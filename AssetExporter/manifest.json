@@ -1,0 +1,10 @@
+{
+  "Name": "Asset Exporter for Bilingual Mod",
+  "Author": "QingGo",
+  "Version": "1.0.0",
+  "Description": "Exports all text assets as JSON for offline processing.",
+  "UniqueID": "QingGo.AssetExporter",
+  "EntryDll": "AssetExporter.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

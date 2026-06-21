@@ -1,14 +1,26 @@
 # Stardew Valley Bilingual Text
 
-星露谷物语中英双语同屏显示 Mod。基于 Content Patcher 实现，无需修改游戏代码，支持实时切换显示模式。
+星露谷物语中英双语同屏显示 Mod。基于 Content Patcher 实现，**无需修改游戏代码**，支持实时切换显示模式。
+
+所有界面文本、对话、事件、物品描述、信件、日历节日等均可显示为 `英文 / 中文`，方便对照学习。
 
 ## 功能
 
-- **English** — 纯英文模式
-- **中文** — 纯中文模式
-- **Bilingual** — 双语模式，同时显示 `英文 / 中文`
+- **English** — 纯英文模式。覆盖游戏内置的中文翻译，所有文本显示为英文
+- **中文** — 纯中文模式。**0 个补丁激活**，使用游戏原生的中文翻译，性能无损耗
+- **Bilingual** — 双语模式。所有文本显示为 `英文 / 中文`，游戏内置的中文翻译保持不变，英文显示在左侧
 
-通过 Generic Mod Config Menu (GMCM) 实时切换，立即生效。
+支持切换的场景：
+- Strings/\* 界面文本（菜单、按钮、提示等）
+- Characters/Dialogue/\* 所有 NPC 对话（含 $d/$p 条件语句）
+- Data/Events/\* 所有剧情事件（含 $q/$r 问答、#$b# 分段）
+- Data/Objects, Data/Tools, Data/Weapons 等物品的名称和描述
+- Data/mail 信件（正文+标题）
+- Data/Festivals/\* 日历节日名称
+- Data/SecretNotes, Data/Achievements 秘密纸条和成就
+- Strings/schedules/\* NPC 日程文本
+
+通过 Generic Mod Config Menu (GMCM) 在游戏中实时切换，**无需重启**立即生效。
 
 ## 效果截图
 
@@ -22,23 +34,45 @@
 
 ## 前置要求
 
-- [SMAPI](https://smapi.io/) 4.0+
-- [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915) 2.0+
-- [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098)（可选，推荐用于便捷切换）
-- Stardew Valley 1.6+（已包含官方中文语言包）
-- 游戏 Language 必须设为 **中文**（需要中文字体渲染）
+本 Mod 是一个 Content Patcher **内容包**（content pack），本身不含游戏修改逻辑。运行时需要以下组件：
+
+| 组件 | 下载地址 | 说明 |
+|------|---------|------|
+| **Stardew Valley 1.6+** | Steam / GOG | 游戏本体，必须为 1.6 或更高版本（已包含官方中文语言包） |
+| **SMAPI 4.0+** | [smapi.io](https://smapi.io/) | 模组加载器。将 Modding API 注入游戏，是运行所有 Mod 的基础 |
+| **Content Patcher 2.0+** | [Nexus Mods](https://www.nexusmods.com/stardewvalley/mods/1915) | 数据包框架。本 Mod 通过它替换游戏文本，不修改任何游戏文件 |
+| **GMCM 1.16+**（可选） | [Nexus Mods](https://www.nexusmods.com/stardewvalley/mods/5098) | 游戏内配置菜单。推荐安装以便在游戏中切换语言模式 |
+
+> **安装顺序：** SMAPI → Content Patcher → GMCM（可选）→ 本 Mod
 
 ## 下载
 
-从 [Releases](https://github.com/anomalyco/stardew-bilin/releases) 页面下载最新版本的 `BilingualMod-v*.zip`。
+从 [Releases](https://github.com/QingGo/stardew-biling-mod/releases) 页面下载最新版本的 `BilingualMod-v*.zip`。
 
 ## 安装
 
-1. 确保已安装 [SMAPI](https://smapi.io/) 和 [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915)
-2. 下载 `BilingualMod-v*.zip`，解压到 `Stardew Valley/Mods/BilingualMod/`
-3. 通过 `StardewModdingAPI.exe` 启动游戏
-4. 在标题画面将 **Language** 设为 **中文**
-5. 进入主菜单后，左下角 **Mods** 按钮 → `Stardew Valley Bilingual Text` → 选择 `Bilingual` 模式
+### 首次安装
+
+1. 确保已安装上述所有前置依赖（SMAPI、Content Patcher）
+2. 下载 `BilingualMod-v*.zip`（从本页面顶部 [Releases](https://github.com/QingGo/stardew-biling-mod/releases) 获取）
+3. 解压 zip 文件，将 `BilingualMod` 文件夹**整体**放入 `Stardew Valley/Mods/` 目录下
+   - 最终路径应为：`Stardew Valley/Mods/BilingualMod/content.json`
+   - 如果放错了（例如多了一层文件夹），Mod 不会被识别
+4. 通过 `StardewModdingAPI.exe` 启动游戏（不要用原版 Stardew Valley.exe）
+5. 在标题画面将 **Language** 设为 **中文**
+   - ⚠ **这一步必须做**，否则中文字体无法渲染，双语文字会显示为方框
+6. 加载存档后，按 `ESC` → **Mods** 按钮 → `Stardew Valley Bilingual Text`
+   - 将 `LanguageMode` 改为 `Bilingual` 即可看到双语效果
+   - 如果没装 GMCM，也可以直接编辑 `Mods/BilingualMod/config.json` 文件
+
+### 更新版本
+
+1. 下载最新 `BilingualMod-v*.zip`
+2. **删除**旧版 `Stardew Valley/Mods/BilingualMod/` 整个文件夹
+3. 解压新的 zip 到 `Stardew Valley/Mods/`，步骤与首次安装相同
+4. 启动游戏即可
+
+> ⚠ 不要直接覆盖旧文件，有时旧版的文件结构会和新版冲突。
 
 ## 当前覆盖情况
 

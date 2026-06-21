@@ -472,6 +472,24 @@ namespace AssetExporter
                 // Fall back to primary strings dict
                 if (primaryStrings.TryGetValue(key, out var primaryResolved))
                     return primaryResolved;
+
+                // Try splitting format arguments from key (e.g. "TrashCan_Description 15")
+                // Key is "TrashCan_Description", arg is "15"; format template has {0}
+                int lastSpace = key.LastIndexOf(' ');
+                if (lastSpace > 0)
+                {
+                    string realKey = key.Substring(0, lastSpace);
+                    string fmtArgs = key.Substring(lastSpace + 1);
+
+                    string template = null;
+                    if (tokenSourceStrings != null && tokenSourceStrings.TryGetValue(realKey, out var srcTemplate))
+                        template = srcTemplate;
+                    else if (primaryStrings.TryGetValue(realKey, out var priTemplate))
+                        template = priTemplate;
+
+                    if (template != null)
+                        return string.Format(template, fmtArgs);
+                }
             }
 
             return rawValue;

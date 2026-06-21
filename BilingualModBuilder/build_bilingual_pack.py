@@ -84,12 +84,125 @@ def save_json(data, file_path: Path):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+MAIL_TITLE_RE = re.compile(r'(%%?\[#\])(.*)$')
+MAIL_ASSET_PATHS = ["Data/mail"]
+
+EVENT_ASSET_PREFIX = "Data/Events/"
+EVENT_TEXT_COMMANDS = ("speak ", "message ", "question ", "quickQuestion ", "textAboveHead ", "dialogue ")
+
+
+def split_event_script(script: str) -> list:
+    """按 / 分割事件脚本，但尊重引号内的内容"""
+    parts = []
+    current = []
+    in_quotes = False
+    for c in script:
+        if c == '"':
+            in_quotes = not in_quotes
+            current.append(c)
+        elif c == '/' and not in_quotes:
+            parts.append(''.join(current))
+            current = []
+        else:
+            current.append(c)
+    if current:
+        parts.append(''.join(current))
+    return parts
+
+
+def get_quoted_text(cmd: str) -> str:
+    """从命令中提取第一个引号内的文本"""
+    start = cmd.find('"')
+    if start < 0:
+        return ""
+    end = cmd.find('"', start + 1)
+    if end < 0:
+        return ""
+    return cmd[start + 1:end]
+
+
+def replace_quoted_text(cmd: str, new_text: str) -> str:
+    """替换命令中第一个引号内的文本"""
+    start = cmd.find('"')
+    if start < 0:
+        return cmd
+    end = cmd.find('"', start + 1)
+    if end < 0:
+        return cmd
+    return cmd[:start + 1] + new_text + cmd[end:]
+
+
+def is_text_command(cmd: str) -> bool:
+    """判断是否为包含对话文本的命令"""
+    stripped = cmd.strip()
+    return any(stripped.startswith(p) for p in EVENT_TEXT_COMMANDS)
+
+
+def make_event_bilingual(en_script: str, zh_script: str) -> str:
+    """对事件脚本做对话双语"""
+    en_parts = split_event_script(en_script)
+    zh_parts = split_event_script(zh_script)
+
+    if len(en_parts) != len(zh_parts):
+        # 结构不一致，回退到简单拼接
+        return BILINGUAL_TEMPLATE.format(en=en_script, zh=zh_script)
+
+    result = []
+    for en_cmd, zh_cmd in zip(en_parts, zh_parts):
+        if is_text_command(en_cmd) and is_text_command(zh_cmd):
+            en_text = get_quoted_text(en_cmd)
+            zh_text = get_quoted_text(zh_cmd)
+            if en_text and zh_text and en_text != zh_text:
+                bi_text = BILINGUAL_TEMPLATE.format(en=en_text, zh=zh_text)
+                result.append(replace_quoted_text(en_cmd, bi_text))
+            else:
+                result.append(en_cmd)
+        else:
+            result.append(en_cmd)
+
+    return "/".join(result)
+
+def make_mail_bilingual(en_val: str, zh_val: str) -> str:
+    """对信件条目做双语，解决 [#] 标记重复导致正文/标题混乱的问题。
+
+    策略：只保留 EN 的 [#] 标记和命令（%item, %money 等），
+    ZH 只取纯文本部分做双语拼接。
+    """
+    # 提取 EN 的正文、标记、标题
+    en_match = MAIL_TITLE_RE.search(en_val)
+    if not en_match:
+        return BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+
+    en_marker = en_match.group(1)   # "%%[#]" or "[#]"
+    en_title = en_match.group(2)    # title text after marker
+    en_body = en_val[:en_match.start()]
+
+    # 提取 ZH 的正文、标题（如果有标记）
+    zh_match = MAIL_TITLE_RE.search(zh_val)
+    if zh_match:
+        zh_body = zh_val[:zh_match.start()]
+        zh_title = zh_match.group(2)
+    else:
+        zh_body = zh_val
+        zh_title = ""
+
+    # ZH 正文中去除 %item/%money/%quest 等命令（只取纯文本）
+    # 避免命令在双语中重复执行
+    zh_body_clean = re.sub(r'%[a-z]+\b.*?(?=\^|%|\[|$)', '', zh_body).strip()
+    if not zh_body_clean:
+        zh_body_clean = zh_body  # fallback if stripping removed everything
+
+    body_bi = BILINGUAL_TEMPLATE.format(en=en_body, zh=zh_body_clean)
+    title_bi = BILINGUAL_TEMPLATE.format(en=en_title, zh=zh_title) if zh_title else en_title
+    return f"{body_bi} {en_marker}{title_bi}"
+
+
 def is_string_asset(asset_path: str) -> bool:
     """判断是否为纯文本 Dict<string,string> 资产"""
     return any(asset_path.startswith(p) for p in STRING_ASSET_PREFIXES) or asset_path in [
         "Data/ExtraDialogue", "Data/mail",
         "Data/TV/CookingChannel", "Data/TV/TipChannel"
-    ]
+    ] or asset_path.startswith(EVENT_ASSET_PREFIX)
 
 
 def is_data_asset(asset_path: str) -> bool:
@@ -131,19 +244,24 @@ def main():
 
             en_data = load_json(en_file)
 
-            # 生成 Bilingual Entries（取所有键的并集）
-            is_dialogue = any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
-
             all_keys = set(en_data.keys())
             if zh_data:
                 all_keys |= set(zh_data.keys())
+
+            is_dialogue = any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
+            is_mail = asset_path in MAIL_ASSET_PATHS
+            is_event = asset_path.startswith(EVENT_ASSET_PREFIX)
 
             bilingual_data = {}
             for key in all_keys:
                 en_val = en_data.get(key, "")
                 zh_val = zh_data.get(key, "") if zh_data else ""
 
-                if is_dialogue:
+                if is_mail:
+                    bilingual_data[key] = make_mail_bilingual(en_val, zh_val)
+                elif is_event:
+                    bilingual_data[key] = make_event_bilingual(en_val, zh_val)
+                elif is_dialogue:
                     bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
                 else:
                     if en_val and zh_val:
@@ -228,7 +346,10 @@ def main():
                             elif i in (dn_field, desc_field) and not en_f and zh_f:
                                 bi_fields[i] = f" / {zh_f}"
                             else:
-                                bi_fields[i] = en_f or zh_f
+                                if en_f and zh_f and en_f != zh_f:
+                                    bi_fields[i] = f"{en_f} / {zh_f}"
+                                else:
+                                    bi_fields[i] = en_f or zh_f
                         bi_entries[key] = delimiter.join(bi_fields)
 
                 # 生成 English 补丁

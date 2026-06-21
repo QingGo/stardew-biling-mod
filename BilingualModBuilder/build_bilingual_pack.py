@@ -70,14 +70,9 @@ def main():
     with open(ASSETS_LIST_FILE, 'r', encoding='utf-8') as f:
         asset_paths = [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
-    # 为字符串资产准备三语目录
-    langs = ["English", "Chinese", "Bilingual"]
-    for lang in langs:
-        (OUTPUT_DIR / "assets" / lang).mkdir(parents=True, exist_ok=True)
-
     content_changes = []
-    load_count = 0
-    edit_count = 0
+    string_count = 0
+    data_count = 0
 
     for asset_path in asset_paths:
         filename = asset_path_to_filename(asset_path)
@@ -89,7 +84,10 @@ def main():
             continue
 
         if is_string_asset(asset_path):
-            # ====== 字符串资产：生成三套 Load 补丁 ======
+            # ====== 字符串资产：生成两套 EditData + Entries 补丁 ======
+            # 中文模式：0 补丁（通过 When 条件跳过，游戏原生 .zh-CN 覆盖层提供中文）
+            # English 模式：EditData + Entries 覆盖 .zh-CN 覆盖层为英文
+            # Bilingual 模式：EditData + Entries 覆盖 .zh-CN 覆盖层为双语
             if not zh_file.exists():
                 print(f"警告：缺失中文资产 {asset_path}，将使用英文代替")
                 zh_data = None
@@ -98,26 +96,39 @@ def main():
 
             en_data = load_json(en_file)
 
-            save_json(en_data, OUTPUT_DIR / "assets" / "English" / filename)
-
+            # 生成 Bilingual Entries（取所有键的并集）
+            all_keys = set(en_data.keys())
             if zh_data:
-                save_json(zh_data, OUTPUT_DIR / "assets" / "Chinese" / filename)
-            else:
-                save_json(en_data, OUTPUT_DIR / "assets" / "Chinese" / filename)
+                all_keys |= set(zh_data.keys())
 
             bilingual_data = {}
-            for key, en_val in en_data.items():
+            for key in all_keys:
+                en_val = en_data.get(key, "")
                 zh_val = zh_data.get(key, "") if zh_data else ""
-                bilingual_data[key] = BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
-            save_json(bilingual_data, OUTPUT_DIR / "assets" / "Bilingual" / filename)
+                if en_val and zh_val:
+                    bilingual_data[key] = BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+                elif en_val:
+                    bilingual_data[key] = f"{en_val} / "
+                elif zh_val:
+                    bilingual_data[key] = f" / {zh_val}"
+                else:
+                    bilingual_data[key] = ""
 
-            patch = {
-                "Action": "Load",
+            # English 模式补丁（仅包含英文有的键；中文独有键保持覆盖层原样）
+            content_changes.append({
+                "Action": "EditData",
                 "Target": asset_path,
-                "FromFile": f"assets/{{{{LanguageMode}}}}/{filename}"
-            }
-            content_changes.append(patch)
-            load_count += 1
+                "When": { "LanguageMode": "English" },
+                "Entries": dict(en_data)
+            })
+            # Bilingual 模式补丁（包含所有键的并集）
+            content_changes.append({
+                "Action": "EditData",
+                "Target": asset_path,
+                "When": { "LanguageMode": "Bilingual" },
+                "Entries": bilingual_data
+            })
+            string_count += 1
 
         elif is_data_asset(asset_path):
             # ====== Data 资产：生成 EditData Fields 补丁 ======
@@ -133,24 +144,32 @@ def main():
             dn_field = field_map["displayName"]
             desc_field = field_map["description"]
 
+            sep = PIPE_BILINGUAL_TEMPLATE if field_map["type"] == "pipe" else BILINGUAL_TEMPLATE
+
             # 构建 English 模式的 Fields 补丁
             en_fields = {}
             # 构建 Bilingual 模式的 Fields 补丁
             bi_fields = {}
 
-            for key in en_data:
-                if key not in zh_data:
-                    continue
+            all_keys = set(en_data.keys()) | set(zh_data.keys())
+            for key in all_keys:
+                en_item = en_data.get(key, {})
+                zh_item = zh_data.get(key, {})
 
-                en_item = en_data[key]
-                zh_item = zh_data[key]
-
-                en_dn = en_item.get("displayName", "")
-                en_desc = en_item.get("description", "")
-                zh_dn = zh_item.get("displayName", "")
-                zh_desc = zh_item.get("description", "")
+                en_dn = en_item.get("displayName", "") if isinstance(en_item, dict) else en_item
+                en_desc = en_item.get("description", "") if isinstance(en_item, dict) else ""
+                zh_dn = zh_item.get("displayName", "") if isinstance(zh_item, dict) else zh_item
+                zh_desc = zh_item.get("description", "") if isinstance(zh_item, dict) else ""
 
                 if not en_dn and not en_desc:
+                    # 只有中文的键，在 English 模式保持中文，Bilingual 模式显示 " / 中文"
+                    if zh_dn:
+                        bi_field_values = {}
+                        if dn_field is not None:
+                            bi_field_values[str(dn_field)] = f" / {zh_dn}"
+                        if desc_field is not None and zh_desc:
+                            bi_field_values[str(desc_field)] = f" / {zh_desc}"
+                        bi_fields[key] = bi_field_values
                     continue
 
                 # English 模式：恢复为纯英文
@@ -162,17 +181,20 @@ def main():
                 en_fields[key] = en_field_values
 
                 # Bilingual 模式：中英双语
-                sep = PIPE_BILINGUAL_TEMPLATE if field_map["type"] == "pipe" else BILINGUAL_TEMPLATE
                 bi_field_values = {}
                 if en_dn and zh_dn:
                     bi_field_values[str(dn_field)] = sep.format(en=en_dn, zh=zh_dn)
                 elif en_dn:
                     bi_field_values[str(dn_field)] = en_dn
+                elif zh_dn:
+                    bi_field_values[str(dn_field)] = f" / {zh_dn}"
 
                 if en_desc and zh_desc:
                     bi_field_values[str(desc_field)] = sep.format(en=en_desc, zh=zh_desc)
                 elif en_desc:
                     bi_field_values[str(desc_field)] = en_desc
+                elif zh_desc:
+                    bi_field_values[str(desc_field)] = f" / {zh_desc}"
                 bi_fields[key] = bi_field_values
 
             # 生成 English 补丁
@@ -193,7 +215,7 @@ def main():
                     "Fields": bi_fields
                 })
 
-            edit_count += 1
+            data_count += 1
 
         else:
             print(f"警告：未知资产类型 {asset_path}，跳过")
@@ -220,7 +242,7 @@ def main():
             shutil.copy2(str(src), str(OUTPUT_DIR / f))
             print(f"已复制 {f}")
 
-    print(f"处理完成：Load 资产 {load_count} 个，EditData 资产 {edit_count} 个")
+    print(f"处理完成：字符串资产 {string_count} 个（EditData），Data 资产 {data_count} 个（EditData Fields）")
     print(f"Content Patcher 包已生成至：{OUTPUT_DIR.resolve()}")
 
 

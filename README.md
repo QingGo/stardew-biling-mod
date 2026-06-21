@@ -10,6 +10,16 @@
 
 通过 Generic Mod Config Menu (GMCM) 实时切换，立即生效。
 
+## 效果截图
+
+| 对话 | 背包物品 |
+|:----:|:--------:|
+| ![对话](images/对话.png) | ![背包](images/背包.png) |
+
+| 开场动画 | SMAPI 日志 |
+|:--------:|:----------:|
+| ![开场动画](images/开场动画.png) | ![日志](images/日志.png) |
+
 ## 前置要求
 
 - [SMAPI](https://smapi.io/) 4.0+
@@ -149,6 +159,11 @@ stardew-bilin/
 │   └── content.json                # 模板（由 Python 脚本覆盖生成）
 ├── docs/
 │   └── tech-doc.md                 # 原始技术方案文档
+├── images/                         # 效果截图
+│   ├── 开场动画.png
+│   ├── 对话.png
+│   ├── 背包.png
+│   └── 日志.png
 ├── verify.py                       # 统一验证系统
 ├── .gitignore
 └── README.md

@@ -343,6 +343,9 @@ def main():
         "Changes": content_changes
     }
 
+    # 确保输出目录存在（CI 中 gitignored 目录不存在）
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     with open(OUTPUT_DIR / "content.json", 'w', encoding='utf-8') as f:
         json.dump(content_json, f, indent=2, ensure_ascii=False)
 

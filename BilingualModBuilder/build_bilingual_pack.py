@@ -44,6 +44,7 @@ STRING_ASSET_PREFIXES = ["Strings/", "Characters/Dialogue/"]
 DIALOGUE_ASSET_PREFIXES = ["Characters/Dialogue/"]
 MAIL_ASSET_PATHS = ["Data/mail"]
 EVENT_ASSET_PREFIX = "Data/Events/"
+FESTIVAL_ASSET_PREFIX = "Data/Festivals/"
 
 
 def asset_path_to_filename(asset_path: str) -> str:
@@ -68,6 +69,10 @@ def is_data_asset(asset_path: str) -> bool:
     return asset_path in DATA_FIELD_MAP
 
 
+def is_festival_asset(asset_path: str) -> bool:
+    return asset_path.startswith(FESTIVAL_ASSET_PREFIX) and not asset_path.endswith("FestivalDates")
+
+
 def main():
     if not ASSETS_LIST_FILE.exists():
         print(f"错误：找不到资产列表文件 {ASSETS_LIST_FILE}")
@@ -89,7 +94,33 @@ def main():
             print(f"警告：缺失英文资产 {asset_path}，跳过")
             continue
 
-        if is_string_asset(asset_path):
+        if is_festival_asset(asset_path):
+            if not zh_file.exists():
+                print(f"警告：缺失中文节日资产 {asset_path}，跳过")
+                continue
+            en_data = load_json(en_file)
+            zh_data = load_json(zh_file)
+            en_name = en_data.get("name", "")
+            zh_name = zh_data.get("name", "")
+            if not en_name:
+                print(f"警告：节日 {asset_path} 缺少 name 字段，跳过")
+                continue
+            content_changes.append({
+                "Action": "EditData",
+                "Target": asset_path,
+                "When": {"LanguageMode": "English"},
+                "Fields": {"name": en_name}
+            })
+            bi_name = f"{en_name} / {zh_name}" if zh_name else en_name
+            content_changes.append({
+                "Action": "EditData",
+                "Target": asset_path,
+                "When": {"LanguageMode": "Bilingual"},
+                "Fields": {"name": bi_name}
+            })
+            data_count += 1
+
+        elif is_string_asset(asset_path):
             if not zh_file.exists():
                 print(f"警告：缺失中文资产 {asset_path}，将使用英文代替")
                 zh_data = None

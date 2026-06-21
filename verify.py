@@ -211,6 +211,76 @@ def check_smapi_log(log_path):
     print(f"  Load: {load_patches}  EditData: {edit_patches}")
 
 
+# ====== 5. Mail 格式检查 ======
+
+def check_mail():
+    print("\n=== 5. Mail 格式检查 ===")
+    pack_path = os.path.join(MOD_DIR, "content.json")
+    if not os.path.exists(pack_path):
+        print("  SKIP: 内容包不存在")
+        return
+
+    pack = json.load(open(pack_path, "r", encoding="utf-8"))
+
+    for entry in pack["Changes"]:
+        if entry.get("Target") != "Data/mail":
+            continue
+        mode = entry["When"]["LanguageMode"]
+        if mode != "Bilingual":
+            continue
+
+        total = 0
+        double_marker = 0
+        unterminated_cmd = 0
+        for key, val in entry.get("Entries", {}).items():
+            total += 1
+            if val.count("[#]") > 1:
+                double_marker += 1
+                log_fail(f"{key}: {val.count('[#]')} [#] markers")
+            if "%" in val and " / " in val:
+                en_half = val.split(" / ", 1)[0]
+                if "%" in en_half and "%%" not in en_half:
+                    unterminated_cmd += 1
+                    log_fail(f"{key}: %command lacks %% in EN half")
+
+        if double_marker or unterminated_cmd:
+            log_fail(f"Data/mail ({mode}): {double_marker} 双重标记, {unterminated_cmd} 未终结命令")
+        else:
+            print(f"  OK Data/mail ({mode}): {total} 条目格式正确")
+
+
+# ====== 6. 节日检查 ======
+
+def check_festivals():
+    print("\n=== 6. 节日 name 字段检查 ===")
+    pack_path = os.path.join(MOD_DIR, "content.json")
+    if not os.path.exists(pack_path):
+        print("  SKIP: 内容包不存在")
+        return
+
+    pack = json.load(open(pack_path, "r", encoding="utf-8"))
+    festival_targets = set()
+
+    for entry in pack["Changes"]:
+        target = entry.get("Target", "")
+        if str(target).startswith("Data/Festivals/") and str(target) != "Data/Festivals/FestivalDates":
+            festival_targets.add(target)
+            mode = entry["When"]["LanguageMode"]
+            fields = entry.get("Fields", {})
+            name_val = fields.get("name", "")
+            if not name_val:
+                log_fail(f"{target} ({mode}): name 字段为空")
+            elif mode == "Bilingual" and " / " not in name_val:
+                log_fail(f"{target} ({mode}): 双语模式缺少 / 分隔符")
+            elif mode == "English" and " / " in name_val:
+                log_fail(f"{target} ({mode}): 英文模式不应含 / 分隔符")
+
+    if festival_targets:
+        print(f"  OK: {len(festival_targets)} 个节日资产")
+    else:
+        log_fail("未找到任何节日资产补丁")
+
+
 # ====== Main ======
 
 def main():
@@ -225,8 +295,10 @@ def main():
         check_dialogue_safety()
 
     if do_all or "--pack" in args:
-        check_caret_entries()  # Already covered by data
+        check_caret_entries()
         check_dialogue_safety()
+        check_mail()
+        check_festivals()
 
     # Check SMAPI log if provided
     for a in args:

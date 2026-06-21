@@ -67,8 +67,21 @@
 | 模式 | 活跃补丁数 |
 |------|-----------|
 | 中文 | 0（所有补丁通过 `When` 条件跳过） |
-| English | 256（159 字符串 + 26 结构型 + 42 `^` 分隔 × 2 方向） |
-| Bilingual | 256 |
+| English | 272（159 字符串 + 34 结构型 + 42 `^` 分隔 + 8 节日 × 2 方向） |
+| Bilingual | 272 |
+
+### 日历节日名称（EditData + Fields，只替换 `name` 字段）
+
+| 节日 | 资产 |
+|------|------|
+| 复活节 (Egg Festival) | `Data/Festivals/spring13` |
+| 花舞节 (Flower Dance) | `Data/Festivals/spring24` |
+| 卢奥节 (Luau) | `Data/Festivals/summer11` |
+| 月光水母之舞 (Dance of the Moonlight Jellies) | `Data/Festivals/summer28` |
+| 星露谷展览会 (Stardew Valley Fair) | `Data/Festivals/fall16` |
+| 万灵节 (Spirit's Eve) | `Data/Festivals/fall27` |
+| 冰雪节 (Festival of Ice) | `Data/Festivals/winter8` |
+| 冬日星盛宴 (Feast of the Winter Star) | `Data/Festivals/winter25` |
 
 ## 从源码构建
 
@@ -109,6 +122,7 @@ stardew-bilin/
 │   └── assets-list.txt             # 需要导出的资产路径列表
 ├── BilingualModBuilder/            # Python 合并脚本
 │   ├── build_bilingual_pack.py     # 读取中英文 JSON，生成 content.json
+│   ├── parsers.py                  # 文本解析器（对话/邮件/事件/Q&A/条件）
 │   ├── assets-list.txt
 │   └── BilingualMod/               # 脚本输出（由 .gitignore 忽略）
 ├── BilingualMod/                   # Content Patcher 内容包模板
@@ -167,17 +181,17 @@ graph TB
 
 ## 已知问题
 
-### 表现异常
+### 架构限制（不可修复）
 
-1. **信件正文纯英文** — `make_mail_bilingual()` 的正则 `%%?\[#\]` 不匹配无 `%%` 前缀的 `[#]` 标记，导致部分信件回退到简单拼接（双 `[#]` 问题未修复）。
-2. **事件对话段落不对齐** — 事件 `speak` 命令内含有 `#$b#`（对话换框），双语拼接后 `#$b#` 将双语文本拆开，导致英文内容出现在前一框、中文内容在后一框。
-3. **部分对话纯英文** — `Maybe now that my mother has her bus...` 等条目来源不明（可能在 `StringsFromCSFiles` 或动态生成文本中），双语化未覆盖到。
+1. **Special Orders/Crop 任务 `{Crop:Text}` token** — `Strings/SpecialOrderStrings` 中的 `{Crop:Text}`、`{FishType:Text}`、`{Monster:LocalizedName}` 等是游戏运行时 token，Content Patcher 无法控制其解析行为。双语格式中 EN/ZH 两侧的 token 会解析为同一值（当前语言对应的作物/物品名），导致句内混用（如 "Harvest 100 芋头 / 收获 100 份芋头"）。
 
-### 架构限制
+2. **海盗的任务动态文本** — `ItemDeliveryQuest` 的任务目标由 C# 代码（`"Looking for " + npcName + "'s " + itemName`）在运行时拼接，不会经过 Content Patcher 的数据流。修复需要 Harmony C# 补丁。
 
-4. **收获任务文本** — `ItemHarvestQuest` 的格式字符串不在任何数据资产中（`StringsFromCSFiles` 无对应条目），需要 Harmony C# 补丁才能修改。
-5. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
-6. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
+### 已知限制
+
+3. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
+4. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
+5. **Data/Tools Token 参数** — 垃圾桶升级（Copper/Steel/Gold/Iridium）的格式参数 token 已被 C# 导出器修复。如仍有残留，重新导出游戏资产即可。`
 
 ## 后续计划（按优先级）
 

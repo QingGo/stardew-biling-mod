@@ -186,3 +186,13 @@ Data/Events/Trailer
 Data/Events/Trailer_Big
 Data/Events/WizardHouse
 Data/Events/Woods
+
+# Festival data（日历显示节日名称）
+Data/Festivals/spring13
+Data/Festivals/spring24
+Data/Festivals/summer11
+Data/Festivals/summer28
+Data/Festivals/fall16
+Data/Festivals/fall27
+Data/Festivals/winter8
+Data/Festivals/winter25

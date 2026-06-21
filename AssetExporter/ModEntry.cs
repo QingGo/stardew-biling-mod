@@ -75,7 +75,7 @@ namespace AssetExporter
 
             foreach (var path in allLines)
             {
-                if (textDataAssets.Contains(path) || path.StartsWith("Data/Events/"))
+                if (textDataAssets.Contains(path) || path.StartsWith("Data/Events/") || path.StartsWith("Data/Festivals/"))
                     stringAssetPaths.Add(path);
                 else if (path.StartsWith("Data/"))
                     dataAssetPaths.Add(path);

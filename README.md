@@ -161,26 +161,50 @@ stardew-bilin/
 ```mermaid
 graph TB
     subgraph "构建流水线"
-        EX[AssetExporter] -->|语言切换+缓存失效| EN_RAW[Export_TextAssets/en/]
-        EX -->|游戏当前 locale| ZH_RAW[Export_TextAssets/zh/]
-        PY[build_bilingual_pack.py] -->|读取中英文 JSON| EN_RAW
-        PY -->|读取中英文 JSON| ZH_RAW
-        PY -->|字符串: EditData+Entries| BP[content.json]
-        PY -->|模型型: EditData+Fields| BP
-        PY -->|^分隔型: EditData+Entries| BP
-        PY -->|对话: 分段双语| BP
-        PY -->|信件: [#]去重| BP
-        PY -->|事件: 脚本解析| BP
+        EX[AssetExporter] -->|"语言切换+缓存失效"| EN_RAW[Export_TextAssets/en/]
+        EX -->|"游戏当前 locale"| ZH_RAW[Export_TextAssets/zh/]
+        PY[build_bilingual_pack.py] -->|"读取中英文 JSON"| EN_RAW
+        PY -->|"读取中英文 JSON"| ZH_RAW
+        PY -->|"字符串: EditData+Entries"| BP[content.json]
+        PY -->|"模型型: EditData+Fields"| BP
+        PY -->|"^分隔型: EditData+Entries"| BP
+        PY -->|"对话: 分段双语"| BP
+        PY -->|"信件: [#]去重"| BP
+        PY -->|"事件: 脚本解析"| BP
     end
 
     subgraph "运行时"
         SMAPI[SMAPI] --> CP[Content Patcher]
-        CP -->|读取 content.json| BP
-        CP -->|根据 LanguageMode 选择| WHEN{When 条件}
-        WHEN -->|中文: 0 补丁| NATIVE[游戏原生 .zh-CN 覆盖层]
-        WHEN -->|English/Bilingual| PATCH[EditData 补丁]
-        PATCH -->|在 .zh-CN 覆盖层之后生效| FINAL[最终文本]
+        CP -->|"读取 content.json"| BP
+        CP -->|"根据 LanguageMode 选择"| WHEN{"When 条件"}
+        WHEN -->|"中文: 0 补丁"| NATIVE[游戏原生 .zh-CN 覆盖层]
+        WHEN -->|"English/Bilingual"| PATCH[EditData 补丁]
+        PATCH -->|"在 .zh-CN 覆盖层之后生效"| FINAL[最终文本]
     end
+```
+
+### 数据流
+
+```mermaid
+sequenceDiagram
+    participant User as 玩家
+    participant SMAPI as SMAPI
+    participant CP as Content Patcher
+    participant Mod as BilingualMod
+    participant Game as 游戏引擎
+
+    User->>SMAPI: 启动游戏 (StardewModdingAPI.exe)
+    SMAPI->>CP: 加载 Content Patcher
+    CP->>Mod: 读取 content.json
+    CP->>Mod: 读取 config.json (LanguageMode=Bilingual)
+    Mod-->>CP: 返回资产替换规则
+    CP->>CP: 解析 {{LanguageMode}} 令牌
+
+    Game->>CP: 请求资产 Strings/UI
+    CP->>Mod: 根据令牌值选择 English/Bilingual 补丁
+    Mod-->>CP: 返回 { "key": "cooking / 烹饪", ... }
+    CP-->>Game: 返回替换后的字典
+    Game->>Game: 渲染文本 "cooking / 烹饪"
 ```
 
 ### 关键实现细节

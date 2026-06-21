@@ -92,7 +92,7 @@ def check_caret_entries():
     for entry in pack["Changes"]:
         if entry.get("Target") in ("Data/Achievements", "Data/SecretNotes"):
             target = entry["Target"]
-            when = entry["When"]["LanguageMode"]
+            when = entry["When"].get("BilingualMode", "?")
             if "Entries" not in entry:
                 log_fail(f"{target} ({when}): 使用 Fields 而非 Entries！")
                 continue
@@ -127,7 +127,7 @@ def check_dialogue_safety():
     for entry in pack["Changes"]:
         if not entry.get("Target", "").startswith("Characters/Dialogue/"):
             continue
-        if entry["When"]["LanguageMode"] != "Bilingual":
+        if entry["When"].get("BilingualMode") != "true":
             continue
 
         target = entry["Target"]
@@ -225,8 +225,8 @@ def check_mail():
     for entry in pack["Changes"]:
         if entry.get("Target") != "Data/mail":
             continue
-        mode = entry["When"]["LanguageMode"]
-        if mode != "Bilingual":
+        mode = entry["When"].get("BilingualMode", "?")
+        if mode != "true":
             continue
 
         total = 0
@@ -265,7 +265,7 @@ def check_festivals():
         target = entry.get("Target", "")
         if str(target).startswith("Data/Festivals/") and str(target) != "Data/Festivals/FestivalDates":
             festival_targets.add(target)
-            mode = entry["When"]["LanguageMode"]
+            mode = entry["When"].get("BilingualMode", "?")
             entries = entry.get("Entries", {})
             name_val = entries.get("name", "")
             if not name_val:

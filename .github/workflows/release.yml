@@ -21,6 +21,8 @@ jobs:
           python-version: '3.11'
 
       - name: Build bilingual content pack
+        env:
+          PYTHONIOENCODING: utf-8
         run: |
           cd BilingualModBuilder
           python build_bilingual_pack.py --export-dir ..\_export

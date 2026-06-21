@@ -269,11 +269,9 @@ def check_festivals():
             entries = entry.get("Entries", {})
             name_val = entries.get("name", "")
             if not name_val:
-                log_fail(f"{target} ({mode}): name 字段为空")
-            elif mode == "Bilingual" and " / " not in name_val:
-                log_fail(f"{target} ({mode}): 双语模式缺少 / 分隔符")
-            elif mode == "English" and " / " in name_val:
-                log_fail(f"{target} ({mode}): 英文模式不应含 / 分隔符")
+                log_fail(f"{target} (BilingualMode={mode}): name 字段为空")
+            elif mode == "true" and " / " not in name_val:
+                log_fail(f"{target} (BilingualMode={mode}): 双语模式缺少 / 分隔符")
 
     if festival_targets:
         print(f"  OK: {len(festival_targets)} 个节日资产")

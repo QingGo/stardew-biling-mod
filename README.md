@@ -75,7 +75,7 @@
    - 将 `LanguageMode` 改为 `Bilingual`，点击 **保存并退出**
    - 按 `ESC` 返回游戏，**无需重启**立即生效
 
-   > 默认模式为 **中文**（0 个补丁激活，启动最快）。如需双语，按上述步骤切换即可。也可以直接编辑 `Mods/BilingualMod/config.json` 文件，将 `"Chinese"` 改为 `"Bilingual"`。
+   > 默认模式为 **Bilingual**（安装后即可看到双语效果）。如需切回纯中文，按上述步骤将 `LanguageMode` 改为 `Chinese` 即可。也可以直接编辑 `Mods/BilingualMod/config.json` 文件。
 
 ### 更新版本
 

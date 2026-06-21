@@ -337,7 +337,7 @@ def main():
         "ConfigSchema": {
             "LanguageMode": {
                 "AllowValues": "English, Chinese, Bilingual",
-                "Default": "Chinese"
+                "Default": "Bilingual"
             }
         },
         "Changes": content_changes

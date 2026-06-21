@@ -266,8 +266,8 @@ def check_festivals():
         if str(target).startswith("Data/Festivals/") and str(target) != "Data/Festivals/FestivalDates":
             festival_targets.add(target)
             mode = entry["When"]["LanguageMode"]
-            fields = entry.get("Fields", {})
-            name_val = fields.get("name", "")
+            entries = entry.get("Entries", {})
+            name_val = entries.get("name", "")
             if not name_val:
                 log_fail(f"{target} ({mode}): name 字段为空")
             elif mode == "Bilingual" and " / " not in name_val:

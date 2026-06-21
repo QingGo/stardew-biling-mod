@@ -109,14 +109,14 @@ def main():
                 "Action": "EditData",
                 "Target": asset_path,
                 "When": {"LanguageMode": "English"},
-                "Fields": {"name": en_name}
+                "Entries": {"name": en_name}
             })
             bi_name = f"{en_name} / {zh_name}" if zh_name else en_name
             content_changes.append({
                 "Action": "EditData",
                 "Target": asset_path,
                 "When": {"LanguageMode": "Bilingual"},
-                "Fields": {"name": bi_name}
+                "Entries": {"name": bi_name}
             })
             data_count += 1
 

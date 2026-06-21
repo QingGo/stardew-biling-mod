@@ -70,7 +70,7 @@
 | English | 272（159 字符串 + 34 结构型 + 42 `^` 分隔 + 8 节日 × 2 方向） |
 | Bilingual | 272 |
 
-### 日历节日名称（EditData + Fields，只替换 `name` 字段）
+### 日历节日名称（EditData + Entries，只替换 `name` 键）
 
 | 节日 | 资产 |
 |------|------|
@@ -106,9 +106,18 @@ python build_bilingual_pack.py
 ### 3. 验证
 
 ```bash
-python verify.py --data    # Token 完整性和分隔符检查
-python verify.py --dialogue # 对话分段安全分析
-python verify.py --log SMAPI-latest.txt  # SMAPI 日志分析
+python verify.py --pack      # 检查 content.json（mail 格式、节日、对话安全）
+python verify.py --data      # Token 完整性和分隔符检查
+python verify.py --dialogue  # 对话分段安全分析
+python verify.py --log=SMAPI-latest.txt  # SMAPI 日志分析
+```
+
+### 4. 一键构建（可选）
+
+```powershell
+.\build.ps1             # 完整构建
+.\build.ps1 -Quick      # 仅构建双语包（跳过编译和导出）
+.\build.ps1 -Deploy     # 仅部署到 Mods 目录
 ```
 
 ## 项目结构
@@ -126,6 +135,7 @@ stardew-bilin/
 │   ├── assets-list.txt
 │   └── BilingualMod/               # 脚本输出（由 .gitignore 忽略）
 ├── BilingualMod/                   # Content Patcher 内容包模板
+├── build.ps1                       # 一键构建脚本
 │   ├── manifest.json
 │   ├── config.json
 │   └── content.json                # 模板（由 Python 脚本覆盖生成）
@@ -171,13 +181,14 @@ graph TB
 |------|------|------|
 | 英文导出 | `LocalizedContentManager` 切换为 `en` + SMAPI 缓存失效 | 强制加载纯英文 XNB（绕过当前中文 locale） |
 | 中文导出 | `Helper.GameContent` 直接加载 | 获取合并后的中文数据（base + `.zh-CN` 覆盖层） |
-| Token 解析 | 多源正则 `\[LocalizedText (source):(key)\]` | 提取 source 路径加载正确的 Strings 资产 |
-| 对话双语 | 按 `#$e#`/`#$b#` 分段 | 每段独立做双语，避免中文被结束标记丢弃 |
-| 信件双语 | `[#]` 去重 + 命令单次执行 | 只保留 EN 的 `[#]` 标记和命令，ZH 取纯文本 |
-| 事件双语 | 引号感知脚本分割器 | 按 `/` 分割事件脚本（尊重引号），对 `speak`/`message` 等命令做双语 |
+| Token 解析 | 多源正则 `\[LocalizedText (source):(key)\]` | 提取 source 路径加载正确的 Strings 资产；支持 format 参数（如 `TrashCan_Description 15 → 15%`） |
+| 对话双语 | 按 `#$e#`/`#$b#` 分段 | 每段独立做双语，避免中文被结束标记丢弃；支持 `$d COND#T\|F` 条件分支 |
+| 信件双语 | `[#]` 去重 + 命令 `%%` 终结 | 只保留 EN 的 `[#]` 标记和命令，ZH 取纯文本；`%command` 在 ` / ` 前终结 |
+| 事件双语 | 引号感知脚本分割器 | 按 `/` 分割事件脚本（尊重引号），对 `speak`/`message`/`$q/$r`/`$p` 等做双语 |
 | `^` 分隔资产 | `EditData` + `Entries` 全值替换 | 读取 `_raw` 字段，按 `^` 分割后逐字段双语再拼接 |
+| 日历节日 | `EditData` + `Entries` | 只替换 `name` 键，不影响 `conditions`/`mainEvent` 等 |
 | Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "English, Bilingual"`，中文模式 0 补丁 |
-| 验证 | `verify.py` 四合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志 |
+| 验证 | `verify.py` 六合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称 |
 
 ## 已知问题
 
@@ -193,23 +204,23 @@ graph TB
 4. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
 5. **Data/Tools Token 参数** — 垃圾桶升级（Copper/Steel/Gold/Iridium）的格式参数 token 已被 C# 导出器修复。如仍有残留，重新导出游戏资产即可。`
 
-## 后续计划（按优先级）
+## 后续计划
 
-### P0 — 事件对话段落对齐
-- `make_event_bilingual()` 内对话文本也按 `#$b#` 分段后再做双语（同 `make_dialogue_bilingual`）
+### P1 — 验证邮件命令格式的 `\b` Unicode 问题
 
-### P0 — 信件 `[#]` 无前缀匹配
-- 修复 `MAIL_TITLE_RE` 正则，增加 `|\[#\]` 分支匹配无 `%%` 前缀的 `[#]` 标记
-
-### P1 — 对话纯英文条目追踪
-- 定位 `Maybe now that my mother has her bus...` 的来源资产
-- 确认是什么原因导致双语化失败
-
-### P1 — 收获任务文本（Harmony）
-- 如需修复 `ItemHarvestQuest` 目标描述，需开发 C# SMAPI Mod 使用 Harmony 补丁
+`MAIL_CMD_RE` 的 `\b` 在中文前不匹配（如 `%secretsanta精心`），导致 ZH 命令未被剥离。`%secretsanta` 被双面执行。需要修复正则。
 
 ### P2 — Strings/credits 支持
-- 研究 `Strings/credits` 格式（`List<string>`），决定是否需要覆盖
+
+研究 `Strings/credits` 格式（`List<string>`），决定是否需要覆盖。
+
+### P2 — 缺失 2 事件
+
+`IslandFarmHouse`、`Tent` 导出失败，研究原因。
+
+### P3 — 海盗任务 Harmony
+
+如需修复 `ItemDeliveryQuest` 动态拼接文本，需开发 C# SMAPI Mod 使用 Harmony 补丁。优先级低，因单条任务影响有限。
 
 ## 许可证
 

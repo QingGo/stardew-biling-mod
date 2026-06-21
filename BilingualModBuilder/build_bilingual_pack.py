@@ -124,17 +124,11 @@ def main():
             if not en_name:
                 print(f"警告：节日 {asset_path} 缺少 name 字段，跳过")
                 continue
-            content_changes.append({
-                "Action": "EditData",
-                "Target": asset_path,
-                "When": {"LanguageMode": "English"},
-                "Entries": {"name": en_name}
-            })
             bi_name = f"{en_name} / {zh_name}" if zh_name else en_name
             content_changes.append({
                 "Action": "EditData",
                 "Target": asset_path,
-                "When": {"LanguageMode": "Bilingual"},
+                "When": {"BilingualMode": "true"},
                 "Entries": {"name": bi_name}
             })
             data_count += 1
@@ -180,13 +174,7 @@ def main():
             content_changes.append({
                 "Action": "EditData",
                 "Target": asset_path,
-                "When": { "LanguageMode": "English" },
-                "Entries": dict(en_data)
-            })
-            content_changes.append({
-                "Action": "EditData",
-                "Target": asset_path,
-                "When": { "LanguageMode": "Bilingual" },
+                "When": { "BilingualMode": "true" },
                 "Entries": bilingual_data
             })
             string_count += 1
@@ -250,18 +238,11 @@ def main():
                                     bi_fields[i] = en_f or zh_f
                         bi_entries[key] = delimiter.join(bi_fields)
 
-                if en_entries:
-                    content_changes.append({
-                        "Action": "EditData",
-                        "Target": asset_path,
-                        "When": {"LanguageMode": "English"},
-                        "Entries": en_entries
-                    })
                 if bi_entries:
                     content_changes.append({
                         "Action": "EditData",
                         "Target": asset_path,
-                        "When": {"LanguageMode": "Bilingual"},
+                        "When": {"BilingualMode": "true"},
                         "Entries": bi_entries
                     })
                 data_count += 1
@@ -313,18 +294,11 @@ def main():
                     bi_field_values[str(desc_field)] = f" / {zh_desc}"
                 bi_fields[key] = bi_field_values
 
-            if en_fields:
-                content_changes.append({
-                    "Action": "EditData",
-                    "Target": asset_path,
-                    "When": { "LanguageMode": "English" },
-                    "Fields": en_fields
-                })
             if bi_fields:
                 content_changes.append({
                     "Action": "EditData",
                     "Target": asset_path,
-                    "When": { "LanguageMode": "Bilingual" },
+                    "When": { "BilingualMode": "true" },
                     "Fields": bi_fields
                 })
             data_count += 1
@@ -335,9 +309,9 @@ def main():
     content_json = {
         "Format": "2.0.0",
         "ConfigSchema": {
-            "LanguageMode": {
-                "AllowValues": "English, Chinese, Bilingual",
-                "Default": "Bilingual"
+            "BilingualMode": {
+                "AllowValues": "true, false",
+                "Default": "true"
             }
         },
         "Changes": content_changes

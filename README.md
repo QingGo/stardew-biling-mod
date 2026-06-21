@@ -6,9 +6,8 @@
 
 ## 功能
 
-- **English** — 纯英文模式。覆盖游戏内置的中文翻译，所有文本显示为英文
-- **中文** — 纯中文模式。**0 个补丁激活**，使用游戏原生的中文翻译，性能无损耗
-- **Bilingual** — 双语模式。所有文本显示为 `英文 / 中文`，游戏内置的中文翻译保持不变，英文显示在左侧
+- **开启（默认）** — 双语模式，所有文本显示为 `英文 / 中文`
+- **关闭** — 跟随游戏语言设置，不进行任何干预
 
 支持切换的场景：
 - Strings/\* 界面文本（菜单、按钮、提示等）
@@ -65,17 +64,18 @@
 
    **方法一：在标题画面配置（推荐）**
    - 在主菜单（标题画面），点击左下角的 ⚙ **齿轮图标**（Mods 按钮）
-   - 选择 `Stardew Valley Bilingual Text` → 将 `LanguageMode` 改为 `Bilingual`
-   - 点击 **保存并退出**，然后加载存档
+   - 选择 `Stardew Valley Bilingual Text`
+   - 找到 `BilingualMode`（默认已开启 `true`）
+   - 如需中文模式，将其改为 `false`，点击 **保存并退出**，然后加载存档
 
    **方法二：进入游戏后配置**
    - 加载存档后，按 `ESC` 打开背包/暂停界面
    - 点击菜单栏右侧的 🎮 **游戏手柄图标**（Mods 按钮）
    - 向下滚动到底部，选择 `Stardew Valley Bilingual Text`
-   - 将 `LanguageMode` 改为 `Bilingual`，点击 **保存并退出**
-   - 按 `ESC` 返回游戏，**无需重启**立即生效
+   - 将 `BilingualMode` 改为 `false` 即可关闭双语，改回 `true` 重新开启
+   - 每次更改后点击 **保存并退出**
 
-   > 默认模式为 **Bilingual**（安装后即可看到双语效果）。如需切回纯中文，按上述步骤将 `LanguageMode` 改为 `Chinese` 即可。也可以直接编辑 `Mods/BilingualMod/config.json` 文件。
+   > 默认模式为 **开启**（安装后即可看到双语效果）。也可以直接编辑 `Mods/BilingualMod/config.json` 文件，将 `"BilingualMode"` 设为 `"false"` 关闭双语。
 
 ### 更新版本
 
@@ -126,9 +126,8 @@
 
 | 模式 | 活跃补丁数 |
 |------|-----------|
-| 中文 | 0（所有补丁通过 `When` 条件跳过） |
-| English | 272（159 字符串 + 34 结构型 + 42 `^` 分隔 + 8 节日 × 2 方向） |
-| Bilingual | 272 |
+| BilingualMode = false（关闭） | 0（所有补丁通过 `When` 条件跳过，游戏原生文本） |
+| BilingualMode = true（开启） | 136（全部 EditData 补丁，含 8 节日） |
 
 ### 日历节日名称（EditData + Entries，只替换 `name` 键）
 

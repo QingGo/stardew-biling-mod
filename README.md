@@ -61,8 +61,11 @@
 4. 通过 `StardewModdingAPI.exe` 启动游戏（不要用原版 Stardew Valley.exe）
 5. 在标题画面将 **Language** 设为 **中文**
    - ⚠ **这一步必须做**，否则中文字体无法渲染，双语文字会显示为方框
-6. 加载存档后，按 `ESC` → **Mods** 按钮 → `Stardew Valley Bilingual Text`
+6. 加载存档后，按 `ESC` 打开背包/暂停界面
+   - 点击菜单栏右侧的 🎮 图标（Mods 按钮）
+   - 向下滚动到底部，找到 `Stardew Valley Bilingual Text`
    - 将 `LanguageMode` 改为 `Bilingual` 即可看到双语效果
+   - 按 `ESC` 返回游戏，**无需重启**立即生效
    - 如果没装 GMCM，也可以直接编辑 `Mods/BilingualMod/config.json` 文件
 
 ### 更新版本

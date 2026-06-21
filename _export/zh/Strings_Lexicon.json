@@ -1,0 +1,22 @@
+{
+  "RandomNegativeItemNoun": "垃圾#废物#废品#污水#粪便",
+  "RandomPositiveAdjective_Child": "酷炫#有趣#真利索#非常好#漂亮#超级棒#太棒了",
+  "RandomPositiveAdjective_AdultMale": "有趣#激动人心#真利索#有趣#太棒了#精彩",
+  "RandomPositiveAdjective_AdultFemale": "极好#令人惊异#温馨感人#神奇#不可思议#可爱#招人喜欢#令人愉快",
+  "RandomPositiveAdjective_PlaceOrEvent": "极好#令人惊异#温馨感人#神奇#不可思议#可爱#招人喜欢#令人愉快",
+  "RandomDeliciousAdjective": "美味#可口#极好#满意的#酒饱饭足#令人垂涎#开胃#令人愉快",
+  "RandomDeliciousAdjective_Child": "好吃",
+  "RandomNegativeFoodAdjective_Child": "令人不快",
+  "RandomNegativeFoodAdjective_Polite": "……有趣#……不平常#……不同的#……非传统",
+  "RandomNegativeFoodAdjective": "肮脏#令人不快#恶心#卑鄙#令人作呕#令人厌恶#可怕#令人#使人呕吐#肮脏恶臭#极其可怕#腐臭",
+  "RandomSlightlyPositiveFoodAdjective": "相当好#挺好#可以吃",
+  "ChildTerm_Male": "男孩",
+  "ChildTerm_Female": "女孩",
+  "Pronoun_Male": "他",
+  "Pronoun_Female": "她",
+  "QuestionDialogue_Yes": "是",
+  "QuestionDialogue_No": "否",
+  "GenericPlayerTerm": "农夫",
+  "Possessive_Pronoun_Male": "他的",
+  "Possessive_Pronoun_Female": "她的"
+}

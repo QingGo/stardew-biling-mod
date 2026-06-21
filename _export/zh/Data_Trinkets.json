@@ -1,0 +1,34 @@
+{
+  "MagicHairDye": {
+    "displayName": "魔法发胶",
+    "description": "你的头发闪烁着五彩碎片的所有颜色。"
+  },
+  "FrogEgg": {
+    "displayName": "青蛙蛋",
+    "description": "召唤一只跟随你的饥饿青蛙。"
+  },
+  "MagicQuiver": {
+    "displayName": "魔法箭筒",
+    "description": "每隔 {0} 秒向附近的敌人射出魔法箭，造成 {1}-{2} 点伤害。"
+  },
+  "FairyBox": {
+    "displayName": "仙女盒",
+    "description": "召唤一个跟随你的 {0} 级仙女，战斗时提供治疗。"
+  },
+  "ParrotEgg": {
+    "displayName": "鹦鹉蛋",
+    "description": "召唤一只跟随你的 {0} 级鹦鹉，使得杀怪时有{1}概率掉落金币。"
+  },
+  "IceRod": {
+    "displayName": "寒冰法杖",
+    "description": "每隔 {0} 秒发射一个冰球，将路径上的所有敌人冻结 {1} 秒。"
+  },
+  "IridiumSpur": {
+    "displayName": "黄金马刺",
+    "description": "暴击时，获得 {0} 秒加速。"
+  },
+  "BasiliskPaw": {
+    "displayName": "蜥怪的爪子",
+    "description": "免疫负面效果。"
+  }
+}

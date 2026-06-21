@@ -1,0 +1,146 @@
+{
+  "ForestMagic": {
+    "displayName": "Forest Magic",
+    "description": "You are one with forest magic..."
+  },
+  "DwarvishTranslationGuide": {
+    "displayName": "Dwarvish Translation Guide",
+    "description": "Teaches you dwarvish."
+  },
+  "RustyKey": {
+    "displayName": "Rusty Key",
+    "description": ""
+  },
+  "ClubCard": {
+    "displayName": "Club Card",
+    "description": ""
+  },
+  "SpecialCharm": {
+    "displayName": "Special Charm",
+    "description": ""
+  },
+  "SkullKey": {
+    "displayName": "Skull Key",
+    "description": ""
+  },
+  "MagnifyingGlass": {
+    "displayName": "Magnifying Glass",
+    "description": ""
+  },
+  "DarkTalisman": {
+    "displayName": "Dark Talisman",
+    "description": ""
+  },
+  "MagicInk": {
+    "displayName": "Magic Ink",
+    "description": ""
+  },
+  "BearPaw": {
+    "displayName": "Bear's Knowledge",
+    "description": "Blackberries and Salmonberries are worth 3x the gold."
+  },
+  "SpringOnionMastery": {
+    "displayName": "Spring Onion Mastery",
+    "description": "Spring onions are worth 5x the gold."
+  },
+  "KeyToTheTown": {
+    "displayName": "Key To The Town",
+    "description": "Allows access to all buildings in town, at any time of day."
+  },
+  "Book_PriceCatalogue": {
+    "displayName": "Price Catalogue",
+    "description": "You can now see the value of your items."
+  },
+  "Book_Marlon": {
+    "displayName": "Mapping Cave Systems",
+    "description": "You get a 50% discount on Marlon's item retrieval service."
+  },
+  "Book_Speed": {
+    "displayName": "Way Of The Wind pt. 1",
+    "description": "You run a little bit faster."
+  },
+  "Book_Speed2": {
+    "displayName": "Way Of The Wind pt. 2",
+    "description": "You run a little bit faster."
+  },
+  "Book_Void": {
+    "displayName": "Monster Compendium",
+    "description": "Monsters have a small chance to drop double loot."
+  },
+  "Book_Friendship": {
+    "displayName": "Friendship 101",
+    "description": "You become friends with people a little faster."
+  },
+  "Book_Defense": {
+    "displayName": "Jack Be Nimble, Jack Be Thick",
+    "description": "Gain +1 Defense."
+  },
+  "Book_Woodcutting": {
+    "displayName": "Woody's Secret",
+    "description": "Felled trees have a 5% chance to yield double the wood."
+  },
+  "Book_WildSeeds": {
+    "displayName": "Raccoon Journal",
+    "description": "Weeds have a greater chance to yield mixed seeds."
+  },
+  "Book_Roe": {
+    "displayName": "Jewels Of The Sea",
+    "description": "Fishing treasure chests have a chance to yield roe."
+  },
+  "Book_Bombs": {
+    "displayName": "Dwarvish Safety Manual",
+    "description": "Bombs deal 25% less damage to you."
+  },
+  "Book_Crabbing": {
+    "displayName": "The Art O' Crabbing",
+    "description": "Crab pots have a 25% chance to yield double."
+  },
+  "Book_Trash": {
+    "displayName": "The Alleyway Buffet",
+    "description": "You have a greater chance to find items in the trash."
+  },
+  "Book_Diamonds": {
+    "displayName": "The Diamond Hunter",
+    "description": "All stones have a chance to drop a diamond when mined by hand."
+  },
+  "Book_Mystery": {
+    "displayName": "Book of Mysteries",
+    "description": "You have a slightly greater chance to find Mystery Boxes."
+  },
+  "Book_Horse": {
+    "displayName": "Horse: The Book",
+    "description": "You gain a little extra speed when riding a horse."
+  },
+  "Book_Artifact": {
+    "displayName": "Treasure Appraisal Guide",
+    "description": "You will fetch a better price when selling artifacts."
+  },
+  "Book_Grass": {
+    "displayName": "Ol' Slitherlegs",
+    "description": "You will now run a lot faster through grass and crops."
+  },
+  "Book_AnimalCatalogue": {
+    "displayName": "Animal Catalogue",
+    "description": "You can access Marnie's shop when she's not around."
+  },
+  "Mastery_Farming": {
+    "displayName": "Farming Mastery",
+    "description": "You can now find Golden Animal Crackers, which permanently doubles a farm animal's produce. Doesn't work on pigs."
+  },
+  "Mastery_Fishing": {
+    "displayName": "Fishing Mastery",
+    "description": "You can now encounter Golden Fishing Chests."
+  },
+  "Mastery_Foraging": {
+    "displayName": "Foraging Mastery",
+    "description": "You now find Golden Mystery Boxes, which contain superior items."
+  },
+  "Mastery_Mining": {
+    "displayName": "Mining Mastery",
+    "description": "Gem-bearing rocks now grant twice the gems."
+  },
+  "Mastery_Combat": {
+    "displayName": "Combat Mastery",
+    "description": "Unlocks a new equipment slot for trinkets. Trinkets can be found while adventuring and grant special powers."
+  }
+}

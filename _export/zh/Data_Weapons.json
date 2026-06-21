@@ -1,0 +1,270 @@
+{
+  "0": {
+    "displayName": "生锈的剑",
+    "description": "一把又锈又旧的钝剑。"
+  },
+  "1": {
+    "displayName": "镀银军刀",
+    "description": "镀银以防锈。"
+  },
+  "2": {
+    "displayName": "黑暗剑",
+    "description": "散发着神秘的能量。"
+  },
+  "3": {
+    "displayName": "圣剑",
+    "description": "握在手里，充满正能量。"
+  },
+  "4": {
+    "displayName": "银河剑",
+    "description": "谁与争锋。"
+  },
+  "5": {
+    "displayName": "骨剑",
+    "description": "磨尖的骨头打造的轻剑。"
+  },
+  "6": {
+    "displayName": "铁刃",
+    "description": "很重的阔剑。"
+  },
+  "7": {
+    "displayName": "圣堂之刃",
+    "description": "曾属于一位高尚的圣殿骑士。"
+  },
+  "8": {
+    "displayName": "黑曜石之刃",
+    "description": "这东西锋利无比。"
+  },
+  "9": {
+    "displayName": "熔岩武士刀",
+    "description": "用火山熔岩打造的强大刀刃。"
+  },
+  "10": {
+    "displayName": "双刃大剑",
+    "description": "非常沉重。"
+  },
+  "11": {
+    "displayName": "钢制轻剑",
+    "description": "一把标准的金属刀。"
+  },
+  "12": {
+    "displayName": "木剑",
+    "description": "对于一块木雕来说不错了。"
+  },
+  "13": {
+    "displayName": "昆虫头部",
+    "description": "挥起来很不舒服。"
+  },
+  "14": {
+    "displayName": "海王星大剑",
+    "description": "来自宝石海的传家宝。"
+  },
+  "15": {
+    "displayName": "森林剑",
+    "description": "由森林魔法打造的强力之剑。"
+  },
+  "16": {
+    "displayName": "刻刀",
+    "description": "很轻的小刀。"
+  },
+  "17": {
+    "displayName": "铁制短剑",
+    "description": "一把普通的匕首。"
+  },
+  "18": {
+    "displayName": "飞贼之胫",
+    "description": "身手敏捷、行动隐秘的人首选之武器。"
+  },
+  "19": {
+    "displayName": "暗影匕首",
+    "description": "把刀放到耳旁，能听见千百条灵魂的哀嚎。"
+  },
+  "20": {
+    "displayName": "精灵之刃",
+    "description": "唯有精灵的巧手才能打造出这件物品。"
+  },
+  "21": {
+    "displayName": "水晶匕首",
+    "description": "此刀由纯石英打造。"
+  },
+  "22": {
+    "displayName": "疾风利剑",
+    "description": "轻便的小刀。"
+  },
+  "23": {
+    "displayName": "银河匕首",
+    "description": "你闻所未闻。"
+  },
+  "24": {
+    "displayName": "木棒",
+    "description": "沉重的木，粗糙地打造成棍子的型状。"
+  },
+  "25": {
+    "displayName": "亚历克斯的棒球棍",
+    "description": "亚历克斯赢得大满贯的棒球棍。"
+  },
+  "26": {
+    "displayName": "铅棒",
+    "description": "异常的沉。"
+  },
+  "27": {
+    "displayName": "木锤",
+    "description": "坚固的头部威力强大。对于一把棍棒来说，重量有点轻。"
+  },
+  "28": {
+    "displayName": "巨锤",
+    "description": "超级重的锤子，能够击飞敌人。"
+  },
+  "29": {
+    "displayName": "银河之锤",
+    "description": "用一种你闻所未闻的超轻材料打造而成。"
+  },
+  "30": {
+    "displayName": "山姆的旧吉他",
+    "description": "陈旧落魄。"
+  },
+  "31": {
+    "displayName": "股骨",
+    "description": "一根古老沉重的骨头，覆盖着数个世纪的尘垢。"
+  },
+  "32": {
+    "displayName": "弹弓",
+    "description": "需要石子当弹药。"
+  },
+  "33": {
+    "displayName": "高级弹弓",
+    "description": "需要石子当弹药。"
+  },
+  "34": {
+    "displayName": "银河弹弓",
+    "description": "看上去很强大。"
+  },
+  "35": {
+    "displayName": "艾利欧特的铅笔",
+    "description": "艾利欧特用它来写书。非常尖锐！"
+  },
+  "36": {
+    "displayName": "玛鲁的扳手",
+    "description": "巨大的金属扳手。闻起来很有玛鲁的味道。"
+  },
+  "37": {
+    "displayName": "哈维的锤子",
+    "description": "让人想起哈维的诊所。"
+  },
+  "38": {
+    "displayName": "潘妮的煎锅",
+    "description": "潘妮最爱的煎锅。里面凝固着一些胶状物。"
+  },
+  "39": {
+    "displayName": "莉亚的削木刀",
+    "description": "莉亚用来削木的最爱工具。"
+  },
+  "40": {
+    "displayName": "阿比盖尔的占卜写板",
+    "description": "用大理石木打造而成。"
+  },
+  "41": {
+    "displayName": "塞巴斯蒂安的遗失之锤",
+    "description": "塞巴斯蒂安的中世纪仿制品之一。"
+  },
+  "42": {
+    "displayName": "海莉的烫发棒",
+    "description": "非常烫手，散发着跟海莉的头发一样的味道。"
+  },
+  "43": {
+    "displayName": "海盗剑",
+    "description": "看上去曾经是一位海盗的武器。"
+  },
+  "44": {
+    "displayName": "弯刀",
+    "description": "质量上乘的刀刃。"
+  },
+  "45": {
+    "displayName": "蛇形邪剑",
+    "description": "使用铱合金打造的刀刃。"
+  },
+  "46": {
+    "displayName": "长柄锤",
+    "description": "野蛮人的最佳伙伴。"
+  },
+  "47": {
+    "displayName": "镰刀",
+    "description": "如果你建了一个筒仓，它可以割草以及收获干草。"
+  },
+  "48": {
+    "displayName": "雪怪之牙",
+    "description": "寒冷冻人。"
+  },
+  "49": {
+    "displayName": "细剑",
+    "description": "一把优雅的剑。"
+  },
+  "50": {
+    "displayName": "钢刀",
+    "description": "轻便，威力强大。"
+  },
+  "51": {
+    "displayName": "残破的三叉戟",
+    "description": "来自海洋，依然尖锐。"
+  },
+  "52": {
+    "displayName": "淬火阔剑",
+    "description": "看上去能够抵挡任何东西。"
+  },
+  "53": {
+    "displayName": "金色的镰刀",
+    "description": "它比传统的镰刀更强大。"
+  },
+  "54": {
+    "displayName": "矮人剑",
+    "description": "很古老，但剑锋未曾变钝。"
+  },
+  "55": {
+    "displayName": "矮人锤",
+    "description": "它会发出微弱的嗡嗡声。"
+  },
+  "56": {
+    "displayName": "矮人匕首",
+    "description": "它很古老，但刃锋未曾变钝。"
+  },
+  "57": {
+    "displayName": "龙牙弯刀",
+    "description": "这把刀是用一颗充满魔力的牙齿锻造而成的。"
+  },
+  "58": {
+    "displayName": "龙牙棒",
+    "description": "这根棍子是用一颗充满魔力的牙齿锻造而成的。"
+  },
+  "59": {
+    "displayName": "龙牙小刀",
+    "description": "这把刀是用一颗充满魔力的牙齿锻造而成的。"
+  },
+  "60": {
+    "displayName": "骨化剑",
+    "description": "由骨头形成的巨大而锋利的剑刃。"
+  },
+  "61": {
+    "displayName": "铱针",
+    "description": "其尖锐超出想象，甚至微观到原子层面也是无比尖锐。"
+  },
+  "62": {
+    "displayName": "无限之刃",
+    "description": "银河剑的真实形态。"
+  },
+  "63": {
+    "displayName": "无限之锤",
+    "description": "银河之锤的真实形态。"
+  },
+  "64": {
+    "displayName": "无限匕首",
+    "description": "银河匕首的真实形态。"
+  },
+  "65": {
+    "displayName": "彩虹猫之刃",
+    "description": "来自异界的罕见武器……"
+  },
+  "66": {
+    "displayName": "铱镰刀",
+    "description": "可以收割所有作物，收集干草效果极佳。"
+  }
+}

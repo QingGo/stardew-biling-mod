@@ -1,0 +1,150 @@
+{
+  "Axe": {
+    "displayName": "斧头",
+    "description": "用于砍柴。"
+  },
+  "CopperAxe": {
+    "displayName": "铜斧头",
+    "description": "用于砍柴。"
+  },
+  "SteelAxe": {
+    "displayName": "钢斧头",
+    "description": "用于砍柴。"
+  },
+  "GoldAxe": {
+    "displayName": "金斧头",
+    "description": "用于砍柴。"
+  },
+  "IridiumAxe": {
+    "displayName": "铱斧头",
+    "description": "用于砍柴。"
+  },
+  "BambooPole": {
+    "displayName": "竹鱼竿",
+    "description": "用于在水中捕鱼。"
+  },
+  "TrainingRod": {
+    "displayName": "训练用鱼竿",
+    "description": "它比其他鱼竿容易使用，但只能钓到基础鱼类。"
+  },
+  "FiberglassRod": {
+    "displayName": "玻璃纤维棒",
+    "description": "用于在水中捕鱼。"
+  },
+  "IridiumRod": {
+    "displayName": "铱金鱼竿",
+    "description": "用于在水中捕鱼。"
+  },
+  "AdvancedIridiumRod": {
+    "displayName": "高级铱金鱼竿",
+    "description": "可以在水中钓鱼。最多同时安装两个浮漂。"
+  },
+  "Hoe": {
+    "displayName": "锄头",
+    "description": "用于犁地和耕地。"
+  },
+  "CopperHoe": {
+    "displayName": "铜锄头",
+    "description": "用于犁地和耕地。"
+  },
+  "SteelHoe": {
+    "displayName": "钢锄头",
+    "description": "用于犁地和耕地。"
+  },
+  "GoldHoe": {
+    "displayName": "金锄头",
+    "description": "用于犁地和耕地。"
+  },
+  "IridiumHoe": {
+    "displayName": "铱锄头",
+    "description": "用于犁地和耕地。"
+  },
+  "Lantern": {
+    "displayName": "灯笼",
+    "description": "点亮暗处。"
+  },
+  "MilkPail": {
+    "displayName": "挤奶桶",
+    "description": "给牲畜挤奶。"
+  },
+  "Pan": {
+    "displayName": "铜淘盘",
+    "description": "用来从溪流中收集矿石。"
+  },
+  "SteelPan": {
+    "displayName": "钢淘盘",
+    "description": "可以收集河流中的矿石，产出的矿石比铜淘盘更多、品质更好。有小概率立即引出另一个淘金地点。"
+  },
+  "GoldPan": {
+    "displayName": "金淘盘",
+    "description": "可以收集河流中的矿石，产出的矿石比钢淘盘更多、品质更好。有小概率立即引出另一个淘金地点。"
+  },
+  "IridiumPan": {
+    "displayName": "铱淘盘",
+    "description": "可以收集河流中的矿石，产出的矿石最多、品质最好。有一定概率立即引出另一个淘金地点。"
+  },
+  "Pickaxe": {
+    "displayName": "十字镐",
+    "description": "用来敲碎石头。"
+  },
+  "CopperPickaxe": {
+    "displayName": "铜十字镐",
+    "description": "用来敲碎石头。"
+  },
+  "SteelPickaxe": {
+    "displayName": "钢十字镐",
+    "description": "用来敲碎石头。"
+  },
+  "GoldPickaxe": {
+    "displayName": "金十字镐",
+    "description": "用来敲碎石头。"
+  },
+  "IridiumPickaxe": {
+    "displayName": "铱十字镐",
+    "description": "用来敲碎石头。"
+  },
+  "ReturnScepter": {
+    "displayName": "回程魔杖",
+    "description": "金光闪闪的手柄中蕴含着巨大的原始魔力。手持这个魔杖指向天空就可以随时回家。"
+  },
+  "Shears": {
+    "displayName": "剪刀",
+    "description": "用这个来从羊身上剪毛。"
+  },
+  "WateringCan": {
+    "displayName": "喷壶",
+    "description": "用于灌溉作物。可以在任意水源重新装满。"
+  },
+  "CopperWateringCan": {
+    "displayName": "铜喷壶",
+    "description": "用于灌溉作物。可以在任意水源重新装满。"
+  },
+  "SteelWateringCan": {
+    "displayName": "钢喷壶",
+    "description": "用于灌溉作物。可以在任意水源重新装满。"
+  },
+  "GoldWateringCan": {
+    "displayName": "金喷壶",
+    "description": "用于灌溉作物。可以在任意水源重新装满。"
+  },
+  "IridiumWateringCan": {
+    "displayName": "铱喷壶",
+    "description": "用于灌溉作物。可以在任意水源重新装满。"
+  },
+  "CopperTrashCan": {
+    "displayName": "铜垃圾桶",
+    "description": "丢弃物品时，你能回收物品价值的 15%。"
+  },
+  "SteelTrashCan": {
+    "displayName": "钢垃圾桶",
+    "description": "丢弃物品时，你能回收物品价值的 30%。"
+  },
+  "GoldTrashCan": {
+    "displayName": "金垃圾桶",
+    "description": "丢弃物品时，你能回收物品价值的 45%。"
+  },
+  "IridiumTrashCan": {
+    "displayName": "铱垃圾桶",
+    "description": "丢弃物品时，你能回收物品价值的 60%。"
+  }
+}

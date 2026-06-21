@@ -1,0 +1,490 @@
+{
+  "0": {
+    "displayName": "牛仔帽",
+    "description": "皮革虽残旧而且裂开了，但依然柔软。虽然味道不好闻。"
+  },
+  "1": {
+    "displayName": "圆顶礼帽",
+    "description": "由柔滑的毛毡制成。"
+  },
+  "2": {
+    "displayName": "大礼帽",
+    "description": "绅士的经典。"
+  },
+  "3": {
+    "displayName": "墨西哥帽",
+    "description": "节日性的装饰草帽。"
+  },
+  "4": {
+    "displayName": "草帽",
+    "description": "轻便凉爽的帽子，农夫最爱。"
+  },
+  "5": {
+    "displayName": "大檐帽",
+    "description": "看起来是位邮差或者警察的帽子。无论如何，它仍然轻软，味道不臭。"
+  },
+  "6": {
+    "displayName": "蓝色软帽",
+    "description": "这顶草原之帽让人回忆起简简单单的旧时光。"
+  },
+  "7": {
+    "displayName": "紫红小帽",
+    "description": "看上去不错。"
+  },
+  "8": {
+    "displayName": "骷髅面具",
+    "description": "红红的眼睛散发着神秘的亮光。"
+  },
+  "9": {
+    "displayName": "哥布林面具",
+    "description": "此面具能够吓死左邻右舍。为了效果，耳朵接合处是用橡胶做的。"
+  },
+  "10": {
+    "displayName": "小鸡面具",
+    "description": "戴上它，你肯定会被笑死。"
+  },
+  "11": {
+    "displayName": "护耳",
+    "description": "让你的耳朵暖烘烘的。装饰用的是城堡村的手工天鹅绒。"
+  },
+  "12": {
+    "displayName": "精美蝴蝶结",
+    "description": "仔细一看，小小的粉色珍珠在闪闪发光。"
+  },
+  "13": {
+    "displayName": "热带风小发卡",
+    "description": "形状像棕榈树。"
+  },
+  "14": {
+    "displayName": "蝴蝶结",
+    "description": "非常柔软。"
+  },
+  "15": {
+    "displayName": "猎人帽",
+    "description": "动物毛线即使在森林深处都能保暖。"
+  },
+  "16": {
+    "displayName": "司机帽",
+    "description": "帽后带网孔以通风。"
+  },
+  "17": {
+    "displayName": "水手帽",
+    "description": "新鲜又古板。"
+  },
+  "18": {
+    "displayName": "老伙计帽",
+    "description": "一顶软塌塌的大礼帽，有一张皱巴巴的账单。看来是一顶有故事的帽子。"
+  },
+  "19": {
+    "displayName": "软呢帽",
+    "description": "城里人的标准。"
+  },
+  "20": {
+    "displayName": "凉帽",
+    "description": "褪色了很多，但曾经是鲜艳的蓝色。"
+  },
+  "21": {
+    "displayName": "幸运蝴蝶结",
+    "description": "中间是纯金打造的。"
+  },
+  "22": {
+    "displayName": "波尔卡蝴蝶结",
+    "description": "戴上她回头率一定超高。"
+  },
+  "23": {
+    "displayName": "土地神帽",
+    "description": "土地神的脑袋很大。"
+  },
+  "24": {
+    "displayName": "眼罩",
+    "description": "难以看出是的还是服装店买来的。"
+  },
+  "25": {
+    "displayName": "圣诞帽",
+    "description": "圣诞来了。"
+  },
+  "26": {
+    "displayName": "三重冕",
+    "description": "一粒巨大的紫水晶，旁边围绕着黄金。"
+  },
+  "27": {
+    "displayName": "安全帽",
+    "description": "保护你的脑袋。"
+  },
+  "28": {
+    "displayName": "防雨帽",
+    "description": "让水手在暴风雨中不会淋湿。"
+  },
+  "29": {
+    "displayName": "雏菊发卡",
+    "description": "新鲜的春天发卡，用来戴在头上。"
+  },
+  "30": {
+    "displayName": "西瓜发卡",
+    "description": "颜色搭配是受到夏日大家最爱的水果所启发。"
+  },
+  "31": {
+    "displayName": "老鼠耳朵",
+    "description": "使用合成纤维打造。"
+  },
+  "32": {
+    "displayName": "猫耳",
+    "description": "包含猫须。"
+  },
+  "33": {
+    "displayName": "牛仔女郎帽",
+    "description": "镶嵌着钻石。"
+  },
+  "34": {
+    "displayName": "专业牛仔帽",
+    "description": "牛奶专家所戴。"
+  },
+  "35": {
+    "displayName": "射手帽",
+    "description": "无论你是否弓箭手，都适合佩戴。"
+  },
+  "36": {
+    "displayName": "熊猫帽子（TGP 玩家专属）",
+    "description": "一顶萌萌的熊猫帽子，这是 Eric 给 TGP 玩家的礼物。"
+  },
+  "37": {
+    "displayName": "蓝色牛仔帽",
+    "description": "冷蓝色的牛仔布牛仔帽。"
+  },
+  "38": {
+    "displayName": "红色牛仔帽",
+    "description": "醒目的红绒面革牛仔帽。"
+  },
+  "39": {
+    "displayName": "锥帽",
+    "description": "来自遥远国度且令人感到好奇的帽子。"
+  },
+  "40": {
+    "displayName": "活的帽子",
+    "description": "它从你的头皮吸收水分。不需要浇水！"
+  },
+  "41": {
+    "displayName": "艾米丽的魔法帽",
+    "description": "艾米丽爱心打造。100% 有机！"
+  },
+  "42": {
+    "displayName": "蘑菇帽",
+    "description": "闻起来有泥土味。"
+  },
+  "43": {
+    "displayName": "恐龙帽",
+    "description": "一种看起来像小恐龙的帽子。"
+  },
+  "44": {
+    "displayName": "图腾面具",
+    "description": "别担心，它不会扭曲你的脸……"
+  },
+  "45": {
+    "displayName": "标志帽",
+    "description": "前面有标志的红色帽子。"
+  },
+  "46": {
+    "displayName": "可穿戴的矮人头盔",
+    "description": "稍大号的矮人所戴头盔，可供人类穿戴。"
+  },
+  "47": {
+    "displayName": "时尚帽",
+    "description": "边缘有羽毛的时尚帽子。"
+  },
+  "48": {
+    "displayName": "南瓜面具",
+    "description": "这东西以前肯定是个非常大的南瓜……"
+  },
+  "49": {
+    "displayName": "骨发夹",
+    "description": "一种史前版本的发夹。"
+  },
+  "50": {
+    "displayName": "骑士头盔",
+    "description": "看起来跟真品一模一样！"
+  },
+  "51": {
+    "displayName": "护卫头盔",
+    "description": "面部裸露以增加通气性。"
+  },
+  "52": {
+    "displayName": "斑点头巾",
+    "description": "系在头上的红色圆点头巾。"
+  },
+  "53": {
+    "displayName": "毛线帽",
+    "description": "一种紧贴脑部的暖帽子。"
+  },
+  "54": {
+    "displayName": "宽松毛线帽",
+    "description": "一种宽松款式的暖帽子。"
+  },
+  "55": {
+    "displayName": "钓鱼帽",
+    "description": "宽阔的帽檐让您在河岸钓鱼时保持阴凉。"
+  },
+  "56": {
+    "displayName": "水滴鱼面具",
+    "description": "和真的一样柔软吸水！"
+  },
+  "57": {
+    "displayName": "派对帽",
+    "description": "一种让任何庆祝活动都更有趣的傻乎乎的红帽子。"
+  },
+  "58": {
+    "displayName": "派对帽",
+    "description": "一种让任何庆祝活动都更有趣的傻乎乎的蓝帽子。"
+  },
+  "59": {
+    "displayName": "派对帽",
+    "description": "一种让任何庆祝活动都更有趣的傻乎乎的绿帽子。"
+  },
+  "60": {
+    "displayName": "神秘帽",
+    "description": "巫师戴的牛仔帽。"
+  },
+  "61": {
+    "displayName": "厨师帽",
+    "description": "厨师长戴的传统帽子。"
+  },
+  "62": {
+    "displayName": "海盗帽",
+    "description": "船长帽，前部装饰有一个可怕的头骨。"
+  },
+  "63": {
+    "displayName": "平顶帽",
+    "description": "曾经被认为非常时髦的旧式帽子。"
+  },
+  "64": {
+    "displayName": "优雅头巾",
+    "description": "带金色镶边的精致黑色丝绸头巾。"
+  },
+  "65": {
+    "displayName": "白色头巾",
+    "description": "带蓝色镶边的精致白色丝绸头巾。"
+  },
+  "66": {
+    "displayName": "垃圾帽",
+    "description": "垃圾桶盖“升级改造”变为一顶帽子……"
+  },
+  "67": {
+    "displayName": "金色面具",
+    "description": "卡利科沙漠遗物的忠实再现！"
+  },
+  "68": {
+    "displayName": "螺旋桨帽",
+    "description": "一种顶部有螺旋桨的傻瓜帽。"
+  },
+  "69": {
+    "displayName": "新娘面纱",
+    "description": "新娘的传统头饰。"
+  },
+  "70": {
+    "displayName": "女巫帽",
+    "description": "受女巫欢迎的尖头帽。"
+  },
+  "71": {
+    "displayName": "淘盘",
+    "description": "你把淘盘扣在头上了……"
+  },
+  "72": {
+    "displayName": "绿色头巾",
+    "description": "绿色的丝织头巾，前面有一个金色装饰。"
+  },
+  "73": {
+    "displayName": "魔法牛仔帽",
+    "description": "有五彩能量而微微发光。"
+  },
+  "74": {
+    "displayName": "魔法头巾",
+    "description": "有五彩能量而微微发光。"
+  },
+  "75": {
+    "displayName": "金色头盔",
+    "description": "这是金色椰子的一半。"
+  },
+  "76": {
+    "displayName": "豪华海盗帽",
+    "description": "只有最臭名昭著的海盗才配得上它。"
+  },
+  "77": {
+    "displayName": "粉色蝴蝶结",
+    "description": "这个巨大的蝴蝶结超有存在感！"
+  },
+  "78": {
+    "displayName": "青蛙帽",
+    "description": "一个住在你头上的黏糊糊的朋友。"
+  },
+  "79": {
+    "displayName": "小帽子",
+    "description": "这款小帽子是流线型的款式。"
+  },
+  "80": {
+    "displayName": "蓝鸟面具",
+    "description": "戴上之后看起来就像你最喜欢的姜岛商人。"
+  },
+  "81": {
+    "displayName": "豪华牛仔帽",
+    "description": "外形更加夸张的牛仔帽。"
+  },
+  "82": {
+    "displayName": "齐先生的帽子",
+    "description": "齐先生标志性的帽子的仿制品。"
+  },
+  "83": {
+    "displayName": "黑色牛仔帽",
+    "description": "时髦黑色款式的牛仔帽。"
+  },
+  "84": {
+    "displayName": "防辐射护目镜",
+    "description": "实际上并不能防辐射。"
+  },
+  "85": {
+    "displayName": "侠客帽",
+    "description": "经典的侠客打扮。"
+  },
+  "86": {
+    "displayName": "齐氏面具",
+    "description": "???"
+  },
+  "87": {
+    "displayName": "星星头盔",
+    "description": "一顶红帽子，上面有星星。"
+  },
+  "88": {
+    "displayName": "太阳镜",
+    "description": "让你看起来很悠闲。"
+  },
+  "89": {
+    "displayName": "护目镜",
+    "description": "让你看起来做足了安全保护。"
+  },
+  "90": {
+    "displayName": "采集者帽",
+    "description": "这是采集者的快乐心情。"
+  },
+  "91": {
+    "displayName": "老虎帽",
+    "description": "让你看起来像只漂亮的老虎。"
+  },
+  "92": {
+    "displayName": "???",
+    "description": "???"
+  },
+  "93": {
+    "displayName": "战士头盔",
+    "description": "拿鸵鸟蛋壳充当头盔。"
+  },
+  "AbigailsBow": {
+    "displayName": "阿比盖尔的蝴蝶结",
+    "description": "阿比的同款蝴蝶结。"
+  },
+  "TricornHat": {
+    "displayName": "三角帽",
+    "description": "海军军官的传统帽子。"
+  },
+  "JojaCap": {
+    "displayName": "Joja 棒球帽",
+    "description": "Joja 官方棒球帽，100% 涤纶面料。"
+  },
+  "LaurelWreathCrown": {
+    "displayName": "月桂花冠",
+    "description": "月桂树叶编织而成的头冠。"
+  },
+  "GilsHat": {
+    "displayName": "吉尔的帽子",
+    "description": "吉尔的同款帽子。"
+  },
+  "BlueBow": {
+    "displayName": "蓝色蝴蝶结",
+    "description": "这个巨大的蝴蝶结特别显眼！"
+  },
+  "DarkVelvetBow": {
+    "displayName": "黑丝绒蝴蝶结",
+    "description": "又大又软的蝴蝶结，材质是黑丝绒。"
+  },
+  "MummyMask": {
+    "displayName": "木乃伊头套",
+    "description": "巨大的木乃伊头套……很吓人！"
+  },
+  "BucketHat": {
+    "displayName": "渔夫帽",
+    "description": "款式简洁的窄檐帽子。"
+  },
+  "SquidHat": {
+    "displayName": "鱿鱼帽",
+    "description": "是时候在头上顶一条鱿鱼了。"
+  },
+  "SportsCap": {
+    "displayName": "棒球帽",
+    "description": "帽子上有一支老牌球队的标志。"
+  },
+  "RedFez": {
+    "displayName": "红色菲斯帽",
+    "description": "这款独特的帽子是被商人的猪带火的。"
+  },
+  "RaccoonHat": {
+    "displayName": "浣熊帽",
+    "description": "拓荒时代的经典帽子。"
+  },
+  "SteelPanHat": {
+    "displayName": "钢淘盘",
+    "description": "你把钢淘盘扣在了脑袋上……"
+  },
+  "GoldPanHat": {
+    "displayName": "金淘盘",
+    "description": "你把金淘盘扣在了脑袋上……"
+  },
+  "IridiumPanHat": {
+    "displayName": "铱淘盘",
+    "description": "你把铱淘盘扣在了脑袋上……"
+  },
+  "MysteryHat": {
+    "displayName": "盲盒帽",
+    "description": "用开过的盲盒包装制成的。"
+  },
+  "DarkBallcap": {
+    "displayName": "黑色棒球帽",
+    "description": "戴在头上，大小刚好合适。"
+  },
+  "LeprechuanHat": {
+    "displayName": "小矮妖帽子",
+    "description": "之前戴这顶帽子的小矮妖脑袋肯定特别大。"
+  },
+  "JunimoHat": {
+    "displayName": "祝尼魔帽子",
+    "description": "纪念我们的小伙伴……"
+  },
+  "PaperHat": {
+    "displayName": "纸帽子",
+    "description": "用特殊的纸折出来的，雨天也不会破掉。"
+  },
+  "PageboyCap": {
+    "displayName": "报童帽",
+    "description": "戴上它就会莫名地想去卖报纸。"
+  },
+  "JesterHat": {
+    "displayName": "小丑帽",
+    "description": "想当小丑就勇敢说出来。"
+  },
+  "BlueRibbon": {
+    "displayName": "蓝丝带",
+    "description": "系在脑袋后面的漂亮丝带。"
+  },
+  "GovernorsHat": {
+    "displayName": "州长帽",
+    "description": "州长同款的标志性帽子。"
+  },
+  "WhiteBow": {
+    "displayName": "白色蝴蝶结",
+    "description": "洁白的蝴蝶结。"
+  },
+  "SpaceHelmet": {
+    "displayName": "太空头盔",
+    "description": "警告：这个头盔实际上还没有在外太空测试过。"
+  },
+  "InfinityCrown": {
+    "displayName": "无限之冠",
+    "description": "由一种闻所未闻的奇异金属打造而成。"
+  }
+}

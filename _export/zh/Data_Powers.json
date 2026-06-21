@@ -1,0 +1,146 @@
+{
+  "ForestMagic": {
+    "displayName": "森林魔法",
+    "description": "你拥有森林的魔法……"
+  },
+  "DwarvishTranslationGuide": {
+    "displayName": "矮人语教程",
+    "description": "教你矮人语。"
+  },
+  "RustyKey": {
+    "displayName": "生锈的钥匙",
+    "description": ""
+  },
+  "ClubCard": {
+    "displayName": "会员卡",
+    "description": ""
+  },
+  "SpecialCharm": {
+    "displayName": "特殊的魅力",
+    "description": ""
+  },
+  "SkullKey": {
+    "displayName": "头骨钥匙",
+    "description": ""
+  },
+  "MagnifyingGlass": {
+    "displayName": "放大镜",
+    "description": ""
+  },
+  "DarkTalisman": {
+    "displayName": "黑暗护身符",
+    "description": ""
+  },
+  "MagicInk": {
+    "displayName": "魔法墨水",
+    "description": ""
+  },
+  "BearPaw": {
+    "displayName": "熊的知识",
+    "description": "黑莓和美洲大树莓的售价提高到了原先的 3 倍。"
+  },
+  "SpringOnionMastery": {
+    "displayName": "青葱技术",
+    "description": "带叶洋葱的售价提高到了原先的 5 倍。"
+  },
+  "KeyToTheTown": {
+    "displayName": "小镇钥匙",
+    "description": "用它可以随时进入镇上的所有建筑。"
+  },
+  "Book_PriceCatalogue": {
+    "displayName": "价格目录",
+    "description": "你可以看到物品的价值了。"
+  },
+  "Book_Marlon": {
+    "displayName": "洞穴地图绘制法",
+    "description": "马龙取回物品时费用给你打五折。"
+  },
+  "Book_Speed": {
+    "displayName": "风之道 第一部分",
+    "description": "你的跑步速度变快了一点。"
+  },
+  "Book_Speed2": {
+    "displayName": "风之道 第二部分",
+    "description": "你的跑步速度变快了一点。"
+  },
+  "Book_Void": {
+    "displayName": "怪物图鉴",
+    "description": "怪物有小概率掉落双倍战利品。"
+  },
+  "Book_Friendship": {
+    "displayName": "交友导论",
+    "description": "你与人增进友谊的速度变快了一点。"
+  },
+  "Book_Defense": {
+    "displayName": "铜墙铁壁",
+    "description": "获得 +1 防御。"
+  },
+  "Book_Woodcutting": {
+    "displayName": "伐木秘事",
+    "description": "砍倒的树有 5% 的几率掉落双倍木头。"
+  },
+  "Book_WildSeeds": {
+    "displayName": "浣熊日记",
+    "description": "杂草有更大的几率掉落混合种子。"
+  },
+  "Book_Roe": {
+    "displayName": "海之宝石",
+    "description": "钓鱼宝箱有几率开出鱼籽。"
+  },
+  "Book_Bombs": {
+    "displayName": "矮人安全手册",
+    "description": "炸弹对你造成的伤害减少 25%。"
+  },
+  "Book_Crabbing": {
+    "displayName": "捕蟹秘籍",
+    "description": "蟹笼有 25% 的几率产出双倍。"
+  },
+  "Book_Trash": {
+    "displayName": "小巷自助餐",
+    "description": "在垃圾桶里找到物品的几率更高。"
+  },
+  "Book_Diamonds": {
+    "displayName": "钻石猎人",
+    "description": "手动凿开石头时有几率掉落钻石。"
+  },
+  "Book_Mystery": {
+    "displayName": "谜之书",
+    "description": "你找到谜之盒的几率稍微变高了一些。"
+  },
+  "Book_Horse": {
+    "displayName": "马术秘籍",
+    "description": "骑马速度稍微加快。"
+  },
+  "Book_Artifact": {
+    "displayName": "古代珍宝鉴定指南",
+    "description": "出售古物时价格更高。"
+  },
+  "Book_Grass": {
+    "displayName": "草中窜",
+    "description": "在草丛和庄稼中的移动速度大幅增加。"
+  },
+  "Book_AnimalCatalogue": {
+    "displayName": "动物目录",
+    "description": "玛妮不在的时候也可以进入她的商店。"
+  },
+  "Mastery_Farming": {
+    "displayName": "耕种精通",
+    "description": "你可以找到金色动物饼干了，它可以使一只农场动物的产量永久翻倍，对猪无效。"
+  },
+  "Mastery_Fishing": {
+    "displayName": "钓鱼精通",
+    "description": "你可以遇到金色钓鱼宝箱了。"
+  },
+  "Mastery_Foraging": {
+    "displayName": "采集精通",
+    "description": "你可以找到金色谜之盒了，里面装有优质物品。"
+  },
+  "Mastery_Mining": {
+    "displayName": "采矿精通",
+    "description": "产宝石的岩石产量翻倍了。"
+  },
+  "Mastery_Combat": {
+    "displayName": "战斗精通",
+    "description": "解锁了一个新的饰品装备栏。饰品会赋予特殊能力，在探险时可以找到。"
+  }
+}

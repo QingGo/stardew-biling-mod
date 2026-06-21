@@ -1,0 +1,150 @@
+{
+  "Axe": {
+    "displayName": "Axe",
+    "description": "Used to chop wood."
+  },
+  "CopperAxe": {
+    "displayName": "Copper Axe",
+    "description": "Used to chop wood."
+  },
+  "SteelAxe": {
+    "displayName": "Steel Axe",
+    "description": "Used to chop wood."
+  },
+  "GoldAxe": {
+    "displayName": "Gold Axe",
+    "description": "Used to chop wood."
+  },
+  "IridiumAxe": {
+    "displayName": "Iridium Axe",
+    "description": "Used to chop wood."
+  },
+  "BambooPole": {
+    "displayName": "Bamboo Pole",
+    "description": "Use in the water to catch fish."
+  },
+  "TrainingRod": {
+    "displayName": "Training Rod",
+    "description": "It's a lot easier to use than other rods, but can only catch basic fish."
+  },
+  "FiberglassRod": {
+    "displayName": "Fiberglass Rod",
+    "description": "Use in the water to catch fish."
+  },
+  "IridiumRod": {
+    "displayName": "Iridium Rod",
+    "description": "Use in the water to catch fish."
+  },
+  "AdvancedIridiumRod": {
+    "displayName": "Advanced Iridium Rod",
+    "description": "Use in the water to catch fish. Up to two bobbers can be attached at once."
+  },
+  "Hoe": {
+    "displayName": "Hoe",
+    "description": "Used to dig and till soil."
+  },
+  "CopperHoe": {
+    "displayName": "Copper Hoe",
+    "description": "Used to dig and till soil."
+  },
+  "SteelHoe": {
+    "displayName": "Steel Hoe",
+    "description": "Used to dig and till soil."
+  },
+  "GoldHoe": {
+    "displayName": "Gold Hoe",
+    "description": "Used to dig and till soil."
+  },
+  "IridiumHoe": {
+    "displayName": "Iridium Hoe",
+    "description": "Used to dig and till soil."
+  },
+  "Lantern": {
+    "displayName": "Lantern",
+    "description": "Lights up dark places."
+  },
+  "MilkPail": {
+    "displayName": "Milk Pail",
+    "description": "Gather milk from your animals."
+  },
+  "Pan": {
+    "displayName": "Copper Pan",
+    "description": "Use to gather ore from streams."
+  },
+  "SteelPan": {
+    "displayName": "Steel Pan",
+    "description": "Use to gather ore from streams. Has bigger and better yields than a copper pan. It also has a small chance to immediately cause another panning spot to appear."
+  },
+  "GoldPan": {
+    "displayName": "Gold Pan",
+    "description": "Use to gather ore from streams. Has bigger and better yields than a steel pan. It also has a small chance to immediately cause another panning spot to appear."
+  },
+  "IridiumPan": {
+    "displayName": "Iridium Pan",
+    "description": "Use to gather ore from streams. Has the best yields of any pan. It also has a chance to immediately cause another panning spot to appear."
+  },
+  "Pickaxe": {
+    "displayName": "Pickaxe",
+    "description": "Used to break stones."
+  },
+  "CopperPickaxe": {
+    "displayName": "Copper Pickaxe",
+    "description": "Used to break stones."
+  },
+  "SteelPickaxe": {
+    "displayName": "Steel Pickaxe",
+    "description": "Used to break stones."
+  },
+  "GoldPickaxe": {
+    "displayName": "Gold Pickaxe",
+    "description": "Used to break stones."
+  },
+  "IridiumPickaxe": {
+    "displayName": "Iridium Pickaxe",
+    "description": "Used to break stones."
+  },
+  "ReturnScepter": {
+    "displayName": "Return Scepter",
+    "description": "The golden handle quivers with raw potential. Hold this scepter to the sky and return home at will."
+  },
+  "Shears": {
+    "displayName": "Shears",
+    "description": "Use this to collect wool from sheep."
+  },
+  "WateringCan": {
+    "displayName": "Watering Can",
+    "description": "Used to water crops. It can be refilled at any water source."
+  },
+  "CopperWateringCan": {
+    "displayName": "Copper Watering Can",
+    "description": "Used to water crops. It can be refilled at any water source."
+  },
+  "SteelWateringCan": {
+    "displayName": "Steel Watering Can",
+    "description": "Used to water crops. It can be refilled at any water source."
+  },
+  "GoldWateringCan": {
+    "displayName": "Gold Watering Can",
+    "description": "Used to water crops. It can be refilled at any water source."
+  },
+  "IridiumWateringCan": {
+    "displayName": "Iridium Watering Can",
+    "description": "Used to water crops. It can be refilled at any water source."
+  },
+  "CopperTrashCan": {
+    "displayName": "Copper Trash Can",
+    "description": "When trashing an item, you reclaim 15% of the value."
+  },
+  "SteelTrashCan": {
+    "displayName": "Steel Trash Can",
+    "description": "When trashing an item, you reclaim 30% of the value."
+  },
+  "GoldTrashCan": {
+    "displayName": "Gold Trash Can",
+    "description": "When trashing an item, you reclaim 45% of the value."
+  },
+  "IridiumTrashCan": {
+    "displayName": "Iridium Trash Can",
+    "description": "When trashing an item, you reclaim 60% of the value."
+  }
+}

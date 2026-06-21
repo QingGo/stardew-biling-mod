@@ -1,0 +1,34 @@
+{
+  "MagicHairDye": {
+    "displayName": "Magic Hair Gel",
+    "description": "Your hair shimmers with all the colors of a prismatic shard."
+  },
+  "FrogEgg": {
+    "displayName": "Frog Egg",
+    "description": "Summons a hungry frog companion."
+  },
+  "MagicQuiver": {
+    "displayName": "Magic Quiver",
+    "description": "Shoots a magic arrow at nearby enemies every {0} seconds, dealing {1}-{2} damage."
+  },
+  "FairyBox": {
+    "displayName": "Fairy Box",
+    "description": "Summons a level {0} fairy companion that heals you in combat situations."
+  },
+  "ParrotEgg": {
+    "displayName": "Parrot Egg",
+    "description": "Summons a level {0} parrot companion, who grants you a {1} chance to find gold coins when slaying monsters."
+  },
+  "IceRod": {
+    "displayName": "Ice Rod",
+    "description": "Shoots an orb of ice every {0} seconds, freezing any enemies in its path for {1} seconds."
+  },
+  "IridiumSpur": {
+    "displayName": "Golden Spur",
+    "description": "Critical strikes give you a speed boost for {0} seconds."
+  },
+  "BasiliskPaw": {
+    "displayName": "Basilisk Paw",
+    "description": "You are immune to debuffs."
+  }
+}

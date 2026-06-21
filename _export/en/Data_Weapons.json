@@ -1,0 +1,270 @@
+{
+  "0": {
+    "displayName": "Rusty Sword",
+    "description": "A rusty, dull old sword."
+  },
+  "1": {
+    "displayName": "Silver Saber",
+    "description": "Plated with silver to deter rust."
+  },
+  "2": {
+    "displayName": "Dark Sword",
+    "description": "It's glowing with vampire energy."
+  },
+  "3": {
+    "displayName": "Holy Blade",
+    "description": "It feels hopeful to wield."
+  },
+  "4": {
+    "displayName": "Galaxy Sword",
+    "description": "It's unlike anything you've ever seen."
+  },
+  "5": {
+    "displayName": "Bone Sword",
+    "description": "A very light piece of sharpened bone."
+  },
+  "6": {
+    "displayName": "Iron Edge",
+    "description": "A heavy broadsword."
+  },
+  "7": {
+    "displayName": "Templar's Blade",
+    "description": "It once belonged to an honorable knight."
+  },
+  "8": {
+    "displayName": "Obsidian Edge",
+    "description": "It's incredibly sharp."
+  },
+  "9": {
+    "displayName": "Lava Katana",
+    "description": "A powerful blade forged in a pool of churning lava."
+  },
+  "10": {
+    "displayName": "Claymore",
+    "description": "It's really heavy."
+  },
+  "11": {
+    "displayName": "Steel Smallsword",
+    "description": "A standard metal blade."
+  },
+  "12": {
+    "displayName": "Wooden Blade",
+    "description": "Not bad for a piece of carved wood."
+  },
+  "13": {
+    "displayName": "Insect Head",
+    "description": "Not very pleasant to wield."
+  },
+  "14": {
+    "displayName": "Neptune's Glaive",
+    "description": "An heirloom from beyond the Gem Sea."
+  },
+  "15": {
+    "displayName": "Forest Sword",
+    "description": "Made powerful by forest magic."
+  },
+  "16": {
+    "displayName": "Carving Knife",
+    "description": "A small, light blade."
+  },
+  "17": {
+    "displayName": "Iron Dirk",
+    "description": "A common dagger."
+  },
+  "18": {
+    "displayName": "Burglar's Shank",
+    "description": "A weapon of choice for the swift and silent."
+  },
+  "19": {
+    "displayName": "Shadow Dagger",
+    "description": "When you hold the blade to your ear you can hear 1,000 souls shrieking."
+  },
+  "20": {
+    "displayName": "Elf Blade",
+    "description": "Only the nimble hands of an elf could craft this."
+  },
+  "21": {
+    "displayName": "Crystal Dagger",
+    "description": "The blade is made of purified quartz."
+  },
+  "22": {
+    "displayName": "Wind Spire",
+    "description": "A swift little blade."
+  },
+  "23": {
+    "displayName": "Galaxy Dagger",
+    "description": "It's unlike anything you've seen."
+  },
+  "24": {
+    "displayName": "Wood Club",
+    "description": "A solid piece of wood, crudely chiseled into a club shape."
+  },
+  "25": {
+    "displayName": "Alex's Bat",
+    "description": "The sweet spot is dented from Alex's famous Grand Slam."
+  },
+  "26": {
+    "displayName": "Lead Rod",
+    "description": "It's incredibly heavy."
+  },
+  "27": {
+    "displayName": "Wood Mallet",
+    "description": "The solid head packs a punch. Relatively light for a club."
+  },
+  "28": {
+    "displayName": "The Slammer",
+    "description": "An extremely heavy gavel that'll send foes flying."
+  },
+  "29": {
+    "displayName": "Galaxy Hammer",
+    "description": "It's made from an ultra-light material you've never seen before."
+  },
+  "30": {
+    "displayName": "Sam's Old Guitar",
+    "description": "It's seen better days."
+  },
+  "31": {
+    "displayName": "Femur",
+    "description": "An old, heavy bone caked in centuries of grime."
+  },
+  "32": {
+    "displayName": "Slingshot",
+    "description": "Requires stones for ammo."
+  },
+  "33": {
+    "displayName": "Master Slingshot",
+    "description": "Requires stones for ammo."
+  },
+  "34": {
+    "displayName": "Galaxy Slingshot",
+    "description": "It looks really powerful."
+  },
+  "35": {
+    "displayName": "Elliott's Pencil",
+    "description": "Elliott used this to write his book. It's sharp!"
+  },
+  "36": {
+    "displayName": "Maru's Wrench",
+    "description": "A big, metal wrench. It smells like Maru."
+  },
+  "37": {
+    "displayName": "Harvey's Mallet",
+    "description": "It brings back memories of Harvey's clinic."
+  },
+  "38": {
+    "displayName": "Penny's Fryer",
+    "description": "Penny's favorite frying pan. There's some rubbery gunk stuck to the inside."
+  },
+  "39": {
+    "displayName": "Leah's Whittler",
+    "description": "Leah's favorite tool for shaping driftwood."
+  },
+  "40": {
+    "displayName": "Abby's Planchette",
+    "description": "It's made from fine marblewood."
+  },
+  "41": {
+    "displayName": "Seb's Lost Mace",
+    "description": "One of Sebastian's medieval replicas."
+  },
+  "42": {
+    "displayName": "Haley's Iron",
+    "description": "It's searing hot and smells like Haley's hair."
+  },
+  "43": {
+    "displayName": "Pirate's Sword",
+    "description": "It looks like a pirate owned this once."
+  },
+  "44": {
+    "displayName": "Cutlass",
+    "description": "A finely crafted blade."
+  },
+  "45": {
+    "displayName": "Wicked Kris",
+    "description": "The blade is made of an iridium alloy."
+  },
+  "46": {
+    "displayName": "Kudgel",
+    "description": "A brute's companion."
+  },
+  "47": {
+    "displayName": "Scythe",
+    "description": "It can cut grass into hay, if you've built a silo."
+  },
+  "48": {
+    "displayName": "Yeti Tooth",
+    "description": "It's icy cold to the touch."
+  },
+  "49": {
+    "displayName": "Rapier",
+    "description": "An elegant blade."
+  },
+  "50": {
+    "displayName": "Steel Falchion",
+    "description": "Light and powerful."
+  },
+  "51": {
+    "displayName": "Broken Trident",
+    "description": "It came from the sea, but it's still sharp."
+  },
+  "52": {
+    "displayName": "Tempered Broadsword",
+    "description": "It looks like it could withstand anything."
+  },
+  "53": {
+    "displayName": "Golden Scythe",
+    "description": "It's more powerful than a normal scythe."
+  },
+  "54": {
+    "displayName": "Dwarf Sword",
+    "description": "It's ancient, but the blade never dulls."
+  },
+  "55": {
+    "displayName": "Dwarf Hammer",
+    "description": "It emits a very faint whirring sound."
+  },
+  "56": {
+    "displayName": "Dwarf Dagger",
+    "description": "It's ancient, but the blade never dulls."
+  },
+  "57": {
+    "displayName": "Dragontooth Cutlass",
+    "description": "The blade was forged from a magical tooth."
+  },
+  "58": {
+    "displayName": "Dragontooth Club",
+    "description": "This club was crafted from a magical tooth."
+  },
+  "59": {
+    "displayName": "Dragontooth Shiv",
+    "description": "The blade was forged from a magical tooth."
+  },
+  "60": {
+    "displayName": "Ossified Blade",
+    "description": "A large, sharp blade formed from bone."
+  },
+  "61": {
+    "displayName": "Iridium Needle",
+    "description": "The point is unbelievably sharp, even down to the atomic level."
+  },
+  "62": {
+    "displayName": "Infinity Blade",
+    "description": "The true form of the Galaxy Sword."
+  },
+  "63": {
+    "displayName": "Infinity Gavel",
+    "description": "The true form of the Galaxy Hammer."
+  },
+  "64": {
+    "displayName": "Infinity Dagger",
+    "description": "The true form of the Galaxy Dagger."
+  },
+  "65": {
+    "displayName": "Meowmere",
+    "description": "An unusual weapon from a far away land..."
+  },
+  "66": {
+    "displayName": "Iridium Scythe",
+    "description": "Can be used to harvest any crops. It's also excellent at gathering hay."
+  }
+}

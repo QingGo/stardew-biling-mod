@@ -1,0 +1,74 @@
+{
+  "0": {
+    "displayName": "农夫裤",
+    "description": "舒适耐用，适合长时间田间劳作。"
+  },
+  "1": {
+    "displayName": "短裤",
+    "description": "炎炎夏日的绝配……你的腿会很感激。"
+  },
+  "2": {
+    "displayName": "长裙",
+    "description": "长长的、飘逸的裙子。"
+  },
+  "3": {
+    "displayName": "短裙",
+    "description": "漂亮的裙子。"
+  },
+  "4": {
+    "displayName": "褶裙",
+    "description": "漂亮的褶裙。"
+  },
+  "5": {
+    "displayName": "恐龙裤",
+    "description": "大家都以为这种裤子很久以前就灭绝了！"
+  },
+  "6": {
+    "displayName": "草裙",
+    "description": "干草编织的裙子。"
+  },
+  "7": {
+    "displayName": "夏威夷草裙",
+    "description": "注定让你成为派对之星的裙子！"
+  },
+  "8": {
+    "displayName": "精灵裤",
+    "description": "下端鼓出来的裤子。你的愿望实现了！"
+  },
+  "9": {
+    "displayName": "紧身裤",
+    "description": "很紧的裤子。"
+  },
+  "10": {
+    "displayName": "宽松裤",
+    "description": "很宽松的裤子。"
+  },
+  "11": {
+    "displayName": "简单长裙",
+    "description": "柔软光滑、中等长度的裙子。"
+  },
+  "12": {
+    "displayName": "休闲裤",
+    "description": "这条裤子给腿留出了更多空间。"
+  },
+  "13": {
+    "displayName": "休闲短裤",
+    "description": "这条短裤给腿留出了更多空间。"
+  },
+  "14": {
+    "displayName": "圆点短裤",
+    "description": "哦呀！"
+  },
+  "15": {
+    "displayName": "镶边幸运紫色短裤",
+    "description": "镶了金边的紫色丝织短裤……"
+  },
+  "998": {
+    "displayName": "五彩裤子",
+    "description": "有五彩能量而微微发光的裤子。"
+  },
+  "999": {
+    "displayName": "五彩神怪裤",
+    "description": "有五彩能量而微微发光的裤子。"
+  }
+}

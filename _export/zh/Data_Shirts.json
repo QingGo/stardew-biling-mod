@@ -1,0 +1,1214 @@
+{
+  "1000": {
+    "displayName": "经典背带裤",
+    "description": "农场经典。"
+  },
+  "1001": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1002": {
+    "displayName": "薄荷女式衬衫",
+    "description": "漂亮的淡绿色女式衬衫。"
+  },
+  "1003": {
+    "displayName": "深色上衣",
+    "description": "颜色很深的上衣。"
+  },
+  "1004": {
+    "displayName": "骷髅 T 恤",
+    "description": "印有可怕的骷髅头骨的 T 恤衫。"
+  },
+  "1005": {
+    "displayName": "浅蓝色上衣",
+    "description": "浅蓝色的上衣。"
+  },
+  "1006": {
+    "displayName": "棕黄色条纹衫",
+    "description": "中间有白色条纹的棕黄色上衣。"
+  },
+  "1007": {
+    "displayName": "绿色背带裤",
+    "description": "稍稍不那么受人欢迎的农场经典。"
+  },
+  "1008": {
+    "displayName": "“Good Grief”衫",
+    "description": "过去的好 T 恤衫……"
+  },
+  "1009": {
+    "displayName": "海蓝色上衣",
+    "description": "海蓝色的上衣。"
+  },
+  "1010": {
+    "displayName": "西装上衣",
+    "description": "活动和庆典时穿的正式上衣。"
+  },
+  "1011": {
+    "displayName": "绿色腰带衫",
+    "description": "绿色的、有腰带的上衣。"
+  },
+  "1012": {
+    "displayName": "黄绿色条纹衫",
+    "description": "有白色条纹的黄绿色上衣。"
+  },
+  "1013": {
+    "displayName": "红色条纹衫",
+    "description": "有白色条纹的红色上衣。"
+  },
+  "1014": {
+    "displayName": "骨架 T 恤",
+    "description": "印有骷髅肋骨架的 T 恤衫。"
+  },
+  "1015": {
+    "displayName": "橘黄色上衣",
+    "description": "橘黄色的上衣。"
+  },
+  "1016": {
+    "displayName": "夜空 T 恤",
+    "description": "能让你想起夜空的 T 恤衫。"
+  },
+  "1017": {
+    "displayName": "镇长吊带衫",
+    "description": "看起来贼熟悉的吊带衫……"
+  },
+  "1018": {
+    "displayName": "棕色夹克衫",
+    "description": "用棕色面料制成的漂亮耐用的夹克衫。"
+  },
+  "1019": {
+    "displayName": "水手服",
+    "description": "让你想起广袤的大海。"
+  },
+  "1020": {
+    "displayName": "绿色背心",
+    "description": "衬衣外面再穿一件绿色背心。"
+  },
+  "1021": {
+    "displayName": "黄绿上衣",
+    "description": "有绿色条纹的黄色上衣。"
+  },
+  "1022": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1023": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1024": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1025": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1026": {
+    "displayName": "浅蓝色条纹衫",
+    "description": "有白色条纹的浅蓝色上衣。"
+  },
+  "1027": {
+    "displayName": "粉色条纹衫",
+    "description": "有条纹的粉色上衣。"
+  },
+  "1028": {
+    "displayName": "爱心 T 恤",
+    "description": "把你的爱心穿在这超软的衣袖上。"
+  },
+  "1029": {
+    "displayName": "工作服",
+    "description": "为持久的田间劳作而生。"
+  },
+  "1030": {
+    "displayName": "店主的夹克衫",
+    "description": "看起来像是小镇的商人会穿的夹克衫。"
+  },
+  "1031": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1032": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1033": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1034": {
+    "displayName": "绿色束腰上衣",
+    "description": "适合冒险者穿的上衣。"
+  },
+  "1035": {
+    "displayName": "靓红女式衬衫",
+    "description": "饰有黄色纽扣的亮红色女式衬衫。"
+  },
+  "1036": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1037": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1038": {
+    "displayName": "白 T 恤（男）",
+    "description": "简单的 T 恤衫。"
+  },
+  "1039": {
+    "displayName": "复古彩虹衫",
+    "description": "有暗淡彩虹图案的 T 恤衫。"
+  },
+  "1040": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1041": {
+    "displayName": "白 T 恤（女）",
+    "description": "简单的 T 恤衫。"
+  },
+  "1042": {
+    "displayName": "黄绿色束腰上衣",
+    "description": "有腰带的黄绿色宽松上衣。"
+  },
+  "1043": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1044": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1045": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1046": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1047": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1048": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1049": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1050": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1051": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1052": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1053": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1054": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1055": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1056": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1057": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1058": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1059": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1060": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1061": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1062": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1063": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1064": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1065": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1066": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1067": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1068": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1069": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1070": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1071": {
+    "displayName": "白色背带裤上衣",
+    "description": "经典的背带裤，上衣是白色的，配有皮带。"
+  },
+  "1072": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1073": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1074": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1075": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1076": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1077": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1078": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1079": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1080": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1081": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1082": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1083": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1084": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1085": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1086": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1087": {
+    "displayName": "平整领结衫",
+    "description": "别有显眼的领结的平整纽扣衫。"
+  },
+  "1088": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1089": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1090": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1091": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1092": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1093": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1094": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1095": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1096": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1097": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1098": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1099": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1100": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1101": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1102": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1103": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1104": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1105": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1106": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1107": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1108": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1109": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1110": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1111": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1112": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1113": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1114": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1115": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1116": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1117": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1118": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1119": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1120": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1121": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1122": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1123": {
+    "displayName": "领带衬衫",
+    "description": "有领带的白衬衫。"
+  },
+  "1124": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1125": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1126": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1127": {
+    "displayName": "艾米丽的魔法衣",
+    "description": "艾米丽爱心打造。染料都是纯天然！"
+  },
+  "1128": {
+    "displayName": "条纹衫",
+    "description": "有暗淡条纹的上衣。"
+  },
+  "1129": {
+    "displayName": "背心（男）",
+    "description": "无袖上衣。"
+  },
+  "1130": {
+    "displayName": "背心（女）",
+    "description": "无袖上衣。"
+  },
+  "1131": {
+    "displayName": "牛仔披风",
+    "description": "旧时西部的传奇装备。"
+  },
+  "1132": {
+    "displayName": "短背心（男）",
+    "description": "无袖上衣，裁短了下摆。"
+  },
+  "1133": {
+    "displayName": "短背心（女）",
+    "description": "无袖上衣，裁短了下摆。"
+  },
+  "1134": {
+    "displayName": "比基尼上装",
+    "description": "夏季必备。"
+  },
+  "1135": {
+    "displayName": "温布斯 T 恤",
+    "description": "主题是一个奇怪的绿家伙的 T 恤衫。"
+  },
+  "1136": {
+    "displayName": "80's衬衣（女）",
+    "description": "顶好的露肩衬衣。"
+  },
+  "1137": {
+    "displayName": "运动员夹克",
+    "description": "充满团队精神的夹克衫。"
+  },
+  "1138": {
+    "displayName": "黑皮夹克",
+    "description": "很酷的深黑色皮夹克。"
+  },
+  "1139": {
+    "displayName": "吊带上衣",
+    "description": "有细吊带的上衣。"
+  },
+  "1140": {
+    "displayName": "纽扣衬衫",
+    "description": "简单的纯色衬衫。"
+  },
+  "1141": {
+    "displayName": "短上衣",
+    "description": "下摆裁短的上衣。"
+  },
+  "1142": {
+    "displayName": "抹胸背心",
+    "description": "无吊带的围绕式上衣。"
+  },
+  "1143": {
+    "displayName": "扎染上衣",
+    "description": "扎起来后浸入彩色染料的上衣。"
+  },
+  "1144": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1145": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1146": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1147": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1148": {
+    "displayName": "钢胸甲",
+    "description": "钢制的装饰铠甲。"
+  },
+  "1149": {
+    "displayName": "铜胸甲",
+    "description": "铜质的装饰铠甲。"
+  },
+  "1150": {
+    "displayName": "金胸甲",
+    "description": "纯金的装饰铠甲。"
+  },
+  "1151": {
+    "displayName": "铱胸甲",
+    "description": "纯铱制的装饰胸甲。"
+  },
+  "1152": {
+    "displayName": "80's衬衣（男）",
+    "description": "顶好的露肩衬衣。"
+  },
+  "1153": {
+    "displayName": "冒充肌肉 T 恤",
+    "description": "要是你没时间去健身房，那就穿这件吧。"
+  },
+  "1154": {
+    "displayName": "法兰绒上衣",
+    "description": "有网格图案的带纽扣外衣，很漂亮，也很厚实。非常适合寒冬时穿。"
+  },
+  "1155": {
+    "displayName": "轰炸机夹克",
+    "description": "很久以前战斗机驾驶员穿的厚实耐用的夹克衫。"
+  },
+  "1156": {
+    "displayName": "原始人上衣",
+    "description": "石器时代的经典！"
+  },
+  "1157": {
+    "displayName": "钓鱼背心",
+    "description": "有很多口袋，可以装下你的渔具。"
+  },
+  "1158": {
+    "displayName": "鱼 T 恤",
+    "description": "有一条鱼的图案的 T 恤衫。"
+  },
+  "1159": {
+    "displayName": "衬衫皮带",
+    "description": "配有棕色皮带的纯色衬衫。"
+  },
+  "1160": {
+    "displayName": "灰色卫衣",
+    "description": "灰色的带兜帽套头衫，颇有运动风。"
+  },
+  "1161": {
+    "displayName": "蓝色卫衣",
+    "description": "蓝色的带兜帽套头衫，颇有运动风。"
+  },
+  "1162": {
+    "displayName": "红色卫衣",
+    "description": "红色的带兜帽套头衫，颇有运动风。"
+  },
+  "1163": {
+    "displayName": "牛仔夹克",
+    "description": "牛仔布面料的耐用夹克衫。"
+  },
+  "1164": {
+    "displayName": "运动风衣",
+    "description": "轻质的弹性面料夹克衫。"
+  },
+  "1165": {
+    "displayName": "白色武术服",
+    "description": "武术家常穿的宽松外衣。"
+  },
+  "1166": {
+    "displayName": "橘色武术服",
+    "description": "武术家常穿的宽松外衣。"
+  },
+  "1167": {
+    "displayName": "灰色背心",
+    "description": "白色衬衣外面再穿一件灰色背心。"
+  },
+  "1168": {
+    "displayName": "海藻上衣",
+    "description": "让你看起来像在海滩被水洗了一样。气味也很像。"
+  },
+  "1169": {
+    "displayName": "带刺背心",
+    "description": "装有金属刺的黑色背心。"
+  },
+  "1170": {
+    "displayName": "花哨上衣",
+    "description": "这蓝色看着很舒服……"
+  },
+  "1171": {
+    "displayName": "绿洲礼服",
+    "description": "沙漠中的宝石。"
+  },
+  "1172": {
+    "displayName": "铁匠围裙",
+    "description": "一代代工匠的传承。"
+  },
+  "1173": {
+    "displayName": "平整领结衫",
+    "description": "别有显眼的领结的平整纽扣衫。"
+  },
+  "1174": {
+    "displayName": "高腰上衣",
+    "description": "外表像穿了高腰裤，下摆可以染色。"
+  },
+  "1175": {
+    "displayName": "高腰上衣",
+    "description": "外表像穿了高腰牛仔裤，下摆可以染色。"
+  },
+  "1176": {
+    "displayName": "普通套头衫（男）",
+    "description": "纯色的套头衫。"
+  },
+  "1177": {
+    "displayName": "普通套头衫（女）",
+    "description": "纯色的套头衫。"
+  },
+  "1178": {
+    "displayName": "龟脖毛衣",
+    "description": "让脖子热热的。"
+  },
+  "1179": {
+    "displayName": "铱能量上衣",
+    "description": "炫耀你的铱能量。"
+  },
+  "1180": {
+    "displayName": "隧道队球衣",
+    "description": "祖祖城隧道队的球衣。"
+  },
+  "1181": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1182": {
+    "displayName": "上衣",
+    "description": "可以穿的上衣。"
+  },
+  "1183": {
+    "displayName": "灰色西装",
+    "description": "专门定做的灰色西装。"
+  },
+  "1184": {
+    "displayName": "红色无尾礼服",
+    "description": "正式场合穿的考究上衣。"
+  },
+  "1185": {
+    "displayName": "藏青色无尾礼服",
+    "description": "正式场合穿的考究上衣。"
+  },
+  "1186": {
+    "displayName": "节日上衣",
+    "description": "庆祝冬日星盛宴。"
+  },
+  "1187": {
+    "displayName": "叶子上衣",
+    "description": "用真的叶子装饰的衣服。"
+  },
+  "1188": {
+    "displayName": "晚安睡衣",
+    "description": "宽大的睡衣，上面有精致的月亮图案。"
+  },
+  "1189": {
+    "displayName": "绿色皮带衬衫",
+    "description": "配有皮带的绿色衬衫。"
+  },
+  "1190": {
+    "displayName": "笑脸 T 恤",
+    "description": "这可是最开心的 T 恤衫。"
+  },
+  "1191": {
+    "displayName": "衬衫领结",
+    "description": "这件衬衫颈部配有一个小领结。"
+  },
+  "1192": {
+    "displayName": "丑角上衣",
+    "description": "把你心中的小丑展示出来。"
+  },
+  "1193": {
+    "displayName": "海洋上衣",
+    "description": "看起来像水下涟漪的上衣。"
+  },
+  "1194": {
+    "displayName": "深色条纹衫",
+    "description": "有彩色条纹的深色上衣。"
+  },
+  "1195": {
+    "displayName": "丝巾上衣",
+    "description": "这件上衣围有丝巾，可以让你的脖子保持洁净。"
+  },
+  "1196": {
+    "displayName": "背包 T 恤",
+    "description": "带一个帆布背包的纯色 T 恤衫。"
+  },
+  "1197": {
+    "displayName": "紫色女式衬衫",
+    "description": "令人惊叹的紫色女式衬衫。"
+  },
+  "1198": {
+    "displayName": "老式 Polo 衫",
+    "description": "由于年代久远已经褪色，散发着旧衣柜的味道。"
+  },
+  "1199": {
+    "displayName": "托加长袍",
+    "description": "这种设计很古老，但是透气性真的很棒！"
+  },
+  "1200": {
+    "displayName": "星星 T 恤",
+    "description": "这颗星星本应该在黑暗中闪闪发光，然而并没有。"
+  },
+  "1201": {
+    "displayName": "时髦上衣（男）",
+    "description": "面料是触感最柔软的天鹅绒。"
+  },
+  "1202": {
+    "displayName": "时髦上衣（女）",
+    "description": "面料是触感最柔软的天鹅绒。"
+  },
+  "1203": {
+    "displayName": "丝巾上衣",
+    "description": "这件上衣围有丝巾，可以替你的脖子挡住伤害。"
+  },
+  "1204": {
+    "displayName": "假日 T 恤",
+    "description": "芬群岛的旅游 T 恤衫。"
+  },
+  "1205": {
+    "displayName": "园丁上衣",
+    "description": "上面本来就沾有盆栽土。"
+  },
+  "1206": {
+    "displayName": "丝巾上衣",
+    "description": "这件上衣围有丝巾，可以让你的脖子保持柔软。"
+  },
+  "1207": {
+    "displayName": "史莱姆 T 恤",
+    "description": "看起来像一个超大史莱姆的 T 恤衫。"
+  },
+  "1208": {
+    "displayName": "挖掘机上衣",
+    "description": "穿着它去发掘古化石肯定会很靓。"
+  },
+  "1209": {
+    "displayName": "运动衫",
+    "description": "经典样式可以让你表现出彩。"
+  },
+  "1210": {
+    "displayName": "爱心 T 恤",
+    "description": "把你的爱心穿在这超软的衣袖上。"
+  },
+  "1211": {
+    "displayName": "深色夹克",
+    "description": "摇粒绒内衬的深色牛仔夹克衫。"
+  },
+  "1212": {
+    "displayName": "日落 T 恤",
+    "description": "这件 T 恤衫的灵感来自于一天中最引人共鸣的时刻。"
+  },
+  "1213": {
+    "displayName": "厨师工作服",
+    "description": "传统的主厨工作服。"
+  },
+  "1214": {
+    "displayName": "大海 T 恤",
+    "description": "闻起来有海水的咸味。"
+  },
+  "1215": {
+    "displayName": "神秘衣",
+    "description": "你能从这件衣服中感受到一股力量。"
+  },
+  "1216": {
+    "displayName": "纯色背带裤",
+    "description": "经典的背带裤，上衣可以染色。"
+  },
+  "1217": {
+    "displayName": "无袖背带裤",
+    "description": "经典的背带裤，上衣无袖可以染色。"
+  },
+  "1218": {
+    "displayName": "开衫",
+    "description": "柔软的带纽扣开襟毛衣。"
+  },
+  "1219": {
+    "displayName": "由巴上衣",
+    "description": "这件上衣的特色是显眼的“舰形符号”。"
+  },
+  "1220": {
+    "displayName": "项链 T 恤",
+    "description": "带有一条金项链的 T 恤衫。"
+  },
+  "1221": {
+    "displayName": "皮带外套",
+    "description": "光滑柔软的黑色外套，配有一根显眼的皮带。"
+  },
+  "1222": {
+    "displayName": "金边 T 恤",
+    "description": "有金边的 T 恤衫。"
+  },
+  "1223": {
+    "displayName": "五彩 T 恤",
+    "description": "有五彩能量而微微发光的 T 恤衫。"
+  },
+  "1224": {
+    "displayName": "吊坠 T 恤",
+    "description": "配有一个巨大吊坠的 T 恤衫。"
+  },
+  "1225": {
+    "displayName": "高热 T 恤",
+    "description": "这 T 恤衫看起来像是烧着了！"
+  },
+  "1226": {
+    "displayName": "火焰 T 恤",
+    "description": "有灼热的火焰，看起来酷冷酷冷的。"
+  },
+  "1227": {
+    "displayName": "古老 T 恤",
+    "description": "有古老图案的 T 恤衫。"
+  },
+  "1228": {
+    "displayName": "淡雅箭头 T 恤",
+    "description": "颜色淡雅的 T 恤衫，上面有一个朝上的箭头图案。"
+  },
+  "1229": {
+    "displayName": "玩偶 T 恤",
+    "description": "有一个古怪的古代玩偶面相的 T 恤衫。"
+  },
+  "1230": {
+    "displayName": "珠宝 T 恤",
+    "description": "配有朴素金链的 T 恤衫。"
+  },
+  "1231": {
+    "displayName": "帆布夹克",
+    "description": "摇粒绒内衬的棕色夹克衫。"
+  },
+  "1232": {
+    "displayName": "垃圾桶 T 恤",
+    "description": "你穿着一个垃圾桶。"
+  },
+  "1233": {
+    "displayName": "铁锈 T 恤",
+    "description": "这个设计是要 T 恤衫看起来满是锈迹。"
+  },
+  "1234": {
+    "displayName": "电路板 T 恤",
+    "description": "这件 T 恤衫像是电路板。"
+  },
+  "1235": {
+    "displayName": "绒毛 T 恤",
+    "description": "毛茸茸的。"
+  },
+  "1236": {
+    "displayName": "酱汁 T 恤",
+    "description": "上面的意面酱汁是本来就有的，所以你不用感到内疚！"
+  },
+  "1237": {
+    "displayName": "棕色西装",
+    "description": "标准的棕色商务西装。"
+  },
+  "1238": {
+    "displayName": "金 T 恤",
+    "description": "闪亮亮的金色 T 恤衫。"
+  },
+  "1239": {
+    "displayName": "船长服",
+    "description": "经典的船长制服。"
+  },
+  "1240": {
+    "displayName": "警服",
+    "description": "经典的警官制服。"
+  },
+  "1241": {
+    "displayName": "护林员制服",
+    "description": "经典的公园护林员制服。"
+  },
+  "1242": {
+    "displayName": "蓝色长背心",
+    "description": "灰色衬衣外面再穿一件蓝色长背心。"
+  },
+  "1243": {
+    "displayName": "皇室披风",
+    "description": "紫色的皇室披风。"
+  },
+  "1244": {
+    "displayName": "遗物 T 恤",
+    "description": "我找到了黄金遗物，我还有 T 恤来证明！"
+  },
+  "1245": {
+    "displayName": "波波 T 恤",
+    "description": "粉色 T 恤，主题是一个相貌古怪的家伙。"
+  },
+  "1246": {
+    "displayName": "煎蛋 T 恤",
+    "description": "起床了，该吃蛋了。"
+  },
+  "1247": {
+    "displayName": "汉堡 T 恤",
+    "description": "吃什么就穿什么！"
+  },
+  "1248": {
+    "displayName": "有领衬衫",
+    "description": "有着严肃的白衣领的衬衫。"
+  },
+  "1249": {
+    "displayName": "烤面包 T 恤",
+    "description": "看起来略微烤焦了。"
+  },
+  "1250": {
+    "displayName": "鲤鱼 T 恤",
+    "description": "正面饰有一个大鲤鱼头。"
+  },
+  "1251": {
+    "displayName": "红色法兰绒上衣",
+    "description": "红蓝相间的法兰绒上衣。"
+  },
+  "1252": {
+    "displayName": "薄饼 T 恤",
+    "description": "看起来像是墨西哥薄馅饼表皮的 T 恤衫。"
+  },
+  "1253": {
+    "displayName": "暖色法兰绒上衣",
+    "description": "棕色和玫瑰色相间的暖色法兰绒上衣。"
+  },
+  "1254": {
+    "displayName": "砂糖 T 恤",
+    "description": "充满了“甜蜜能量”。"
+  },
+  "1255": {
+    "displayName": "绿色法兰绒上衣",
+    "description": "棕绿相间的法兰绒上衣。"
+  },
+  "1256": {
+    "displayName": "油渍 T 恤",
+    "description": "本来就沾满了油，所以看起来油腻腻的。"
+  },
+  "1257": {
+    "displayName": "羊肚菌 T 恤",
+    "description": "这件 T 恤衫的设计是这种春天标志性的蘑菇。"
+  },
+  "1258": {
+    "displayName": "春季 T 恤",
+    "description": "既轻柔，又清新，也有春季色彩的设计。"
+  },
+  "1259": {
+    "displayName": "水手服",
+    "description": "让你想起广袤的大海。"
+  },
+  "1260": {
+    "displayName": "雨衣",
+    "description": "经典的黄色雨衣。"
+  },
+  "1261": {
+    "displayName": "水手服",
+    "description": "与一般的水手服不同，这件的衣领是白色的，而且衣身可以染色。"
+  },
+  "1262": {
+    "displayName": "深色丝巾上衣",
+    "description": "围有多彩丝巾的深色上衣。"
+  },
+  "1263": {
+    "displayName": "深色荧光衬衫",
+    "description": "有亮色荧光点的衬衫。"
+  },
+  "1264": {
+    "displayName": "泛光 T 恤",
+    "description": "有斑驳的彩虹斑点！"
+  },
+  "1265": {
+    "displayName": "新娘上衣",
+    "description": "漂亮的白色上衣，新娘穿正合适。"
+  },
+  "1266": {
+    "displayName": "棕色背带裤",
+    "description": "这件衣服沾了泥也看不出来。"
+  },
+  "1267": {
+    "displayName": "橘红色领结衫",
+    "description": "配有一个大号白色领结的橘红色条纹上衣。"
+  },
+  "1268": {
+    "displayName": "白色背带裤",
+    "description": "经典的农夫衣装，换上漂亮的白色设计。"
+  },
+  "1269": {
+    "displayName": "手冲咖啡 T 恤",
+    "description": "上面有熟悉的锯齿状图案。啊……这个味道。"
+  },
+  "1270": {
+    "displayName": "绿色 T 恤夹克",
+    "description": "灵感来自于绿头鸭。T 恤衫可以染色。"
+  },
+  "1271": {
+    "displayName": "短夹克",
+    "description": "T 恤衫外面再穿一件可以染色的短夹克。"
+  },
+  "1272": {
+    "displayName": "圆点上衣",
+    "description": "深色上衣，上面有可以染色的圆点。"
+  },
+  "1273": {
+    "displayName": "白点上衣",
+    "description": "可以染色的上衣，上面有白色圆点。"
+  },
+  "1274": {
+    "displayName": "迷彩上衣",
+    "description": "让你与环境融为一体。"
+  },
+  "1275": {
+    "displayName": "泥土 T 恤",
+    "description": "在农场上穿正合适！"
+  },
+  "1276": {
+    "displayName": "蟹黄糕上衣",
+    "description": "预先加入大量蒜泥蛋黄酱供你享受。用餐愉快！"
+  },
+  "1277": {
+    "displayName": "丝绸上衣",
+    "description": "面料是光滑的丝绸物质。"
+  },
+  "1278": {
+    "displayName": "蓝色纽扣汗衫",
+    "description": "蓝色的上衣，袖子可以染色。"
+  },
+  "1279": {
+    "displayName": "褪色牛仔上衣",
+    "description": "灰暗褪色的牛仔上衣。"
+  },
+  "1280": {
+    "displayName": "红色纽扣汗衫",
+    "description": "红色的上衣，袖子可以染色。"
+  },
+  "1281": {
+    "displayName": "绿色纽扣汗衫",
+    "description": "绿色的上衣，袖子可以染色。"
+  },
+  "1282": {
+    "displayName": "番茄 T 恤",
+    "description": "这件 T 恤解答了重大难题：“番茄是”……（剩余部分被抹去）"
+  },
+  "1283": {
+    "displayName": "流苏背心",
+    "description": "无袖上衣外面再穿一件有流苏的棕色背心。"
+  },
+  "1284": {
+    "displayName": "杂乱 T 恤",
+    "description": "图案杂乱，难以辨认。"
+  },
+  "1285": {
+    "displayName": "午夜狗 T 恤",
+    "description": "用鱿鱼墨汁染了午夜的深蓝色。"
+  },
+  "1286": {
+    "displayName": "虾爱好者 T 恤",
+    "description": "为那些天天吃虾的人设计。"
+  },
+  "1287": {
+    "displayName": "绿茶 T 恤",
+    "description": "这件 T 恤衫灵感来自于很受欢迎的饮品。"
+  },
+  "1288": {
+    "displayName": "饰品上衣",
+    "description": "装饰有大号彩色玻璃球的上衣。"
+  },
+  "1289": {
+    "displayName": "暗色西装",
+    "description": "黑色的西装上衣，配有暗红色方巾。"
+  },
+  "1290": {
+    "displayName": "矿物狗外套",
+    "description": "它充满了海洋中的微量矿物质。"
+  },
+  "1291": {
+    "displayName": "洋红色 T 恤",
+    "description": "熔岩菇独有的特别颜色。"
+  },
+  "1292": {
+    "displayName": "姜汁背带裤",
+    "description": "配色的灵感来自姜汁汽水。"
+  },
+  "1293": {
+    "displayName": "香蕉 T 恤",
+    "description": "如果你喜欢香蕉，可以试试这件 T 恤。"
+  },
+  "1294": {
+    "displayName": "黄色西装",
+    "description": "敢穿这套西装说明你大胆自信。"
+  },
+  "1295": {
+    "displayName": "热粉色衬衫",
+    "description": "热带粉色的丝绸衬衫。"
+  },
+  "1296": {
+    "displayName": "热带日出 T 恤",
+    "description": "这件 T 恤有椰子的味道。"
+  },
+  "1297": {
+    "displayName": "姜岛比基尼",
+    "description": "芬群岛的经典款。"
+  },
+  "1997": {
+    "displayName": "魔法斑点衣",
+    "description": "有五彩斑点的上衣。"
+  },
+  "1998": {
+    "displayName": "五彩上衣",
+    "description": "有五彩能量而微微发光。袖子是深色的。"
+  },
+  "1999": {
+    "displayName": "五彩上衣",
+    "description": "有五彩能量而微微发光。袖子是白色的。"
+  },
+  "MysteryShirt": {
+    "displayName": "谜之上衣",
+    "description": "用谜之盒的余料制成的。"
+  },
+  "SoftEdgePullover": {
+    "displayName": "普通套头衫（男）",
+    "description": "纯色的套头衫。"
+  }
+}

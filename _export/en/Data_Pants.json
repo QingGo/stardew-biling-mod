@@ -1,0 +1,74 @@
+{
+  "0": {
+    "displayName": "Farmer Pants",
+    "description": "Comfortable and durable for long hours in the field."
+  },
+  "1": {
+    "displayName": "Shorts",
+    "description": "Perfect for a hot summer's day... your legs will thank you."
+  },
+  "2": {
+    "displayName": "Long Dress",
+    "description": "A long, flowy dress."
+  },
+  "3": {
+    "displayName": "Skirt",
+    "description": "A cute skirt."
+  },
+  "4": {
+    "displayName": "Pleated Skirt",
+    "description": "A cute pleated skirt."
+  },
+  "5": {
+    "displayName": "Dinosaur Pants",
+    "description": "These pants were thought to have gone extinct a long time ago!"
+  },
+  "6": {
+    "displayName": "Grass Skirt",
+    "description": "A skirt made of dried grass."
+  },
+  "7": {
+    "displayName": "Luau Skirt",
+    "description": "A skirt destined to make you the 'luau' the party!"
+  },
+  "8": {
+    "displayName": "Genie Pants",
+    "description": "Pants that balloon out near the bottom. Your wish has been answered!"
+  },
+  "9": {
+    "displayName": "Tight Pants",
+    "description": "A very tight pair of pants."
+  },
+  "10": {
+    "displayName": "Baggy Pants",
+    "description": "A loose pair of pants."
+  },
+  "11": {
+    "displayName": "Simple Dress",
+    "description": "A soft, smooth, medium length dress."
+  },
+  "12": {
+    "displayName": "Relaxed Fit Pants",
+    "description": "These pants have a little more room for the legs."
+  },
+  "13": {
+    "displayName": "Relaxed Fit Shorts",
+    "description": "These shorts have a little more room for the legs."
+  },
+  "14": {
+    "displayName": "Polka Dot Shorts",
+    "description": "Whoops!"
+  },
+  "15": {
+    "displayName": "Trimmed Lucky Purple Shorts",
+    "description": "Purple silk shorts trimmed in luxurious gold..."
+  },
+  "998": {
+    "displayName": "Prismatic Pants",
+    "description": "Pants that shimmer with prismatic energy."
+  },
+  "999": {
+    "displayName": "Prismatic Genie Pants",
+    "description": "Pants that shimmer with prismatic energy."
+  }
+}

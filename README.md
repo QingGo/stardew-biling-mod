@@ -18,11 +18,15 @@
 - Stardew Valley 1.6+（已包含官方中文语言包）
 - 游戏 Language 必须设为 **中文**（需要中文字体渲染）
 
+## 下载
+
+从 [Releases](https://github.com/anomalyco/stardew-bilin/releases) 页面下载最新版本的 `BilingualMod-v*.zip`。
+
 ## 安装
 
-1. 确保已安装 SMAPI、Content Patcher
-2. 下载本 Mod 的 `BilingualMod` 文件夹，放入 `Stardew Valley/Mods/`
-3. 启动游戏（通过 `StardewModdingAPI.exe`）
+1. 确保已安装 [SMAPI](https://smapi.io/) 和 [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915)
+2. 下载 `BilingualMod-v*.zip`，解压到 `Stardew Valley/Mods/BilingualMod/`
+3. 通过 `StardewModdingAPI.exe` 启动游戏
 4. 在标题画面将 **Language** 设为 **中文**
 5. 进入主菜单后，左下角 **Mods** 按钮 → `Stardew Valley Bilingual Text` → 选择 `Bilingual` 模式
 
@@ -84,6 +88,10 @@
 | 冬日星盛宴 (Feast of the Winter Star) | `Data/Festivals/winter25` |
 
 ## 从源码构建
+
+> 普通用户不需要执行此流程。直接下载 [Releases](https://github.com/anomalyco/stardew-bilin/releases) 中的 zip 即可。
+>
+> 以下流程仅适用于**开发者**需要修改或更新本 Mod 时。
 
 ### 1. 导出游戏文本资产
 

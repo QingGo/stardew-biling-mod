@@ -1,0 +1,730 @@
+{
+  "0": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "1": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "2": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "3": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "4": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "5": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "6": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "7": {
+    "displayName": "House Plant",
+    "description": "Adds some character to your home or farm."
+  },
+  "8": {
+    "displayName": "Scarecrow",
+    "description": "Prevents crows from attacking your crops. Has a limited radius (about 8 \"tiles\")."
+  },
+  "9": {
+    "displayName": "Lightning Rod",
+    "description": "Collects energy from lightning storms and turns it into battery packs."
+  },
+  "10": {
+    "displayName": "Bee House",
+    "description": "Place outside and wait for delicious honey! (Except in Winter)."
+  },
+  "12": {
+    "displayName": "Keg",
+    "description": "Place a fruit or vegetable in here. Eventually it will turn into a beverage."
+  },
+  "13": {
+    "displayName": "Furnace",
+    "description": "Turns ore and coal into metal bars."
+  },
+  "15": {
+    "displayName": "Preserves Jar",
+    "description": "Turns vegetables into pickles and fruit into jam."
+  },
+  "16": {
+    "displayName": "Cheese Press",
+    "description": "Turns milk into cheese."
+  },
+  "17": {
+    "displayName": "Loom",
+    "description": "Turns raw wool into fine cloth."
+  },
+  "19": {
+    "displayName": "Oil Maker",
+    "description": "Makes gourmet truffle oil."
+  },
+  "20": {
+    "displayName": "Recycling Machine",
+    "description": "Turns fishing trash into resources."
+  },
+  "21": {
+    "displayName": "Crystalarium",
+    "description": "Insert a gem of your choice and it will grow copies."
+  },
+  "22": {
+    "displayName": "Table Piece L",
+    "description": "The left side of a big table."
+  },
+  "23": {
+    "displayName": "Table Piece R",
+    "description": "The right side of a big table"
+  },
+  "24": {
+    "displayName": "Mayonnaise Machine",
+    "description": "Turns eggs into mayonnaise."
+  },
+  "25": {
+    "displayName": "Seed Maker",
+    "description": "Place crops inside to produce a varying amount of seeds. Doesn't work with fruit tree crops."
+  },
+  "26": {
+    "displayName": "Wood Chair",
+    "description": "A chair that can be oriented in 4 different ways."
+  },
+  "27": {
+    "displayName": "Wood Chair",
+    "description": "A chair that can be oriented in 4 different ways."
+  },
+  "28": {
+    "displayName": "Skeleton Model",
+    "description": "A model of a skeleton."
+  },
+  "29": {
+    "displayName": "Obelisk",
+    "description": "A sinister-looking portal that radiates with evil energy."
+  },
+  "31": {
+    "displayName": "Chicken Statue",
+    "description": "A wooden statue of a chicken."
+  },
+  "32": {
+    "displayName": "Stone Cairn",
+    "description": "A decorative piece for your farm."
+  },
+  "33": {
+    "displayName": "Suit Of Armor",
+    "description": "A decorative piece for your farm."
+  },
+  "34": {
+    "displayName": "Sign Of The Vessel",
+    "description": "A decorative piece for your farm."
+  },
+  "35": {
+    "displayName": "Basic Log",
+    "description": "A decorative piece for your farm."
+  },
+  "36": {
+    "displayName": "Lawn Flamingo",
+    "description": "A decorative piece for your farm."
+  },
+  "37": {
+    "displayName": "Wood Sign",
+    "description": "Use an item on this to change what's displayed. The item won't be consumed."
+  },
+  "38": {
+    "displayName": "Stone Sign",
+    "description": "Use an item on this to change what's displayed. The item won't be consumed."
+  },
+  "39": {
+    "displayName": "Dark Sign",
+    "description": "Use an item on this to change what's displayed. The item won't be consumed."
+  },
+  "40": {
+    "displayName": "Big Green Cane",
+    "description": "A decorative piece for your farm."
+  },
+  "41": {
+    "displayName": "Green Canes",
+    "description": "A decorative piece for your farm."
+  },
+  "42": {
+    "displayName": "Mixed Cane",
+    "description": "A decorative piece for your farm."
+  },
+  "43": {
+    "displayName": "Red Canes",
+    "description": "A decorative piece for your farm."
+  },
+  "44": {
+    "displayName": "Big Red Cane",
+    "description": "A decorative piece for your farm."
+  },
+  "45": {
+    "displayName": "Ornamental Hay Bale",
+    "description": "A decorative piece for your farm."
+  },
+  "46": {
+    "displayName": "Log Section",
+    "description": "A decorative piece for your farm."
+  },
+  "47": {
+    "displayName": "Grave Stone",
+    "description": "A decorative piece for your farm."
+  },
+  "48": {
+    "displayName": "Seasonal Decor",
+    "description": "This decoration changes with the seasons."
+  },
+  "52": {
+    "displayName": "Stone Frog",
+    "description": "Garden art for your farm."
+  },
+  "53": {
+    "displayName": "Stone Parrot",
+    "description": "Garden art for your farm."
+  },
+  "54": {
+    "displayName": "Stone Owl",
+    "description": "Garden art for your farm."
+  },
+  "55": {
+    "displayName": "Stone Junimo",
+    "description": "Garden art for your farm."
+  },
+  "56": {
+    "displayName": "Slime Ball",
+    "description": "Filled with slime."
+  },
+  "62": {
+    "displayName": "Garden Pot",
+    "description": "Grows crops from any season when indoors. Outdoors, it can only house seasonal crops."
+  },
+  "64": {
+    "displayName": "Bookcase",
+    "description": "A home for books."
+  },
+  "65": {
+    "displayName": "Fancy Table",
+    "description": "A finely crafted round table."
+  },
+  "66": {
+    "displayName": "Ancient Table",
+    "description": "It's covered in the thickest cobwebs."
+  },
+  "67": {
+    "displayName": "Ancient Stool",
+    "description": "It smells like Grandma's apartment."
+  },
+  "68": {
+    "displayName": "Grandfather Clock",
+    "description": "It's so old... looks like the pendulum is rusted in place."
+  },
+  "69": {
+    "displayName": "Teddy Timer",
+    "description": "It's a grandfather clock shaped like a teddy."
+  },
+  "70": {
+    "displayName": "Dead Tree",
+    "description": "It's been petrified for a long time, poor thing."
+  },
+  "71": {
+    "displayName": "Staircase",
+    "description": "Use this to move down a level in the mines."
+  },
+  "72": {
+    "displayName": "Tall Torch",
+    "description": "The stem is made from bamboo."
+  },
+  "73": {
+    "displayName": "Ritual Mask",
+    "description": "It's way too large to wear."
+  },
+  "74": {
+    "displayName": "Bonfire",
+    "description": "The red embers glow softly."
+  },
+  "75": {
+    "displayName": "Bongo",
+    "description": "A decorative percussion instrument with a rich sound."
+  },
+  "76": {
+    "displayName": "Decorative Spears",
+    "description": "Not a very safe decoration."
+  },
+  "78": {
+    "displayName": "Boulder",
+    "description": "An extremely dense piece of stone."
+  },
+  "79": {
+    "displayName": "Door",
+    "description": "A hidden mechanism causes it to retract into the ground."
+  },
+  "80": {
+    "displayName": "Door",
+    "description": "A hidden mechanism causes it to retract into the ground."
+  },
+  "81": {
+    "displayName": "Locked Door",
+    "description": "A hidden mechanism causes it to retract into the ground."
+  },
+  "82": {
+    "displayName": "Locked Door",
+    "description": "A hidden mechanism causes it to retract into the ground."
+  },
+  "83": {
+    "displayName": "Wicked Statue",
+    "description": "There's something unsettling about the looks of this statue."
+  },
+  "84": {
+    "displayName": "Wicked Statue",
+    "description": "Something's not right with this statue."
+  },
+  "85": {
+    "displayName": "Sloth Skeleton L",
+    "description": "This extinct sloth roamed the lush, prehistoric forests of Stardew Valley. Its powerful jaw tore through the toughest plant fibers."
+  },
+  "86": {
+    "displayName": "Sloth Skeleton M",
+    "description": "The ribs of a prehistoric sloth. "
+  },
+  "87": {
+    "displayName": "Sloth Skeleton R",
+    "description": "The hind legs and tail of a prehistoric sloth."
+  },
+  "88": {
+    "displayName": "Standing Geode",
+    "description": "It's a huge geode mounted on a stand. Hundreds of purple crystals shimmer within."
+  },
+  "89": {
+    "displayName": "Obsidian Vase",
+    "description": "A beautifully crafted ornamental vase made from obsidian and gold."
+  },
+  "94": {
+    "displayName": "Singing Stone",
+    "description": "It rings out with a pure tone when struck."
+  },
+  "95": {
+    "displayName": "Stone Owl",
+    "description": "It's not clear where this came from, but it looks very fine."
+  },
+  "96": {
+    "displayName": "Strange Capsule",
+    "description": "There's something fleshy bobbing around in the fluid..."
+  },
+  "98": {
+    "displayName": "Empty Capsule",
+    "description": "Part of the glass is shattered."
+  },
+  "99": {
+    "displayName": "Feed Hopper",
+    "description": "Provides convenient access to silo fodder."
+  },
+  "101": {
+    "displayName": "Incubator",
+    "description": "Hatches eggs into baby chickens and ducks."
+  },
+  "104": {
+    "displayName": "Heater",
+    "description": "Keeps your animals warmer and happier during the winter."
+  },
+  "105": {
+    "displayName": "Tapper",
+    "description": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product!"
+  },
+  "106": {
+    "displayName": "Camera",
+    "description": "An old camera mounted on a tripod."
+  },
+  "107": {
+    "displayName": "Plush Bunny",
+    "description": "It's big, it's soft, and it's cute."
+  },
+  "108": {
+    "displayName": "Tub o' Flowers",
+    "description": "Flowers planted in an oak barrel. Blooms in spring and summer."
+  },
+  "110": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (1 of 8)"
+  },
+  "111": {
+    "displayName": "Decorative Pitcher",
+    "description": "Hand-made out of brass."
+  },
+  "112": {
+    "displayName": "Dried Sunflowers",
+    "description": "A vibrant home decoration."
+  },
+  "113": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (2 of 8)"
+  },
+  "114": {
+    "displayName": "Charcoal Kiln",
+    "description": "Turns 10 pieces of wood into one piece of coal."
+  },
+  "116": {
+    "displayName": "Stardew Hero Trophy",
+    "description": "The most prestigious award a Stardew Valley resident could receive!"
+  },
+  "117": {
+    "displayName": "Soda Machine",
+    "description": "Keeps pumping out the good stuff."
+  },
+  "118": {
+    "displayName": "Barrel",
+    "description": "..."
+  },
+  "119": {
+    "displayName": "Crate",
+    "description": "..."
+  },
+  "120": {
+    "displayName": "Barrel",
+    "description": "..."
+  },
+  "121": {
+    "displayName": "Crate",
+    "description": "..."
+  },
+  "122": {
+    "displayName": "Barrel",
+    "description": "..."
+  },
+  "123": {
+    "displayName": "Crate",
+    "description": "..."
+  },
+  "124": {
+    "displayName": "Barrel",
+    "description": "..."
+  },
+  "125": {
+    "displayName": "Crate",
+    "description": "..."
+  },
+  "126": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (3 of 8)"
+  },
+  "127": {
+    "displayName": "Statue Of Endless Fortune",
+    "description": "It's made of solid gold. What's it for?"
+  },
+  "128": {
+    "displayName": "Mushroom Box",
+    "description": "Mushrooms grow every few days"
+  },
+  "130": {
+    "displayName": "Chest",
+    "description": "A place to store your items."
+  },
+  "136": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (4 of 8)"
+  },
+  "137": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (5 of 8)"
+  },
+  "138": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (6 of 8)"
+  },
+  "139": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (7 of 8)"
+  },
+  "140": {
+    "displayName": "Rarecrow",
+    "description": "Collect them all! (8 of 8)"
+  },
+  "141": {
+    "displayName": "Prairie King Arcade System",
+    "description": "Play 'Journey Of The Prairie King' at home!"
+  },
+  "143": {
+    "displayName": "Wooden Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "144": {
+    "displayName": "Stone Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "145": {
+    "displayName": "Gold Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "146": {
+    "displayName": "Campfire",
+    "description": "Provides a moderate amount of light."
+  },
+  "147": {
+    "displayName": "Stump Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "148": {
+    "displayName": "Carved Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "149": {
+    "displayName": "Skull Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "150": {
+    "displayName": "Barrel Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "151": {
+    "displayName": "Marble Brazier",
+    "description": "Provides a moderate amount of light."
+  },
+  "152": {
+    "displayName": "Wood Lamp-post",
+    "description": "Provides a good amount of light."
+  },
+  "153": {
+    "displayName": "Iron Lamp-post",
+    "description": "Provides a good amount of light."
+  },
+  "154": {
+    "displayName": "Worm Bin",
+    "description": "Produces bait on a regular basis. The worms are self-sufficient."
+  },
+  "155": {
+    "displayName": "??HMTGF??",
+    "description": "??HMTGF??"
+  },
+  "156": {
+    "displayName": "Slime Incubator",
+    "description": "Hatches slimes eggs into slimes. Allows you to raise slimes outdoors."
+  },
+  "158": {
+    "displayName": "Slime Egg-Press",
+    "description": "Compresses 100 pieces of slime into a slime egg. It's a miracle of science!"
+  },
+  "159": {
+    "displayName": "Junimo Kart Arcade System",
+    "description": "Play 'Junimo Kart' at home!"
+  },
+  "160": {
+    "displayName": "Statue Of Perfection",
+    "description": "It's made of pure iridium."
+  },
+  "161": {
+    "displayName": "??Pinky Lemon??",
+    "description": "??Pinky Lemon??"
+  },
+  "162": {
+    "displayName": "??Foroguemon??",
+    "description": "??Foroguemon??"
+  },
+  "163": {
+    "displayName": "Cask",
+    "description": "Use in the cellar to age products like wine and cheese."
+  },
+  "164": {
+    "displayName": "Solid Gold Lewis",
+    "description": "Mayor's secret project."
+  },
+  "165": {
+    "displayName": "Auto-Grabber",
+    "description": "Automatically harvests from your animals each morning. Must be placed inside a coop or barn."
+  },
+  "167": {
+    "displayName": "Deluxe Scarecrow",
+    "description": "Prevents crows from attacking your crops. Has a large radius (about 16 \"tiles\")."
+  },
+  "174": {
+    "displayName": "Barrel",
+    "description": "..."
+  },
+  "175": {
+    "displayName": "Crate",
+    "description": "..."
+  },
+  "184": {
+    "displayName": "Seasonal Plant",
+    "description": "An ornamental plant that changes with each season. It doesn't need to be watered."
+  },
+  "188": {
+    "displayName": "Seasonal Plant",
+    "description": "An ornamental plant that changes with each season. It doesn't need to be watered."
+  },
+  "192": {
+    "displayName": "Seasonal Plant",
+    "description": "An ornamental plant that changes with each season. It doesn't need to be watered."
+  },
+  "196": {
+    "displayName": "Seasonal Plant",
+    "description": "An ornamental plant that changes with each season. It doesn't need to be watered."
+  },
+  "200": {
+    "displayName": "Seasonal Plant",
+    "description": "An ornamental plant that changes with each season. It doesn't need to be watered."
+  },
+  "204": {
+    "displayName": "Seasonal Plant",
+    "description": "An ornamental plant that changes with each season. It doesn't need to be watered."
+  },
+  "208": {
+    "displayName": "Workbench",
+    "description": "When crafting here, you'll have access to materials in any adjacent chests."
+  },
+  "209": {
+    "displayName": "Mini-Jukebox",
+    "description": "Allows you to play your favorite tunes."
+  },
+  "211": {
+    "displayName": "Wood Chipper",
+    "description": "Insert a piece of hardwood to break it down into regular wood."
+  },
+  "214": {
+    "displayName": "Telephone",
+    "description": "Can be used to check store hours and inventory."
+  },
+  "216": {
+    "displayName": "Mini-Fridge",
+    "description": "Allows you to store additional ingredients for cooking."
+  },
+  "219": {
+    "displayName": "Cursed P.K. Arcade System",
+    "description": "Something's not right with this Prairie King Arcade System..."
+  },
+  "221": {
+    "displayName": "Item Pedestal",
+    "description": "A place to display an item."
+  },
+  "232": {
+    "displayName": "Stone Chest",
+    "description": "A place to store your items."
+  },
+  "238": {
+    "displayName": "Mini-Obelisk",
+    "description": "Place two on the farm to warp between them."
+  },
+  "239": {
+    "displayName": "Farm Computer",
+    "description": "Scans the farm and displays useful information."
+  },
+  "248": {
+    "displayName": "Mini-Shipping Bin",
+    "description": "Items placed in it will be included in the nightly shipment."
+  },
+  "254": {
+    "displayName": "Ostrich Incubator",
+    "description": "Hatches ostrich eggs into baby ostriches. Place in a barn."
+  },
+  "182": {
+    "displayName": "Geode Crusher",
+    "description": "Breaks geodes open automatically."
+  },
+  "246": {
+    "displayName": "Coffee Maker",
+    "description": "Automatically brews a fresh cup every morning."
+  },
+  "247": {
+    "displayName": "Sewing Machine",
+    "description": "Use to tailor clothes from the convenience of your home!"
+  },
+  "231": {
+    "displayName": "Solar Panel",
+    "description": "Slowly generates batteries when left in the sun."
+  },
+  "90": {
+    "displayName": "Bone Mill",
+    "description": "Turns bone items into fertilizers."
+  },
+  "256": {
+    "displayName": "Junimo Chest",
+    "description": "Through the power of forest magic, every Junimo Chest links to the same stash."
+  },
+  "262": {
+    "displayName": "Barrel",
+    "description": "..."
+  },
+  "263": {
+    "displayName": "Crate",
+    "description": "..."
+  },
+  "264": {
+    "displayName": "Heavy Tapper",
+    "description": "Place on a maple, oak, or pine tree and wait for the reservoir to fill with product! Works twice as fast as a normal tapper."
+  },
+  "265": {
+    "displayName": "Deconstructor",
+    "description": "Destroys crafted items, but salvages their most valuable material."
+  },
+  "272": {
+    "displayName": "Auto-Petter",
+    "description": "Joja Co. patented technology for coops and barns. Keeps your animals content, but can't replace the full benefit of human touch. Hand-petting can be provided to supplement."
+  },
+  "275": {
+    "displayName": "Hopper",
+    "description": "Items placed inside will automatically be loaded into the machine in front of it."
+  },
+  "278": {
+    "displayName": "Campfire",
+    "description": "Cook on the go!"
+  },
+  "280": {
+    "displayName": "Statue Of True Perfection",
+    "description": "It's made of pure iridium."
+  },
+  "TextSign": {
+    "displayName": "Text Sign",
+    "description": "You can write a custom message on this sign."
+  },
+  "MushroomLog": {
+    "displayName": "Mushroom Log",
+    "description": "Grows mushrooms every so often. The more wild trees are nearby, the better it works."
+  },
+  "BaitMaker": {
+    "displayName": "Bait Maker",
+    "description": "Place a fish inside to create targeted bait."
+  },
+  "Dehydrator": {
+    "displayName": "Dehydrator",
+    "description": "Place 5 pieces of fruit or edible mushrooms inside to dry them."
+  },
+  "HeavyFurnace": {
+    "displayName": "Heavy Furnace",
+    "description": "It's more efficient than a regular furnace. Requires 25 pieces of ore and 3 coal per use."
+  },
+  "StatueOfBlessings": {
+    "displayName": "Statue Of Blessings",
+    "description": "Touching the statue gives a unique blessing every day."
+  },
+  "StatueOfTheDwarfKing": {
+    "displayName": "Statue Of The Dwarf King",
+    "description": "Choose from two mining-related powers each day."
+  },
+  "Anvil": {
+    "displayName": "Anvil",
+    "description": "Allows you to re-forge trinkets, randomizing their stats. Costs 3 iridium bars per use."
+  },
+  "MiniForge": {
+    "displayName": "Mini-Forge",
+    "description": "Now, you can use a dwarvish forge from the convenience of your home."
+  },
+  "FishSmoker": {
+    "displayName": "Fish Smoker",
+    "description": "Place fish inside with a piece of coal to create smoked fish, which is worth double. The quality of the fish is preserved."
+  },
+  "DeluxeWormBin": {
+    "displayName": "Deluxe Worm Bin",
+    "description": "Produces Deluxe Bait on a regular basis. The worms are self-sufficient."
+  },
+  "BigChest": {
+    "displayName": "Big Chest",
+    "description": "It can store almost twice as much as a regular chest."
+  },
+  "BigStoneChest": {
+    "displayName": "Big Stone Chest",
+    "description": "It can store almost twice as much as a regular chest."
+  }
+}

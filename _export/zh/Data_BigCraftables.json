@@ -1,0 +1,730 @@
+{
+  "0": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "1": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "2": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "3": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "4": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "5": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "6": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "7": {
+    "displayName": "家居植物",
+    "description": "为你的房子或农场添加一些角色。"
+  },
+  "8": {
+    "displayName": "稻草人",
+    "description": "防止乌鸦袭击你的农作物。范围有限（大约半径 8 格）。"
+  },
+  "9": {
+    "displayName": "避雷针",
+    "description": "收集暴风雨的能量，转换为电池。"
+  },
+  "10": {
+    "displayName": "蜂房",
+    "description": "置放在屋外，然后等着吃甜蜜的蜂蜜吧！（除了冬天）。"
+  },
+  "12": {
+    "displayName": "小桶",
+    "description": "置放水果或蔬菜在内。最终会变成饮品。"
+  },
+  "13": {
+    "displayName": "熔炉",
+    "description": "将矿石和煤炭转换为金属方块。"
+  },
+  "15": {
+    "displayName": "罐头瓶",
+    "description": "将蔬菜转换成泡菜，水果为果酱。"
+  },
+  "16": {
+    "displayName": "压酪机",
+    "description": "将牛奶转换成乳酪。"
+  },
+  "17": {
+    "displayName": "织布机",
+    "description": "将动物毛转换成美丽的布料。"
+  },
+  "19": {
+    "displayName": "产油机",
+    "description": "生产松露美食油"
+  },
+  "20": {
+    "displayName": "回收机",
+    "description": "将捕鱼废料转换为资源。"
+  },
+  "21": {
+    "displayName": "宝石复制机",
+    "description": "置入你的宝石，它就会被复制。"
+  },
+  "22": {
+    "displayName": "桌子部件（左）",
+    "description": "一张大桌子的左角。"
+  },
+  "23": {
+    "displayName": "桌子部件（右）",
+    "description": "一张大桌子的右角。"
+  },
+  "24": {
+    "displayName": "蛋黄酱机",
+    "description": "将鸡蛋转换为蛋黄酱。"
+  },
+  "25": {
+    "displayName": "种子生产器",
+    "description": "将作物放入，将会产出各种各样的种子。对果树类的作物无效。"
+  },
+  "26": {
+    "displayName": "木椅",
+    "description": "一种可面朝四个方向的椅子。"
+  },
+  "27": {
+    "displayName": "木椅",
+    "description": "一种可面朝四个方向的椅子。"
+  },
+  "28": {
+    "displayName": "骨架模型",
+    "description": "一具模型骨架。"
+  },
+  "29": {
+    "displayName": "方尖碑",
+    "description": "一个散发着邪恶能量的可怕传送阵。"
+  },
+  "31": {
+    "displayName": "鸡雕像",
+    "description": "一只母鸡的木质雕像。"
+  },
+  "32": {
+    "displayName": "石堆",
+    "description": "农场的装饰件。"
+  },
+  "33": {
+    "displayName": "装甲",
+    "description": "农场的装饰件。"
+  },
+  "34": {
+    "displayName": "船标",
+    "description": "农场的装饰件。"
+  },
+  "35": {
+    "displayName": "普通圆木",
+    "description": "农场的装饰件。"
+  },
+  "36": {
+    "displayName": "草坪火烈鸟",
+    "description": "农场的装饰件。"
+  },
+  "37": {
+    "displayName": "木牌",
+    "description": "在此上使用一个道具，即可改变显示的内容。道具不会被消耗掉。"
+  },
+  "38": {
+    "displayName": "石牌",
+    "description": "在此上使用一个道具，即可改变显示的内容。道具不会被消耗掉。"
+  },
+  "39": {
+    "displayName": "深色牌子",
+    "description": "在此上使用一个道具，即可改变显示的内容。道具不会被消耗掉。"
+  },
+  "40": {
+    "displayName": "大绿杖",
+    "description": "农场的装饰件。"
+  },
+  "41": {
+    "displayName": "绿杖",
+    "description": "农场的装饰件。"
+  },
+  "42": {
+    "displayName": "混色杖",
+    "description": "农场的装饰件。"
+  },
+  "43": {
+    "displayName": "红杖",
+    "description": "农场的装饰件。"
+  },
+  "44": {
+    "displayName": "大红杖",
+    "description": "农场的装饰件。"
+  },
+  "45": {
+    "displayName": "装饰干草捆",
+    "description": "农场的装饰件。"
+  },
+  "46": {
+    "displayName": "圆木段",
+    "description": "农场的装饰件。"
+  },
+  "47": {
+    "displayName": "墓石",
+    "description": "农场的装饰件。"
+  },
+  "48": {
+    "displayName": "季节性装饰",
+    "description": "此装饰随季节变化。"
+  },
+  "52": {
+    "displayName": "石蛙",
+    "description": "适合农场的园艺。"
+  },
+  "53": {
+    "displayName": "石鹦鹉",
+    "description": "适合农场的园艺。"
+  },
+  "54": {
+    "displayName": "石猫头鹰",
+    "description": "适合农场的园艺。"
+  },
+  "55": {
+    "displayName": "石祝尼魔",
+    "description": "适合农场的园艺。"
+  },
+  "56": {
+    "displayName": "史莱姆球",
+    "description": "满是粘液的物体。"
+  },
+  "62": {
+    "displayName": "花盆",
+    "description": "在室内时，可种植任何季节的作物。在户外时，只能容纳季节性作物。"
+  },
+  "64": {
+    "displayName": "书架",
+    "description": "书本的家。"
+  },
+  "65": {
+    "displayName": "漂亮的桌子",
+    "description": "制作精良的圆桌。"
+  },
+  "66": {
+    "displayName": "远古桌子",
+    "description": "满满都是蛛网的桌子。"
+  },
+  "67": {
+    "displayName": "远古凳子",
+    "description": "有种祖母的公寓的味道。"
+  },
+  "68": {
+    "displayName": "祖父的钟",
+    "description": "很古老……钟摆都生锈卡着了。"
+  },
+  "69": {
+    "displayName": "泰迪熊闹钟",
+    "description": "祖父的一个泰迪熊型状闹钟。"
+  },
+  "70": {
+    "displayName": "枯死的树",
+    "description": "已经风干了很久的可怜树木。"
+  },
+  "71": {
+    "displayName": "楼梯",
+    "description": "前往矿场的下一层。"
+  },
+  "72": {
+    "displayName": "高高的火把",
+    "description": "火把是用竹子打造的。"
+  },
+  "73": {
+    "displayName": "仪式面具",
+    "description": "过于巨大，戴不上。"
+  },
+  "74": {
+    "displayName": "篝火",
+    "description": "余烬徐徐燃烧。"
+  },
+  "75": {
+    "displayName": "小手鼓",
+    "description": "一种声音浑厚的装饰乐器。"
+  },
+  "76": {
+    "displayName": "装饰长矛",
+    "description": "不是很安全的装饰物。"
+  },
+  "78": {
+    "displayName": "圆石",
+    "description": "一块非常沉重的石头。"
+  },
+  "79": {
+    "displayName": "门",
+    "description": "一种使它缩回地面的隐蔽装置。"
+  },
+  "80": {
+    "displayName": "门",
+    "description": "一种使它缩回地面的隐蔽装置。"
+  },
+  "81": {
+    "displayName": "上锁的门",
+    "description": "一种使它缩回地面的隐蔽装置。"
+  },
+  "82": {
+    "displayName": "上锁的门",
+    "description": "一种使它缩回地面的隐蔽装置。"
+  },
+  "83": {
+    "displayName": "邪恶雕像",
+    "description": "这个雕像看上去有点瘆人。"
+  },
+  "84": {
+    "displayName": "邪恶雕像",
+    "description": "这个雕像有点不太对劲。"
+  },
+  "85": {
+    "displayName": "树懒骨架（左）",
+    "description": "这种已经灭绝的树懒曾经生活在星露谷的史前森林中。它强大的上下顎可以咬断最坚硬的植物纤维。"
+  },
+  "86": {
+    "displayName": "树懒骨架（中）",
+    "description": "史前树懒的肋骨。 "
+  },
+  "87": {
+    "displayName": "树懒骨架（右）",
+    "description": "史前树懒的后腿和尾巴。"
+  },
+  "88": {
+    "displayName": "直立的晶洞",
+    "description": "一块巨大的晶洞镶嵌在一个基座上。成千上百的紫色水晶在其中闪闪发光。"
+  },
+  "89": {
+    "displayName": "黑曜石花瓶",
+    "description": "一个由黑曜石和黄金打造的美丽装饰花瓶。"
+  },
+  "94": {
+    "displayName": "唱歌的石头",
+    "description": "被击中就会发出纯音。"
+  },
+  "95": {
+    "displayName": "石猫头鹰",
+    "description": "不知道从哪儿来，但是挺耐看。"
+  },
+  "96": {
+    "displayName": "奇怪的胶囊",
+    "description": "里面的液体有点不对劲……"
+  },
+  "98": {
+    "displayName": "空置的胶囊",
+    "description": "一部分玻璃被击碎了。"
+  },
+  "99": {
+    "displayName": "喂料斗",
+    "description": "可以轻易进入饲料筒仓。"
+  },
+  "101": {
+    "displayName": "孵化器",
+    "description": "将蛋孵化为小鸡和小鸭。"
+  },
+  "104": {
+    "displayName": "加热器",
+    "description": "为你的动物在冬天中保暖。"
+  },
+  "105": {
+    "displayName": "树液采集器",
+    "description": "放在枫树、橡树、松树上，然后等着装满树液吧！"
+  },
+  "106": {
+    "displayName": "相机",
+    "description": "装在三脚架上的旧相机。"
+  },
+  "107": {
+    "displayName": "绒毛兔子",
+    "description": "很大、很软、很可爱。"
+  },
+  "108": {
+    "displayName": "一簇鲜花",
+    "description": "种植在橡木桶里的花朵。春天和夏天开花。"
+  },
+  "110": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-1）"
+  },
+  "111": {
+    "displayName": "装饰瓶子",
+    "description": "用黄铜手工打造。"
+  },
+  "112": {
+    "displayName": "风干太阳花",
+    "description": "鲜艳的家具饰物。"
+  },
+  "113": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-2）"
+  },
+  "114": {
+    "displayName": "煤炭窑",
+    "description": "将 10 块木头转换成一块煤炭。"
+  },
+  "116": {
+    "displayName": "星露谷英雄奖杯",
+    "description": "星露谷居民的至高奖项！"
+  },
+  "117": {
+    "displayName": "汽水机",
+    "description": "总会弹出美妙的东西。"
+  },
+  "118": {
+    "displayName": "木桶",
+    "description": "……"
+  },
+  "119": {
+    "displayName": "木箱",
+    "description": "……"
+  },
+  "120": {
+    "displayName": "木桶",
+    "description": "……"
+  },
+  "121": {
+    "displayName": "木箱",
+    "description": "……"
+  },
+  "122": {
+    "displayName": "木桶",
+    "description": "……"
+  },
+  "123": {
+    "displayName": "木箱",
+    "description": "……"
+  },
+  "124": {
+    "displayName": "木桶",
+    "description": "……"
+  },
+  "125": {
+    "displayName": "木箱",
+    "description": "……"
+  },
+  "126": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-3）"
+  },
+  "127": {
+    "displayName": "无尽财富之雕像",
+    "description": "黄金打造的。干什么用的呢？"
+  },
+  "128": {
+    "displayName": "蘑菇盒子",
+    "description": "每过几天就会长出蘑菇。"
+  },
+  "130": {
+    "displayName": "宝箱",
+    "description": "收藏你的物品的地方。"
+  },
+  "136": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-4）"
+  },
+  "137": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-5）"
+  },
+  "138": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-6）"
+  },
+  "139": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-7）"
+  },
+  "140": {
+    "displayName": "珍奇乌鸦",
+    "description": "将它们全部收齐！（8-8）"
+  },
+  "141": {
+    "displayName": "草原之王街机系统",
+    "description": "在家里玩“草原之王的冒险之旅”！"
+  },
+  "143": {
+    "displayName": "木头火炬",
+    "description": "提供一点亮光。"
+  },
+  "144": {
+    "displayName": "石头火炬",
+    "description": "提供一点亮光。"
+  },
+  "145": {
+    "displayName": "金制火炬",
+    "description": "提供一点亮光。"
+  },
+  "146": {
+    "displayName": "篝火",
+    "description": "提供一点亮光。"
+  },
+  "147": {
+    "displayName": "树桩火炬",
+    "description": "提供一点亮光。"
+  },
+  "148": {
+    "displayName": "镂空火炬",
+    "description": "提供一点亮光。"
+  },
+  "149": {
+    "displayName": "骷髅火炬",
+    "description": "提供一点亮光。"
+  },
+  "150": {
+    "displayName": "木桶火炬",
+    "description": "提供一点亮光。"
+  },
+  "151": {
+    "displayName": "大理石火炬",
+    "description": "提供一点亮光。"
+  },
+  "152": {
+    "displayName": "木灯柱",
+    "description": "提供不少亮光。"
+  },
+  "153": {
+    "displayName": "铁灯柱",
+    "description": "提供不少亮光。"
+  },
+  "154": {
+    "displayName": "虫饵盒",
+    "description": "稳定地提供诱饵。这些虫可以依靠自身维持生存。"
+  },
+  "155": {
+    "displayName": "??HMTGF??",
+    "description": "??HMTGF??"
+  },
+  "156": {
+    "displayName": "史莱姆孵化器",
+    "description": "将史莱姆蛋孵化成史莱姆。让你能够在室外饲养史莱姆。"
+  },
+  "158": {
+    "displayName": "史莱姆压蛋器",
+    "description": "将 100 团史莱姆泥压成一个史莱姆蛋。简直是奇迹！"
+  },
+  "159": {
+    "displayName": "祝尼魔赛车街机系统",
+    "description": "在家玩“祝尼魔赛车”！"
+  },
+  "160": {
+    "displayName": "完美雕像",
+    "description": "由纯铱打造而成。"
+  },
+  "161": {
+    "displayName": "??粉色柠檬??",
+    "description": "??粉色柠檬??"
+  },
+  "162": {
+    "displayName": "??碎屑雕像??",
+    "description": "??碎屑雕像??"
+  },
+  "163": {
+    "displayName": "木桶",
+    "description": "在地窖中使用以使产品变陈，如葡萄酒和奶酪。"
+  },
+  "164": {
+    "displayName": "刘易斯黄金像",
+    "description": "市长的秘密项目。"
+  },
+  "165": {
+    "displayName": "自动采集器",
+    "description": "每天早晨自动采集动物产品。必须放在鸡舍或畜棚内。"
+  },
+  "167": {
+    "displayName": "豪华稻草人",
+    "description": "阻止乌鸦攻击你的庄稼。范围很大（大约半径 16 格）。"
+  },
+  "174": {
+    "displayName": "木桶",
+    "description": "……"
+  },
+  "175": {
+    "displayName": "木箱",
+    "description": "……"
+  },
+  "184": {
+    "displayName": "季节性植物",
+    "description": "随着季节变化的观赏性植物。不需要浇水。"
+  },
+  "188": {
+    "displayName": "季节性植物",
+    "description": "随着季节变化的观赏性植物。不需要浇水。"
+  },
+  "192": {
+    "displayName": "季节性植物",
+    "description": "随着季节变化的观赏性植物。不需要浇水。"
+  },
+  "196": {
+    "displayName": "季节性植物",
+    "description": "随着季节变化的观赏性植物。不需要浇水。"
+  },
+  "200": {
+    "displayName": "季节性植物",
+    "description": "随着季节变化的观赏性植物。不需要浇水。"
+  },
+  "204": {
+    "displayName": "季节性植物",
+    "description": "随着季节变化的观赏性植物。不需要浇水。"
+  },
+  "208": {
+    "displayName": "工作台",
+    "description": "在这里制作物品时，你可以使用任何相邻箱子中的材料。"
+  },
+  "209": {
+    "displayName": "迷你点唱机",
+    "description": "可以播放自己最喜欢的音乐。"
+  },
+  "211": {
+    "displayName": "碎木机",
+    "description": "放入一块硬木，把它分解成普通的木头。"
+  },
+  "214": {
+    "displayName": "电话",
+    "description": "可以用来了解商店的营业时间和库存。"
+  },
+  "216": {
+    "displayName": "迷你冰箱",
+    "description": "可以储存额外的烹饪原材料。"
+  },
+  "219": {
+    "displayName": "被诅咒的P.K.街机系统",
+    "description": "这台草原之王街机系统有哪里不对劲……"
+  },
+  "221": {
+    "displayName": "Item Pedestal",
+    "description": "A place to display an item."
+  },
+  "232": {
+    "displayName": "石箱",
+    "description": "可以储存你的物品。"
+  },
+  "238": {
+    "displayName": "迷你图腾尖塔",
+    "description": "在农场中放置两个，就可以在它们之间传送。"
+  },
+  "239": {
+    "displayName": "农场电脑",
+    "description": "可以扫描农场，显示实用的信息。"
+  },
+  "248": {
+    "displayName": "迷你出货箱",
+    "description": "放在里面的物品会在每晚售出。"
+  },
+  "254": {
+    "displayName": "鸵鸟孵化器",
+    "description": "将鸵鸟蛋孵化成鸵鸟雏鸟。放置在畜棚里。"
+  },
+  "182": {
+    "displayName": "晶球破开器",
+    "description": "可以自动地破开晶球。"
+  },
+  "246": {
+    "displayName": "咖啡机",
+    "description": "每天早上自动煮一杯新鲜的咖啡。"
+  },
+  "247": {
+    "displayName": "缝纫机",
+    "description": "用来在家中方便地量身定做衣服！"
+  },
+  "231": {
+    "displayName": "太阳能板",
+    "description": "放在阳光下会缓慢地生产出电池。"
+  },
+  "90": {
+    "displayName": "碎骨机",
+    "description": "可以把骨头制成肥料。"
+  },
+  "256": {
+    "displayName": "祝尼魔箱",
+    "description": "通过森林魔法的力量，每个祝尼魔箱都连接到同一个储存处。"
+  },
+  "262": {
+    "displayName": "木桶",
+    "description": "……"
+  },
+  "263": {
+    "displayName": "木箱",
+    "description": "……"
+  },
+  "264": {
+    "displayName": "重型树液采集器",
+    "description": "放在枫树、橡树、松树上，然后等着装满树液吧！比普通树液采集器快一倍。"
+  },
+  "265": {
+    "displayName": "分解机",
+    "description": "销毁打造的物品，回收最有价值的材料。"
+  },
+  "272": {
+    "displayName": "自动抚摸机",
+    "description": "Joja 公司专利技术，适用于鸡舍和畜棚。可以让动物们满足，但是无法实现亲自抚摸的所有好处。使用后仍可手动抚摸来补足。"
+  },
+  "275": {
+    "displayName": "加料器",
+    "description": "把东西放进去，会自动加进前面的机器里。"
+  },
+  "278": {
+    "displayName": "篝火",
+    "description": "随时随地做饭！"
+  },
+  "280": {
+    "displayName": "真正完美的雕像",
+    "description": "由纯铱打造而成。"
+  },
+  "TextSign": {
+    "displayName": "文字标牌",
+    "description": "你可以在这个标牌上写一条信息。"
+  },
+  "MushroomLog": {
+    "displayName": "蘑菇树桩",
+    "description": "偶尔会长蘑菇。附近野树越多，效果越好。"
+  },
+  "BaitMaker": {
+    "displayName": "鱼饵制造机",
+    "description": "放入鱼即可制造有针对性的鱼饵。"
+  },
+  "Dehydrator": {
+    "displayName": "烘干机",
+    "description": "放入 5 个水果或可食用的蘑菇即可烘干。"
+  },
+  "HeavyFurnace": {
+    "displayName": "重型熔炉",
+    "description": "比普通熔炉效率更高。每次使用需要 25 个矿石和 3 块煤炭。"
+  },
+  "StatueOfBlessings": {
+    "displayName": "祝福雕像",
+    "description": "每天触摸雕像可以获得随机祝福。"
+  },
+  "StatueOfTheDwarfKing": {
+    "displayName": "矮人之王雕像",
+    "description": "每天二选一获得采矿能力。"
+  },
+  "Anvil": {
+    "displayName": "铁砧",
+    "description": "可以“重新锻造”饰品。每次使用消耗 3 块铱锭。"
+  },
+  "MiniForge": {
+    "displayName": "迷你锻造台",
+    "description": "你可以在家中方便地使用矮人锻造台了。"
+  },
+  "FishSmoker": {
+    "displayName": "熏鱼机",
+    "description": "放入鱼和一块煤炭即可烟熏，熏鱼价格是普通的两倍。"
+  },
+  "DeluxeWormBin": {
+    "displayName": "高级虫饵盒",
+    "description": "定期产生高级鱼饵。里面的虫子可以自给自足。"
+  },
+  "BigChest": {
+    "displayName": "大箱子",
+    "description": "容量几乎是普通箱子的两倍。"
+  },
+  "BigStoneChest": {
+    "displayName": "石制大箱子",
+    "description": "容量几乎是普通箱子的两倍。"
+  }
+}

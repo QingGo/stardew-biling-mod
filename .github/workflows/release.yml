@@ -1,0 +1,50 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build bilingual content pack
+        run: |
+          cd BilingualModBuilder
+          python build_bilingual_pack.py --export-dir ..\_export
+
+      - name: Create release zip
+        run: |
+          cd BilingualModBuilder
+          $tag = "${{ github.ref_name }}"
+          $zipName = "BilingualMod-$tag.zip"
+          Compress-Archive -Path BilingualMod\* -DestinationPath $zipName
+          echo "zip=$zipName" >> $env:GITHUB_ENV
+          Move-Item $zipName ..\ -Force
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: BilingualMod-${{ github.ref_name }}.zip
+          generate_release_notes: true
+          body: |
+            ## Stardew Valley Bilingual Text ${{ github.ref_name }}
+
+            ### 安装
+            1. 下载 `BilingualMod-${{ github.ref_name }}.zip`
+            2. 解压到 `Stardew Valley/Mods/BilingualMod/`
+            3. 启动游戏（通过 `StardewModdingAPI.exe`）
+            4. 在标题画面将 Language 设为 **中文**
+            5. 进入主菜单，GMCM → Stardew Valley Bilingual Text → 选择 Bilingual 模式

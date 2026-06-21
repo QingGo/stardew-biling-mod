@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import shutil
@@ -11,11 +12,15 @@ from parsers import (
 )
 
 # ====== Config ======
-EXPORT_DIR = Path("D:/steam/steamapps/common/Stardew Valley/Export_TextAssets")
+SCRIPT_DIR = Path(__file__).parent.resolve()
+DEFAULT_EXPORT_DIR = SCRIPT_DIR.parent / "_export"  # committed export data for CI
+GAME_EXPORT_DIR = Path("D:/steam/steamapps/common/Stardew Valley/Export_TextAssets")
 OUTPUT_DIR = Path("./BilingualMod")
 ASSETS_LIST_FILE = Path("./assets-list.txt")
 
 PIPE_BILINGUAL_TEMPLATE = "{en} | {zh}"
+
+EXPORT_DIR = None  # set by main() via CLI arg or auto-detect
 
 # Data/* 资产的字段映射
 #   model: 模型型 (named fields), 用 EditData + Fields
@@ -74,6 +79,20 @@ def is_festival_asset(asset_path: str) -> bool:
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Build bilingual Content Patcher pack")
+    parser.add_argument("--export-dir", type=str, default=None,
+                        help="Path to Export_TextAssets (default: auto-detect)")
+    args = parser.parse_args()
+
+    # Auto-detect export dir: game path first, fall back to committed _export
+    global EXPORT_DIR
+    if args.export_dir:
+        EXPORT_DIR = Path(args.export_dir)
+    elif GAME_EXPORT_DIR.exists():
+        EXPORT_DIR = GAME_EXPORT_DIR
+    else:
+        EXPORT_DIR = DEFAULT_EXPORT_DIR
+
     if not ASSETS_LIST_FILE.exists():
         print(f"错误：找不到资产列表文件 {ASSETS_LIST_FILE}")
         return
@@ -91,7 +110,7 @@ def main():
         zh_file = EXPORT_DIR / "zh" / filename
 
         if not en_file.exists():
-            print(f"警告：缺失英文资产 {asset_path}，跳过")
+            print(f"警告：缺失英文资产 {asset_path}（查找路径：{en_file}），跳过")
             continue
 
         if is_festival_asset(asset_path):

@@ -1,24 +1,56 @@
-# Display text assets (safe for bilingual)
+# Display text assets (safe for bilingual, Dictionary<string,string>)
 Data/ExtraDialogue
 Data/mail
 Data/TV/CookingChannel
 Data/TV/TipChannel
 
+# Data assets (display name + description extraction, for EditData patches)
+Data/Objects
+Data/Tools
+Data/Weapons
+Data/BigCraftables
+Data/Powers
+Data/Trinkets
+Data/hats
+Data/Boots
+Data/Shirts
+Data/Pants
+Data/Quests
+Data/SecretNotes
+Data/EngagementDialogue
+
 # Strings (most UI text) - 纯文本，安全用于双语
+Strings/1_6_Strings
+Strings/animationDescriptions
+Strings/BigCraftables
 Strings/Buildings
 Strings/BundleNames
 Strings/Characters
+Strings/credits
+Strings/EnchantmentNames
 Strings/Events
 Strings/FarmAnimals
 Strings/Furniture
+Strings/Lexicon
 Strings/Locations
+Strings/MovieConcessions
+Strings/MovieReactions
+Strings/Movies
+Strings/Notes
 Strings/NPCNames
 Strings/Objects
+Strings/Pants
 Strings/Quests
+Strings/Shirts
+Strings/SimpleNonVillagerDialogues
+Strings/SpecialOrderStrings
 Strings/SpeechBubbles
 Strings/StringsFromCSFiles
 Strings/StringsFromMaps
+Strings/Tools
 Strings/UI
+Strings/Weapons
+Strings/WorldMap
 
 # Dialogue - 纯文本，安全用于双语
 Characters/Dialogue/Abigail
@@ -31,6 +63,7 @@ Characters/Dialogue/Elliott
 Characters/Dialogue/Emily
 Characters/Dialogue/Evelyn
 Characters/Dialogue/George
+Characters/Dialogue/Gil
 Characters/Dialogue/Gus
 Characters/Dialogue/Haley
 Characters/Dialogue/Harvey
@@ -40,13 +73,16 @@ Characters/Dialogue/Kent
 Characters/Dialogue/Krobus
 Characters/Dialogue/Leah
 Characters/Dialogue/Leo
+Characters/Dialogue/LeoMainland
 Characters/Dialogue/Lewis
 Characters/Dialogue/Linus
 Characters/Dialogue/Marnie
 Characters/Dialogue/Maru
+Characters/Dialogue/Mister Qi
 Characters/Dialogue/Pam
 Characters/Dialogue/Penny
 Characters/Dialogue/Pierre
+Characters/Dialogue/rainy
 Characters/Dialogue/Robin
 Characters/Dialogue/Sam
 Characters/Dialogue/Sandy
@@ -69,3 +105,35 @@ Characters/Dialogue/MarriageDialoguePenny
 Characters/Dialogue/MarriageDialogueSam
 Characters/Dialogue/MarriageDialogueSebastian
 Characters/Dialogue/MarriageDialogueShane
+
+# Schedule strings
+Strings/schedules/Abigail
+Strings/schedules/Alex
+Strings/schedules/Caroline
+Strings/schedules/Clint
+Strings/schedules/Demetrius
+Strings/schedules/Elliott
+Strings/schedules/Emily
+Strings/schedules/Evelyn
+Strings/schedules/George
+Strings/schedules/Gus
+Strings/schedules/Haley
+Strings/schedules/Harvey
+Strings/schedules/Jas
+Strings/schedules/Jodi
+Strings/schedules/Leah
+Strings/schedules/Leo
+Strings/schedules/Lewis
+Strings/schedules/Linus
+Strings/schedules/Marnie
+Strings/schedules/Maru
+Strings/schedules/Pam
+Strings/schedules/Penny
+Strings/schedules/Pierre
+Strings/schedules/Robin
+Strings/schedules/Sam
+Strings/schedules/Sandy
+Strings/schedules/Sebastian
+Strings/schedules/Shane
+Strings/schedules/Vincent
+Strings/schedules/Willy

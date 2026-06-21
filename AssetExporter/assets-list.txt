@@ -17,6 +17,7 @@ Data/Shirts
 Data/Pants
 Data/Quests
 Data/SecretNotes
+Data/Achievements
 Data/EngagementDialogue
 
 # Strings (most UI text) - 纯文本，安全用于双语

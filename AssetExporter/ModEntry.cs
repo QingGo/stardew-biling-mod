@@ -42,9 +42,11 @@ namespace AssetExporter
         };
 
         private static readonly Regex TokenRegex = new(
-            @"\[LocalizedText\s+[^:]+:(\w+)\]",
+            @"\[LocalizedText\s+([\w\\]+):(.+?)\]",
             RegexOptions.Compiled
         );
+
+        private readonly Dictionary<string, Dictionary<string, string>> _stringsLoadCache = new();
 
         public override void Entry(IModHelper helper)
         {
@@ -95,26 +97,13 @@ namespace AssetExporter
         private T LoadEn<T>(string assetPath)
         {
             var origLang = LocalizedContentManager.CurrentLanguageCode;
-            DebugLog($"LoadEn<{typeof(T).Name}>(\"{assetPath}\") origLang={origLang}");
-
             LocalizedContentManager.CurrentLanguageCode = LocalizedContentManager.LanguageCode.en;
 
             InvalidateAllCaches();
 
             var result = Helper.GameContent.Load<T>(assetPath);
-            DebugLog($"  loaded, lang now={LocalizedContentManager.CurrentLanguageCode}");
 
             LocalizedContentManager.CurrentLanguageCode = origLang;
-            DebugLog($"  restored to {origLang}");
-
-            // Check if result has Chinese
-            if (result is Dictionary<string, string> dict && dict.Count > 0)
-            {
-                var sample = dict.First();
-                bool hasChinese = sample.Value.Any(c => c > 0x2FF);
-                DebugLog($"  sample \"{sample.Key}\"=\"{sample.Value.Substring(0, Math.Min(60, sample.Value.Length))}\" containsChinese={hasChinese}");
-            }
-
             return result;
         }
 
@@ -256,7 +245,7 @@ namespace AssetExporter
                         WriteDataExport(assetPath, zhDir, zhResult);
                         validation.AddData(assetPath, enResult, zhResult);
                     }
-                    else if (assetPath == "Data/SecretNotes")
+                    else if (assetPath == "Data/SecretNotes" || assetPath == "Data/Achievements")
                     {
                         var enResult = ExportIntKeyPipeData(assetPath, '^', isEnglish: true);
                         var zhResult = ExportIntKeyPipeData(assetPath, '^', isEnglish: false);
@@ -384,7 +373,8 @@ namespace AssetExporter
                 result[kvp.Key.ToString()] = new Dictionary<string, string>
                 {
                     ["displayName"] = displayName,
-                    ["description"] = description
+                    ["description"] = description,
+                    ["_raw"] = kvp.Value
                 };
             }
             return result;
@@ -398,21 +388,21 @@ namespace AssetExporter
             return assetPath switch
             {
                 "Data/Objects" => ExtractTokenizedData(
-                    LoadModelData<ObjectData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<ObjectData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/Tools" => ExtractTokenizedData(
-                    LoadModelData<ToolData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<ToolData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/Weapons" => ExtractTokenizedData(
-                    LoadModelData<WeaponData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<WeaponData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/Shirts" => ExtractTokenizedData(
-                    LoadModelData<ShirtData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<ShirtData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/Pants" => ExtractTokenizedData(
-                    LoadModelData<PantsData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<PantsData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/BigCraftables" => ExtractTokenizedData(
-                    LoadModelData<BigCraftableData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<BigCraftableData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/Powers" => ExtractTokenizedData(
-                    LoadModelData<PowersData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<PowersData>(assetPath, isEnglish), stringsDict, isEnglish),
                 "Data/Trinkets" => ExtractTokenizedData(
-                    LoadModelData<TrinketData>(assetPath, isEnglish), stringsDict),
+                    LoadModelData<TrinketData>(assetPath, isEnglish), stringsDict, isEnglish),
                 _ => null
             };
         }
@@ -426,7 +416,7 @@ namespace AssetExporter
         }
 
         private Dictionary<string, Dictionary<string, string>> ExtractTokenizedData<T>(
-            Dictionary<string, T> rawData, Dictionary<string, string> stringsDict)
+            Dictionary<string, T> rawData, Dictionary<string, string> primaryStrings, bool isEnglish)
         {
             if (rawData == null) return null;
 
@@ -438,14 +428,14 @@ namespace AssetExporter
                 string desc = item?.Description as string ?? "";
                 result[kvp.Key] = new Dictionary<string, string>
                 {
-                    ["displayName"] = ResolveToken(dn, stringsDict),
-                    ["description"] = ResolveToken(desc, stringsDict)
+                    ["displayName"] = ResolveToken(dn, primaryStrings, isEnglish),
+                    ["description"] = ResolveToken(desc, primaryStrings, isEnglish)
                 };
             }
             return result;
         }
 
-        private string ResolveToken(string rawValue, Dictionary<string, string> stringsDict)
+        private string ResolveToken(string rawValue, Dictionary<string, string> primaryStrings, bool isEnglish)
         {
             if (string.IsNullOrEmpty(rawValue))
                 return "";
@@ -453,9 +443,35 @@ namespace AssetExporter
             var match = TokenRegex.Match(rawValue);
             if (match.Success)
             {
-                string key = match.Groups[1].Value;
-                if (stringsDict != null && stringsDict.TryGetValue(key, out string resolved))
+                string source = match.Groups[1].Value; // "Strings\Objects"
+                string key = match.Groups[2].Value;    // "DwarvishTranslationGuide_Name"
+
+                // Try the token's specified source first
+                string assetPath = source.Replace('\\', '/');
+                string cacheKey = assetPath + ":" + isEnglish;
+
+                if (!_stringsLoadCache.TryGetValue(cacheKey, out var tokenSourceStrings))
+                {
+                    try
+                    {
+                        if (isEnglish)
+                            tokenSourceStrings = LoadEn<Dictionary<string, string>>(assetPath);
+                        else
+                            tokenSourceStrings = LoadZh<Dictionary<string, string>>(assetPath);
+                        _stringsLoadCache[cacheKey] = tokenSourceStrings;
+                    }
+                    catch
+                    {
+                        tokenSourceStrings = null;
+                    }
+                }
+
+                if (tokenSourceStrings != null && tokenSourceStrings.TryGetValue(key, out var resolved))
                     return resolved;
+
+                // Fall back to primary strings dict
+                if (primaryStrings.TryGetValue(key, out var primaryResolved))
+                    return primaryResolved;
             }
 
             return rawValue;

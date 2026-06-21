@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import shutil
 from pathlib import Path
 
@@ -11,9 +12,43 @@ ASSETS_LIST_FILE = Path("./assets-list.txt")
 BILINGUAL_TEMPLATE = "{en} / {zh}"
 PIPE_BILINGUAL_TEMPLATE = "{en} | {zh}"
 
-# Data/* 资产的字段映射 (管道分隔型使用索引，模型型使用命名字段)
+# 对话标记分割：#$e# (结束) 和 #$b# (换行) 是段落边界
+# 在边界之间做双语拼接，避免中文被 #$e# 丢弃
+DIALOGUE_SEGMENT_RE = re.compile(r'(#\$[eb]#)')
+DIALOGUE_ASSET_PREFIXES = ["Characters/Dialogue/"]
+
+
+def make_dialogue_bilingual(en_val: str, zh_val: str) -> str:
+    """对对话条目按 #$e# / #$b# 分段后做双语，避免中文被结束标记丢弃"""
+    en_parts = DIALOGUE_SEGMENT_RE.split(en_val)
+    zh_parts = DIALOGUE_SEGMENT_RE.split(zh_val)
+
+    # 如果分段结构不一致（中英标记数量不同），回退到简单拼接
+    if len(en_parts) != len(zh_parts):
+        return BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+
+    result = []
+    for en_part, zh_part in zip(en_parts, zh_parts):
+        if en_part in ('#$e#', '#$b#'):
+            result.append(en_part)
+        else:
+            en_text = en_part
+            zh_text = zh_part
+            if en_text and zh_text:
+                result.append(f"{en_text} / {zh_text}")
+            elif en_text:
+                result.append(f"{en_text} / ")
+            elif zh_text:
+                result.append(f" / {zh_text}")
+            else:
+                result.append("")
+    return "".join(result)
+
+# Data/* 资产的字段映射
+#   model: 模型型 (named fields), 用 EditData + Fields
+#   pipe:  管道分隔型 (/ 分割), 用 EditData + Fields
+#   caret: ^ 分隔型 (int key), 用 EditData + Entries 全值替换
 DATA_FIELD_MAP = {
-    # 模型型 (named fields)
     "Data/Objects":   { "type": "model",  "displayName": "DisplayName", "description": "Description" },
     "Data/Tools":     { "type": "model",  "displayName": "DisplayName", "description": "Description" },
     "Data/Weapons":   { "type": "model",  "displayName": "DisplayName", "description": "Description" },
@@ -22,12 +57,12 @@ DATA_FIELD_MAP = {
     "Data/BigCraftables": { "type": "model", "displayName": "DisplayName", "description": "Description" },
     "Data/Powers":    { "type": "model",  "displayName": "DisplayName", "description": "Description" },
     "Data/Trinkets":  { "type": "model",  "displayName": "DisplayName", "description": "Description" },
-    # 管道分隔型 (numeric index)
     "Data/hats":      { "type": "pipe",   "displayName": 5, "description": 1 },
     "Data/Boots":     { "type": "pipe",   "displayName": 6, "description": 1 },
     "Data/Quests":    { "type": "pipe",   "displayName": 1, "description": 2 },
-    "Data/SecretNotes":  { "type": "pipe",   "displayName": 0, "description": 1 },
     "Data/EngagementDialogue": { "type": "pipe", "displayName": 0, "description": 1 },
+    "Data/SecretNotes":  { "type": "caret", "delimiter": "^", "displayName": 0, "description": 1 },
+    "Data/Achievements": { "type": "caret", "delimiter": "^", "displayName": 0, "description": 1 },
 }
 
 # 只处理 Load 的资产类型前缀 (不生成 EditData)
@@ -97,6 +132,8 @@ def main():
             en_data = load_json(en_file)
 
             # 生成 Bilingual Entries（取所有键的并集）
+            is_dialogue = any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
+
             all_keys = set(en_data.keys())
             if zh_data:
                 all_keys |= set(zh_data.keys())
@@ -105,14 +142,18 @@ def main():
             for key in all_keys:
                 en_val = en_data.get(key, "")
                 zh_val = zh_data.get(key, "") if zh_data else ""
-                if en_val and zh_val:
-                    bilingual_data[key] = BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
-                elif en_val:
-                    bilingual_data[key] = f"{en_val} / "
-                elif zh_val:
-                    bilingual_data[key] = f" / {zh_val}"
+
+                if is_dialogue:
+                    bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
                 else:
-                    bilingual_data[key] = ""
+                    if en_val and zh_val:
+                        bilingual_data[key] = BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+                    elif en_val:
+                        bilingual_data[key] = f"{en_val} / "
+                    elif zh_val:
+                        bilingual_data[key] = f" / {zh_val}"
+                    else:
+                        bilingual_data[key] = ""
 
             # English 模式补丁（仅包含英文有的键；中文独有键保持覆盖层原样）
             content_changes.append({
@@ -140,11 +181,74 @@ def main():
             zh_data = load_json(zh_file)
 
             field_map = DATA_FIELD_MAP[asset_path]
-            is_model = field_map["type"] == "model"
+            asset_type = field_map["type"]
             dn_field = field_map["displayName"]
             desc_field = field_map["description"]
+            sep = PIPE_BILINGUAL_TEMPLATE if asset_type == "pipe" else BILINGUAL_TEMPLATE
 
-            sep = PIPE_BILINGUAL_TEMPLATE if field_map["type"] == "pipe" else BILINGUAL_TEMPLATE
+            if asset_type == "caret":
+                # ====== ^ 分隔型：EditData + Entries 全值替换 ======
+                delimiter = field_map.get("delimiter", "^")
+                en_entries = {}
+                bi_entries = {}
+
+                all_keys = set(en_data.keys()) | set(zh_data.keys())
+                for key in all_keys:
+                    en_item = en_data.get(key, {})
+                    zh_item = zh_data.get(key, {})
+
+                    if not isinstance(en_item, dict):
+                        en_item = {"_raw": str(en_item), "displayName": str(en_item), "description": ""}
+                    if not isinstance(zh_item, dict):
+                        zh_item = {"_raw": str(zh_item), "displayName": str(zh_item), "description": ""}
+
+                    en_raw = en_item.get("_raw", "")
+                    zh_raw = zh_item.get("_raw", "")
+
+                    if not en_raw and not zh_raw:
+                        continue
+
+                    # English 模式：用 EN 原始值
+                    if en_raw:
+                        en_entries[key] = en_raw
+
+                    # Bilingual 模式：替换相关字段为双语
+                    if en_raw or zh_raw:
+                        en_fields = en_raw.split(delimiter) if en_raw else []
+                        zh_fields = zh_raw.split(delimiter) if zh_raw else []
+                        max_len = max(len(en_fields), len(zh_fields))
+                        bi_fields = [""] * max_len
+                        for i in range(max_len):
+                            en_f = en_fields[i] if i < len(en_fields) else ""
+                            zh_f = zh_fields[i] if i < len(zh_fields) else ""
+                            if i in (dn_field, desc_field) and en_f and zh_f:
+                                bi_fields[i] = f"{en_f} / {zh_f}"
+                            elif i in (dn_field, desc_field) and en_f and not zh_f:
+                                bi_fields[i] = f"{en_f} / "
+                            elif i in (dn_field, desc_field) and not en_f and zh_f:
+                                bi_fields[i] = f" / {zh_f}"
+                            else:
+                                bi_fields[i] = en_f or zh_f
+                        bi_entries[key] = delimiter.join(bi_fields)
+
+                # 生成 English 补丁
+                if en_entries:
+                    content_changes.append({
+                        "Action": "EditData",
+                        "Target": asset_path,
+                        "When": {"LanguageMode": "English"},
+                        "Entries": en_entries
+                    })
+                # 生成 Bilingual 补丁
+                if bi_entries:
+                    content_changes.append({
+                        "Action": "EditData",
+                        "Target": asset_path,
+                        "When": {"LanguageMode": "Bilingual"},
+                        "Entries": bi_entries
+                    })
+                data_count += 1
+                continue
 
             # 构建 English 模式的 Fields 补丁
             en_fields = {}

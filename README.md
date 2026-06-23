@@ -14,9 +14,12 @@
 - Characters/Dialogue/\* 所有 NPC 对话（含 $d/$p 条件语句）
 - Data/Events/\* 所有剧情事件（含 $q/$r 问答、#$b# 分段）
 - Data/Objects, Data/Tools, Data/Weapons 等物品的名称和描述
+- Data/Bundles, Data/Monsters, Data/hats, Data/Boots 等管道分隔型数据
+- Data/NPCGiftTastes 所有 NPC 送礼反应（爱/喜欢/普通/讨厌/厌恶五档）
 - Data/mail 信件（正文+标题）
-- Data/Festivals/\* 日历节日名称
+- Data/Festivals/\* 日历节日名称 + 节日 NPC 对话 + 节日事件
 - Data/SecretNotes, Data/Achievements 秘密纸条和成就
+- Data/ExtraDialogue, Strings/MovieReactions, Strings/SpecialOrderStrings 对话文本
 - Strings/schedules/\* NPC 日程文本
 
 通过 Generic Mod Config Menu (GMCM) 在游戏中实时切换，**无需重启**立即生效。
@@ -95,7 +98,7 @@
 | Strings/* 界面文本 | 30 |
 | 对话 (Characters/Dialogue/* + ExtraDialogue + MovieReactions + SpecialOrderStrings) | 44 |
 | 日程文本 (Strings/schedules/*) | 30 |
-| Data 文本 (mail, TV/*) | 3 |
+| Data 文本 (mail, TV/*, FestivalDates) | 4 |
 | 事件对话 (Data/Events/*) | 43 |
 
 ### 结构型数据资产（EditData + Fields，按字段替换）
@@ -114,6 +117,9 @@
 | 饰品 (Data/Trinkets) | Fields | 8 |
 | 任务 (Data/Quests) | Fields (数值索引 1,2) | 66 |
 | 订婚对话 (Data/EngagementDialogue) | Fields (数值索引 0,1) | 26 |
+| Bundle (Data/Bundles) | Fields (数值索引 6) | 31 |
+| 怪物 (Data/Monsters) | Fields (数值索引 14) | 51 |
+| 送礼反应 (Data/NPCGiftTastes) | Fields (多字段 pipe_multi 索引 0,2,4,6,8) | 39 |
 
 ### `^` 分隔型数据资产（EditData + Entries，全值替换）
 
@@ -127,20 +133,20 @@
 | 模式 | 活跃补丁数 |
 |------|-----------|
 | BilingualMode = false（关闭） | 0（所有补丁通过 `When` 条件跳过，游戏原生文本） |
-| BilingualMode = true（开启） | 181（全部 EditData 补丁，含 8 节日） |
+| BilingualMode = true（开启） | 193（160 字符串 + 25 Data Fields + 8 节日） |
 
-### 日历节日名称（EditData + Entries，只替换 `name` 键）
+### 日历节日（EditData + Entries，NPC 对话 + 事件脚本 + 节日名称）
 
-| 节日 | 资产 |
-|------|------|
-| 复活节 (Egg Festival) | `Data/Festivals/spring13` |
-| 花舞节 (Flower Dance) | `Data/Festivals/spring24` |
-| 卢奥节 (Luau) | `Data/Festivals/summer11` |
-| 月光水母之舞 (Dance of the Moonlight Jellies) | `Data/Festivals/summer28` |
-| 星露谷展览会 (Stardew Valley Fair) | `Data/Festivals/fall16` |
-| 万灵节 (Spirit's Eve) | `Data/Festivals/fall27` |
-| 冰雪节 (Festival of Ice) | `Data/Festivals/winter8` |
-| 冬日星盛宴 (Feast of the Winter Star) | `Data/Festivals/winter25` |
+| 节日 | 资产 | 条目数 |
+|------|------|--------|
+| 复活节 (Egg Festival) | `Data/Festivals/spring13` | 78 条（NPC 对话 + 事件 + 名称）|
+| 花舞节 (Flower Dance) | `Data/Festivals/spring24` | 80 条 |
+| 卢奥节 (Luau) | `Data/Festivals/summer11` | 100 条 |
+| 月光水母之舞 (Dance of the Moonlight Jellies) | `Data/Festivals/summer28` | 82 条 |
+| 星露谷展览会 (Stardew Valley Fair) | `Data/Festivals/fall16` | 91 条 |
+| 万灵节 (Spirit's Eve) | `Data/Festivals/fall27` | 88 条 |
+| 冰雪节 (Festival of Ice) | `Data/Festivals/winter8` | 93 条 |
+| 冬日星盛宴 (Feast of the Winter Star) | `Data/Festivals/winter25` | 88 条 |
 
 ## 从源码构建
 
@@ -279,8 +285,10 @@ sequenceDiagram
 | 信件双语 | `[#]` 去重 + 命令 `%%` 终结 | 只保留 EN 的 `[#]` 标记和命令，ZH 取纯文本；`%command` 在 ` / ` 前终结 |
 | 事件双语 | 引号感知脚本分割器 | 按 `/` 分割事件脚本（尊重引号），对 `speak`/`message`/`$q/$r`/`$p` 等做双语 |
 | `^` 分隔资产 | `EditData` + `Entries` 全值替换 | 读取 `_raw` 字段，按 `^` 分割后逐字段双语再拼接 |
-| 日历节日 | `EditData` + `Entries` | 只替换 `name` 键，不影响 `conditions`/`mainEvent` 等 |
-| Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "English, Bilingual"`，中文模式 0 补丁 |
+| 普通双语 | `bilingualize_pair()` 统一处理 | `^` 性别分支配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`（跳过 `${...^...}$` CP 令牌），所有 parser 共享此函数 |
+| 日历节日 | `EditData` + `Entries` | 替换 `name` + 全部 NPC 对话（dialogue parser）+ 事件脚本（event parser），不影响 `conditions`/`mainEvent` 等 |
+| 多字段管道型 | `pipe_multi` 类型 | 支持多个对话字段（如 NPCGiftTastes 的 0/2/4/6/8 五档送礼对话），读取 `_raw` 全值后按字段拆分双语 |
+| Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "BilingualMode": "true"`，关闭模式 0 补丁 |
 | 验证 | `verify.py` 七合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称、parser 分配 |
 
 ## 已知问题
@@ -295,13 +303,9 @@ sequenceDiagram
 
 3. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
 4. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
-5. **Data/Tools Token 参数** — 垃圾桶升级（Copper/Steel/Gold/Iridium）的格式参数 token 已被 C# 导出器修复。如仍有残留，重新导出游戏资产即可。`
+5. **节日 NPC 缺失 7 个对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
 
 ## 后续计划
-
-### P1 — 验证邮件命令格式的 `\b` Unicode 问题
-
-`MAIL_CMD_RE` 的 `\b` 在中文前不匹配（如 `%secretsanta精心`），导致 ZH 命令未被剥离。`%secretsanta` 被双面执行。需要修复正则。
 
 ### P2 — Strings/credits 支持
 
@@ -314,6 +318,10 @@ sequenceDiagram
 ### P3 — 海盗任务 Harmony
 
 如需修复 `ItemDeliveryQuest` 动态拼接文本，需开发 C# SMAPI Mod 使用 Harmony 补丁。优先级低，因单条任务影响有限。
+
+### P3 — 补全 7 个节日缺失对话
+
+安装贴吧汉化修正后运行 AssetExporter 导出，即可获得 `Dwarf_y2`/`Sandy_y2`/`Event.cs.1862` 的中文翻译。
 
 ## 许可证
 

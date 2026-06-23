@@ -1,0 +1,126 @@
+{
+  "Pantry/0": {
+    "displayName": "春季作物",
+    "description": ""
+  },
+  "Pantry/1": {
+    "displayName": "夏季作物",
+    "description": ""
+  },
+  "Pantry/2": {
+    "displayName": "秋季作物",
+    "description": ""
+  },
+  "Pantry/3": {
+    "displayName": "高品质作物",
+    "description": ""
+  },
+  "Pantry/4": {
+    "displayName": "动物",
+    "description": ""
+  },
+  "Pantry/5": {
+    "displayName": "工匠",
+    "description": ""
+  },
+  "Crafts Room/13": {
+    "displayName": "春季采集",
+    "description": ""
+  },
+  "Crafts Room/14": {
+    "displayName": "夏季采集",
+    "description": ""
+  },
+  "Crafts Room/15": {
+    "displayName": "秋季采集",
+    "description": ""
+  },
+  "Crafts Room/16": {
+    "displayName": "冬季采集",
+    "description": ""
+  },
+  "Crafts Room/17": {
+    "displayName": "建筑",
+    "description": ""
+  },
+  "Crafts Room/19": {
+    "displayName": "异国情调采集",
+    "description": ""
+  },
+  "Fish Tank/6": {
+    "displayName": "河鱼",
+    "description": ""
+  },
+  "Fish Tank/7": {
+    "displayName": "湖鱼",
+    "description": ""
+  },
+  "Fish Tank/8": {
+    "displayName": "海鱼",
+    "description": ""
+  },
+  "Fish Tank/9": {
+    "displayName": "夜间垂钓",
+    "description": ""
+  },
+  "Fish Tank/10": {
+    "displayName": "特色鱼类",
+    "description": ""
+  },
+  "Fish Tank/11": {
+    "displayName": "蟹笼",
+    "description": ""
+  },
+  "Boiler Room/20": {
+    "displayName": "铁匠的",
+    "description": ""
+  },
+  "Boiler Room/21": {
+    "displayName": "地理学家的",
+    "description": ""
+  },
+  "Boiler Room/22": {
+    "displayName": "冒险家的",
+    "description": ""
+  },
+  "Vault/23": {
+    "displayName": "2500 金",
+    "description": ""
+  },
+  "Vault/24": {
+    "displayName": "5000 金",
+    "description": ""
+  },
+  "Vault/25": {
+    "displayName": "10000 金",
+    "description": ""
+  },
+  "Vault/26": {
+    "displayName": "25000 金",
+    "description": ""
+  },
+  "Bulletin Board/31": {
+    "displayName": "厨师",
+    "description": ""
+  },
+  "Bulletin Board/32": {
+    "displayName": "土地研究",
+    "description": ""
+  },
+  "Bulletin Board/33": {
+    "displayName": "魔法师",
+    "description": ""
+  },
+  "Bulletin Board/34": {
+    "displayName": "染料",
+    "description": ""
+  },
+  "Bulletin Board/35": {
+    "displayName": "饲料",
+    "description": ""
+  },
+  "Abandoned Joja Mart/36": {
+    "displayName": "失踪的",
+    "description": ""
+  }
+}

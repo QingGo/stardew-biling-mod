@@ -1,0 +1,206 @@
+{
+  "Green Slime": {
+    "displayName": "绿色史莱姆",
+    "description": ""
+  },
+  "Dust Spirit": {
+    "displayName": "灰尘精灵",
+    "description": ""
+  },
+  "Bat": {
+    "displayName": "蝙蝠",
+    "description": ""
+  },
+  "Frost Bat": {
+    "displayName": "冰霜蝙蝠",
+    "description": ""
+  },
+  "Lava Bat": {
+    "displayName": "熔岩蝙蝠",
+    "description": ""
+  },
+  "Iridium Bat": {
+    "displayName": "铱蝠",
+    "description": ""
+  },
+  "Stone Golem": {
+    "displayName": "石魔",
+    "description": ""
+  },
+  "Wilderness Golem": {
+    "displayName": "荒野石魔",
+    "description": ""
+  },
+  "Iridium Golem": {
+    "displayName": "Wilderness Golem",
+    "description": ""
+  },
+  "Grub": {
+    "displayName": "蛆",
+    "description": ""
+  },
+  "Fly": {
+    "displayName": "苍蝇",
+    "description": ""
+  },
+  "Frost Jelly": {
+    "displayName": "冰冻史莱姆",
+    "description": ""
+  },
+  "Sludge": {
+    "displayName": "熔岩史莱姆",
+    "description": ""
+  },
+  "Shadow Guy": {
+    "displayName": "暗影人",
+    "description": ""
+  },
+  "Ghost": {
+    "displayName": "幽灵",
+    "description": ""
+  },
+  "Carbon Ghost": {
+    "displayName": "石碳幽灵",
+    "description": ""
+  },
+  "Duggy": {
+    "displayName": "掘地虫",
+    "description": ""
+  },
+  "Rock Crab": {
+    "displayName": "岩石蟹",
+    "description": ""
+  },
+  "Truffle Crab": {
+    "displayName": "Rock Crab",
+    "description": ""
+  },
+  "Lava Crab": {
+    "displayName": "熔岩蟹",
+    "description": ""
+  },
+  "Iridium Crab": {
+    "displayName": "铱蟹",
+    "description": ""
+  },
+  "Fireball": {
+    "displayName": "火球",
+    "description": ""
+  },
+  "Squid Kid": {
+    "displayName": "鱿鱼娃",
+    "description": ""
+  },
+  "Skeleton Warrior": {
+    "displayName": "骷髅战士",
+    "description": ""
+  },
+  "Crow": {
+    "displayName": "乌鸦",
+    "description": ""
+  },
+  "Frog": {
+    "displayName": "青蛙",
+    "description": ""
+  },
+  "Cat": {
+    "displayName": "猫",
+    "description": ""
+  },
+  "Shadow Brute": {
+    "displayName": "暗影狂徒",
+    "description": ""
+  },
+  "Shadow Shaman": {
+    "displayName": "暗影萨满",
+    "description": ""
+  },
+  "Skeleton": {
+    "displayName": "骷髅",
+    "description": ""
+  },
+  "Skeleton Mage": {
+    "displayName": "骷髅法师",
+    "description": ""
+  },
+  "Metal Head": {
+    "displayName": "金属大头",
+    "description": ""
+  },
+  "Spiker": {
+    "displayName": "主攻手",
+    "description": ""
+  },
+  "Bug": {
+    "displayName": "臭虫",
+    "description": ""
+  },
+  "Mummy": {
+    "displayName": "木乃伊",
+    "description": ""
+  },
+  "Big Slime": {
+    "displayName": "大史莱姆",
+    "description": ""
+  },
+  "Serpent": {
+    "displayName": "飞蛇",
+    "description": ""
+  },
+  "Pepper Rex": {
+    "displayName": "霸王喷火龙",
+    "description": ""
+  },
+  "Tiger Slime": {
+    "displayName": "老虎史莱姆",
+    "description": ""
+  },
+  "Lava Lurk": {
+    "displayName": "熔岩潜伏怪",
+    "description": ""
+  },
+  "Hot Head": {
+    "displayName": "熔岩大头",
+    "description": ""
+  },
+  "Magma Sprite": {
+    "displayName": "熔岩精灵",
+    "description": ""
+  },
+  "Magma Duggy": {
+    "displayName": "熔岩掘地虫",
+    "description": ""
+  },
+  "Magma Sparker": {
+    "displayName": "熔岩火球",
+    "description": ""
+  },
+  "False Magma Cap": {
+    "displayName": "假熔岩菇",
+    "description": ""
+  },
+  "Dwarvish Sentry": {
+    "displayName": "矮人哨兵",
+    "description": ""
+  },
+  "Putrid Ghost": {
+    "displayName": "腐臭幽灵",
+    "description": ""
+  },
+  "Shadow Sniper": {
+    "displayName": "暗影狙击手",
+    "description": ""
+  },
+  "Spider": {
+    "displayName": "蜘蛛",
+    "description": ""
+  },
+  "Royal Serpent": {
+    "displayName": "皇家飞蛇",
+    "description": ""
+  },
+  "Blue Squid": {
+    "displayName": "蓝鱿鱼",
+    "description": ""
+  }
+}

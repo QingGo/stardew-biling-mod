@@ -19,6 +19,11 @@ Data/Quests
 Data/SecretNotes
 Data/Achievements
 Data/EngagementDialogue
+Data/Bundles
+Data/Monsters
+Data/NPCGiftTastes
+Data/Festivals/FestivalDates
+
 
 # Strings (most UI text) - 纯文本，安全用于双语
 Strings/1_6_Strings

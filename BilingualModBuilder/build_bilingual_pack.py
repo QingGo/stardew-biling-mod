@@ -45,6 +45,9 @@ DATA_FIELD_MAP = {
     "Data/EngagementDialogue": { "type": "pipe", "displayName": 0, "description": 1 },
     "Data/SecretNotes":  { "type": "caret", "delimiter": "^", "displayName": 0, "description": 1 },
     "Data/Achievements": { "type": "caret", "delimiter": "^", "displayName": 0, "description": 1 },
+    "Data/Bundles":   { "type": "pipe", "displayName": 6, "description": None },
+    "Data/Monsters":  { "type": "pipe", "displayName": 14, "description": None },
+    "Data/NPCGiftTastes": { "type": "pipe_multi", "textFields": [0, 2, 4, 6, 8], "delimiter": "/" },
 }
 
 # 只处理字符串类型的资产前缀（不生成 EditData Fields）
@@ -69,7 +72,8 @@ def is_string_asset(asset_path: str) -> bool:
     """判断是否为纯文本 Dict<string,string> 类型资产"""
     return any(asset_path.startswith(p) for p in STRING_ASSET_PREFIXES) or asset_path in [
         "Data/ExtraDialogue", "Data/mail",
-        "Data/TV/CookingChannel", "Data/TV/TipChannel"
+        "Data/TV/CookingChannel", "Data/TV/TipChannel",
+        "Data/Festivals/FestivalDates"
     ] or asset_path.startswith(EVENT_ASSET_PREFIX)
 
 
@@ -213,6 +217,53 @@ def main():
 
             field_map = DATA_FIELD_MAP[asset_path]
             asset_type = field_map["type"]
+
+            if asset_type == "pipe_multi":
+                delimiter = field_map.get("delimiter", "/")
+                text_fields = field_map["textFields"]
+                bi_fields_data = {}
+
+                all_keys = set(en_data.keys()) | set(zh_data.keys())
+                for key in all_keys:
+                    en_item = en_data.get(key, {})
+                    zh_item = zh_data.get(key, {})
+
+                    en_raw = en_item.get("_raw", "") if isinstance(en_item, dict) else ""
+                    zh_raw = zh_item.get("_raw", "") if isinstance(zh_item, dict) else ""
+
+                    if not en_raw or not zh_raw:
+                        en_dn = en_item.get("displayName", "") if isinstance(en_item, dict) else ""
+                        zh_dn = zh_item.get("displayName", "") if isinstance(zh_item, dict) else ""
+                        if en_dn and zh_dn:
+                            bi_fields_data[key] = {str(text_fields[0]): f"{en_dn} / {zh_dn}"}
+                        continue
+
+                    en_fields_raw = en_raw.split(delimiter)
+                    zh_fields_raw = zh_raw.split(delimiter)
+
+                    field_vals = {}
+                    for idx in text_fields:
+                        en_f = en_fields_raw[idx] if idx < len(en_fields_raw) else ""
+                        zh_f = zh_fields_raw[idx] if idx < len(zh_fields_raw) else ""
+                        if en_f and zh_f:
+                            field_vals[str(idx)] = f"{en_f} / {zh_f}"
+                        elif en_f:
+                            field_vals[str(idx)] = f"{en_f} / "
+                        elif zh_f:
+                            field_vals[str(idx)] = f" / {zh_f}"
+                    if field_vals:
+                        bi_fields_data[key] = field_vals
+
+                if bi_fields_data:
+                    content_changes.append({
+                        "Action": "EditData",
+                        "Target": asset_path,
+                        "When": { "BilingualMode": "true" },
+                        "Fields": bi_fields_data
+                    })
+                data_count += 1
+                continue
+
             dn_field = field_map["displayName"]
             desc_field = field_map["description"]
             sep = PIPE_BILINGUAL_TEMPLATE if asset_type == "pipe" else BILINGUAL_TEMPLATE

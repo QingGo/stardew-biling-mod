@@ -237,7 +237,9 @@ namespace AssetExporter
                 try
                 {
                     if (assetPath == "Data/hats" || assetPath == "Data/Boots"
-                        || assetPath == "Data/Quests" || assetPath == "Data/EngagementDialogue")
+                        || assetPath == "Data/Quests" || assetPath == "Data/EngagementDialogue"
+                        || assetPath == "Data/Bundles" || assetPath == "Data/Monsters"
+                        || assetPath == "Data/NPCGiftTastes")
                     {
                         var enResult = ExportPipeDelimitedData(assetPath, isEnglish: true);
                         var zhResult = ExportPipeDelimitedData(assetPath, isEnglish: false);
@@ -340,12 +342,29 @@ namespace AssetExporter
                 {
                     displayName = fields.Length > 0 ? fields[0] : "";
                 }
+                else if (assetPath == "Data/Bundles")
+                {
+                    displayName = fields.Length > 6 ? fields[6] : "";
+                }
+                else if (assetPath == "Data/Monsters")
+                {
+                    displayName = fields.Length > 14 ? fields[14] : "";
+                }
+                else if (assetPath == "Data/NPCGiftTastes")
+                {
+                    displayName = fields.Length > 0 ? fields[0] : "";
+                }
 
                 result[kvp.Key] = new Dictionary<string, string>
                 {
                     ["displayName"] = displayName,
                     ["description"] = description
                 };
+
+                if (assetPath == "Data/NPCGiftTastes")
+                {
+                    result[kvp.Key]["_raw"] = kvp.Value;
+                }
             }
             return result;
         }

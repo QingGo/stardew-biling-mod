@@ -1,0 +1,126 @@
+{
+  "Pantry/0": {
+    "displayName": "Spring Crops",
+    "description": ""
+  },
+  "Pantry/1": {
+    "displayName": "Summer Crops",
+    "description": ""
+  },
+  "Pantry/2": {
+    "displayName": "Fall Crops",
+    "description": ""
+  },
+  "Pantry/3": {
+    "displayName": "Quality Crops",
+    "description": ""
+  },
+  "Pantry/4": {
+    "displayName": "Animal",
+    "description": ""
+  },
+  "Pantry/5": {
+    "displayName": "Artisan",
+    "description": ""
+  },
+  "Crafts Room/13": {
+    "displayName": "Spring Foraging",
+    "description": ""
+  },
+  "Crafts Room/14": {
+    "displayName": "Summer Foraging",
+    "description": ""
+  },
+  "Crafts Room/15": {
+    "displayName": "Fall Foraging",
+    "description": ""
+  },
+  "Crafts Room/16": {
+    "displayName": "Winter Foraging",
+    "description": ""
+  },
+  "Crafts Room/17": {
+    "displayName": "Construction",
+    "description": ""
+  },
+  "Crafts Room/19": {
+    "displayName": "Exotic Foraging",
+    "description": ""
+  },
+  "Fish Tank/6": {
+    "displayName": "River Fish",
+    "description": ""
+  },
+  "Fish Tank/7": {
+    "displayName": "Lake Fish",
+    "description": ""
+  },
+  "Fish Tank/8": {
+    "displayName": "Ocean Fish",
+    "description": ""
+  },
+  "Fish Tank/9": {
+    "displayName": "Night Fishing",
+    "description": ""
+  },
+  "Fish Tank/10": {
+    "displayName": "Specialty Fish",
+    "description": ""
+  },
+  "Fish Tank/11": {
+    "displayName": "Crab Pot",
+    "description": ""
+  },
+  "Boiler Room/20": {
+    "displayName": "Blacksmith's",
+    "description": ""
+  },
+  "Boiler Room/21": {
+    "displayName": "Geologist's",
+    "description": ""
+  },
+  "Boiler Room/22": {
+    "displayName": "Adventurer's",
+    "description": ""
+  },
+  "Vault/23": {
+    "displayName": "2,500g",
+    "description": ""
+  },
+  "Vault/24": {
+    "displayName": "5,000g",
+    "description": ""
+  },
+  "Vault/25": {
+    "displayName": "10,000g",
+    "description": ""
+  },
+  "Vault/26": {
+    "displayName": "25,000g",
+    "description": ""
+  },
+  "Bulletin Board/31": {
+    "displayName": "Chef's",
+    "description": ""
+  },
+  "Bulletin Board/32": {
+    "displayName": "Field Research",
+    "description": ""
+  },
+  "Bulletin Board/33": {
+    "displayName": "Enchanter's",
+    "description": ""
+  },
+  "Bulletin Board/34": {
+    "displayName": "Dye",
+    "description": ""
+  },
+  "Bulletin Board/35": {
+    "displayName": "Fodder",
+    "description": ""
+  },
+  "Abandoned Joja Mart/36": {
+    "displayName": "The Missing",
+    "description": ""
+  }
+}

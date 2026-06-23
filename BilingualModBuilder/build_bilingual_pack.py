@@ -221,6 +221,7 @@ def main():
             if asset_type == "pipe_multi":
                 delimiter = field_map.get("delimiter", "/")
                 text_fields = field_map["textFields"]
+                bi_sep = PIPE_BILINGUAL_TEMPLATE
                 bi_fields_data = {}
 
                 all_keys = set(en_data.keys()) | set(zh_data.keys())
@@ -235,7 +236,7 @@ def main():
                         en_dn = en_item.get("displayName", "") if isinstance(en_item, dict) else ""
                         zh_dn = zh_item.get("displayName", "") if isinstance(zh_item, dict) else ""
                         if en_dn and zh_dn:
-                            bi_fields_data[key] = {str(text_fields[0]): f"{en_dn} / {zh_dn}"}
+                            bi_fields_data[key] = {str(text_fields[0]): bi_sep.format(en=en_dn, zh=zh_dn)}
                         continue
 
                     en_fields_raw = en_raw.split(delimiter)
@@ -246,11 +247,11 @@ def main():
                         en_f = en_fields_raw[idx] if idx < len(en_fields_raw) else ""
                         zh_f = zh_fields_raw[idx] if idx < len(zh_fields_raw) else ""
                         if en_f and zh_f:
-                            field_vals[str(idx)] = f"{en_f} / {zh_f}"
+                            field_vals[str(idx)] = bi_sep.format(en=en_f, zh=zh_f)
                         elif en_f:
-                            field_vals[str(idx)] = f"{en_f} / "
+                            field_vals[str(idx)] = f"{en_f} | "
                         elif zh_f:
-                            field_vals[str(idx)] = f" / {zh_f}"
+                            field_vals[str(idx)] = f" | {zh_f}"
                     if field_vals:
                         bi_fields_data[key] = field_vals
 

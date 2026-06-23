@@ -12,6 +12,9 @@ from parsers import (
     make_event_bilingual,
 )
 
+# ====== Festival command detection ======
+FESTIVAL_CMD_PATTERNS = ("speak ", "pause ", "move ", "jump ", "warp ")  # for classifying festival entries
+
 # ====== Config ======
 SCRIPT_DIR = Path(__file__).parent.resolve()
 DEFAULT_EXPORT_DIR = SCRIPT_DIR.parent / "_export"  # committed export data for CI
@@ -125,12 +128,27 @@ def main():
             if not en_name:
                 print(f"警告：节日 {asset_path} 缺少 name 字段，跳过")
                 continue
-            bi_name = f"{en_name} / {zh_name}" if zh_name else en_name
+
+            entries = {}
+            entries["name"] = f"{en_name} / {zh_name}" if zh_name else en_name
+
+            for key in en_data:
+                if key == "name":
+                    continue
+                en_val = en_data.get(key, "")
+                zh_val = zh_data.get(key, "")
+                if not en_val or en_val == zh_val:
+                    continue  # data-only key (conditions etc.), skip
+                if "/" in en_val and any(cmd in en_val for cmd in FESTIVAL_CMD_PATTERNS):
+                    entries[key] = make_event_bilingual(en_val, zh_val)
+                else:
+                    entries[key] = make_dialogue_bilingual(en_val, zh_val)
+
             content_changes.append({
                 "Action": "EditData",
                 "Target": asset_path,
                 "When": {"BilingualMode": "true"},
-                "Entries": {"name": bi_name}
+                "Entries": entries
             })
             data_count += 1
 

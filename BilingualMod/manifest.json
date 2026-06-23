@@ -1,7 +1,7 @@
 {
   "Name": "Stardew Valley Bilingual Text",
   "Author": "QingGo",
-  "Version": "1.1.0",
+  "Version": "1.2.0",
   "Description": "Displays game text in English, Chinese, or bilingual mode. Switchable via GMCM.",
   "UniqueID": "QingGo.BilingualText",
   "MinimumApiVersion": "4.0.0",

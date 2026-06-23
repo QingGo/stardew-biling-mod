@@ -6,6 +6,7 @@ from pathlib import Path
 
 from parsers import (
     BILINGUAL_TEMPLATE,
+    bilingualize_pair,
     make_dialogue_bilingual,
     make_mail_bilingual,
     make_event_bilingual,
@@ -146,7 +147,12 @@ def main():
             if zh_data:
                 all_keys |= set(zh_data.keys())
 
-            is_dialogue = any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
+            is_dialogue = (
+                any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
+                or asset_path == "Data/ExtraDialogue"
+                or asset_path == "Strings/MovieReactions"
+                or asset_path == "Strings/SpecialOrderStrings"
+            )
             is_mail = asset_path in MAIL_ASSET_PATHS
             is_event = asset_path.startswith(EVENT_ASSET_PREFIX)
 
@@ -163,7 +169,7 @@ def main():
                     bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
                 else:
                     if en_val and zh_val:
-                        bilingual_data[key] = BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+                        bilingual_data[key] = bilingualize_pair(en_val, zh_val)
                     elif en_val:
                         bilingual_data[key] = f"{en_val} / "
                     elif zh_val:

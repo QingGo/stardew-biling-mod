@@ -18,20 +18,66 @@ D_COND_RE = re.compile(r'^(\$d\s+\w+#)(.*?)\|(.*)$')
 EMOTION_RE = re.compile(r'(\$\w+)\s*$')
 
 
+def _find_first_caret_outside_token(text: str) -> int:
+    """Find the first ^ outside ${...}$ CP tokens.
+    Returns index, or -1 if none."""
+    depth = 0
+    i = 0
+    while i < len(text):
+        if text[i] == '$' and i + 1 < len(text) and text[i+1] == '{':
+            depth += 1
+            i += 2
+        elif text[i] == '}':
+            depth -= 1
+            if depth < 0:
+                depth = 0
+            i += 1
+        elif text[i] == '^' and depth == 0:
+            return i
+        else:
+            i += 1
+    return -1
+
+
+def bilingualize_pair(en_val: str, zh_val: str) -> str:
+    """Bilingualize a single text pair, handling ^ gender split.
+    
+    Game engine processes ^ before #$b#, so ^ must pair EN/zh branches
+    correctly: \"EN_male / ZH_male ^ EN_female / ZH_female\"
+    """
+    en_idx = _find_first_caret_outside_token(en_val)
+    zh_idx = _find_first_caret_outside_token(zh_val)
+
+    has_en_caret = en_idx >= 0
+    has_zh_caret = zh_idx >= 0
+
+    if not has_en_caret and not has_zh_caret:
+        return f"{en_val} / {zh_val}"
+
+    en_left = en_val[:en_idx] if has_en_caret else en_val
+    en_right = en_val[en_idx+1:] if has_en_caret else en_val
+    zh_left = zh_val[:zh_idx] if has_zh_caret else zh_val
+    zh_right = zh_val[zh_idx+1:] if has_zh_caret else zh_val
+
+    left = f"{en_left} / {zh_left}"
+    right = f"{en_right} / {zh_right}"
+    return f"{left}^{right}"
+
+
 def _bilingualize_segments(en_val: str, zh_val: str) -> str:
     """按 #$e# / #$b# 分段后做双语，每段独立拼接。"""
     en_parts = SEGMENT_RE.split(en_val)
     zh_parts = SEGMENT_RE.split(zh_val)
 
     if len(en_parts) != len(zh_parts):
-        return BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+        return bilingualize_pair(en_val, zh_val)
 
     result = []
     for en_part, zh_part in zip(en_parts, zh_parts):
         if en_part in ('#$e#', '#$b#'):
             result.append(en_part)
         elif en_part and zh_part:
-            result.append(f"{en_part} / {zh_part}")
+            result.append(bilingualize_pair(en_part, zh_part))
         elif en_part:
             result.append(f"{en_part} / ")
         elif zh_part:

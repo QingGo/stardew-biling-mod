@@ -93,9 +93,9 @@
 | 类别 | 资产数 |
 |------|--------|
 | Strings/* 界面文本 | 30 |
-| 对话 (Characters/Dialogue/*) | 41 |
+| 对话 (Characters/Dialogue/* + ExtraDialogue + MovieReactions + SpecialOrderStrings) | 44 |
 | 日程文本 (Strings/schedules/*) | 30 |
-| Data 文本 (ExtraDialogue, mail, TV/*) | 4 |
+| Data 文本 (mail, TV/*) | 3 |
 | 事件对话 (Data/Events/*) | 43 |
 
 ### 结构型数据资产（EditData + Fields，按字段替换）
@@ -127,7 +127,7 @@
 | 模式 | 活跃补丁数 |
 |------|-----------|
 | BilingualMode = false（关闭） | 0（所有补丁通过 `When` 条件跳过，游戏原生文本） |
-| BilingualMode = true（开启） | 136（全部 EditData 补丁，含 8 节日） |
+| BilingualMode = true（开启） | 181（全部 EditData 补丁，含 8 节日） |
 
 ### 日历节日名称（EditData + Entries，只替换 `name` 键）
 
@@ -172,6 +172,7 @@ python build_bilingual_pack.py
 python verify.py --pack      # 检查 content.json（mail 格式、节日、对话安全）
 python verify.py --data      # Token 完整性和分隔符检查
 python verify.py --dialogue  # 对话分段安全分析
+python verify.py --parser    # 检查 build script 的 parser 分配是否正确，捕捉 ^ 性别分支 / #\$b# 分段遗漏
 python verify.py --log=SMAPI-latest.txt  # SMAPI 日志分析
 ```
 
@@ -274,13 +275,13 @@ sequenceDiagram
 | 英文导出 | `LocalizedContentManager` 切换为 `en` + SMAPI 缓存失效 | 强制加载纯英文 XNB（绕过当前中文 locale） |
 | 中文导出 | `Helper.GameContent` 直接加载 | 获取合并后的中文数据（base + `.zh-CN` 覆盖层） |
 | Token 解析 | 多源正则 `\[LocalizedText (source):(key)\]` | 提取 source 路径加载正确的 Strings 资产；支持 format 参数（如 `TrashCan_Description 15 → 15%`） |
-| 对话双语 | 按 `#$e#`/`#$b#` 分段 | 每段独立做双语，避免中文被结束标记丢弃；支持 `$d COND#T\|F` 条件分支 |
+| 对话双语 | 按 `#$e#`/`#$b#` 分段 + `^` 性别配对 | 每段独立做双语，避免中文被结束标记丢弃；支持 `$d COND#T\|F` 条件分支；`^` 性别配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`，跳过 `${...^...}$` CP 令牌 |
 | 信件双语 | `[#]` 去重 + 命令 `%%` 终结 | 只保留 EN 的 `[#]` 标记和命令，ZH 取纯文本；`%command` 在 ` / ` 前终结 |
 | 事件双语 | 引号感知脚本分割器 | 按 `/` 分割事件脚本（尊重引号），对 `speak`/`message`/`$q/$r`/`$p` 等做双语 |
 | `^` 分隔资产 | `EditData` + `Entries` 全值替换 | 读取 `_raw` 字段，按 `^` 分割后逐字段双语再拼接 |
 | 日历节日 | `EditData` + `Entries` | 只替换 `name` 键，不影响 `conditions`/`mainEvent` 等 |
 | Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "English, Bilingual"`，中文模式 0 补丁 |
-| 验证 | `verify.py` 六合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称 |
+| 验证 | `verify.py` 七合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称、parser 分配 |
 
 ## 已知问题
 

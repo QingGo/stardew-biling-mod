@@ -4,6 +4,7 @@
 用法:
   python verify.py --data         验证导出数据 (token, ^ 分隔)
   python verify.py --dialogue     验证对话分段安全性
+  python verify.py --parser       验证 build script 的 parser 分配正确性
   python verify.py --log PATH     解析 SMAPI 日志
   python verify.py --pack PATH    验证 content.json 结构
   python verify.py --all          (默认) 所有检查
@@ -13,6 +14,7 @@ import json
 import os
 import re
 import sys
+from pathlib import Path
 
 GAME_DIR = r"D:\steam\steamapps\common\Stardew Valley"
 EXPORT_DIR = os.path.join(GAME_DIR, "Export_TextAssets")
@@ -279,6 +281,141 @@ def check_festivals():
         log_fail("未找到任何节日资产补丁")
 
 
+# ====== 7. Parser 分配检查 ======
+
+def check_parser_assignment():
+    print("\n=== 7. Parser 分配检查 ===")
+    # Add build_bilingual_pack to path for its classification functions
+    builder_dir = Path(__file__).parent / "BilingualModBuilder"
+    sys.path.insert(0, str(builder_dir))
+    try:
+        from build_bilingual_pack import (
+            is_string_asset, is_data_asset, is_festival_asset,
+            DIALOGUE_ASSET_PREFIXES, MAIL_ASSET_PATHS,
+            EVENT_ASSET_PREFIX, DATA_FIELD_MAP,
+        )
+    except ImportError:
+        print("  SKIP: 无法导入 build_bilingual_pack.py")
+        return
+
+    # Use committed export data
+    script_dir = Path(__file__).parent
+    zh_dir = script_dir / "_export" / "zh"
+    en_dir = script_dir / "_export" / "en"
+    assets_file = builder_dir / "assets-list.txt"
+
+    if not zh_dir.exists() or not assets_file.exists():
+        print("  SKIP: 导出数据或资产列表不存在")
+        return
+
+    with open(assets_file, encoding="utf-8") as f:
+        asset_paths = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+
+    # Handle path overrides for export filenames
+    EXPORT_OVERRIDES = {
+        "Data/Events/BathHouse_Pool": "Data_Events_BathHouse_Pool.json",
+        "Data/Events/Trailer_Big": "Data_Events_Trailer_Big.json",
+        "Strings/1_6_Strings": "Strings_1_6_Strings.json",
+    }
+
+    def asset_to_filename(ap):
+        if ap in EXPORT_OVERRIDES:
+            return EXPORT_OVERRIDES[ap]
+        return ap.replace("/", "_") + ".json"
+
+    total_issues = 0
+    for ap in sorted(asset_paths):
+        fn = asset_to_filename(ap)
+        zh_file = zh_dir / fn
+        if not zh_file.exists():
+            continue
+
+        try:
+            with open(zh_file, encoding="utf-8") as f:
+                zh = json.load(f)
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            continue
+
+        # Determine what parser the build script would assign
+        cat = None
+        if is_festival_asset(ap):
+            cat = "festival (name-only)"
+        elif is_data_asset(ap):
+            cat = "data/{}".format(DATA_FIELD_MAP[ap]["type"])
+        elif is_string_asset(ap):
+            if (
+                any(ap.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
+                or ap == "Data/ExtraDialogue"
+                or ap == "Strings/MovieReactions"
+                or ap == "Strings/SpecialOrderStrings"
+            ):
+                cat = "dialogue parser"
+            elif ap in MAIL_ASSET_PATHS:
+                cat = "mail parser"
+            elif ap.startswith(EVENT_ASSET_PREFIX):
+                cat = "event parser"
+            else:
+                cat = "plain template"
+        else:
+            cat = "UNKNOWN"
+
+        # Scan content for text markers
+        has_caret = False
+        has_hash_b = False
+        has_hash_e = False
+        for v in zh.values():
+            if not isinstance(v, str):
+                continue
+            if "^" in v:
+                has_caret = True
+            if "#$b#" in v:
+                has_hash_b = True
+            if "#$e#" in v:
+                has_hash_e = True
+
+        issues_fail = []
+        issues_warn = []
+
+        # ^ gender split → always a real bug (now handled by bilingualize_pair)
+        if has_caret and cat == "plain template":
+            issues_warn.append("含 ^ 性别分支（已通过 bilingualize_pair 修复）")
+
+        # #$b#/#$e# in plain template → depends on context
+        if (has_hash_b or has_hash_e) and cat == "plain template":
+            # These might be dialogue-like strings displayed in dialogue box
+            # where #$b# IS parsed, causing segment interleaving.
+            # Only flag as FAIL if the asset name suggests dialogue content.
+            dialogue_like = any(x in ap for x in [
+                "Characters/", "Dialogue", "ExtraDialogue",
+                "SimpleNonVillagerDialogues",
+            ])
+            if dialogue_like:
+                issues_fail.append("含 #$b#/#$e# 分段但走 plain template，可能分段错乱")
+            else:
+                issues_warn.append("含 #$b#/#$e# 分段但走 plain template（上下文未知，低风险）")
+
+        # #$b# segments in data Fields → segments mixed with pipe-split fields
+        if (has_hash_b or has_hash_e) and cat and cat.startswith("data/"):
+            issues_fail.append("含 #$b#/#$e# 分段但走 data Fields，可能数据错乱")
+
+        if issues_fail:
+            total_issues += 1
+            for issue in issues_fail:
+                log_fail(f"{ap} [{cat}]: {issue}")
+                print(f"       当前 parser: {cat}")
+        if issues_warn:
+            for issue in issues_warn:
+                log_warn(f"{ap} [{cat}]: {issue}")
+                print(f"       当前 parser: {cat}")
+        if not issues_fail and not issues_warn:
+            print(f"  OK {ap} [{cat}]")
+
+    if total_issues:
+        print(f"\n  总计: {total_issues} 个 asset 可能有 parser 分配问题")
+    else:
+        print(f"\n  全部 {len(asset_paths)} 个 asset parser 分配正确")
+
+
 # ====== Main ======
 
 def main():
@@ -291,6 +428,9 @@ def main():
 
     if do_all or "--dialogue" in args:
         check_dialogue_safety()
+
+    if do_all or "--parser" in args:
+        check_parser_assignment()
 
     if do_all or "--pack" in args:
         check_caret_entries()

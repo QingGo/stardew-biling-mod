@@ -8,12 +8,14 @@ Handles:
 """
 
 import re
+from typing import Optional
 
 BILINGUAL_TEMPLATE = "{en} / {zh}"
 
 # ====== Shared ======
 
 SEGMENT_RE = re.compile(r'(#\$[eb]#)')
+D1_SEGMENT_RE = re.compile(r'^(#\$1\s+\S+#)(.*)')
 D_COND_RE = re.compile(r'^(\$d\s+\w+#)(.*?)\|(.*)$')
 EMOTION_RE = re.compile(r'(\$\w+)\s*$')
 
@@ -64,6 +66,43 @@ def bilingualize_pair(en_val: str, zh_val: str) -> str:
     return f"{left}^{right}"
 
 
+def _bilingualize_d1_segment(en_val: str, zh_val: str) -> Optional[str]:
+    """对 #$1 条件对话段做双语，将中文插入 $k 终结符之前。
+
+    输入:  #$1 cond#EN_TEXT$TERM[AFTER]
+           #$1 cond#ZH_TEXT$TERM[AFTER]
+    输出:  #$1 cond#EN_TEXT / ZH_TEXT$TERM[AFTER]
+
+    TERM 为 $k 或 $0。若非 #$1 段或无终结符，返回 None 由上级继续处理。
+    """
+    en_m = D1_SEGMENT_RE.match(en_val)
+    zh_m = D1_SEGMENT_RE.match(zh_val)
+    if not en_m or not zh_m:
+        return None
+
+    prefix = en_m.group(1)
+    en_inner = en_m.group(2)
+    zh_inner = zh_m.group(2)
+
+    en_term = re.search(r'\$[0k]', en_inner)
+    if not en_term:
+        return None
+
+    en_block = en_inner[:en_term.start()]
+    terminator = en_term.group(0)
+    en_after = en_inner[en_term.end():]
+
+    zh_term_idx = zh_inner.find(terminator)
+    if zh_term_idx < 0:
+        return None
+
+    zh_block = zh_inner[:zh_term_idx]
+    zh_after = zh_inner[zh_term_idx + len(terminator):]
+
+    bi_block = bilingualize_pair(en_block, zh_block)
+    return f"{prefix}{bi_block}{terminator}{en_after}"
+
+
 def _bilingualize_segments(en_val: str, zh_val: str) -> str:
     """按 #$e# / #$b# 分段后做双语，每段独立拼接。"""
     en_parts = SEGMENT_RE.split(en_val)
@@ -77,7 +116,11 @@ def _bilingualize_segments(en_val: str, zh_val: str) -> str:
         if en_part in ('#$e#', '#$b#'):
             result.append(en_part)
         elif en_part and zh_part:
-            result.append(bilingualize_pair(en_part, zh_part))
+            d1 = _bilingualize_d1_segment(en_part, zh_part)
+            if d1 is not None:
+                result.append(d1)
+            else:
+                result.append(bilingualize_pair(en_part, zh_part))
         elif en_part:
             result.append(f"{en_part} / ")
         elif zh_part:

@@ -1,5 +1,0 @@
-{
-  "tests/test_parsers_d1.py::TestBilingualizeD1Segment": true,
-  "tests/test_parsers_d1.py::TestBilingualizeSegmentsD1": true,
-  "tests/test_parsers_d1.py::TestMakeDialogueBilingualD1": true
-}

@@ -301,9 +301,10 @@ sequenceDiagram
 
 ### 已知限制
 
-3. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
-4. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
-5. **节日 NPC 缺失 7 个对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
+3. **动态格式字符串的双语重复** — 841 个 key 含 `{0}` `{1}` 等 `string.Format` 占位符。当占位符对应的参数本身也是双语文本（如季节名 `Summer / 夏季`、物品名 `Parsnip / 防风草`），`string.Format` 将双语参数**同时代入模板的 EN 半段和 ZH 半段**，产生嵌套双语（如 `Day 9 of Summer / 夏季, Year 3 / 第3年Summer / 夏季9日`）。这是 Content Patcher 架构的固有局限 — 无法控制运行时 `string.Format` 的参数代入。影响轻微（文字冗余但不丢失信息），需 C# Harmony 补丁彻底修复。
+4. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
+5. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
+6. **节日 NPC 缺失 7 个对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
 
 ## 后续计划
 

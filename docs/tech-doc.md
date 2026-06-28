@@ -1,6 +1,6 @@
 # 星露谷物语双语显示 Mod——资产替换方案实施指南
 
-> 这份文档是一个自包含的、可逐步执行的技术方案，面向本地 Code Agent 或开发者，用于生成一套利用 Content Patcher 实现中英双语同屏显示且支持实时切换的 Mod。
+> **历史说明**：本文档是 v1 初始架构（基于 `Load` 补丁 + 三目录切换）的设计方案。当前版本已演进为基于 `EditData` 补丁 + 单文件双语格式 + 布尔值 `BilingualMode` 切换的架构。细节以实际代码和 [README.md](../README.md) 为准，本文仅供参考架构思路。
 
 ---
 
@@ -556,6 +556,8 @@ BilingualMod/
 
 ### 6.2 `config.json`
 
+> **注意**：当前版本已改用 `BilingualMode`（布尔值），见 [config.json](../BilingualMod/config.json)。
+
 ```json
 {
   "LanguageMode": "Bilingual",
@@ -647,26 +649,25 @@ Strings/Events
 ## 附录 B：目录结构总览
 
 ```
-YourWorkingDir/
+stardew-bilin/                    # 仓库根目录
 ├── AssetExporter/                # 导出 Mod 源代码
 │   ├── AssetExporter.csproj
 │   ├── manifest.json
 │   ├── ModEntry.cs
 │   └── assets-list.txt
-├── BilingualModBuilder/          # 生成工具
-│   ├── build_bilingual_pack.py
-│   └── assets-list.txt
-├── Export_TextAssets/            # 运行导出 Mod 后生成
-│   ├── en/
-│   └── zh/
+├── BilingualModBuilder/          # Python 构建工具
+│   ├── build_bilingual_pack.py   # 读取 _export/{en,zh}，生成 content.json
+│   ├── parsers.py                # 文本解析器
+│   ├── assets-list.txt
+│   ├── BilingualMod/             # 构建输出（gitignored）
+│   └── tests/                    # pytest 单元测试
+├── _export/                      # 导出的游戏文本（提交到仓库）
+│   ├── en/                       # 英文原文 JSON
+│   └── zh/                       # 中文翻译 JSON
 └── BilingualMod/                 # 最终 Mod（放入游戏 Mods 目录）
     ├── manifest.json
     ├── config.json
-    ├── content.json
-    └── assets/
-        ├── English/
-        ├── Chinese/
-        └── Bilingual/
+    └── content.json               # 由 build_bilingual_pack.py 自动生成
 ```
 
 ---

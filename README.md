@@ -150,7 +150,7 @@
 
 ## 从源码构建
 
-> 普通用户不需要执行此流程。直接下载 [Releases](https://github.com/anomalyco/stardew-bilin/releases) 中的 zip 即可。
+> 普通用户不需要执行此流程。直接下载 [Releases](https://github.com/QingGo/stardew-biling-mod/releases) 中的 zip 即可。
 >
 > 以下流程仅适用于**开发者**需要修改或更新本 Mod 时。
 
@@ -199,24 +199,30 @@ stardew-bilin/
 │   ├── manifest.json
 │   ├── ModEntry.cs                 # 遍历资产列表，按类型导出 JSON
 │   └── assets-list.txt             # 需要导出的资产路径列表
-├── BilingualModBuilder/            # Python 合并脚本
-│   ├── build_bilingual_pack.py     # 读取中英文 JSON，生成 content.json
+├── BilingualModBuilder/            # Python 构建脚本
+│   ├── build_bilingual_pack.py     # 读取 _export/{en,zh}，生成 content.json
 │   ├── parsers.py                  # 文本解析器（对话/邮件/事件/Q&A/条件）
-│   ├── assets-list.txt
-│   └── BilingualMod/               # 脚本输出（由 .gitignore 忽略）
-├── BilingualMod/                   # Content Patcher 内容包模板
-├── build.ps1                       # 一键构建脚本
+│   ├── assets-list.txt             # 资产路径列表（与导出时一致）
+│   ├── BilingualMod/               # 构建输出（由 .gitignore 忽略）
+│   │   ├── content.json            # 自动生成的 Content Patcher 补丁
+│   │   ├── manifest.json
+│   │   └── config.json
+│   └── tests/                      # pytest 单元测试
+│       ├── test_parsers_d1.py
+│       └── test_parsers_qr.py
+├── BilingualMod/                   # Content Patcher 内容包（游戏使用的版本）
 │   ├── manifest.json
 │   ├── config.json
-│   └── content.json                # 模板（由 Python 脚本覆盖生成）
+│   └── content.json                # 由 build_bilingual_pack.py 自动生成
+├── _export/                        # 导出的游戏文本资产（中英文对照）
+│   ├── en/                         # 英文原文 JSON（185 个文件）
+│   └── zh/                         # 中文翻译 JSON（185 个文件）
+├── scripts/                        # 辅助分析脚本
 ├── docs/
 │   └── tech-doc.md                 # 原始技术方案文档
 ├── images/                         # 效果截图
-│   ├── 开场动画.png
-│   ├── 对话.png
-│   ├── 背包.png
-│   └── 日志.png
 ├── verify.py                       # 统一验证系统
+├── build.ps1                       # 一键构建脚本
 ├── .gitignore
 └── README.md
 ```

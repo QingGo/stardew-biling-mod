@@ -7,6 +7,7 @@ from pathlib import Path
 from parsers import (
     BILINGUAL_TEMPLATE,
     bilingualize_pair,
+    bilingualize_event_quoted_text,
     make_dialogue_bilingual,
     make_mail_bilingual,
     make_event_bilingual,
@@ -191,7 +192,10 @@ def main():
                     bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
                 else:
                     if en_val and zh_val:
-                        bilingual_data[key] = bilingualize_pair(en_val, zh_val)
+                        if '$q' in en_val and '$q' in zh_val:
+                            bilingual_data[key] = bilingualize_event_quoted_text(en_val, zh_val)
+                        else:
+                            bilingual_data[key] = bilingualize_pair(en_val, zh_val)
                     elif en_val:
                         bilingual_data[key] = f"{en_val} / "
                     elif zh_val:

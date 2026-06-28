@@ -37,3 +37,6 @@ Mods/
 
 # NuGet packages
 packages/
+
+# Local backups
+backup/

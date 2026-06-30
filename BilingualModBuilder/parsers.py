@@ -5,6 +5,8 @@ Handles:
   - Dialogue #$b#/#$e# segmentation + $d/$p conditionals
   - Mail [#] markers + command dedup
   - Event script /-split + $q/$r inline Q&A
+  - $y quick question format
+  - TV CookingChannel recipe prefix
 """
 
 import re
@@ -18,6 +20,7 @@ SEGMENT_RE = re.compile(r'(#\$[eb]#)')
 D1_SEGMENT_RE = re.compile(r'^(#\$1\s+\S+#)(.*)')
 D_COND_RE = re.compile(r'^(\$d\s+\w+#)(.*?)\|(.*)$')
 EMOTION_RE = re.compile(r'(\$\w+)\s*$')
+Y_Q_RE = re.compile(r"^\$y\s*'(.*)'$", re.DOTALL)
 
 
 def _find_first_caret_outside_token(text: str) -> int:
@@ -41,12 +44,48 @@ def _find_first_caret_outside_token(text: str) -> int:
     return -1
 
 
+def _bilingualize_y_text(en_val: str, zh_val: str) -> Optional[str]:
+    """Handle $y 'Question_Opt1_Resp1_...' quick question format.
+    
+    Splits content by _ to pair question/option/response segments
+    between EN and ZH. Each segment is independently bilingualized
+    via bilingualize_pair, preserving any nested #$b# or ^ markers.
+    
+    Returns bilingual string or None if format doesn't match.
+    """
+    en_m = Y_Q_RE.match(en_val)
+    zh_m = Y_Q_RE.match(zh_val)
+
+    if not en_m or not zh_m:
+        return None
+
+    en_segments = en_m.group(1).split('_')
+    zh_segments = zh_m.group(1).split('_')
+
+    if len(en_segments) != len(zh_segments):
+        return None
+
+    bi_segments = [bilingualize_pair(es, zs) for es, zs in zip(en_segments, zh_segments)]
+
+    return "$y '" + '_'.join(bi_segments) + "'"
+
+
 def bilingualize_pair(en_val: str, zh_val: str) -> str:
-    """Bilingualize a single text pair, handling ^ gender split.
+    """Bilingualize a single text pair, handling ^ gender split and $y quick questions.
     
     Game engine processes ^ before #$b#, so ^ must pair EN/zh branches
     correctly: \"EN_male / ZH_male ^ EN_female / ZH_female\"
+    
+    $y 'Question_Opt1_Resp1_...' format is detected and handled
+    by pairing question/option/response segments between languages.
     """
+    # Handle $y quick question format — must be before ^ check
+    # since $y uses _ as delimiter, not ^
+    if '$y' in en_val and '$y' in zh_val:
+        y_result = _bilingualize_y_text(en_val, zh_val)
+        if y_result is not None:
+            return y_result
+
     en_idx = _find_first_caret_outside_token(en_val)
     zh_idx = _find_first_caret_outside_token(zh_val)
 

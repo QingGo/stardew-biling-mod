@@ -178,6 +178,7 @@ def main():
             )
             is_mail = asset_path in MAIL_ASSET_PATHS
             is_event = asset_path.startswith(EVENT_ASSET_PREFIX)
+            is_cooking = asset_path == "Data/TV/CookingChannel"
 
             bilingual_data = {}
             for key in all_keys:
@@ -190,9 +191,22 @@ def main():
                     bilingual_data[key] = make_event_bilingual(en_val, zh_val)
                 elif is_dialogue:
                     bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
+                elif is_cooking:
+                    # Format: "RecipeName/Dialogue" — strip recipe prefix,
+                    # bilingualize only the dialogue portion
+                    if '/' in en_val and '/' in zh_val:
+                        recipe_name, en_dialogue = en_val.split('/', 1)
+                        _, zh_dialogue = zh_val.split('/', 1)
+                        bilingual_data[key] = f"{recipe_name}/{bilingualize_pair(en_dialogue, zh_dialogue)}"
+                    else:
+                        bilingual_data[key] = bilingualize_pair(en_val, zh_val)
                 else:
                     if en_val and zh_val:
                         if '$q' in en_val and '$q' in zh_val:
+                            bilingual_data[key] = bilingualize_event_quoted_text(en_val, zh_val)
+                        elif '$y' in en_val and '$y' in zh_val:
+                            # Route $y through event_quoted_text for proper #$b# splitting
+                            # before bilingualize_pair handles the $y block
                             bilingual_data[key] = bilingualize_event_quoted_text(en_val, zh_val)
                         else:
                             bilingual_data[key] = bilingualize_pair(en_val, zh_val)

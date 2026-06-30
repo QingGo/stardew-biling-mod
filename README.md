@@ -11,8 +11,8 @@
 
 支持切换的场景：
 - Strings/\* 界面文本（菜单、按钮、提示等）
-- Characters/Dialogue/\* 所有 NPC 对话（含 $d/$p 条件语句）
-- Data/Events/\* 所有剧情事件（含 $q/$r 问答、#$b# 分段）
+- Characters/Dialogue/\* 所有 NPC 对话（含 $d/$p 条件语句、$y 快速问答）
+- Data/Events/\* 所有剧情事件（含 $q/$r 问答、$y 快速问答、#$b# 分段）
 - Data/Objects, Data/Tools, Data/Weapons 等物品的名称和描述
 - Data/Bundles, Data/Monsters, Data/hats, Data/Boots 等管道分隔型数据
 - Data/NPCGiftTastes 所有 NPC 送礼反应（爱/喜欢/普通/讨厌/厌恶五档）
@@ -208,8 +208,9 @@ stardew-bilin/
 │   │   ├── manifest.json
 │   │   └── config.json
 │   └── tests/                      # pytest 单元测试
-│       ├── test_parsers_d1.py
-│       └── test_parsers_qr.py
+│       ├── test_parsers_d1.py      # #$1 条件对话 + 分段双语
+│       ├── test_parsers_qr.py      # $q/$r 内联问答
+│       └── test_parsers_y.py       # $y 快速问答 + 烹饪频道
 ├── BilingualMod/                   # Content Patcher 内容包（游戏使用的版本）
 │   ├── manifest.json
 │   ├── config.json
@@ -291,7 +292,7 @@ sequenceDiagram
 | 信件双语 | `[#]` 去重 + 命令 `%%` 终结 | 只保留 EN 的 `[#]` 标记和命令，ZH 取纯文本；`%command` 在 ` / ` 前终结 |
 | 事件双语 | 引号感知脚本分割器 | 按 `/` 分割事件脚本（尊重引号），对 `speak`/`message`/`$q/$r`/`$p` 等做双语 |
 | `^` 分隔资产 | `EditData` + `Entries` 全值替换 | 读取 `_raw` 字段，按 `^` 分割后逐字段双语再拼接 |
-| 普通双语 | `bilingualize_pair()` 统一处理 | `^` 性别分支配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`（跳过 `${...^...}$` CP 令牌），所有 parser 共享此函数 |
+| 普通双语 | `bilingualize_pair()` 统一处理 | `^` 性别分支配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`（跳过 `${...^...}$` CP 令牌）；自动识别 `$y 'Q_Opt1_Resp1'` 格式，按 `_` 分割后逐段双语化，所有 parser 共享此函数 |
 | 日历节日 | `EditData` + `Entries` | 替换 `name` + 全部 NPC 对话（dialogue parser）+ 事件脚本（event parser），不影响 `conditions`/`mainEvent` 等 |
 | 多字段管道型 | `pipe_multi` 类型 | 支持多个对话字段（如 NPCGiftTastes 的 0/2/4/6/8 五档送礼对话），读取 `_raw` 全值后按字段拆分双语；使用 ` | ` 作为隔符避免与 `/` 字段分隔符冲突 |
 | Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "BilingualMode": "true"`，关闭模式 0 补丁 |
@@ -311,6 +312,8 @@ sequenceDiagram
 4. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
 5. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
 6. **节日 NPC 缺失 7 个对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
+7. **电视烹饪频道菜名前缀重复**（v1.1 已修复） — 历史版本 `Data/TV/CookingChannel` 的 `RecipeName/Dialogue` 格式导致菜名在双语两侧重复出现。
+8. **`$y` 快速问答仅显示英文**（v1.1 已修复） — 历史版本 `bilingualize_pair` 将 `$y 'EN'` 和 `$y 'ZH'` 简单拼接，游戏只处理第一个 `$y` 块。现改为按 `_` 分割后逐段双语配对，修复全部 14 处 `$y` 文本。
 
 ## 后续计划
 

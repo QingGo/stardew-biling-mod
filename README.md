@@ -11,7 +11,7 @@
 
 支持切换的场景：
 - Strings/\* 界面文本（菜单、按钮、提示等）
-- Characters/Dialogue/\* 所有 NPC 对话（含 $d/$p 条件语句、$y 快速问答）
+- Characters/Dialogue/\* 所有 NPC 对话（含 $d/$p 条件语句、$y 快速问答、$q/$r Q&A、#$1 条件分支）
 - Data/Events/\* 所有剧情事件（含 $q/$r 问答、$y 快速问答、#$b# 分段）
 - Data/Objects, Data/Tools, Data/Weapons 等物品的名称和描述
 - Data/Bundles, Data/Monsters, Data/hats, Data/Boots 等管道分隔型数据
@@ -208,8 +208,8 @@ stardew-bilin/
 │   │   ├── manifest.json
 │   │   └── config.json
 │   └── tests/                      # pytest 单元测试
-│       ├── test_parsers_d1.py      # #$1 条件对话 + 分段双语
-│       ├── test_parsers_qr.py      # $q/$r 内联问答
+│       ├── test_parsers_d1.py      # #$1 条件对话（含 $k/$0 与 #$e# 终结两种模式）
+│       ├── test_parsers_qr.py      # $q/$r 内联问答（事件 + 对话两种格式）
 │       └── test_parsers_y.py       # $y 快速问答 + 烹饪频道
 ├── BilingualMod/                   # Content Patcher 内容包（游戏使用的版本）
 │   ├── manifest.json
@@ -288,7 +288,7 @@ sequenceDiagram
 | 英文导出 | `LocalizedContentManager` 切换为 `en` + SMAPI 缓存失效 | 强制加载纯英文 XNB（绕过当前中文 locale） |
 | 中文导出 | `Helper.GameContent` 直接加载 | 获取合并后的中文数据（base + `.zh-CN` 覆盖层） |
 | Token 解析 | 多源正则 `\[LocalizedText (source):(key)\]` | 提取 source 路径加载正确的 Strings 资产；支持 format 参数（如 `TrashCan_Description 15 → 15%`） |
-| 对话双语 | 按 `#$e#`/`#$b#` 分段 + `^` 性别配对 | 每段独立做双语，避免中文被结束标记丢弃；支持 `$d COND#T\|F` 条件分支；`^` 性别配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`，跳过 `${...^...}$` CP 令牌 |
+| 对话双语 | 按 `#$e#`/`#$b#` 分段 + `^` 性别配对 | 每段独立做双语，避免中文被结束标记丢弃；支持 `$d COND#T\|F` 条件分支；`^` 性别配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`，跳过 `${...^...}$` CP 令牌；`$q/$r` Q&A 和 `#$1` 条件对话：保留 EN 命令结构，仅双语化文本部分 |
 | 信件双语 | `[#]` 去重 + 命令 `%%` 终结 | 只保留 EN 的 `[#]` 标记和命令，ZH 取纯文本；`%command` 在 ` / ` 前终结 |
 | 事件双语 | 引号感知脚本分割器 | 按 `/` 分割事件脚本（尊重引号），对 `speak`/`message`/`$q/$r`/`$p` 等做双语 |
 | `^` 分隔资产 | `EditData` + `Entries` 全值替换 | 读取 `_raw` 字段，按 `^` 分割后逐字段双语再拼接 |
@@ -296,7 +296,7 @@ sequenceDiagram
 | 日历节日 | `EditData` + `Entries` | 替换 `name` + 全部 NPC 对话（dialogue parser）+ 事件脚本（event parser），不影响 `conditions`/`mainEvent` 等 |
 | 多字段管道型 | `pipe_multi` 类型 | 支持多个对话字段（如 NPCGiftTastes 的 0/2/4/6/8 五档送礼对话），读取 `_raw` 全值后按字段拆分双语；使用 ` | ` 作为隔符避免与 `/` 字段分隔符冲突 |
 | Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "BilingualMode": "true"`，关闭模式 0 补丁 |
-| 验证 | `verify.py` 七合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称、parser 分配 |
+| 验证 | `verify.py` 九合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称、parser 分配、CookingChannel 配方名去重、`#$1` 重复前缀 |
 
 ## 已知问题
 
@@ -314,6 +314,8 @@ sequenceDiagram
 6. **节日 NPC 缺失 7 个对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
 7. **电视烹饪频道菜名前缀重复**（v1.1 已修复） — 历史版本 `Data/TV/CookingChannel` 的 `RecipeName/Dialogue` 格式导致菜名在双语两侧重复出现。
 8. **`$y` 快速问答仅显示英文**（v1.1 已修复） — 历史版本 `bilingualize_pair` 将 `$y 'EN'` 和 `$y 'ZH'` 简单拼接，游戏只处理第一个 `$y` 块。现改为按 `_` 分割后逐段双语配对，修复全部 14 处 `$y` 文本。
+9. **`$q/$r` 问答仅显示英文**（v1.2 已修复） — 历史版本 `Data/ExtraDialogue` 中 5 条 Morris 对话含 `$q/$r` Q&A 结构，EN/ZH 两侧各有一套命令。`bilingualize_pair` 简单拼接后产生两套 `$q` 命令，游戏只处理第一个（英文）。现改为保留 EN 命令结构，仅双语化文本部分。
+10. **`#$1` 条件对话中文丢失**（v1.2 已修复） — 14 条对话中 `#$1` 条件块使用 `#$e#` 而非 `$k`/`$0` 作为终结符（Abigail 周四、Caroline 多段对话等）。`_bilingualize_d1_segment` 因找不到 `$k`/`$0` 返回 None，降级后产生两套 `#$1` 前缀，游戏只处理第一个。现改为无条件型 `$k`/`$0` 时以 `#$e#`/`#$b#`/段尾为终结位置。
 
 ## 后续计划
 

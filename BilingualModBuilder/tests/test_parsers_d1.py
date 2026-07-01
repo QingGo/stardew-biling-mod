@@ -43,10 +43,11 @@ class TestBilingualizeD1Segment:
         expected = "#$1 cond#Welcome / 欢迎^Welcome, sir / 欢迎，先生$k"
         assert _bilingualize_d1_segment(en, zh) == expected
 
-    def test_no_terminator_returns_none(self):
+    def test_no_terminator_fallback(self):
         en = "#$1 cond#Hello there$s"
         zh = "#$1 cond#你好$s"
-        assert _bilingualize_d1_segment(en, zh) is None
+        expected = "#$1 cond#Hello there$s / 你好$s"
+        assert _bilingualize_d1_segment(en, zh) == expected
 
     def test_no_d1_prefix_returns_none(self):
         en = "Just normal text$s"
@@ -112,7 +113,7 @@ class TestBilingualizeSegmentsD1:
     def test_pattern_b_unchanged(self):
         en = "#$1 cond#Hello there$s#$e#How are you?"
         zh = "#$1 cond#你好$s#$e#你好吗？"
-        expected = "#$1 cond#Hello there$s / #$1 cond#你好$s#$e#How are you? / 你好吗？"
+        expected = "#$1 cond#Hello there$s / 你好$s#$e#How are you? / 你好吗？"
         assert _bilingualize_segments(en, zh) == expected
 
     def test_no_d1_normal(self):
@@ -122,6 +123,39 @@ class TestBilingualizeSegmentsD1:
         assert _bilingualize_segments(en, zh) == expected
 
 
+
+    def test_d1_no_terminator_with_b_sep(self):
+        """#$1 without $k/$0 followed by #$b# separator."""
+        en = "#$1 cond#Hello there$s#$b#And goodbye!"
+        zh = "#$1 cond#你好$s#$b#再见！"
+        expected = "#$1 cond#Hello there$s / 你好$s#$b#And goodbye! / 再见！"
+        assert _bilingualize_segments(en, zh) == expected
+
+    def test_d1_zh_no_prefix(self):
+        """ZH lacks #$1 prefix, falls through to naive bilingualize_pair."""
+        en = "#$1 cond#Hello$s#$e#Bye"
+        zh = "你好$s#$e#再见"
+        expected = "#$1 cond#Hello$s / 你好$s#$e#Bye / 再见"
+        assert _bilingualize_segments(en, zh) == expected
+
+    def test_d1_cond_name_mismatch(self):
+        """EN and ZH have different condition names; falls through to bilingualize_pair via _bilingualize_d1_segment returning None."""
+        en = "#$1 condA#Hello there$k"
+        zh = "#$1 condB#你好$k"
+        # _bilingualize_d1_segment returns None, then _bilingualize_segments fallback
+        # preserves EN prefix
+        result = _bilingualize_segments(en, zh)
+        assert result.count("#$1") == 1
+        assert "condA" in result
+        assert "Hello there" in result
+
+    def test_d1_zh_no_prefix_fallback_safety(self):
+        """ZH has no #$1, EN has it: fallback preserves single EN prefix."""
+        en = "#$1 cond#Hello$s"
+        zh = "你好$s"
+        result = _bilingualize_segments(en, zh)
+        assert result.count("#$1") == 1
+        assert "Hello$s / 你好$s" in result
 class TestMakeDialogueBilingualD1:
     """make_dialogue_bilingual — full integration with real-world #$1 cases."""
 

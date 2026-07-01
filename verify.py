@@ -443,6 +443,107 @@ def main():
         if a.startswith("--log="):
             check_smapi_log(a.split("=", 1)[1])
 
+# ====== 8. CookingChannel 配方名去重检查 ======
+
+def check_cooking_channel():
+    print("\n=== 8. CookingChannel 配方名去重检查 ===")
+    pack_path = os.path.join(MOD_DIR, "content.json")
+    if not os.path.exists(pack_path):
+        pack_path = Path(__file__).parent / "BilingualMod" / "content.json"
+    if not os.path.exists(pack_path):
+        print("  SKIP: content.json 不存在")
+        return
+
+    pack = json.load(open(pack_path, "r", encoding="utf-8"))
+    found = False
+    for entry in pack["Changes"]:
+        if entry.get("Target") != "Data/TV/CookingChannel":
+            continue
+        found = True
+        mode = entry["When"].get("BilingualMode", "?")
+        entries = entry.get("Entries", {})
+        dup_count = 0
+        total = 0
+        for key, val in entries.items():
+            total += 1
+            if " / " not in val:
+                continue
+            # Format: RecipeName/EN_dialogue / ZH_dialogue
+            first_slash = val.index("/")
+            recipe_name = val[:first_slash]
+            zh_part = val.split(" / ", 1)[1]
+            if zh_part.startswith(recipe_name + "/"):
+                dup_count += 1
+                log_fail(f"  key={key}: ZH 对话含重复的 \"{recipe_name}/\"")
+        if dup_count:
+            log_fail(f"Data/TV/CookingChannel ({mode}): {dup_count}/{total} 条目配方名重复")
+        else:
+            print(f"  OK Data/TV/CookingChannel ({mode}): {total} 条目配方名正确")
+
+    if not found:
+        log_fail("未找到 Data/TV/CookingChannel 补丁")
+
+
+# ====== 9. #$1 条件对话重复前缀检查 ======
+
+def check_d1_entries():
+    print("\n=== 9. #$1 条件对话重复前缀检查 ===")
+    pack_path = Path(__file__).parent / "BilingualMod" / "content.json"
+    if not pack_path.exists():
+        print("  SKIP: content.json 不存在")
+        return
+
+    pack = json.load(open(pack_path, "r", encoding="utf-8"))
+
+    total_bad = 0
+    for entry in pack["Changes"]:
+        target = entry.get("Target", "")
+        if not (target.startswith("Characters/Dialogue/") or target == "Data/ExtraDialogue"):
+            continue
+        if entry["When"].get("BilingualMode") != "true":
+            continue
+
+        for key, val in entry.get("Entries", {}).items():
+            count = val.count("$1 ")
+            if count > 1:
+                total_bad += 1
+                log_fail(f"{target} key={key}: $1 出现 {count} 次 (应为 1)")
+
+    if total_bad:
+        print(f"  总计: {total_bad} 个条目存在问题")
+    else:
+        print(f"  全部条目 $1 计数正确")
+
+
+# ====== Main ======
+
+def main():
+    args = sys.argv[1:]
+    do_all = not args or "--all" in args
+
+    if do_all or "--data" in args:
+        check_tokens()
+        check_caret_entries()
+
+    if do_all or "--dialogue" in args:
+        check_dialogue_safety()
+
+    if do_all or "--parser" in args:
+        check_parser_assignment()
+
+    if do_all or "--pack" in args:
+        check_caret_entries()
+        check_dialogue_safety()
+        check_mail()
+        check_festivals()
+        check_cooking_channel()
+        check_d1_entries()
+
+    # Check SMAPI log if provided
+    for a in args:
+        if a.startswith("--log="):
+            check_smapi_log(a.split("=", 1)[1])
+
     print(f"\n=== 结果: FAIL={FAIL} WARN={WARN} ===")
     return 1 if FAIL else 0
 

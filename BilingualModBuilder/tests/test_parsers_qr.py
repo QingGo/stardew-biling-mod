@@ -101,33 +101,46 @@ class TestBilingualizeEventQuotedText:
         assert bilingualize_event_quoted_text(en, zh) == expected
 
 
-class TestBilingualizePairBreaksQr:
-    """Demonstrate that bilingualize_pair corrupts $q/$r format.
-
-    This documents the bug: bilingualize_pair() naively concatenates
-    the full en + zh strings, breaking the $q/$r structure that
-    Stardew Valley's event parser expects.
-    """
-
-    def test_bilingualize_pair_corrupts_egg_hunt(self):
+class TestDialogueQrBilingual:
+    def test_dialogue_qr_egg_hunt(self):
         en = "$q -1 null#Do you think everyone's ready for the egg hunt yet?#$r -1 0 yes#Yes, let's start.#$r -1 0 no#Not yet."
         zh = "$q -1 null#你觉得大家都准备好彩蛋大寻宝了吗？#$r -1 0 yes#是的，让我们开始吧。#$r -1 0 no#还没有。"
         result = bilingualize_pair(en, zh)
-        # bilingualize_pair concatenates: {en} / {zh}
-        # The result contains TWO complete $q/$r blocks — game can't parse this.
-        assert "$q -1 null#Do you think everyone's ready" in result
-        assert "$q -1 null#你觉得大家都准备好" in result
-        # The first $r's response text is NOT bilingualized; the entire
-        # English block is kept as-is followed by the Chinese block.
-        # This means the text contains "Not yet.\n$q -1 null#..." which
-        # the game's $q/$r parser cannot handle.
-        assert "$q" in result[result.index("Not yet."):]
-        # This would cause the Q&A to fail in-game
+        assert result.count("$q -1 null#") == 1
+        assert "Make it so" not in result
 
-    def test_bilingualize_pair_corrupts_dance_ask(self):
+    def test_dialogue_qr_dance_ask(self):
         en = "$q -1 null#...Yes, dear?#$r -1 0 danceAsk#(Ask {0} to be your dance partner)#$r -1 0 null#Never mind..."
         zh = "$q -1 null#……什么事，亲爱的？#$r -1 0 danceAsk#（邀请{0}作你的舞伴）#$r -1 0 null#没事……"
         result = bilingualize_pair(en, zh)
-        # Same corruption: second $q block follows first $r's last response
-        assert "$q" in result.split("Never mind...")[1] if "Never mind..." in result else True
-        assert True  # placeholder — we just need to confirm the pattern
+        assert result.count("$q") == 1
+        assert "...Yes, dear?" in result
+        assert "Never mind..." in result
+
+    def test_dialogue_qr_with_preamble(self):
+        en = "Oh, and another thing... Isn't that wonderful? #$q -1 -1#Membership costs {0}g. Well, would you like to join us? #$r -1 -1 Yes#Yes.#$r -1 -1 No#No."
+        zh = "啊，还有另一件事……那不是好极了？ #$q -1 -1#会员费用 {0} 金。那么，你愿意加入我们吗？ #$r -1 -1 Yes#愿意。 #$r -1 -1 No#不愿意。"
+        result = bilingualize_pair(en, zh)
+        assert result.count("$q -1 -1#") == 1
+        assert "Oh, and another thing..." in result
+        assert "Membership costs" in result
+
+    def test_dialogue_qr_after_b_sep(self):
+        en = "So, naturally, I turn to you.#$b#$q -1 -1#We could make this happen for 500,000g...$h#$r -1 -1 Yes#Yes#$r -1 -1 No#No"
+        zh = "于是我很自然地找到了您。#$b#$q -1 -1#我们只需要 500,000 金。$h#$r -1 -1 Yes#是#$r -1 -1 No#否"
+        result = bilingualize_pair(en, zh)
+        assert result.count("$q -1 -1#") == 1
+        assert "500,000g...$h" in result
+
+    def test_dialogue_qr_emotion_in_question(self):
+        en = "$q -1 -1#Are you ready?$h#$r -1 -1 Yes#Yes!$h#$r -1 -1 No#No."
+        zh = "$q -1 -1#准备好了吗？$h#$r -1 -1 Yes#好了！$h#$r -1 -1 No#还没有。"
+        result = bilingualize_pair(en, zh)
+        assert result.count("$q") == 1
+        assert "Are you ready?$h" in result
+
+    def test_dialogue_qr_r_count_mismatch(self):
+        en = "$q -1 null#Ready?#$r -1 0 yes#Yes"
+        zh = "$q -1 null#准备好了吗？#$r -1 0 yes#好了#$r -1 0 no#还没"
+        result = bilingualize_pair(en, zh)
+        assert result.count("$q") == 2

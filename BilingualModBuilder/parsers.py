@@ -21,6 +21,8 @@ D1_SEGMENT_RE = re.compile(r'^(#\$1\s+\S+#)(.*)')
 D_COND_RE = re.compile(r'^(\$d\s+\w+#)(.*?)\|(.*)$')
 EMOTION_RE = re.compile(r'(\$\w+)\s*$')
 Y_Q_RE = re.compile(r"^\$y\s*'(.*)'$", re.DOTALL)
+DIALOGUE_Q_RE = re.compile(r'(#?\$q\s+[^#]*#)(.*)', re.DOTALL)
+DIALOGUE_R_RE = re.compile(r'#\$r\s+([^#]+)#(.*?)(?=#\$r|#\$q|#\$e|#\$b|$)', re.DOTALL)
 
 
 def _find_first_caret_outside_token(text: str) -> int:
@@ -70,15 +72,93 @@ def _bilingualize_y_text(en_val: str, zh_val: str) -> Optional[str]:
     return "$y '" + '_'.join(bi_segments) + "'"
 
 
-def bilingualize_pair(en_val: str, zh_val: str) -> str:
-    """Bilingualize a single text pair, handling ^ gender split and $y quick questions.
+_qr_depth = 0
+
+
+def _bilingualize_dialogue_qr(en_text: str, zh_text: str) -> Optional[str]:
+    """Handle dialogue $q/$r Q&A format.
+
+    Both event ($q) and dialogue (#$q) patterns are supported.
+    Preserves EN command structure, bilingualizes only the text portions.
+
+    Input EN:  ...text $q -1 -1#question?#$r -1 -1 Yes#yes.#$r -1 -1 No#no.
+    Input ZH:  ...text $q -1 -1#问题？#$r -1 -1 Yes#是。#$r -1 -1 No#不。
+    Output:    ...text / ...text $q -1 -1#question? / 问题？#$r -1 -1 Yes#yes. / 是。#$r -1 -1 No#no. / 不。
+    """
+    global _qr_depth
+    if _qr_depth > 0:
+        return None
+    if '$q' not in en_text or '$q' not in zh_text:
+        return None
+
+    en_q = DIALOGUE_Q_RE.search(en_text)
+    zh_q = DIALOGUE_Q_RE.search(zh_text)
+
+    if not en_q or not zh_q:
+        return None
     
+    _qr_depth += 1
+    try:
+        en_preamble = en_text[:en_q.start()]
+        zh_preamble = zh_text[:zh_q.start()]
+        preamble_bi = bilingualize_pair(en_preamble, zh_preamble) if en_preamble or zh_preamble else ""
+
+        q_prefix = en_q.group(1)
+        en_content = en_q.group(2)
+        zh_content = zh_q.group(2)
+
+        en_r_matches = list(DIALOGUE_R_RE.finditer(en_content))
+        zh_r_matches = list(DIALOGUE_R_RE.finditer(zh_content))
+
+        if not en_r_matches or not zh_r_matches:
+            q_bi = bilingualize_pair(en_content, zh_content)
+            return f"{preamble_bi}{q_prefix}{q_bi}"
+
+        if len(en_r_matches) != len(zh_r_matches):
+            return None
+
+        en_q_text = en_content[:en_r_matches[0].start()]
+        zh_q_text = zh_content[:zh_r_matches[0].start()]
+        q_bi = bilingualize_pair(en_q_text, zh_q_text) if en_q_text or zh_q_text else ""
+
+        en_last_end = en_r_matches[-1].end()
+        zh_last_end = zh_r_matches[-1].end()
+        en_tail = en_content[en_last_end:]
+        zh_tail = zh_content[zh_last_end:]
+        tail_bi = bilingualize_pair(en_tail, zh_tail) if en_tail or zh_tail else ""
+
+        responses = []
+        for en_m, zh_m in zip(en_r_matches, zh_r_matches):
+            en_args = en_m.group(1)
+            en_resp = en_m.group(2)
+            zh_resp = zh_m.group(2)
+            resp_bi = bilingualize_pair(en_resp, zh_resp)
+            responses.append(f"#$r {en_args}#{resp_bi}")
+
+        return f"{preamble_bi}{q_prefix}{q_bi}{''.join(responses)}{tail_bi}"
+    finally:
+        _qr_depth -= 1
+
+
+def bilingualize_pair(en_val: str, zh_val: str) -> str:
+    """Bilingualize a single text pair, handling ^ gender split, $y quick questions,
+    and $q/$r dialogue Q&A.
+
     Game engine processes ^ before #$b#, so ^ must pair EN/zh branches
     correctly: \"EN_male / ZH_male ^ EN_female / ZH_female\"
-    
+
     $y 'Question_Opt1_Resp1_...' format is detected and handled
     by pairing question/option/response segments between languages.
+
+    $q/$r dialogue Q&A format is detected and handled by preserving
+    the EN command structure and bilingualizing only the text portions.
     """
+    # Handle $q/$r dialogue Q&A — must be before ^ check since $q uses #
+    if '$q' in en_val and '$q' in zh_val:
+        qr_result = _bilingualize_dialogue_qr(en_val, zh_val)
+        if qr_result is not None:
+            return qr_result
+
     # Handle $y quick question format — must be before ^ check
     # since $y uses _ as delimiter, not ^
     if '$y' in en_val and '$y' in zh_val:
@@ -112,7 +192,8 @@ def _bilingualize_d1_segment(en_val: str, zh_val: str) -> Optional[str]:
            #$1 cond#ZH_TEXT$TERM[AFTER]
     输出:  #$1 cond#EN_TEXT / ZH_TEXT$TERM[AFTER]
 
-    TERM 为 $k 或 $0。若非 #$1 段或无终结符，返回 None 由上级继续处理。
+    TERM 为 $k 或 $0。若无 $k/$0（以 #$e#/#$b# 或段尾终结），
+    则视整段为条件文本段做双语，仅保留 EN 前缀。
     """
     en_m = D1_SEGMENT_RE.match(en_val)
     zh_m = D1_SEGMENT_RE.match(zh_val)
@@ -125,18 +206,19 @@ def _bilingualize_d1_segment(en_val: str, zh_val: str) -> Optional[str]:
 
     en_term = re.search(r'\$[0k]', en_inner)
     if not en_term:
-        return None
-
-    en_block = en_inner[:en_term.start()]
-    terminator = en_term.group(0)
-    en_after = en_inner[en_term.end():]
-
-    zh_term_idx = zh_inner.find(terminator)
-    if zh_term_idx < 0:
-        return None
-
-    zh_block = zh_inner[:zh_term_idx]
-    zh_after = zh_inner[zh_term_idx + len(terminator):]
+        en_block = en_inner
+        terminator = ""
+        en_after = ""
+        zh_block = zh_inner
+    else:
+        en_block = en_inner[:en_term.start()]
+        terminator = en_term.group(0)
+        en_after = en_inner[en_term.end():]
+        zh_term_idx = zh_inner.find(terminator)
+        if zh_term_idx < 0:
+            return None
+        zh_block = zh_inner[:zh_term_idx]
+        zh_after = zh_inner[zh_term_idx + len(terminator):]
 
     bi_block = bilingualize_pair(en_block, zh_block)
     return f"{prefix}{bi_block}{terminator}{en_after}"
@@ -159,7 +241,14 @@ def _bilingualize_segments(en_val: str, zh_val: str) -> str:
             if d1 is not None:
                 result.append(d1)
             else:
-                result.append(bilingualize_pair(en_part, zh_part))
+                en_d1 = D1_SEGMENT_RE.match(en_part)
+                zh_d1 = D1_SEGMENT_RE.match(zh_part)
+                if en_d1 and zh_d1:
+                    prefix = en_d1.group(1)
+                    bi_text = bilingualize_pair(en_d1.group(2), zh_d1.group(2))
+                    result.append(f"{prefix}{bi_text}")
+                else:
+                    result.append(bilingualize_pair(en_part, zh_part))
         elif en_part:
             result.append(f"{en_part} / ")
         elif zh_part:

@@ -132,6 +132,18 @@ class TestContentJsonMultiPair:
         true_count = sum(1 for c in data['Changes'] if c['When'].get('BilingualMode') == 'true')
         assert true_count > 0
 
+    def test_font_redirect_patches_for_cjk(self):
+        """ja-zh pair adds font Load patches for SpriteFont1 and SmallFont."""
+        data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
+        font_patches = [c for c in data['Changes'] 
+                        if c.get('Action') == 'Load' 
+                        and 'Fonts/' in c.get('Target', '')
+                        and c['When'].get('BilingualMode') == 'ja-zh']
+        assert len(font_patches) == 2, f"Expected 2 font patches, got {len(font_patches)}"
+        targets = [c['Target'] for c in font_patches]
+        assert 'Fonts/SpriteFont1' in targets
+        assert 'Fonts/SmallFont' in targets
+
     def test_event_cs_1726_segment_bilingual(self):
         """Event.cs.1726 has per-segment bilingual format."""
         data = json.loads(self.CONTENT_PATH.read_text('utf-8'))

@@ -403,6 +403,22 @@ def main():
                             "Fields": bi_fields
                         })
 
+    # Add font redirect patches for cross-CJK pairs (ja:zh, zh:ja, ko:zh, etc.)
+    cjk_pairs = {"ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja"}
+    for pair in args.pairs:
+        if pair in cjk_pairs:
+            pair_code = pair.replace(':', '-')
+            for font_name in ["SpriteFont1", "SmallFont"]:
+                from_file = f"assets/{font_name}.zh-CN.xnb"
+                if (OUTPUT_DIR / from_file).exists():
+                    content_changes.append({
+                        "Action": "Load",
+                        "Target": f"Fonts/{font_name}",
+                        "FromFile": from_file,
+                        "When": {"BilingualMode": pair_code}
+                    })
+                    print(f"  字体重定向: {font_name} -> {from_file} (when={pair_code})")
+
     allow_values = "off, " + ", ".join(all_pair_codes)
 
     content_json = {

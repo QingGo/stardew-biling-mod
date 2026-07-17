@@ -105,12 +105,12 @@ class TestContentJsonMultiPair:
             pytest.skip("content.json not found")
 
     def test_config_schema_includes_pairs(self):
-        """ConfigSchema has AllowValues with pairs and backward-compat true."""
+        """ConfigSchema has AllowValues with pair codes and off."""
         data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
         schema = data['ConfigSchema']['BilingualMode']
         assert 'en-zh' in schema['AllowValues']
-        assert 'true' in schema['AllowValues']
-        assert 'false' in schema['AllowValues']
+        assert 'off' in schema['AllowValues']
+        assert 'true' not in schema['AllowValues']
 
     def test_each_target_has_en_zh_patch(self):
         """At least one patch per target for en-zh mode."""
@@ -125,6 +125,12 @@ class TestContentJsonMultiPair:
                 true_targets.add(c['Target'])
         assert len(enzh_targets) > 0
         assert enzh_targets == true_targets
+
+    def test_backward_compat_true_patches_exist(self):
+        """Old 'true' config value still matches patches (even though not in AllowValues)."""
+        data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
+        true_count = sum(1 for c in data['Changes'] if c['When'].get('BilingualMode') == 'true')
+        assert true_count > 0
 
     def test_event_cs_1726_segment_bilingual(self):
         """Event.cs.1726 has per-segment bilingual format."""

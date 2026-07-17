@@ -393,9 +393,7 @@ def main():
                             "Fields": bi_fields
                         })
 
-    allow_values = "false, " + ", ".join(all_pair_codes)
-    if args.pairs[0] is not None:
-        allow_values += ", true"
+    allow_values = "off, " + ", ".join(all_pair_codes)
 
     content_json = {
         "Format": "2.0.0",

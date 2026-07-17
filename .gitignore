@@ -38,5 +38,5 @@ Mods/
 # NuGet packages
 packages/
 
-# Local backups
-backup/
+# xnbcli source (cloned for font merging, not part of the mod)
+xnbcli/

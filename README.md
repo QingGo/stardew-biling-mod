@@ -1,12 +1,14 @@
 # Stardew Valley Bilingual Text
 
-星露谷物语中英双语同屏显示 Mod。基于 Content Patcher 实现，**无需修改游戏代码**，支持实时切换显示模式。
+星露谷物语中英 / 德英 / 日中等多语言对双语同屏显示 Mod。
+基于 Content Patcher 实现，**无需修改游戏代码**，支持实时切换显示模式。
 
-所有界面文本、对话、事件、物品描述、信件、日历节日等均可显示为 `英文 / 中文`，方便对照学习。
+所有界面文本、对话、事件、物品描述、信件、日历节日等均可显示为 `语言A / 语言B`，方便对照学习。
 
 ## 功能
 
-- **开启（默认）** — 双语模式，所有文本显示为 `英文 / 中文`
+- **语言对选择** — 在 GMCM 中选择 `en-zh`（英中）、`de-en`（德英）、`ja-zh`（日中）等
+- **开启** — 选中语言对后，所有文本显示为 `语言A / 语言B`
 - **关闭** — 跟随游戏语言设置，不进行任何干预
 
 支持切换的场景：
@@ -167,10 +169,20 @@ dotnet build
 
 ```bash
 cd BilingualModBuilder
+
+# 默认英中对（en:zh）
 python build_bilingual_pack.py
+
+# 多语言对（需 _export 目录下有对应语言数据）
+python build_bilingual_pack.py --pairs en:zh de:en ja:zh
+
+# 交换语言顺序（中文在前英文在后）
+python build_bilingual_pack.py --pairs zh:en
 ```
 
 生成的 Content Patcher 包位于 `BilingualModBuilder/BilingualMod/`，复制到 `Stardew Valley/Mods/` 即可使用。
+
+> 如需导出其他语言的游戏数据，先修改 `AssetExporter/config.json` 的 `Languages` 字段（默认 `["en", "zh"]`），运行 AssetExporter mod 后即可获得对应语言的 JSON 文件。
 
 ### 3. 验证
 
@@ -210,7 +222,8 @@ stardew-bilin/
 │   └── tests/                      # pytest 单元测试
 │       ├── test_parsers_d1.py      # #$1 条件对话（含 $k/$0 与 #$e# 终结两种模式）
 │       ├── test_parsers_qr.py      # $q/$r 内联问答（事件 + 对话两种格式）
-│       └── test_parsers_y.py       # $y 快速问答 + 烹饪频道
+│       ├── test_parsers_y.py       # $y 快速问答 + 烹饪频道
+│       └── test_multipair.py       # 多语言对支持
 ├── BilingualMod/                   # Content Patcher 内容包（游戏使用的版本）
 │   ├── manifest.json
 │   ├── config.json

@@ -18,8 +18,14 @@ using StardewValley.GameData;
 
 namespace AssetExporter
 {
+    public class ModConfig
+    {
+        public string[] Languages { get; set; } = { "en", "zh" };
+    }
+
     public class ModEntry : Mod
     {
+        private ModConfig _config;
         private static readonly string DebugLogPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "StardewValley", "export-debug.log");
         private static void DebugLog(string msg)
         {
@@ -48,13 +54,44 @@ namespace AssetExporter
 
         private readonly Dictionary<string, Dictionary<string, string>> _stringsLoadCache = new();
 
+        private static readonly Dictionary<string, LocalizedContentManager.LanguageCode> LangCodeMap = new()
+        {
+            ["en"] = LocalizedContentManager.LanguageCode.en,
+            ["zh"] = LocalizedContentManager.LanguageCode.zh,
+            ["de"] = LocalizedContentManager.LanguageCode.de,
+            ["ja"] = LocalizedContentManager.LanguageCode.ja,
+            ["fr"] = LocalizedContentManager.LanguageCode.fr,
+            ["ko"] = LocalizedContentManager.LanguageCode.ko,
+            ["tr"] = LocalizedContentManager.LanguageCode.tr,
+            ["es"] = LocalizedContentManager.LanguageCode.es,
+            ["pt"] = LocalizedContentManager.LanguageCode.pt,
+            ["ru"] = LocalizedContentManager.LanguageCode.ru,
+            ["hu"] = LocalizedContentManager.LanguageCode.hu,
+            ["it"] = LocalizedContentManager.LanguageCode.it,
+            ["vi"] = LocalizedContentManager.LanguageCode.vi,
+            ["th"] = LocalizedContentManager.LanguageCode.th,
+        };
+
         public override void Entry(IModHelper helper)
         {
+            _config = helper.ReadConfig<ModConfig>();
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
         }
 
         private void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
+            DebugLog($"配置语言: {string.Join(", ", _config.Languages)}");
+            Monitor.Log($"导出语言: {string.Join(", ", _config.Languages)}", LogLevel.Info);
+
+            foreach (var lang in _config.Languages)
+            {
+                if (!LangCodeMap.ContainsKey(lang))
+                {
+                    Monitor.Log($"不支持的语言代码: {lang}，跳过。支持: {string.Join(", ", LangCodeMap.Keys)}", LogLevel.Warn);
+                    return;
+                }
+            }
+
             string listFile = Path.Combine(Helper.DirectoryPath, "assets-list.txt");
             if (!File.Exists(listFile))
             {
@@ -94,16 +131,33 @@ namespace AssetExporter
 
         // ====== 加载路径 ======
 
-        private T LoadEn<T>(string assetPath)
+        private T LoadLanguage<T>(string assetPath, string langCode)
         {
+            DebugLog($"LoadLanguage<{typeof(T).Name}>(\"{assetPath}\", \"{langCode}\")");
             var origLang = LocalizedContentManager.CurrentLanguageCode;
-            LocalizedContentManager.CurrentLanguageCode = LocalizedContentManager.LanguageCode.en;
+            LocalizedContentManager.CurrentLanguageCode = LangCodeMap[langCode];
 
             InvalidateAllCaches();
 
             var result = Helper.GameContent.Load<T>(assetPath);
 
             LocalizedContentManager.CurrentLanguageCode = origLang;
+
+            // Verify: for Chinese, check we got CJK characters
+            if (langCode == "zh" && result is Dictionary<string, string> dict && dict.Count > 0)
+            {
+                var sample = dict.First();
+                bool hasChinese = sample.Value.Any(c => c > 0x2FF);
+                if (!hasChinese)
+                {
+                    DebugLog($"  ⚠ LoadLanguage(\"{assetPath}\", \"zh\") — NO Chinese found! \"{sample.Key}\"=\"{sample.Value.Substring(0, Math.Min(60, sample.Value.Length))}\"");
+                    LocalizedContentManager.CurrentLanguageCode = LangCodeMap["zh"];
+                    InvalidateAllCaches();
+                    result = Helper.GameContent.Load<T>(assetPath);
+                    LocalizedContentManager.CurrentLanguageCode = origLang;
+                }
+            }
+
             return result;
         }
 
@@ -122,65 +176,33 @@ namespace AssetExporter
             Helper.GameContent.InvalidateCache<Dictionary<string, TrinketData>>();
         }
 
-        private T LoadZh<T>(string assetPath)
-        {
-            DebugLog($"LoadZh<{typeof(T).Name}>(\"{assetPath}\")");
-            var origLang = LocalizedContentManager.CurrentLanguageCode;
-            LocalizedContentManager.CurrentLanguageCode = LocalizedContentManager.LanguageCode.zh;
-            InvalidateAllCaches();
-
-            var result = Helper.GameContent.Load<T>(assetPath);
-
-            // Don't restore — subsequent LoadEn will handle its own switching
-            // Actually, we must restore so the game doesn't break when user plays
-            LocalizedContentManager.CurrentLanguageCode = origLang;
-
-            // Verify we got Chinese data
-            if (result is Dictionary<string, string> dict && dict.Count > 0)
-            {
-                var sample = dict.First();
-                bool hasChinese = sample.Value.Any(c => c > 0x2FF);
-                if (!hasChinese)
-                {
-                    DebugLog($"  ⚠ LoadZh(\"{assetPath}\") — NO Chinese found! \"{sample.Key}\"=\"{sample.Value.Substring(0, Math.Min(60, sample.Value.Length))}\"");
-                    // Try again with stronger measures
-                    LocalizedContentManager.CurrentLanguageCode = LocalizedContentManager.LanguageCode.zh;
-                    InvalidateAllCaches();
-                    result = Helper.GameContent.Load<T>(assetPath);
-                    LocalizedContentManager.CurrentLanguageCode = origLang;
-                }
-            }
-
-            return result;
-        }
-
         // ====== 主流程 ======
 
         private void ExportAssets()
         {
             string outRoot = Path.Combine(Constants.GamePath, "Export_TextAssets");
-            string enDir = Path.Combine(outRoot, "en");
-            string zhDir = Path.Combine(outRoot, "zh");
-
-            Directory.CreateDirectory(enDir);
-            Directory.CreateDirectory(zhDir);
+            var langDirs = new Dictionary<string, string>();
+            foreach (var lang in _config.Languages)
+            {
+                var dir = Path.Combine(outRoot, lang);
+                Directory.CreateDirectory(dir);
+                langDirs[lang] = dir;
+            }
 
             Monitor.Log("=== 导出开始 ===", LogLevel.Info);
-            Monitor.Log("EN: Switch CurrentLanguageCode=en + InvalidateCache<Dict<string,string>> + Load", LogLevel.Info);
-            Monitor.Log("ZH: Helper.GameContent.Load (Chinese locale)", LogLevel.Info);
 
-            var validation = new ExportValidation(Monitor);
+            var validation = new ExportValidation(Monitor, _config.Languages);
 
             if (stringAssetPaths.Count > 0)
             {
                 Monitor.Log("--- 字符串资产 ---", LogLevel.Info);
-                ExportStringAssets(stringAssetPaths, enDir, zhDir, validation);
+                ExportStringAssets(stringAssetPaths, langDirs, validation);
             }
 
             if (dataAssetPaths.Count > 0)
             {
                 Monitor.Log("--- Data 资产（显示名+描述）---", LogLevel.Info);
-                ExportDataAssets(dataAssetPaths, enDir, zhDir, validation);
+                ExportDataAssets(dataAssetPaths, langDirs, validation);
             }
 
             validation.Report();
@@ -191,20 +213,27 @@ namespace AssetExporter
 
         // ====== 字符串资产（Dictionary<string, string>）=====
 
-        private void ExportStringAssets(List<string> paths, string enDir, string zhDir, ExportValidation validation)
+        private void ExportStringAssets(List<string> paths, Dictionary<string, string> langDirs, ExportValidation validation)
         {
             foreach (string assetPath in paths)
             {
                 try
                 {
-                    var enDict = LoadEn<Dictionary<string, string>>(assetPath);
-                    if (enDict == null || enDict.Count == 0) continue;
+                    var langDicts = new Dictionary<string, Dictionary<string, string>>();
+                    foreach (var lang in _config.Languages)
+                    {
+                        var dict = LoadLanguage<Dictionary<string, string>>(assetPath, lang);
+                        if (dict == null || dict.Count == 0)
+                        {
+                            Monitor.Log($"  跳过 {assetPath}（{lang} 为空）", LogLevel.Warn);
+                            break;
+                        }
+                        langDicts[lang] = dict;
+                    }
+                    if (langDicts.Count != _config.Languages.Length) continue;
 
-                    var zhDict = LoadZh<Dictionary<string, string>>(assetPath);
-                    if (zhDict == null || zhDict.Count == 0) continue;
-
-                    // Debug: check first key
-                    if (enDict.Count > 0)
+                    // Debug: check first key of English
+                    if (langDicts.TryGetValue("en", out var enDict) && enDict.Count > 0)
                     {
                         var first = enDict.First();
                         bool chinese = first.Value.Any(c => c > 0x2FF);
@@ -212,14 +241,14 @@ namespace AssetExporter
                         if (chinese)
                             Monitor.Log($"  ⚠ {assetPath} EN 仍含中文: \"{first.Key}\"=\"{sample}\"", LogLevel.Warn);
                         else
-                            Monitor.Log($"  ✓ {assetPath}: EN={enDict.Count} ZH={zhDict.Count} 条目", LogLevel.Info);
+                            Monitor.Log($"  ✓ {assetPath}: {string.Join(" ", _config.Languages.Select(l => $"{l}={langDicts[l].Count}"))} 条目", LogLevel.Info);
                     }
 
                     string safeName = assetPath.Replace("/", "_").Replace("\\", "_") + ".json";
-                    WriteJson(enDict, Path.Combine(enDir, safeName));
-                    WriteJson(zhDict, Path.Combine(zhDir, safeName));
+                    foreach (var lang in _config.Languages)
+                        WriteJson(langDicts[lang], Path.Combine(langDirs[lang], safeName));
 
-                    validation.AddStrings(assetPath, enDict, zhDict);
+                    validation.AddStrings(assetPath, langDicts);
                 }
                 catch (Exception ex)
                 {
@@ -230,47 +259,51 @@ namespace AssetExporter
 
         // ====== Data 资产 ======
 
-        private void ExportDataAssets(List<string> paths, string enDir, string zhDir, ExportValidation validation)
+        private void ExportDataAssets(List<string> paths, Dictionary<string, string> langDirs, ExportValidation validation)
         {
             foreach (string assetPath in paths)
             {
                 try
                 {
-                    if (assetPath == "Data/hats" || assetPath == "Data/Boots"
-                        || assetPath == "Data/Quests" || assetPath == "Data/EngagementDialogue"
-                        || assetPath == "Data/Bundles" || assetPath == "Data/Monsters"
-                        || assetPath == "Data/NPCGiftTastes")
-                    {
-                        var enResult = ExportPipeDelimitedData(assetPath, isEnglish: true);
-                        var zhResult = ExportPipeDelimitedData(assetPath, isEnglish: false);
-                        WriteDataExport(assetPath, enDir, enResult);
-                        WriteDataExport(assetPath, zhDir, zhResult);
-                        validation.AddData(assetPath, enResult, zhResult);
-                    }
-                    else if (assetPath == "Data/SecretNotes" || assetPath == "Data/Achievements")
-                    {
-                        var enResult = ExportIntKeyPipeData(assetPath, '^', isEnglish: true);
-                        var zhResult = ExportIntKeyPipeData(assetPath, '^', isEnglish: false);
-                        WriteDataExport(assetPath, enDir, enResult);
-                        WriteDataExport(assetPath, zhDir, zhResult);
-                        validation.AddData(assetPath, enResult, zhResult);
-                    }
-                    else if (DataToStringsAsset.ContainsKey(assetPath))
-                    {
-                        string stringsAsset = DataToStringsAsset[assetPath];
-                        var enStrings = LoadEn<Dictionary<string, string>>(stringsAsset);
-                        var zhStrings = LoadZh<Dictionary<string, string>>(stringsAsset);
+                    var langResults = new Dictionary<string, Dictionary<string, Dictionary<string, string>>>();
 
-                        var enResult = LoadModelDataWithTokenResolution(assetPath, enStrings, isEnglish: true);
-                        var zhResult = LoadModelDataWithTokenResolution(assetPath, zhStrings, isEnglish: false);
-                        WriteDataExport(assetPath, enDir, enResult);
-                        WriteDataExport(assetPath, zhDir, zhResult);
-                        validation.AddData(assetPath, enResult, zhResult);
-                    }
-                    else
+                    foreach (var lang in _config.Languages)
                     {
-                        Monitor.Log($"  未知的 Data 资产类型：{assetPath}，跳过。", LogLevel.Warn);
+                        Dictionary<string, Dictionary<string, string>> result = null;
+
+                        if (assetPath == "Data/hats" || assetPath == "Data/Boots"
+                            || assetPath == "Data/Quests" || assetPath == "Data/EngagementDialogue"
+                            || assetPath == "Data/Bundles" || assetPath == "Data/Monsters"
+                            || assetPath == "Data/NPCGiftTastes")
+                        {
+                            result = ExportPipeDelimitedData(assetPath, lang);
+                        }
+                        else if (assetPath == "Data/SecretNotes" || assetPath == "Data/Achievements")
+                        {
+                            result = ExportIntKeyPipeData(assetPath, '^', lang);
+                        }
+                        else if (DataToStringsAsset.ContainsKey(assetPath))
+                        {
+                            string stringsAsset = DataToStringsAsset[assetPath];
+                            var stringsDict = LoadLanguage<Dictionary<string, string>>(stringsAsset, lang);
+                            result = LoadModelDataWithTokenResolution(assetPath, stringsDict, lang);
+                        }
+                        else
+                        {
+                            Monitor.Log($"  未知的 Data 资产类型：{assetPath}，跳过。", LogLevel.Warn);
+                            break;
+                        }
+
+                        if (result != null)
+                            langResults[lang] = result;
                     }
+
+                    if (langResults.Count != _config.Languages.Length) continue;
+
+                    foreach (var lang in _config.Languages)
+                        WriteDataExport(assetPath, langDirs[lang], langResults[lang]);
+
+                    validation.AddData(assetPath, langResults);
                 }
                 catch (Exception ex)
                 {
@@ -302,14 +335,9 @@ namespace AssetExporter
 
         // ====== 管道分隔型 Data ======
 
-        private Dictionary<string, Dictionary<string, string>> ExportPipeDelimitedData(string assetPath, bool isEnglish)
+        private Dictionary<string, Dictionary<string, string>> ExportPipeDelimitedData(string assetPath, string langCode)
         {
-            Dictionary<string, string> raw;
-            if (isEnglish)
-                raw = LoadEn<Dictionary<string, string>>(assetPath);
-            else
-                raw = LoadZh<Dictionary<string, string>>(assetPath);
-
+            var raw = LoadLanguage<Dictionary<string, string>>(assetPath, langCode);
             if (raw == null) return null;
 
             var result = new Dictionary<string, Dictionary<string, string>>();
@@ -371,16 +399,11 @@ namespace AssetExporter
 
         // ====== ^ 分隔的 int-key Data（SecretNotes）=====
 
-        private Dictionary<string, Dictionary<string, string>> ExportIntKeyPipeData(string assetPath, char delimiter, bool isEnglish)
+        private Dictionary<string, Dictionary<string, string>> ExportIntKeyPipeData(string assetPath, char delimiter, string langCode)
         {
             Helper.GameContent.InvalidateCache<Dictionary<int, string>>();
 
-            Dictionary<int, string> raw;
-            if (isEnglish)
-                raw = LoadEn<Dictionary<int, string>>(assetPath);
-            else
-                raw = LoadZh<Dictionary<int, string>>(assetPath);
-
+            var raw = LoadLanguage<Dictionary<int, string>>(assetPath, langCode);
             if (raw == null) return null;
 
             var result = new Dictionary<string, Dictionary<string, string>>();
@@ -402,40 +425,35 @@ namespace AssetExporter
         // ====== 模型型 Data ======
 
         private Dictionary<string, Dictionary<string, string>> LoadModelDataWithTokenResolution(
-            string assetPath, Dictionary<string, string> stringsDict, bool isEnglish)
+            string assetPath, Dictionary<string, string> stringsDict, string langCode)
         {
             return assetPath switch
             {
                 "Data/Objects" => ExtractTokenizedData(
-                    LoadModelData<ObjectData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<ObjectData>(assetPath, langCode), stringsDict, langCode),
                 "Data/Tools" => ExtractTokenizedData(
-                    LoadModelData<ToolData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<ToolData>(assetPath, langCode), stringsDict, langCode),
                 "Data/Weapons" => ExtractTokenizedData(
-                    LoadModelData<WeaponData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<WeaponData>(assetPath, langCode), stringsDict, langCode),
                 "Data/Shirts" => ExtractTokenizedData(
-                    LoadModelData<ShirtData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<ShirtData>(assetPath, langCode), stringsDict, langCode),
                 "Data/Pants" => ExtractTokenizedData(
-                    LoadModelData<PantsData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<PantsData>(assetPath, langCode), stringsDict, langCode),
                 "Data/BigCraftables" => ExtractTokenizedData(
-                    LoadModelData<BigCraftableData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<BigCraftableData>(assetPath, langCode), stringsDict, langCode),
                 "Data/Powers" => ExtractTokenizedData(
-                    LoadModelData<PowersData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<PowersData>(assetPath, langCode), stringsDict, langCode),
                 "Data/Trinkets" => ExtractTokenizedData(
-                    LoadModelData<TrinketData>(assetPath, isEnglish), stringsDict, isEnglish),
+                    LoadModelData<TrinketData>(assetPath, langCode), stringsDict, langCode),
                 _ => null
             };
         }
 
-        private Dictionary<string, T> LoadModelData<T>(string assetPath, bool isEnglish)
-        {
-            if (isEnglish)
-                return LoadEn<Dictionary<string, T>>(assetPath);
-            else
-                return LoadZh<Dictionary<string, T>>(assetPath);
-        }
+        private Dictionary<string, T> LoadModelData<T>(string assetPath, string langCode)
+            => LoadLanguage<Dictionary<string, T>>(assetPath, langCode);
 
         private Dictionary<string, Dictionary<string, string>> ExtractTokenizedData<T>(
-            Dictionary<string, T> rawData, Dictionary<string, string> primaryStrings, bool isEnglish)
+            Dictionary<string, T> rawData, Dictionary<string, string> primaryStrings, string langCode)
         {
             if (rawData == null) return null;
 
@@ -447,10 +465,40 @@ namespace AssetExporter
                 string desc = item?.Description as string ?? "";
                 result[kvp.Key] = new Dictionary<string, string>
                 {
-                    ["displayName"] = ResolveToken(dn, primaryStrings, isEnglish),
-                    ["description"] = ResolveToken(desc, primaryStrings, isEnglish)
+                    ["displayName"] = ResolveToken(dn, primaryStrings, langCode),
+                    ["description"] = ResolveToken(desc, primaryStrings, langCode)
                 };
             }
+            return result;
+        }
+
+        private string ResolveToken(string rawValue, Dictionary<string, string> primaryStrings, string langCode)
+        {
+            if (string.IsNullOrEmpty(rawValue))
+                return "";
+
+            var match = TokenRegex.Match(rawValue);
+            if (match.Success)
+            {
+                string source = match.Groups[1].Value; // "Strings\Objects"
+                string key = match.Groups[2].Value;    // "DwarvishTranslationGuide_Name"
+
+                // Try the token's specified source first
+                string assetPath = source.Replace('\\', '/');
+                string cacheKey = assetPath + ":" + langCode;
+
+                if (!_stringsLoadCache.TryGetValue(cacheKey, out var tokenSourceStrings))
+                {
+                    try
+                    {
+                        tokenSourceStrings = LoadLanguage<Dictionary<string, string>>(assetPath, langCode);
+                        _stringsLoadCache[cacheKey] = tokenSourceStrings;
+                    }
+                    catch
+                    {
+                        tokenSourceStrings = null;
+                    }
+                }
             return result;
         }
 
@@ -519,6 +567,7 @@ namespace AssetExporter
         private class ExportValidation
         {
             private readonly IMonitor _monitor;
+            private readonly string[] _langs;
             private readonly List<AssetReport> _reports = new();
 
             public class AssetReport
@@ -526,102 +575,129 @@ namespace AssetExporter
                 public string AssetPath;
                 public int TotalMergedKeys;
                 public int IdenticalValues;
-                public int EnTokenResidual;
-                public int ZhTokenResidual;
-                public int EnOnly;
-                public int ZhOnly;
+                public Dictionary<string, int> TokenResidual = new();
+                public Dictionary<string, int> LangOnly = new();
             }
 
-            public ExportValidation(IMonitor monitor) { _monitor = monitor; }
+            public ExportValidation(IMonitor monitor, string[] langs) { _monitor = monitor; _langs = langs; }
 
-            public void AddStrings(string assetPath, Dictionary<string, string> en, Dictionary<string, string> zh)
+            public void AddStrings(string assetPath, Dictionary<string, Dictionary<string, string>> langDicts)
             {
-                var allKeys = new HashSet<string>(en.Keys);
-                allKeys.UnionWith(zh.Keys);
+                var allKeys = new HashSet<string>();
+                foreach (var dict in langDicts.Values)
+                    allKeys.UnionWith(dict.Keys);
 
                 var r = new AssetReport { AssetPath = assetPath };
                 foreach (var key in allKeys)
                 {
                     r.TotalMergedKeys++;
-                    bool hasEn = en.TryGetValue(key, out string enVal);
-                    bool hasZh = zh.TryGetValue(key, out string zhVal);
 
-                    if (hasEn && hasZh && enVal == zhVal && !string.IsNullOrEmpty(enVal))
+                    bool allSame = true;
+                    string firstVal = null;
+
+                    foreach (var lang in _langs)
+                    {
+                        var dict = langDicts[lang];
+                        bool hasKey = dict.TryGetValue(key, out string val);
+
+                        if (!hasKey)
+                        {
+                            if (!r.LangOnly.ContainsKey(lang)) r.LangOnly[lang] = 0;
+                            r.LangOnly[lang]++;
+                        }
+                        else
+                        {
+                            if (firstVal == null) firstVal = val;
+                            else if (val != firstVal) allSame = false;
+
+                            if (TokenRegex.IsMatch(val))
+                            {
+                                if (!r.TokenResidual.ContainsKey(lang)) r.TokenResidual[lang] = 0;
+                                r.TokenResidual[lang]++;
+                            }
+                        }
+                    }
+
+                    if (allSame && !string.IsNullOrEmpty(firstVal))
                         r.IdenticalValues++;
-                    if (hasEn && !hasZh) r.EnOnly++;
-                    if (hasZh && !hasEn) r.ZhOnly++;
-                    if (hasEn && TokenRegex.IsMatch(enVal)) r.EnTokenResidual++;
-                    if (hasZh && TokenRegex.IsMatch(zhVal)) r.ZhTokenResidual++;
                 }
                 _reports.Add(r);
             }
 
             public void AddData(string assetPath,
-                Dictionary<string, Dictionary<string, string>> en,
-                Dictionary<string, Dictionary<string, string>> zh)
+                Dictionary<string, Dictionary<string, Dictionary<string, string>>> langResults)
             {
-                if (en == null && zh == null) return;
+                if (langResults.Count == 0) return;
 
                 var allKeys = new HashSet<string>();
-                if (en != null) allKeys.UnionWith(en.Keys);
-                if (zh != null) allKeys.UnionWith(zh.Keys);
+                foreach (var result in langResults.Values)
+                    allKeys.UnionWith(result.Keys);
 
                 var r = new AssetReport { AssetPath = assetPath };
                 foreach (var key in allKeys)
                 {
                     r.TotalMergedKeys++;
-                    bool hasEn = en?.ContainsKey(key) ?? false;
-                    bool hasZh = zh?.ContainsKey(key) ?? false;
 
-                    if (hasEn && !hasZh) r.EnOnly++;
-                    else if (hasZh && !hasEn) r.ZhOnly++;
-                    else if (hasEn && hasZh)
+                    bool allSame = true;
+                    bool firstSet = false;
+                    int sharedFieldCount = 0, sharedFieldMatches = 0;
+
+                    foreach (var lang in _langs)
                     {
-                        var ev = en[key];
-                        var zv = zh[key];
-                        bool same = ev.Count == zv.Count
-                            && ev.Keys.All(k => zv.TryGetValue(k, out string v) && v == ev[k]);
-                        if (same)
-                            r.IdenticalValues++;
+                        if (!langResults.TryGetValue(lang, out var result) || !result.ContainsKey(key))
+                        {
+                            if (!r.LangOnly.ContainsKey(lang)) r.LangOnly[lang] = 0;
+                            r.LangOnly[lang]++;
+                            continue;
+                        }
+
+                        var entry = result[key];
+                        if (!firstSet)
+                        {
+                            firstSet = true;
+                            sharedFieldCount = entry.Count;
+                            sharedFieldMatches = entry.Count;
+                        }
+                        else
+                        {
+                            // Compare against first language's entry
+                            var firstEntry = langResults[_langs[0]][key];
+                            bool same = entry.Count == firstEntry.Count
+                                && entry.Keys.All(k => firstEntry.TryGetValue(k, out string v) && v == entry[k]);
+                            if (!same) allSame = false;
+                        }
+
+                        foreach (var fv in entry.Values)
+                            if (TokenRegex.IsMatch(fv))
+                            {
+                                if (!r.TokenResidual.ContainsKey(lang)) r.TokenResidual[lang] = 0;
+                                r.TokenResidual[lang]++;
+                            }
                     }
 
-                    if (hasEn)
-                        foreach (var fv in en[key].Values)
-                            if (TokenRegex.IsMatch(fv)) r.EnTokenResidual++;
-                    if (hasZh)
-                        foreach (var fv in zh[key].Values)
-                            if (TokenRegex.IsMatch(fv)) r.ZhTokenResidual++;
+                    if (allSame && firstSet)
+                        r.IdenticalValues++;
                 }
                 _reports.Add(r);
             }
 
             public void Report()
             {
-                int totalIdentical = 0;
                 int totalKeys = 0;
-                int totalEnOnly = 0;
-                int totalZhOnly = 0;
-                int totalTokens = 0;
 
                 _monitor.Log("--- 导出验证报告 ---", LogLevel.Info);
 
                 foreach (var r in _reports.OrderBy(r => r.AssetPath))
                 {
-                    totalIdentical += r.IdenticalValues;
                     totalKeys += r.TotalMergedKeys;
-                    totalEnOnly += r.EnOnly;
-                    totalZhOnly += r.ZhOnly;
-                    totalTokens += r.EnTokenResidual + r.ZhTokenResidual;
 
                     var issues = new List<string>();
                     if (r.IdenticalValues > 0 && r.IdenticalValues > r.TotalMergedKeys * 0.3)
-                        issues.Add($"EN=ZH 占 {r.IdenticalValues}/{r.TotalMergedKeys}");
-                    if (r.EnTokenResidual > 0 || r.ZhTokenResidual > 0)
-                        issues.Add($"Token 残留 EN:{r.EnTokenResidual} ZH:{r.ZhTokenResidual}");
-                    if (r.EnOnly > 10)
-                        issues.Add($"仅英文键: {r.EnOnly}");
-                    if (r.ZhOnly > 10)
-                        issues.Add($"仅中文键: {r.ZhOnly}");
+                        issues.Add($"所有语言完全一致 占 {r.IdenticalValues}/{r.TotalMergedKeys}");
+                    foreach (var kvp in r.TokenResidual)
+                        if (kvp.Value > 0) issues.Add($"Token 残留 {kvp.Key}:{kvp.Value}");
+                    foreach (var kvp in r.LangOnly)
+                        if (kvp.Value > 10) issues.Add($"仅 {kvp.Key} 键: {kvp.Value}");
 
                     if (issues.Count > 0)
                         _monitor.Log($"  ⚠ {r.AssetPath}: {string.Join("; ", issues)}", LogLevel.Warn);
@@ -632,10 +708,6 @@ namespace AssetExporter
                 _monitor.Log("--- 汇总 ---", LogLevel.Info);
                 _monitor.Log($"总资产: {_reports.Count}", LogLevel.Info);
                 _monitor.Log($"总合并键: {totalKeys}", LogLevel.Info);
-                _monitor.Log($"EN=ZH 完全相同: {totalIdentical}", LogLevel.Info);
-                _monitor.Log($"仅英文键: {totalEnOnly}", LogLevel.Info);
-                _monitor.Log($"仅中文键: {totalZhOnly}", LogLevel.Info);
-                _monitor.Log($"Token 残留: {totalTokens}", LogLevel.Info);
             }
         }
     }

@@ -254,6 +254,106 @@ class TestCookingChannelBilingual:
         assert result.startswith("Radish/")
 
 
+class TestSegmentBilingualization:
+    """_bilingualize_segments — #$b#/#$e# segment pairing.
+
+    Ensures each #$b#-separated segment is independently bilingualized,
+    preventing EN/ZH segment interleaving when game splits by #$b#.
+    """
+
+    def test_basic_b_segments(self):
+        """Each #$b# segment independently bilingualized."""
+        en = "Hello.#$b#How are you?"
+        zh = "你好。#$b#你好吗？"
+        result = _bilingualize_segments(en, zh)
+        assert result == "Hello. / 你好。#$b#How are you? / 你好吗？"
+
+    def test_b_segments_with_emotion(self):
+        """#$b# with emotion codes — each segment keeps its emotion."""
+        en = "Line one.$h#$b#Line two.$s"
+        zh = "第一行。$h#$b#第二行。$s"
+        result = _bilingualize_segments(en, zh)
+        assert "Line one.$h / 第一行。$h" in result
+        assert "Line two.$s / 第二行。$s" in result
+
+    def test_e_segments(self):
+        """#$e# works identically to #$b#."""
+        en = "Part A.#$e#Part B."
+        zh = "部分A。#$e#部分B。"
+        result = _bilingualize_segments(en, zh)
+        assert result == "Part A. / 部分A。#$e#Part B. / 部分B。"
+
+    def test_mixed_b_e_segments(self):
+        """Mixed #$b# and #$e# segments handled."""
+        en = "First.$h#$b#Second.#$e#Third."
+        zh = "第一。$h#$b#第二。#$e#第三。"
+        result = _bilingualize_segments(en, zh)
+        assert "First.$h / 第一。$h" in result
+        assert "Second. / 第二。" in result
+        assert "Third. / 第三。" in result
+
+    def test_no_segments_same_as_bilingualize_pair(self):
+        """Plain text without #$b#/#$e# — output matches bilingualize_pair."""
+        en = "Just some plain text."
+        zh = "一些普通文本。"
+        seg_result = _bilingualize_segments(en, zh)
+        pair_result = bilingualize_pair(en, zh)
+        assert seg_result == pair_result
+        assert seg_result == "Just some plain text. / 一些普通文本。"
+
+    def test_real_lewis_grange_1726(self):
+        """Real-world: Event.cs.1726 (Lewis grange display 2nd place)."""
+        en = "Hey, not bad! You won 2nd place with a rating of {0}.#$b#Your prize is 500 star tokens! Spend them wisely.$h#$b#Oh, and don't forget to clean out your grange display box."
+        zh = "嘿，还不错！你赢得了第二名，得分是{0}。#$b#你的奖品是 500 星星币！省着点花。$h#$b#哦，别忘了清理你的农庄展览箱。"
+        result = _bilingualize_segments(en, zh)
+        # Each #$b#-separated segment is independently bilingual
+        segments = result.split("#$b#")
+        assert len(segments) == 3
+        for seg in segments:
+            assert " / " in seg, f"Segment '{seg[:50]}...' lacks bilingual separator"
+
+    def test_real_desert_festival_abigail(self):
+        """Real-world: DesertFestival_Abigail from Strings/1_6_Strings."""
+        en = "I'm glad you fixed up the bus! This is really fun.$h#$e#I've always wanted to travel beyond Pelican Town."
+        zh = "谢谢你修好了巴士！坐巴士很快乐。$h#$e#我一直想去鹈鹕镇外面旅行。"
+        result = _bilingualize_segments(en, zh)
+        segments = result.split("#$e#")
+        assert len(segments) == 2
+        for seg in segments:
+            assert " / " in seg, f"Segment '{seg[:40]}...' lacks bilingual separator"
+
+    def test_mismatched_segment_count_fallback(self):
+        """Different number of #$b# segments → fallback to bilingualize_pair."""
+        en = "A.#$b#B."
+        zh = "甲。#$b#乙。#$b#丙。"
+        result = _bilingualize_segments(en, zh)
+        # Fallback: whole EN / whole ZH
+        assert result == "A.#$b#B. / 甲。#$b#乙。#$b#丙。"
+
+    def test_empty_segment_fallback(self):
+        """One side empty with #$b# → fallback to bilingualize_pair."""
+        en = "A.#$b#B."
+        zh = ""
+        result = _bilingualize_segments(en, zh)
+        assert result == "A.#$b#B. / "
+
+
+class TestMakeDialogueBilingualHandlesHashB:
+    """Verifies make_dialogue_bilingual correctly distributes #$b# segments
+    against bilingualize_pair which does not."""
+
+    def test_vs_bilingualize_pair_contrast(self):
+        """Contrast: bilingualize_pair interleaves; make_dialogue_bilingual pairs."""
+        en = "Seg1.#$b#Seg2"
+        zh = "段1。#$b#段2。"
+        pair_result = bilingualize_pair(en, zh)
+        dia_result = make_dialogue_bilingual(en, zh)
+        # bilingualize_pair: whole EN / whole ZH
+        assert pair_result == "Seg1.#$b#Seg2 / 段1。#$b#段2。"
+        # make_dialogue_bilingual: per segment
+        assert dia_result == "Seg1. / 段1。#$b#Seg2 / 段2。"
+
+
 class TestRegression:
     """Ensure existing behavior is not broken."""
 

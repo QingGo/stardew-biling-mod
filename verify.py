@@ -348,6 +348,10 @@ def check_parser_assignment():
                 or ap == "Data/ExtraDialogue"
                 or ap == "Strings/MovieReactions"
                 or ap == "Strings/SpecialOrderStrings"
+                or ap == "Strings/StringsFromCSFiles"
+                or ap == "Strings/1_6_Strings"
+                or ap == "Strings/StringsFromMaps"
+                or ap == "Strings/SimpleNonVillagerDialogues"
             ):
                 cat = "dialogue parser"
             elif ap in MAIL_ASSET_PATHS:
@@ -388,6 +392,9 @@ def check_parser_assignment():
             dialogue_like = any(x in ap for x in [
                 "Characters/", "Dialogue", "ExtraDialogue",
                 "SimpleNonVillagerDialogues",
+                "StringsFromCSFiles",
+                "1_6_Strings",
+                "StringsFromMaps",
             ])
             if dialogue_like:
                 issues_fail.append("含 #$b#/#$e# 分段但走 plain template，可能分段错乱")

@@ -175,6 +175,10 @@ def main():
                 or asset_path == "Data/ExtraDialogue"
                 or asset_path == "Strings/MovieReactions"
                 or asset_path == "Strings/SpecialOrderStrings"
+                or asset_path == "Strings/StringsFromCSFiles"
+                or asset_path == "Strings/1_6_Strings"
+                or asset_path == "Strings/StringsFromMaps"
+                or asset_path == "Strings/SimpleNonVillagerDialogues"
             )
             is_mail = asset_path in MAIL_ASSET_PATHS
             is_event = asset_path.startswith(EVENT_ASSET_PREFIX)
@@ -208,6 +212,8 @@ def main():
                             # Route $y through event_quoted_text for proper #$b# splitting
                             # before bilingualize_pair handles the $y block
                             bilingual_data[key] = bilingualize_event_quoted_text(en_val, zh_val)
+                        elif '#$b#' in en_val or '#$b#' in zh_val or '#$e#' in en_val or '#$e#' in zh_val:
+                            bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
                         else:
                             bilingual_data[key] = bilingualize_pair(en_val, zh_val)
                     elif en_val:

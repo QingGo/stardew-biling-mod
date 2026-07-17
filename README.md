@@ -96,7 +96,7 @@
 | 类别 | 资产数 |
 |------|--------|
 | Strings/* 界面文本 | 30 |
-| 对话 (Characters/Dialogue/* + ExtraDialogue + MovieReactions + SpecialOrderStrings) | 44 |
+| 对话 (Characters/Dialogue/* + ExtraDialogue + MovieReactions + SpecialOrderStrings + StringsFromCSFiles + 1_6_Strings + StringsFromMaps + SimpleNonVillagerDialogues) | 48 |
 | 日程文本 (Strings/schedules/*) | 30 |
 | Data 文本 (mail, TV/*, FestivalDates) | 4 |
 | 事件对话 (Data/Events/*) | 43 |
@@ -315,7 +315,8 @@ sequenceDiagram
 7. **电视烹饪频道菜名前缀重复**（v1.1 已修复） — 历史版本 `Data/TV/CookingChannel` 的 `RecipeName/Dialogue` 格式导致菜名在双语两侧重复出现。
 8. **`$y` 快速问答仅显示英文**（v1.1 已修复） — 历史版本 `bilingualize_pair` 将 `$y 'EN'` 和 `$y 'ZH'` 简单拼接，游戏只处理第一个 `$y` 块。现改为按 `_` 分割后逐段双语配对，修复全部 14 处 `$y` 文本。
 9. **`$q/$r` 问答仅显示英文**（v1.2 已修复） — 历史版本 `Data/ExtraDialogue` 中 5 条 Morris 对话含 `$q/$r` Q&A 结构，EN/ZH 两侧各有一套命令。`bilingualize_pair` 简单拼接后产生两套 `$q` 命令，游戏只处理第一个（英文）。现改为保留 EN 命令结构，仅双语化文本部分。
-10. **`#$1` 条件对话中文丢失**（v1.2 已修复） — 14 条对话中 `#$1` 条件块使用 `#$e#` 而非 `$k`/`$0` 作为终结符（Abigail 周四、Caroline 多段对话等）。`_bilingualize_d1_segment` 因找不到 `$k`/`$0` 返回 None，降级后产生两套 `#$1` 前缀，游戏只处理第一个。现改为无条件型 `$k`/`$0` 时以 `#$e#`/`#$b#`/段尾为终结位置。
+10. **`#$1` 条件对话中文丢失**（v1.2 已修复） — 14 条对话中 `#$1` 条件块使用 `#$e#` 而非 `$k`/`$0` 作为终结符（Abigail 周四、Caroline 多段对话等）。`_bilingualize_d1_segment` 因找不到 `$k`/`$0` 返回 None，降级后产生两套 `#$1` 前缀，游戏只处理第一个。现改为无条件型 `$k`/`$0` 时以 `#$e#`/`#$b#`/段尾为终止位置。
+11. **对话分段模板误用导致部分页面仅显示单语**（v1.3 已修复） — `StringsFromCSFiles`、`Strings/1_6_Strings`、`Strings/StringsFromMaps` 中含有 `#$b#`/`#$e#` 分段标记的文本（113 条）被误分配到 plain template parser（`bilingualize_pair`），导致 EN/ZH 两侧的 `#$b#` 段在游戏内交错穿插，部分对话页仅显示英文。现改为资产级 `is_dialogue` 分类 + 逐条目 `#$b#`/`#$e#` 自动检测双层防护，每条 `#$b#` 段独立双语化，每页都显示 `EN / ZH`。
 
 ## 后续计划
 

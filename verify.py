@@ -38,6 +38,12 @@ def log_warn(msg):
     print(f"  WARN: {msg}")
 
 
+def _is_bilingual_patch(entry):
+    """Check if a content.json patch entry is an active bilingual patch."""
+    mode = entry.get("When", {}).get("BilingualMode", "")
+    return mode not in ("", "false", "off")
+
+
 # ====== 1. Token 完整性检查 ======
 
 def check_tokens():
@@ -106,7 +112,7 @@ def check_caret_entries():
                     log_fail(f"{target} ({when}) key={key}: 缺少 ^ 分隔符 (值={val[:60]})")
 
                 # Check that bilingual entries have " / " in display-related fields
-                if when == "Bilingual":
+                if _is_bilingual_patch(entry):
                     fields = val.split("^")
                     has_bilingual = any(" / " in f for f in fields)
                     if not has_bilingual:
@@ -129,7 +135,7 @@ def check_dialogue_safety():
     for entry in pack["Changes"]:
         if not entry.get("Target", "").startswith("Characters/Dialogue/"):
             continue
-        if entry["When"].get("BilingualMode") != "true":
+        if not _is_bilingual_patch(entry):
             continue
 
         target = entry["Target"]
@@ -228,7 +234,7 @@ def check_mail():
         if entry.get("Target") != "Data/mail":
             continue
         mode = entry["When"].get("BilingualMode", "?")
-        if mode != "true":
+        if not _is_bilingual_patch(entry):
             continue
 
         total = 0
@@ -272,7 +278,7 @@ def check_festivals():
             name_val = entries.get("name", "")
             if not name_val:
                 log_fail(f"{target} (BilingualMode={mode}): name 字段为空")
-            elif mode == "true" and " / " not in name_val:
+            elif _is_bilingual_patch(entry) and " / " not in name_val:
                 log_fail(f"{target} (BilingualMode={mode}): 双语模式缺少 / 分隔符")
 
     if festival_targets:
@@ -507,7 +513,7 @@ def check_d1_entries():
         target = entry.get("Target", "")
         if not (target.startswith("Characters/Dialogue/") or target == "Data/ExtraDialogue"):
             continue
-        if entry["When"].get("BilingualMode") != "true":
+        if not _is_bilingual_patch(entry):
             continue
 
         for key, val in entry.get("Entries", {}).items():

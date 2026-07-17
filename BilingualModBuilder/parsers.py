@@ -12,7 +12,7 @@ Handles:
 import re
 from typing import Optional
 
-BILINGUAL_TEMPLATE = "{en} / {zh}"
+BILINGUAL_TEMPLATE = "{left} / {right}"
 
 # ====== Shared ======
 
@@ -173,15 +173,15 @@ def bilingualize_pair(en_val: str, zh_val: str) -> str:
     has_zh_caret = zh_idx >= 0
 
     if not has_en_caret and not has_zh_caret:
-        return f"{en_val} / {zh_val}"
+        return BILINGUAL_TEMPLATE.format(left=en_val, right=zh_val)
 
     en_left = en_val[:en_idx] if has_en_caret else en_val
     en_right = en_val[en_idx+1:] if has_en_caret else en_val
     zh_left = zh_val[:zh_idx] if has_zh_caret else zh_val
     zh_right = zh_val[zh_idx+1:] if has_zh_caret else zh_val
 
-    left = f"{en_left} / {zh_left}"
-    right = f"{en_right} / {zh_right}"
+    left = BILINGUAL_TEMPLATE.format(left=en_left, right=zh_left)
+    right = BILINGUAL_TEMPLATE.format(left=en_right, right=zh_right)
     return f"{left}^{right}"
 
 
@@ -342,7 +342,7 @@ def make_mail_bilingual(en_val: str, zh_val: str) -> str:
     """
     en_match = MAIL_TITLE_RE.search(en_val)
     if not en_match:
-        return BILINGUAL_TEMPLATE.format(en=en_val, zh=zh_val)
+        return BILINGUAL_TEMPLATE.format(left=en_val, right=zh_val)
 
     en_marker = en_match.group(1)
     en_title = en_match.group(2)
@@ -366,8 +366,8 @@ def make_mail_bilingual(en_val: str, zh_val: str) -> str:
         en_body = en_body.rstrip() + ' %%'
         en_marker = re.sub(r'^%+', '', en_marker)
 
-    body_bi = BILINGUAL_TEMPLATE.format(en=en_body, zh=zh_body_clean)
-    title_bi = BILINGUAL_TEMPLATE.format(en=en_title, zh=zh_title) if zh_title else en_title
+    body_bi = BILINGUAL_TEMPLATE.format(left=en_body, right=zh_body_clean)
+    title_bi = BILINGUAL_TEMPLATE.format(left=en_title, right=zh_title) if zh_title else en_title
     return f"{body_bi} {en_marker}{title_bi}"
 
 

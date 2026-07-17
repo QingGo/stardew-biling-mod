@@ -23,7 +23,7 @@ GAME_EXPORT_DIR = Path("D:/steam/steamapps/common/Stardew Valley/Export_TextAsse
 OUTPUT_DIR = Path("./BilingualMod")
 ASSETS_LIST_FILE = Path("./assets-list.txt")
 
-PIPE_BILINGUAL_TEMPLATE = "{en} | {zh}"
+PIPE_BILINGUAL_TEMPLATE = "{left} | {right}"
 
 EXPORT_DIR = None  # set by main() via CLI arg or auto-detect
 
@@ -91,6 +91,8 @@ def main():
     parser = argparse.ArgumentParser(description="Build bilingual Content Patcher pack")
     parser.add_argument("--export-dir", type=str, default=None,
                         help="Path to Export_TextAssets (default: auto-detect)")
+    parser.add_argument("--pairs", type=str, nargs="+", default=["en:zh"],
+                        help="Language pairs: lang1:lang2 lang1:lang2 ... (default: en:zh)")
     args = parser.parse_args()
 
     # Auto-detect export dir: game path first, fall back to committed _export
@@ -110,308 +112,297 @@ def main():
         asset_paths = [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
     content_changes = []
-    string_count = 0
-    data_count = 0
+    all_pair_codes = []
 
-    for asset_path in asset_paths:
-        filename = asset_path_to_filename(asset_path)
-        en_file = EXPORT_DIR / "en" / filename
-        zh_file = EXPORT_DIR / "zh" / filename
+    for pair in args.pairs:
+        lang1, lang2 = pair.split(':')
+        pair_code = f"{lang1}-{lang2}"
+        all_pair_codes.append(pair_code)
+        when_values = [pair_code]
+        # Backward compat: first pair also responds to old "true" config value
+        if pair == args.pairs[0]:
+            when_values.append("true")
 
-        if not en_file.exists():
-            print(f"警告：缺失英文资产 {asset_path}（查找路径：{en_file}），跳过")
-            continue
+        for when_val in when_values:
+            for asset_path in asset_paths:
+                filename = asset_path_to_filename(asset_path)
+                lang1_file = EXPORT_DIR / lang1 / filename
+                lang2_file = EXPORT_DIR / lang2 / filename
 
-        if is_festival_asset(asset_path):
-            if not zh_file.exists():
-                print(f"警告：缺失中文节日资产 {asset_path}，跳过")
-                continue
-            en_data = load_json(en_file)
-            zh_data = load_json(zh_file)
-            en_name = en_data.get("name", "")
-            zh_name = zh_data.get("name", "")
-            if not en_name:
-                print(f"警告：节日 {asset_path} 缺少 name 字段，跳过")
-                continue
-
-            entries = {}
-            entries["name"] = f"{en_name} / {zh_name}" if zh_name else en_name
-
-            for key in en_data:
-                if key == "name":
+                if not lang1_file.exists():
+                    print(f"警告：缺失 {lang1} 资产 {asset_path}（查找路径：{lang1_file}），跳过")
                     continue
-                en_val = en_data.get(key, "")
-                zh_val = zh_data.get(key, "")
-                if not en_val or en_val == zh_val:
-                    continue  # data-only key (conditions etc.), skip
-                if "/" in en_val and any(cmd in en_val for cmd in FESTIVAL_CMD_PATTERNS):
-                    entries[key] = make_event_bilingual(en_val, zh_val)
-                else:
-                    entries[key] = make_dialogue_bilingual(en_val, zh_val)
 
-            content_changes.append({
-                "Action": "EditData",
-                "Target": asset_path,
-                "When": {"BilingualMode": "true"},
-                "Entries": entries
-            })
-            data_count += 1
+                if is_festival_asset(asset_path):
+                    if not lang2_file.exists():
+                        print(f"警告：缺失 {lang2} 节日资产 {asset_path}，跳过")
+                        continue
+                    lang1_data = load_json(lang1_file)
+                    lang2_data = load_json(lang2_file)
+                    name1 = lang1_data.get("name", "")
+                    name2 = lang2_data.get("name", "")
+                    if not name1:
+                        print(f"警告：节日 {asset_path} 缺少 name 字段，跳过")
+                        continue
 
-        elif is_string_asset(asset_path):
-            if not zh_file.exists():
-                print(f"警告：缺失中文资产 {asset_path}，将使用英文代替")
-                zh_data = None
-            else:
-                zh_data = load_json(zh_file)
+                    entries = {}
+                    entries["name"] = BILINGUAL_TEMPLATE.format(left=name1, right=name2) if name2 else name1
 
-            en_data = load_json(en_file)
-
-            all_keys = set(en_data.keys())
-            if zh_data:
-                all_keys |= set(zh_data.keys())
-
-            is_dialogue = (
-                any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
-                or asset_path == "Data/ExtraDialogue"
-                or asset_path == "Strings/MovieReactions"
-                or asset_path == "Strings/SpecialOrderStrings"
-                or asset_path == "Strings/StringsFromCSFiles"
-                or asset_path == "Strings/1_6_Strings"
-                or asset_path == "Strings/StringsFromMaps"
-                or asset_path == "Strings/SimpleNonVillagerDialogues"
-            )
-            is_mail = asset_path in MAIL_ASSET_PATHS
-            is_event = asset_path.startswith(EVENT_ASSET_PREFIX)
-            is_cooking = asset_path == "Data/TV/CookingChannel"
-
-            bilingual_data = {}
-            for key in all_keys:
-                en_val = en_data.get(key, "")
-                zh_val = zh_data.get(key, "") if zh_data else ""
-
-                if is_mail:
-                    bilingual_data[key] = make_mail_bilingual(en_val, zh_val)
-                elif is_event:
-                    bilingual_data[key] = make_event_bilingual(en_val, zh_val)
-                elif is_dialogue:
-                    bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
-                elif is_cooking:
-                    # Format: "RecipeName/Dialogue" — strip recipe prefix,
-                    # bilingualize only the dialogue portion
-                    if '/' in en_val and '/' in zh_val:
-                        recipe_name, en_dialogue = en_val.split('/', 1)
-                        _, zh_dialogue = zh_val.split('/', 1)
-                        bilingual_data[key] = f"{recipe_name}/{bilingualize_pair(en_dialogue, zh_dialogue)}"
-                    else:
-                        bilingual_data[key] = bilingualize_pair(en_val, zh_val)
-                else:
-                    if en_val and zh_val:
-                        if '$q' in en_val and '$q' in zh_val:
-                            bilingual_data[key] = bilingualize_event_quoted_text(en_val, zh_val)
-                        elif '$y' in en_val and '$y' in zh_val:
-                            # Route $y through event_quoted_text for proper #$b# splitting
-                            # before bilingualize_pair handles the $y block
-                            bilingual_data[key] = bilingualize_event_quoted_text(en_val, zh_val)
-                        elif '#$b#' in en_val or '#$b#' in zh_val or '#$e#' in en_val or '#$e#' in zh_val:
-                            bilingual_data[key] = make_dialogue_bilingual(en_val, zh_val)
+                    for key in lang1_data:
+                        if key == "name":
+                            continue
+                        v1 = lang1_data.get(key, "")
+                        v2 = lang2_data.get(key, "")
+                        if not v1 or v1 == v2:
+                            continue
+                        if "/" in v1 and any(cmd in v1 for cmd in FESTIVAL_CMD_PATTERNS):
+                            entries[key] = make_event_bilingual(v1, v2)
                         else:
-                            bilingual_data[key] = bilingualize_pair(en_val, zh_val)
-                    elif en_val:
-                        bilingual_data[key] = f"{en_val} / "
-                    elif zh_val:
-                        bilingual_data[key] = f" / {zh_val}"
+                            entries[key] = make_dialogue_bilingual(v1, v2)
+
+                    content_changes.append({
+                        "Action": "EditData",
+                        "Target": asset_path,
+                        "When": {"BilingualMode": when_val},
+                        "Entries": entries
+                    })
+
+                elif is_string_asset(asset_path):
+                    if not lang2_file.exists():
+                        print(f"警告：缺失 {lang2} 资产 {asset_path}，将使用 {lang1} 代替")
+                        lang2_data = None
                     else:
-                        bilingual_data[key] = ""
+                        lang2_data = load_json(lang2_file)
 
-            content_changes.append({
-                "Action": "EditData",
-                "Target": asset_path,
-                "When": { "BilingualMode": "true" },
-                "Entries": bilingual_data
-            })
-            string_count += 1
+                    lang1_data = load_json(lang1_file)
 
-        elif is_data_asset(asset_path):
-            if not zh_file.exists():
-                print(f"警告：缺失中文 Data 资产 {asset_path}，跳过")
-                continue
+                    all_keys = set(lang1_data.keys())
+                    if lang2_data:
+                        all_keys |= set(lang2_data.keys())
 
-            en_data = load_json(en_file)
-            zh_data = load_json(zh_file)
+                    is_dialogue = (
+                        any(asset_path.startswith(p) for p in DIALOGUE_ASSET_PREFIXES)
+                        or asset_path == "Data/ExtraDialogue"
+                        or asset_path == "Strings/MovieReactions"
+                        or asset_path == "Strings/SpecialOrderStrings"
+                        or asset_path == "Strings/StringsFromCSFiles"
+                        or asset_path == "Strings/1_6_Strings"
+                        or asset_path == "Strings/StringsFromMaps"
+                        or asset_path == "Strings/SimpleNonVillagerDialogues"
+                    )
+                    is_mail = asset_path in MAIL_ASSET_PATHS
+                    is_event = asset_path.startswith(EVENT_ASSET_PREFIX)
+                    is_cooking = asset_path == "Data/TV/CookingChannel"
 
-            field_map = DATA_FIELD_MAP[asset_path]
-            asset_type = field_map["type"]
+                    bilingual_data = {}
+                    for key in all_keys:
+                        v1 = lang1_data.get(key, "")
+                        v2 = lang2_data.get(key, "") if lang2_data else ""
 
-            if asset_type == "pipe_multi":
-                delimiter = field_map.get("delimiter", "/")
-                text_fields = field_map["textFields"]
-                bi_sep = PIPE_BILINGUAL_TEMPLATE
-                bi_fields_data = {}
-
-                all_keys = set(en_data.keys()) | set(zh_data.keys())
-                for key in all_keys:
-                    en_item = en_data.get(key, {})
-                    zh_item = zh_data.get(key, {})
-
-                    en_raw = en_item.get("_raw", "") if isinstance(en_item, dict) else ""
-                    zh_raw = zh_item.get("_raw", "") if isinstance(zh_item, dict) else ""
-
-                    if not en_raw or not zh_raw:
-                        en_dn = en_item.get("displayName", "") if isinstance(en_item, dict) else ""
-                        zh_dn = zh_item.get("displayName", "") if isinstance(zh_item, dict) else ""
-                        if en_dn and zh_dn:
-                            bi_fields_data[key] = {str(text_fields[0]): bi_sep.format(en=en_dn, zh=zh_dn)}
-                        continue
-
-                    en_fields_raw = en_raw.split(delimiter)
-                    zh_fields_raw = zh_raw.split(delimiter)
-
-                    field_vals = {}
-                    for idx in text_fields:
-                        en_f = en_fields_raw[idx] if idx < len(en_fields_raw) else ""
-                        zh_f = zh_fields_raw[idx] if idx < len(zh_fields_raw) else ""
-                        if en_f and zh_f:
-                            field_vals[str(idx)] = bi_sep.format(en=en_f, zh=zh_f)
-                        elif en_f:
-                            field_vals[str(idx)] = f"{en_f} | "
-                        elif zh_f:
-                            field_vals[str(idx)] = f" | {zh_f}"
-                    if field_vals:
-                        bi_fields_data[key] = field_vals
-
-                if bi_fields_data:
-                    content_changes.append({
-                        "Action": "EditData",
-                        "Target": asset_path,
-                        "When": { "BilingualMode": "true" },
-                        "Fields": bi_fields_data
-                    })
-                data_count += 1
-                continue
-
-            dn_field = field_map["displayName"]
-            desc_field = field_map["description"]
-            sep = PIPE_BILINGUAL_TEMPLATE if asset_type == "pipe" else BILINGUAL_TEMPLATE
-
-            if asset_type == "caret":
-                delimiter = field_map.get("delimiter", "^")
-                en_entries = {}
-                bi_entries = {}
-
-                all_keys = set(en_data.keys()) | set(zh_data.keys())
-                for key in all_keys:
-                    en_item = en_data.get(key, {})
-                    zh_item = zh_data.get(key, {})
-
-                    if not isinstance(en_item, dict):
-                        en_item = {"_raw": str(en_item), "displayName": str(en_item), "description": ""}
-                    if not isinstance(zh_item, dict):
-                        zh_item = {"_raw": str(zh_item), "displayName": str(zh_item), "description": ""}
-
-                    en_raw = en_item.get("_raw", "")
-                    zh_raw = zh_item.get("_raw", "")
-
-                    if not en_raw and not zh_raw:
-                        continue
-
-                    if en_raw:
-                        en_entries[key] = en_raw
-
-                    if en_raw or zh_raw:
-                        en_fields = en_raw.split(delimiter) if en_raw else []
-                        zh_fields = zh_raw.split(delimiter) if zh_raw else []
-                        max_len = max(len(en_fields), len(zh_fields))
-                        bi_fields = [""] * max_len
-                        for i in range(max_len):
-                            en_f = en_fields[i] if i < len(en_fields) else ""
-                            zh_f = zh_fields[i] if i < len(zh_fields) else ""
-                            if i in (dn_field, desc_field) and en_f and zh_f:
-                                bi_fields[i] = f"{en_f} / {zh_f}"
-                            elif i in (dn_field, desc_field) and en_f and not zh_f:
-                                bi_fields[i] = f"{en_f} / "
-                            elif i in (dn_field, desc_field) and not en_f and zh_f:
-                                bi_fields[i] = f" / {zh_f}"
+                        if is_mail:
+                            bilingual_data[key] = make_mail_bilingual(v1, v2)
+                        elif is_event:
+                            bilingual_data[key] = make_event_bilingual(v1, v2)
+                        elif is_dialogue:
+                            bilingual_data[key] = make_dialogue_bilingual(v1, v2)
+                        elif is_cooking:
+                            if '/' in v1 and '/' in v2:
+                                recipe_name, d1 = v1.split('/', 1)
+                                _, d2 = v2.split('/', 1)
+                                bilingual_data[key] = f"{recipe_name}/{bilingualize_pair(d1, d2)}"
                             else:
-                                if en_f and zh_f and en_f != zh_f:
-                                    bi_fields[i] = f"{en_f} / {zh_f}"
+                                bilingual_data[key] = bilingualize_pair(v1, v2)
+                        else:
+                            if v1 and v2:
+                                if '$q' in v1 and '$q' in v2:
+                                    bilingual_data[key] = bilingualize_event_quoted_text(v1, v2)
+                                elif '$y' in v1 and '$y' in v2:
+                                    bilingual_data[key] = bilingualize_event_quoted_text(v1, v2)
+                                elif '#$b#' in v1 or '#$b#' in v2 or '#$e#' in v1 or '#$e#' in v2:
+                                    bilingual_data[key] = make_dialogue_bilingual(v1, v2)
                                 else:
-                                    bi_fields[i] = en_f or zh_f
-                        bi_entries[key] = delimiter.join(bi_fields)
+                                    bilingual_data[key] = bilingualize_pair(v1, v2)
+                            elif v1:
+                                bilingual_data[key] = f"{v1} / "
+                            elif v2:
+                                bilingual_data[key] = f" / {v2}"
+                            else:
+                                bilingual_data[key] = ""
 
-                if bi_entries:
                     content_changes.append({
                         "Action": "EditData",
                         "Target": asset_path,
-                        "When": {"BilingualMode": "true"},
-                        "Entries": bi_entries
+                        "When": { "BilingualMode": when_val },
+                        "Entries": bilingual_data
                     })
-                data_count += 1
-                continue
 
-            en_fields = {}
-            bi_fields = {}
+                elif is_data_asset(asset_path):
+                    if not lang2_file.exists():
+                        print(f"警告：缺失 {lang2} Data 资产 {asset_path}，跳过")
+                        continue
 
-            all_keys = set(en_data.keys()) | set(zh_data.keys())
-            for key in all_keys:
-                en_item = en_data.get(key, {})
-                zh_item = zh_data.get(key, {})
+                    lang1_data = load_json(lang1_file)
+                    lang2_data = load_json(lang2_file)
 
-                en_dn = en_item.get("displayName", "") if isinstance(en_item, dict) else en_item
-                en_desc = en_item.get("description", "") if isinstance(en_item, dict) else ""
-                zh_dn = zh_item.get("displayName", "") if isinstance(zh_item, dict) else zh_item
-                zh_desc = zh_item.get("description", "") if isinstance(zh_item, dict) else ""
+                    field_map = DATA_FIELD_MAP[asset_path]
+                    asset_type = field_map["type"]
 
-                if not en_dn and not en_desc:
-                    if zh_dn:
+                    if asset_type == "pipe_multi":
+                        delimiter = field_map.get("delimiter", "/")
+                        text_fields = field_map["textFields"]
+                        bi_sep = PIPE_BILINGUAL_TEMPLATE
+                        bi_fields_data = {}
+
+                        all_keys = set(lang1_data.keys()) | set(lang2_data.keys())
+                        for key in all_keys:
+                            item1 = lang1_data.get(key, {})
+                            item2 = lang2_data.get(key, {})
+
+                            raw1 = item1.get("_raw", "") if isinstance(item1, dict) else ""
+                            raw2 = item2.get("_raw", "") if isinstance(item2, dict) else ""
+
+                            if not raw1 or not raw2:
+                                dn1 = item1.get("displayName", "") if isinstance(item1, dict) else ""
+                                dn2 = item2.get("displayName", "") if isinstance(item2, dict) else ""
+                                if dn1 and dn2:
+                                    bi_fields_data[key] = {str(text_fields[0]): bi_sep.format(left=dn1, right=dn2)}
+                                continue
+
+                            fields1 = raw1.split(delimiter)
+                            fields2 = raw2.split(delimiter)
+
+                            field_vals = {}
+                            for idx in text_fields:
+                                f1 = fields1[idx] if idx < len(fields1) else ""
+                                f2 = fields2[idx] if idx < len(fields2) else ""
+                                if f1 and f2:
+                                    field_vals[str(idx)] = bi_sep.format(left=f1, right=f2)
+                                elif f1:
+                                    field_vals[str(idx)] = f"{f1} | "
+                                elif f2:
+                                    field_vals[str(idx)] = f" | {f2}"
+                            if field_vals:
+                                bi_fields_data[key] = field_vals
+
+                        if bi_fields_data:
+                            content_changes.append({
+                                "Action": "EditData",
+                                "Target": asset_path,
+                                "When": {"BilingualMode": when_val},
+                                "Fields": bi_fields_data
+                            })
+                        continue
+
+                    dn_field = field_map["displayName"]
+                    desc_field = field_map["description"]
+                    sep = PIPE_BILINGUAL_TEMPLATE if asset_type == "pipe" else BILINGUAL_TEMPLATE
+
+                    if asset_type == "caret":
+                        delimiter = field_map.get("delimiter", "^")
+                        bi_entries = {}
+
+                        all_keys = set(lang1_data.keys()) | set(lang2_data.keys())
+                        for key in all_keys:
+                            item1 = lang1_data.get(key, {})
+                            item2 = lang2_data.get(key, {})
+
+                            if not isinstance(item1, dict):
+                                item1 = {"_raw": str(item1), "displayName": str(item1), "description": ""}
+                            if not isinstance(item2, dict):
+                                item2 = {"_raw": str(item2), "displayName": str(item2), "description": ""}
+
+                            raw1 = item1.get("_raw", "")
+                            raw2 = item2.get("_raw", "")
+
+                            if not raw1 and not raw2:
+                                continue
+
+                            if raw1 or raw2:
+                                fields1 = raw1.split(delimiter) if raw1 else []
+                                fields2 = raw2.split(delimiter) if raw2 else []
+                                max_len = max(len(fields1), len(fields2))
+                                bi_fields = [""] * max_len
+                                for i in range(max_len):
+                                    f1 = fields1[i] if i < len(fields1) else ""
+                                    f2 = fields2[i] if i < len(fields2) else ""
+                                    if i in (dn_field, desc_field) and f1 and f2:
+                                        bi_fields[i] = f"{f1} / {f2}"
+                                    elif i in (dn_field, desc_field) and f1 and not f2:
+                                        bi_fields[i] = f"{f1} / "
+                                    elif i in (dn_field, desc_field) and not f1 and f2:
+                                        bi_fields[i] = f" / {f2}"
+                                    else:
+                                        if f1 and f2 and f1 != f2:
+                                            bi_fields[i] = f"{f1} / {f2}"
+                                        else:
+                                            bi_fields[i] = f1 or f2
+                                bi_entries[key] = delimiter.join(bi_fields)
+
+                        if bi_entries:
+                            content_changes.append({
+                                "Action": "EditData",
+                                "Target": asset_path,
+                                "When": {"BilingualMode": when_val},
+                                "Entries": bi_entries
+                            })
+                        continue
+
+                    bi_fields = {}
+
+                    all_keys = set(lang1_data.keys()) | set(lang2_data.keys())
+                    for key in all_keys:
+                        item1 = lang1_data.get(key, {})
+                        item2 = lang2_data.get(key, {})
+
+                        dn1 = item1.get("displayName", "") if isinstance(item1, dict) else item1
+                        desc1 = item1.get("description", "") if isinstance(item1, dict) else ""
+                        dn2 = item2.get("displayName", "") if isinstance(item2, dict) else item2
+                        desc2 = item2.get("description", "") if isinstance(item2, dict) else ""
+
+                        if not dn1 and not desc1:
+                            if dn2:
+                                bi_field_values = {}
+                                if dn_field is not None:
+                                    bi_field_values[str(dn_field)] = f" / {dn2}"
+                                if desc_field is not None and desc2:
+                                    bi_field_values[str(desc_field)] = f" / {desc2}"
+                                bi_fields[key] = bi_field_values
+                            continue
+
                         bi_field_values = {}
-                        if dn_field is not None:
-                            bi_field_values[str(dn_field)] = f" / {zh_dn}"
-                        if desc_field is not None and zh_desc:
-                            bi_field_values[str(desc_field)] = f" / {zh_desc}"
+                        if dn1 and dn2:
+                            bi_field_values[str(dn_field)] = sep.format(left=dn1, right=dn2)
+                        elif dn1:
+                            bi_field_values[str(dn_field)] = dn1
+                        elif dn2:
+                            bi_field_values[str(dn_field)] = f" / {dn2}"
+
+                        if desc1 and desc2:
+                            bi_field_values[str(desc_field)] = sep.format(left=desc1, right=desc2)
+                        elif desc1:
+                            bi_field_values[str(desc_field)] = desc1
+                        elif desc2:
+                            bi_field_values[str(desc_field)] = f" / {desc2}"
                         bi_fields[key] = bi_field_values
-                    continue
 
-                en_field_values = {}
-                if en_dn:
-                    en_field_values[str(dn_field)] = en_dn
-                if en_desc:
-                    en_field_values[str(desc_field)] = en_desc
-                en_fields[key] = en_field_values
+                    if bi_fields:
+                        content_changes.append({
+                            "Action": "EditData",
+                            "Target": asset_path,
+                            "When": {"BilingualMode": when_val},
+                            "Fields": bi_fields
+                        })
 
-                bi_field_values = {}
-                if en_dn and zh_dn:
-                    bi_field_values[str(dn_field)] = sep.format(en=en_dn, zh=zh_dn)
-                elif en_dn:
-                    bi_field_values[str(dn_field)] = en_dn
-                elif zh_dn:
-                    bi_field_values[str(dn_field)] = f" / {zh_dn}"
-
-                if en_desc and zh_desc:
-                    bi_field_values[str(desc_field)] = sep.format(en=en_desc, zh=zh_desc)
-                elif en_desc:
-                    bi_field_values[str(desc_field)] = en_desc
-                elif zh_desc:
-                    bi_field_values[str(desc_field)] = f" / {zh_desc}"
-                bi_fields[key] = bi_field_values
-
-            if bi_fields:
-                content_changes.append({
-                    "Action": "EditData",
-                    "Target": asset_path,
-                    "When": { "BilingualMode": "true" },
-                    "Fields": bi_fields
-                })
-            data_count += 1
-
-        else:
-            print(f"警告：未知资产类型 {asset_path}，跳过")
+    allow_values = "false, " + ", ".join(all_pair_codes)
+    if args.pairs[0] is not None:
+        allow_values += ", true"
 
     content_json = {
         "Format": "2.0.0",
         "ConfigSchema": {
             "BilingualMode": {
-                "AllowValues": "true, false",
-                "Default": "true"
+                "AllowValues": allow_values,
+                "Default": all_pair_codes[0]
             }
         },
         "Changes": content_changes
@@ -430,7 +421,9 @@ def main():
             shutil.copy2(str(src), str(OUTPUT_DIR / f))
             print(f"已复制 {f}")
 
-    print(f"处理完成：字符串资产 {string_count} 个（EditData），Data 资产 {data_count} 个（EditData Fields）")
+    patch_count = len(content_changes)
+    print(f"处理完成：补丁数 {patch_count}")
+    print(f"语言对：{', '.join(f'{pair}' for pair in args.pairs)}")
     print(f"Content Patcher 包已生成至：{OUTPUT_DIR.resolve()}")
 
 

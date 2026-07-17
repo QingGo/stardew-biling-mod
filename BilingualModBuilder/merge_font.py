@@ -31,6 +31,7 @@ print(f'Missing kana: {len(missing)}')
 # Map Japanese chars to glyph data
 ja_glyph_map = dict(zip(ja_chars, jc['glyphs']))
 ja_crop_map = dict(zip(ja_chars, jc['cropping']))
+ja_kern_map = dict(zip(ja_chars, jc['kerning']))
 
 # Calculate layout for new glyphs in Chinese texture
 tex_w = zh_img.width
@@ -95,6 +96,7 @@ print(f'Saved merged texture: {merged_img.size}')
 new_characters = list(zh_chars)
 new_glyphs_data = list(zc['glyphs'])
 new_cropping = list(zc['cropping'])
+new_kerning = list(zc['kerning'])
 
 for ng in new_glyphs:
     new_characters.append(ng['char'])
@@ -103,11 +105,13 @@ for ng in new_glyphs:
         'width': ng['glyph']['width'], 'height': ng['glyph']['height']
     })
     new_cropping.append(ng['crop'])
+    new_kerning.append(ja_kern_map[ng['char']])
 
 # Update content
 zc['characterMap'] = new_characters
 zc['glyphs'] = new_glyphs_data
 zc['cropping'] = new_cropping
+zc['kerning'] = new_kerning
 zc['texture']['export'] = 'SpriteFont1.zh-CN.png'
 
 # Save updated JSON

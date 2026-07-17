@@ -107,6 +107,11 @@ for ng in new_glyphs:
     new_cropping.append(ng['crop'])
     new_kerning.append(ja_kern_map[ng['char']])
 
+# Sort all four lists by character code point (SpriteFont requires ascending order)
+combined = list(zip(new_characters, new_glyphs_data, new_cropping, new_kerning))
+combined.sort(key=lambda t: ord(t[0]))
+new_characters, new_glyphs_data, new_cropping, new_kerning = map(list, zip(*combined))
+
 # Update content
 zc['characterMap'] = new_characters
 zc['glyphs'] = new_glyphs_data

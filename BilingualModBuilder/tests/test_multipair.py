@@ -116,21 +116,17 @@ class TestContentJsonMultiPair:
         """At least one patch per target for en-zh mode."""
         data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
         enzh_targets = set()
-        true_targets = set()
         for c in data['Changes']:
             mode = c['When'].get('BilingualMode', '')
             if mode == 'en-zh':
                 enzh_targets.add(c['Target'])
-            if mode == 'true':
-                true_targets.add(c['Target'])
         assert len(enzh_targets) > 0
-        assert enzh_targets == true_targets
 
-    def test_backward_compat_true_patches_exist(self):
-        """Old 'true' config value still matches patches (even though not in AllowValues)."""
+    def test_no_true_backward_compat_patches(self):
+        """v2.0.0: no 'true' backward-compat patches (CP validates When against AllowValues)."""
         data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
         true_count = sum(1 for c in data['Changes'] if c['When'].get('BilingualMode') == 'true')
-        assert true_count > 0
+        assert true_count == 0, f"Found {true_count} 'true' patches that would cause CP validation errors"
 
     def test_font_redirect_patches_for_cjk(self):
         """ja-zh pair adds font Load patches for SpriteFont1 and SmallFont."""

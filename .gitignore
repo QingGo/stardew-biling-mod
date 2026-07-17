@@ -40,3 +40,10 @@ packages/
 
 # xnbcli source (cloned for font merging, not part of the mod)
 xnbcli/
+BilingualModBuilder/tools/
+
+# Temp files
+_tmp/
+
+# Local backups
+backup/

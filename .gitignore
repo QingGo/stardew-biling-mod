@@ -40,4 +40,6 @@ Mods/
 packages/
 
 # Local backups
-backup/
+backup/_tmp/
+*.bin
+BilingualMod/assets/

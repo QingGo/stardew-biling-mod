@@ -95,6 +95,16 @@ def main():
                         help="Language pairs: lang1:lang2 lang1:lang2 ... (default: en:zh)")
     args = parser.parse_args()
 
+    # Check for font-limited pairs
+    font_limited = {"ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja"}
+    for pair in args.pairs:
+        if pair in font_limited:
+            print(f"注意：语言对 {pair} 的两种文字使用不同的位图字体（SpriteFont），")
+            print(f"      游戏引擎无法同时渲染两种非拉丁字符集。")
+            print(f"      共享的 CJK 汉字可以正常显示，但日文假名/韩文谚文会显示为 *。")
+            print(f"      如需完整支持，需要安装自定义合并字体的 Mod (外部工具制作 XNB)。")
+            print()
+
     # Auto-detect export dir: game path first, fall back to committed _export
     global EXPORT_DIR
     if args.export_dir:

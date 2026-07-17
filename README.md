@@ -184,6 +184,12 @@ python build_bilingual_pack.py --pairs zh:en
 
 > 如需导出其他语言的游戏数据，先修改 `AssetExporter/config.json` 的 `Languages` 字段（默认 `["en", "zh"]`），运行 AssetExporter mod 后即可获得对应语言的 JSON 文件。
 
+> **⚠ 日中/日韩/韩中等跨 CJK 语言对的字体限制**  
+> 星露谷为每种语言编译了独立的位图字体 XNB，只包含该语言的字符集。
+> `ja:zh`（日中）对下，共享的 CJK 汉字可以正常渲染，但日文假名（ひらがな・カタカナ）或韩文谚文会显示为 `*`。
+> 这是因为游戏引擎在运行时只能加载一种语言的 SpriteFont，无法同时渲染两种非拉丁字符集。
+> 如需完整的中日双语支持，需要安装包含合并 CJK 字体的外部 Mod。
+
 ### 3. 验证
 
 ```bash

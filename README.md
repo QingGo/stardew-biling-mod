@@ -185,10 +185,28 @@ python build_bilingual_pack.py --pairs zh:en
 > 如需导出其他语言的游戏数据，先修改 `AssetExporter/config.json` 的 `Languages` 字段（默认 `["en", "zh"]`），运行 AssetExporter mod 后即可获得对应语言的 JSON 文件。
 
 > **⚠ 日中/日韩/韩中等跨 CJK 语言对的字体限制**  
-> 星露谷为每种语言编译了独立的位图字体 XNB，只包含该语言的字符集。
+> 星露谷为每种语言编译了独立的位图字体 SpriteFont XNB，游戏引擎运行时只能加载**一种**字体。
 > `ja:zh`（日中）对下，共享的 CJK 汉字可以正常渲染，但日文假名（ひらがな・カタカナ）或韩文谚文会显示为 `*`。
-> 这是因为游戏引擎在运行时只能加载一种语言的 SpriteFont，无法同时渲染两种非拉丁字符集。
-> 如需完整的中日双语支持，需要安装包含合并 CJK 字体的外部 Mod。
+> 
+> **如需完整支持，创建合并字体 XNB 的步骤：**
+> 1. 安装 [xnbcli](https://github.com/Pathoschild/StardewXnbCli)：`dotnet tool install -g xnbcli`
+> 2. 导出中日字体数据：
+>    ```bash
+>    xnbcli export "Stardew Valley\Content\Fonts\SpriteFont1.zh-CN.xnb" --output-dir zh_font/
+>    xnbcli export "Stardew Valley\Content\Fonts\SpriteFont1.ja-JP.xnb" --output-dir ja_font/
+>    ```
+> 3. 将日文字体的假名 glyphs（ひらがな・カタカナ）从 `ja_font/texture.png` 复制到 `zh_font/texture.png` 的空闲区域
+> 4. 更新 `zh_font/charmap.csv` 添加新 glyph 的坐标映射
+> 5. 重建 XNB：
+>    ```bash
+>    xnbcli rebuild --input-dir zh_font/ --output SpriteFont1.zh-CN.xnb
+>    ```
+> 6. 将 `SpriteFont1.zh-CN.xnb` 放入 `BilingualMod/assets/`，添加 CP `Load` 补丁：
+>    ```json
+>    { "Action": "Load", "Target": "Fonts/SpriteFont1",
+>      "FromFile": "assets/SpriteFont1.zh-CN.xnb",
+>      "When": { "BilingualMode": "ja-zh" } }
+>    ```
 
 ### 3. 验证
 

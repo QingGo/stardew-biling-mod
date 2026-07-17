@@ -1,0 +1,146 @@
+{
+  "ForestMagic": {
+    "displayName": "森の魔法",
+    "description": "あなたは森の魔法と共にあります…"
+  },
+  "DwarvishTranslationGuide": {
+    "displayName": "ドワーフ語翻訳ガイド",
+    "description": "これがあればドワーフ語を学べる。"
+  },
+  "RustyKey": {
+    "displayName": "錆びた鍵",
+    "description": ""
+  },
+  "ClubCard": {
+    "displayName": "会員カード",
+    "description": ""
+  },
+  "SpecialCharm": {
+    "displayName": "特別な飾り",
+    "description": ""
+  },
+  "SkullKey": {
+    "displayName": "骨の鍵",
+    "description": ""
+  },
+  "MagnifyingGlass": {
+    "displayName": "虫眼鏡",
+    "description": ""
+  },
+  "DarkTalisman": {
+    "displayName": "闇のタリスマン",
+    "description": ""
+  },
+  "MagicInk": {
+    "displayName": "魔法のインク",
+    "description": ""
+  },
+  "BearPaw": {
+    "displayName": "クマのちえ",
+    "description": "ブラックベリーとサーモンベリーの値段が3倍になる。"
+  },
+  "SpringOnionMastery": {
+    "displayName": "葉タマネギマスター",
+    "description": "葉タマネギの値段が5倍になる。"
+  },
+  "KeyToTheTown": {
+    "displayName": "町への鍵",
+    "description": "一日中いつでも、町のすべての建物に入ることができる。"
+  },
+  "Book_PriceCatalogue": {
+    "displayName": "値段表",
+    "description": "あなたのアイテムの値段が分かるようになる。"
+  },
+  "Book_Marlon": {
+    "displayName": "洞窟の地図",
+    "description": "マーロンのアイテム回収サービスが50%割引になる。"
+  },
+  "Book_Speed": {
+    "displayName": "風の道 パート1",
+    "description": "少しだけ早く走れる。"
+  },
+  "Book_Speed2": {
+    "displayName": "風の道 パート2",
+    "description": "少しだけ早く走れる。"
+  },
+  "Book_Void": {
+    "displayName": "モンスター図鑑",
+    "description": "モンスターがまれに2倍のアイテムを落とす。"
+  },
+  "Book_Friendship": {
+    "displayName": "友達のつくり方",
+    "description": "住人と友達になるのが少しだけ早くなる。"
+  },
+  "Book_Defense": {
+    "displayName": "ジャックはすばやくたくましく",
+    "description": "防御+1の効果"
+  },
+  "Book_Woodcutting": {
+    "displayName": "ウッディの秘密",
+    "description": "伐採した木から5%の確率で2倍の木材を入手できる。"
+  },
+  "Book_WildSeeds": {
+    "displayName": "アライグマ新聞",
+    "description": "雑草からミックスシードが入手できる確率が上がる。"
+  },
+  "Book_Roe": {
+    "displayName": "海の宝石",
+    "description": "宝箱から魚卵が手に入ることがある。"
+  },
+  "Book_Bombs": {
+    "displayName": "ドワーフの安全マニュアル",
+    "description": "ボムから受けるダメージが25%減少する。"
+  },
+  "Book_Crabbing": {
+    "displayName": "カニの学問",
+    "description": "カニかごの水揚げが25%の確率で2倍になる。"
+  },
+  "Book_Trash": {
+    "displayName": "路地裏のビュッフェ",
+    "description": "ゴミ箱からアイテムが見つかる確率が上がる。"
+  },
+  "Book_Diamonds": {
+    "displayName": "ダイヤモンドハンター",
+    "description": "手作業で採掘すると、すべての石からダイヤモンドがドロップする可能性がある。"
+  },
+  "Book_Mystery": {
+    "displayName": "ミステリーの本",
+    "description": "ミステリーボックスが見つかる確率が少し上がる。"
+  },
+  "Book_Horse": {
+    "displayName": "馬読本",
+    "description": "乗馬したときのスピードが少しアップする。"
+  },
+  "Book_Artifact": {
+    "displayName": "古代の秘宝鑑定ガイド",
+    "description": "発掘品の売り値が高くなる。"
+  },
+  "Book_Grass": {
+    "displayName": "ベテランランナー",
+    "description": "草むらや作物の中を速く走れるようになる。"
+  },
+  "Book_AnimalCatalogue": {
+    "displayName": "動物カタログ",
+    "description": "マーニーがいないときでもマーニーの店を利用できる。"
+  },
+  "Mastery_Farming": {
+    "displayName": "農業の達人",
+    "description": "動物の生産物がずっと2倍になる金の動物ビスケットを見つけられるようになりました。ブタには効果がありません。"
+  },
+  "Mastery_Fishing": {
+    "displayName": "釣りの達人",
+    "description": "金の宝箱を釣り上げられるようになりました。"
+  },
+  "Mastery_Foraging": {
+    "displayName": "採取の達人",
+    "description": "上質なアイテムが入った金のミステリーボックスを見つけられるようになりました。"
+  },
+  "Mastery_Mining": {
+    "displayName": "採鉱の達人",
+    "description": "宝石が入った石から2倍の宝石が手が入るようになりました。"
+  },
+  "Mastery_Combat": {
+    "displayName": "戦闘の達人",
+    "description": "装身具用の新しい装備スロットをアンロックする。装身具は冒険中に見つけることができ、特別な力を与えてくれる。"
+  }
+}

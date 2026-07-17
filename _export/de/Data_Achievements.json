@@ -1,0 +1,197 @@
+{
+  "0": {
+    "displayName": "Grünschnabel (15.000)",
+    "description": "Verdiene 15.000 G",
+    "_raw": "Grünschnabel (15.000)^Verdiene 15.000 G^true^-1^18"
+  },
+  "1": {
+    "displayName": "Cowboy (50.000)",
+    "description": "Verdiene 50.000 G",
+    "_raw": "Cowboy (50.000)^Verdiene 50.000 G^true^0^21"
+  },
+  "2": {
+    "displayName": "Heimstätter (250.000)",
+    "description": "Verdiene 250.000 G",
+    "_raw": "Heimstätter (250.000)^Verdiene 250.000 G^true^1^20"
+  },
+  "3": {
+    "displayName": "Millionär (1 Mio.)",
+    "description": "Verdiene 1.000.000 G",
+    "_raw": "Millionär (1 Mio.)^Verdiene 1.000.000 G^true^2^1"
+  },
+  "4": {
+    "displayName": "Legende (10 Mio.)",
+    "description": "Verdiene 10.000.000 G",
+    "_raw": "Legende (10 Mio.)^Verdiene 10.000.000 G^false^-1^3"
+  },
+  "5": {
+    "displayName": "Eine vollständige Sammlung",
+    "description": "Vervollständige die Museumskollektion",
+    "_raw": "Eine vollständige Sammlung^Vervollständige die Museumskollektion^true^28^0"
+  },
+  "6": {
+    "displayName": "Ein neuer Freund",
+    "description": "Freunde dich mit jemandem an, bis die Zuneigung 5 Herzen erreicht.",
+    "_raw": "Ein neuer Freund^Freunde dich mit jemandem an, bis die Zuneigung 5 Herzen erreicht.^true^-1^14"
+  },
+  "7": {
+    "displayName": "Beste Freunde",
+    "description": "Freunde dich mit jemandem an, bis die Zuneigung 10 Herzen erreicht.",
+    "_raw": "Beste Freunde^Freunde dich mit jemandem an, bis die Zuneigung 10 Herzen erreicht.^true^6^31"
+  },
+  "9": {
+    "displayName": "Der beliebte Bauer",
+    "description": "Erreiche mit 8 Personen jeweils eine Zuneigung von 10 Herzen.",
+    "_raw": "Der beliebte Bauer^Erreiche mit 8 Personen jeweils eine Zuneigung von 10 Herzen.^true^7^32"
+  },
+  "11": {
+    "displayName": "Cliquen",
+    "description": "Erreiche mit 4 Personen jeweils eine Zuneigung von 5 Herzen.",
+    "_raw": "Cliquen^Erreiche mit 4 Personen jeweils eine Zuneigung von 5 Herzen.^true^6^26"
+  },
+  "12": {
+    "displayName": "Vernetzt",
+    "description": "Erreiche mit 10 Personen jeweils eine Zuneigung von 5 Herzen.",
+    "_raw": "Vernetzt^Erreiche mit 10 Personen jeweils eine Zuneigung von 5 Herzen.^true^11^25"
+  },
+  "13": {
+    "displayName": "Populär",
+    "description": "Erreiche mit 20 Personen jeweils eine Zuneigung von 5 Herzen.",
+    "_raw": "Populär^Erreiche mit 20 Personen jeweils eine Zuneigung von 5 Herzen.^true^12^11"
+  },
+  "15": {
+    "displayName": "Koch",
+    "description": "Bereite 10 verschiedene Rezepte zu.",
+    "_raw": "Koch^Bereite 10 verschiedene Rezepte zu.^true^18^12"
+  },
+  "16": {
+    "displayName": "Souschef",
+    "description": "Bereite 25 verschiedene Rezepte zu.",
+    "_raw": "Souschef^Bereite 25 verschiedene Rezepte zu.^true^15^7"
+  },
+  "17": {
+    "displayName": "Gourmetkoch",
+    "description": "Bereite alle Rezepte zu.",
+    "_raw": "Gourmetkoch^Bereite alle Rezepte zu.^true^16^35"
+  },
+  "18": {
+    "displayName": "Ausbauen",
+    "description": "Erweitere dein Haus.",
+    "_raw": "Ausbauen^Erweitere dein Haus.^true^-1^13"
+  },
+  "19": {
+    "displayName": "Das große Leben",
+    "description": "Erweitere dein Haus auf die maximale Größe.",
+    "_raw": "Das große Leben^Erweitere dein Haus auf die maximale Größe.^true^18^15"
+  },
+  "20": {
+    "displayName": "D.I.Y.",
+    "description": "Stelle 15 verschiedene Gegenstände her.",
+    "_raw": "D.I.Y.^Stelle 15 verschiedene Gegenstände her.^true^-1^29"
+  },
+  "21": {
+    "displayName": "Handwerker",
+    "description": "Stelle 30 verschiedene Gegenstände her.",
+    "_raw": "Handwerker^Stelle 30 verschiedene Gegenstände her.^true^20^16"
+  },
+  "22": {
+    "displayName": "Handwerksmeister",
+    "description": "Stelle alle Gegenstände her.",
+    "_raw": "Handwerksmeister^Stelle alle Gegenstände her.^true^21^23"
+  },
+  "24": {
+    "displayName": "Fischer",
+    "description": "Fange 10 verschiedene Fische.",
+    "_raw": "Fischer^Fange 10 verschiedene Fische.^true^-1^28"
+  },
+  "25": {
+    "displayName": "Alter Seemann",
+    "description": "Fange 24 verschiedene Fische.",
+    "_raw": "Alter Seemann^Fange 24 verschiedene Fische.^true^24^5"
+  },
+  "26": {
+    "displayName": "Meisterangler",
+    "description": "Fange alle Fische.",
+    "_raw": "Meisterangler^Fange alle Fische.^true^25^24"
+  },
+  "27": {
+    "displayName": "Massiver Fang",
+    "description": "Fange 100 Fische.",
+    "_raw": "Massiver Fang^Fange 100 Fische.^true^64^30"
+  },
+  "28": {
+    "displayName": "Fundgrube",
+    "description": "Spende dem Museum 40 verschiedene Gegenstände.",
+    "_raw": "Fundgrube^Spende dem Museum 40 verschiedene Gegenstände.^true^-1^6"
+  },
+  "29": {
+    "displayName": "Laufbursche",
+    "description": "Vollende 10 \"Aushilfe gesucht\"-Anfragen.",
+    "_raw": "Laufbursche^Vollende 10 \"Aushilfe gesucht\"-Anfragen.^true^-1^22"
+  },
+  "30": {
+    "displayName": "Große Hilfe",
+    "description": "Vollende 40 \"Aushilfe gesucht\"-Anfragen.",
+    "_raw": "Große Hilfe^Vollende 40 \"Aushilfe gesucht\"-Anfragen.^true^29^10"
+  },
+  "31": {
+    "displayName": "Polykultur",
+    "description": "Verschicke 15 Stück von jeder Nutzpflanze.",
+    "_raw": "Polykultur^Verschicke 15 Stück von jeder Nutzpflanze.^true^-1^34"
+  },
+  "32": {
+    "displayName": "Monokultur",
+    "description": "Verschicke 300 Stück von einer Nutzpflanze.",
+    "_raw": "Monokultur^Verschicke 300 Stück von einer Nutzpflanze.^true^-1^33"
+  },
+  "34": {
+    "displayName": "Volle Lieferung",
+    "description": "Verschicke alle Gegenstände.",
+    "_raw": "Volle Lieferung^Verschicke alle Gegenstände.^true^-1^9"
+  },
+  "40": {
+    "displayName": "Ein fernes Ufer",
+    "description": "Erreiche die Ingwerinsel.",
+    "_raw": "Ein fernes Ufer^Erreiche die Ingwerinsel.^false^-1^9"
+  },
+  "35": {
+    "displayName": "Belesen",
+    "description": "Lese jedes Buch.",
+    "_raw": "Belesen^Lese jedes Buch.^true^-1^9"
+  },
+  "36": {
+    "displayName": "Zwei Daumen hoch",
+    "description": "Sieh einen Film.",
+    "_raw": "Zwei Daumen hoch^Sieh einen Film.^false^-1^9"
+  },
+  "37": {
+    "displayName": "Blaues Band",
+    "description": "Erreiche den 1. Platz im Sternentautal Jahrmarkt-Wettbewerb.",
+    "_raw": "Blaues Band^Erreiche den 1. Platz im Sternentautal Jahrmarkt-Wettbewerb.^true^-1^9"
+  },
+  "38": {
+    "displayName": "Eine unvergessliche Suppe",
+    "description": "Erfreu den Gouverneur.",
+    "_raw": "Eine unvergessliche Suppe^Erfreu den Gouverneur.^true^-1^9"
+  },
+  "39": {
+    "displayName": "Gute Nachbarn",
+    "description": "Hilf deinen Waldnachbarn dabei, ihre Familie zu vergrößern.",
+    "_raw": "Gute Nachbarn^Hilf deinen Waldnachbarn dabei, ihre Familie zu vergrößern.^true^-1^9"
+  },
+  "41": {
+    "displayName": "Gefahr in der Tiefe",
+    "description": "Erreiche den Grund der \"gefährlichen\" Minen.",
+    "_raw": "Gefahr in der Tiefe^Erreiche den Grund der \"gefährlichen\" Minen.^false^-1^9"
+  },
+  "42": {
+    "displayName": "Unendliche Macht",
+    "description": "Erhalte die mächtigste Waffe.",
+    "_raw": "Unendliche Macht^Erhalte die mächtigste Waffe.^true^-1^9"
+  },
+  "44": {
+    "displayName": "Perfektion",
+    "description": "Erreiche den Gipfel.",
+    "_raw": "Perfektion^Erreiche den Gipfel.^false^-1^9"
+  }
+}

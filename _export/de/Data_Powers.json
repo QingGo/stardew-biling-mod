@@ -1,0 +1,146 @@
+{
+  "ForestMagic": {
+    "displayName": "Waldmagie",
+    "description": "Du bist eins mit der Waldmagie..."
+  },
+  "DwarvishTranslationGuide": {
+    "displayName": "Zwergischer Übersetzungsleitfaden",
+    "description": "Bringt dir Zwergisch bei."
+  },
+  "RustyKey": {
+    "displayName": "Rostiger Schlüssel",
+    "description": ""
+  },
+  "ClubCard": {
+    "displayName": "Clubkarte",
+    "description": ""
+  },
+  "SpecialCharm": {
+    "displayName": "Besonderes Amulett",
+    "description": ""
+  },
+  "SkullKey": {
+    "displayName": "Schädelschlüssel",
+    "description": ""
+  },
+  "MagnifyingGlass": {
+    "displayName": "Lupe",
+    "description": ""
+  },
+  "DarkTalisman": {
+    "displayName": "Dunkler Talisman",
+    "description": ""
+  },
+  "MagicInk": {
+    "displayName": "Magische Tinte",
+    "description": ""
+  },
+  "BearPaw": {
+    "displayName": "Wissen des Bärs",
+    "description": "Brombeeren und Lachsbeeren sind 3x so viel Gold wert."
+  },
+  "SpringOnionMastery": {
+    "displayName": "Frühlingszwiebel-Meisterschaft",
+    "description": "Frühlingszwiebeln sind 5x so viel Gold wert."
+  },
+  "KeyToTheTown": {
+    "displayName": "Schlüssel zur Stadt",
+    "description": "Ermöglicht zu jeder Tageszeit den Zugang zu allen Gebäuden in der Stadt."
+  },
+  "Book_PriceCatalogue": {
+    "displayName": "Preiskatalog",
+    "description": "Der Wert deiner Gegenstände ist nun sichtbar."
+  },
+  "Book_Marlon": {
+    "displayName": "Kartierung von Höhlensystemen",
+    "description": "Du bekommst 50% Rabatt auf Marlons Fundservice."
+  },
+  "Book_Speed": {
+    "displayName": "Weg des Windes, Teil 1",
+    "description": "Du läufst etwas schneller."
+  },
+  "Book_Speed2": {
+    "displayName": "Weg des Windes, Teil 2",
+    "description": "Du läufst etwas schneller."
+  },
+  "Book_Void": {
+    "displayName": "Monster-Kompendium",
+    "description": "Monster haben eine kleine Chance, doppelte Beute zu hinterlassen."
+  },
+  "Book_Friendship": {
+    "displayName": "Freundschaft für Anfänger",
+    "description": "Du freundest dich etwas schneller mit Leuten an."
+  },
+  "Book_Defense": {
+    "displayName": "Jack ist flink, Jack ist zäh",
+    "description": "Erhalte +1 Verteidigung."
+  },
+  "Book_Woodcutting": {
+    "displayName": "Woodys Geheimnis",
+    "description": "Gefällte Bäume haben eine 5 %ige Chance, die doppelte Holzmenge zu liefern."
+  },
+  "Book_WildSeeds": {
+    "displayName": "Waschbär-Tagebuch",
+    "description": "Unkraut hat eine höhere Chance, gemischte Saat zu bilden."
+  },
+  "Book_Roe": {
+    "displayName": "Juwelen des Meeres",
+    "description": "Fischereischatztruhen haben eine Chance, Rogen zu enthalten."
+  },
+  "Book_Bombs": {
+    "displayName": "Zwergen-Sicherheitshandbuch",
+    "description": "Bomben verursachen 25% weniger Schaden an dir."
+  },
+  "Book_Crabbing": {
+    "displayName": "Die Kunst des Krabbenspiels",
+    "description": "Krabbentöpfe haben eine 25 %ige Chance, das Doppelte zu erbringen."
+  },
+  "Book_Trash": {
+    "displayName": "Das Gassenbuffet",
+    "description": "Du hast eine höhere Chance, Gegenstände im Müll zu finden."
+  },
+  "Book_Diamonds": {
+    "displayName": "Der Diamantenjäger",
+    "description": "Jeder Stein hat die Chance, einen Diamanten zu hinterlassen, wenn er von Hand abgebaut wird."
+  },
+  "Book_Mystery": {
+    "displayName": "Buch der Mysterien",
+    "description": "Du hast eine etwas höhere Chance, Mysteriöse Kisten zu finden."
+  },
+  "Book_Horse": {
+    "displayName": "Pferd: Das Buch",
+    "description": "Du bekommst ein bisschen mehr Geschwindigkeit, wenn du auf einem Pferd reitest."
+  },
+  "Book_Artifact": {
+    "displayName": "Antike Schätze: Leitfaden für die Schätzung",
+    "description": "Beim Verkauf von Artefakten erzielst du einen besseren Preis."
+  },
+  "Book_Grass": {
+    "displayName": "Alte Schlitterbeine",
+    "description": "Du wirst jetzt viel schneller durch Gras und Pflanzen laufen."
+  },
+  "Book_AnimalCatalogue": {
+    "displayName": "Tierkatalog",
+    "description": "Du kannst auf Marnies Laden zugreifen, wenn sie nicht da ist."
+  },
+  "Mastery_Farming": {
+    "displayName": "Meisterung der Hofarbeit",
+    "description": "Es gibt jetzt Goldene Tierkräcker, die den Ertrag eines Nutztieres dauerhaft verdoppeln. Funktioniert nicht bei Schweinen."
+  },
+  "Mastery_Fishing": {
+    "displayName": "Meisterung des Angelns",
+    "description": "Du kannst jetzt goldene Fischertruhen finden."
+  },
+  "Mastery_Foraging": {
+    "displayName": "Meisterung des Sammelns",
+    "description": "Du findest jetzt Goldene Mysteriöse Kisten, die bessere Gegenstände enthalten."
+  },
+  "Mastery_Mining": {
+    "displayName": "Meiserung der Minenarbeiten",
+    "description": "Edelsteinhaltige Felsen gewähren jetzt doppelt so viele Edelsteine."
+  },
+  "Mastery_Combat": {
+    "displayName": "Meisterung des Kampfes",
+    "description": "Schaltet einen neuen Ausrüstungsplatz für Ornamente frei. Ornamente können während Abenteuern gefunden werden und verleihen besondere Kräfte."
+  }
+}

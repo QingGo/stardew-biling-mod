@@ -1,0 +1,74 @@
+{
+  "0": {
+    "displayName": "Farmer Hosen",
+    "description": "Gemütlich und langlebig für lange Schichten auf dem Feld."
+  },
+  "1": {
+    "displayName": "Shorts",
+    "description": "Perfekt für einen heißen Sommertag... deine Beine werden es dir danken."
+  },
+  "2": {
+    "displayName": "Langes Kleid",
+    "description": "Ein langes, blumiges Kleid."
+  },
+  "3": {
+    "displayName": "Rock",
+    "description": "Ein süßer Rock."
+  },
+  "4": {
+    "displayName": "Faltenrock",
+    "description": "Ein süßer Faltenrock"
+  },
+  "5": {
+    "displayName": "Dinosaurier Hosen",
+    "description": "Es wurde angenommen, dass diese Hose vor langer Zeit ausgestorben ist!"
+  },
+  "6": {
+    "displayName": "Gras Rock",
+    "description": "Ein Rock aus getrocknetem Gras."
+  },
+  "7": {
+    "displayName": "Luau Rock",
+    "description": "Ein Rock, der dazu bestimmt ist, dich zum Luau der Party zu machen!"
+  },
+  "8": {
+    "displayName": "Genie Hose",
+    "description": "Hosen, die gegen Ende der Beine ballonartig auseinander gehen. Dein Wunsch wurde erfüllt!"
+  },
+  "9": {
+    "displayName": "Röhrenhose",
+    "description": "Eine sehr eng anliegende Hose."
+  },
+  "10": {
+    "displayName": "Baggy Hose",
+    "description": "Ein lockeres Paar Hosen."
+  },
+  "11": {
+    "displayName": "Simples Kleid",
+    "description": "Ein weiches, glattes, mittellanges Kleid."
+  },
+  "12": {
+    "displayName": "Locker geschnittene Hose",
+    "description": "In dieser Hose haben deine Beine ein wenig mehr Spielraum."
+  },
+  "13": {
+    "displayName": "Locker geschnittene Shorts",
+    "description": "In diesen Shorts haben deine Beine ein wenig mehr Spielraum."
+  },
+  "14": {
+    "displayName": "Polka Punkt Shorts",
+    "description": "Ups!"
+  },
+  "15": {
+    "displayName": "Beschnittene lila Glücksshorts",
+    "description": "Lila Seidenshorts, besetzt mit luxuriösem Gold..."
+  },
+  "998": {
+    "displayName": "Prismatische Hose",
+    "description": "Hosen, die vor prismatischer Energie schimmern."
+  },
+  "999": {
+    "displayName": "Prismatische Genie Hosen",
+    "description": "Hosen, die vor prismatischer Energie schimmern."
+  }
+}

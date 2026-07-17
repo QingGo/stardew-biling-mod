@@ -1,0 +1,74 @@
+{
+  "504": {
+    "displayName": "Sneakers",
+    "description": "Nicht sehr robust... sehen aber gut aus!"
+  },
+  "505": {
+    "displayName": "Regenstiefel",
+    "description": "Schutz vor den Elementen."
+  },
+  "506": {
+    "displayName": "Lederschuhe",
+    "description": "Das Leder ist sehr geschmeidig."
+  },
+  "507": {
+    "displayName": "Arbeiterschuhe",
+    "description": "Mit Stahlkappen für extra Schutz."
+  },
+  "508": {
+    "displayName": "Kampfstiefel",
+    "description": "Mit Eisenmaschen verstärkt."
+  },
+  "509": {
+    "displayName": "Tundrastiefel",
+    "description": "Das flauschige Futter hält deine Knöchel warm."
+  },
+  "510": {
+    "displayName": "Thermalstiefel",
+    "description": "Für extreme Wetterlagen entworfen."
+  },
+  "511": {
+    "displayName": "Dunkle Stiefel",
+    "description": "Aus dickem schwarzen Leder hergestellt."
+  },
+  "512": {
+    "displayName": "Feuerwandlerstiefel",
+    "description": "Man sagt, diese Stiefel könnten selbst dem heißesten Magma widerstehen."
+  },
+  "513": {
+    "displayName": "Dschinn-Schuhe",
+    "description": "Eine seltsame Energie durchdringt den Stoff."
+  },
+  "514": {
+    "displayName": "Weltall-Stiefel",
+    "description": "Das Iridiumgewebe gibt ihnen einen violetten Schein."
+  },
+  "515": {
+    "displayName": "Cowboy-Stiefel",
+    "description": "Der Höhepunkt der ländlichen Mode."
+  },
+  "804": {
+    "displayName": "Emily's magische Stiefel",
+    "description": "Hergestellt mit Liebe von Emily. 100% kompostierbar!"
+  },
+  "806": {
+    "displayName": "Leprechaun Schuhe",
+    "description": "Die Schnalle ist aus massivem Gold gefertigt."
+  },
+  "853": {
+    "displayName": "Zunderclown-Schuhe",
+    "description": "Diese magischen Schuhe gehörten einem berühmten Zwergennarren."
+  },
+  "854": {
+    "displayName": "Meerjungfrauen-Stiefel",
+    "description": "Merjungfrauenschuppen verleihen diesen Stiefeln eine schützende Aura."
+  },
+  "855": {
+    "displayName": "Drachenhaut-Stiefel",
+    "description": "Diese schimmernden Stiefel sind extrem widerstandsfähig."
+  },
+  "878": {
+    "displayName": "Kristallschuhe",
+    "description": "Diese funkelnden Schuhe werden deine Füße sehr gut schützen."
+  }
+}

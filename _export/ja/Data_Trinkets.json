@@ -1,0 +1,34 @@
+{
+  "MagicHairDye": {
+    "displayName": "魔法のヘアジェル",
+    "description": "髪がレインボージェムで色とりどりに輝く。"
+  },
+  "FrogEgg": {
+    "displayName": "カエルのタマゴ",
+    "description": "お腹を空かせたカエルを召喚する。"
+  },
+  "MagicQuiver": {
+    "displayName": "魔法の矢筒",
+    "description": "{0}秒おきに近くの敵にむかって魔法の矢を放つ。ダメージ{1}-{2}。"
+  },
+  "FairyBox": {
+    "displayName": "フェアリーボックス",
+    "description": "戦闘中に回復してくれるレベル{0}の妖精を召喚する。"
+  },
+  "ParrotEgg": {
+    "displayName": "オウムのタマゴ",
+    "description": "モンスターを倒すたびに{1}確率でゴールドコインを見つけてくれる、レベル{0}のオウムを召喚する。"
+  },
+  "IceRod": {
+    "displayName": "アイスロッド",
+    "description": "{0}秒おきに氷の球を放ち、当たった敵を{1}秒間凍らせる。"
+  },
+  "IridiumSpur": {
+    "displayName": "金の拍車",
+    "description": "クリティカル攻撃のたびに{0}秒間スピードがアップする。"
+  },
+  "BasiliskPaw": {
+    "displayName": "バシリスクの足",
+    "description": "デバフの効果を受けなくなる。"
+  }
+}

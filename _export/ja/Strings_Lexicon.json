@@ -1,0 +1,22 @@
+{
+  "RandomNegativeItemNoun": "いらないもの#ゴミ#ガラクタ#くず#かす",
+  "RandomPositiveAdjective_Child": "カッコいい#おもしろい#すてきな#いい#かわいい#すごい#サイコー",
+  "RandomPositiveAdjective_AdultMale": "興味ぶかい#イカしてる#すてき#おもしろい#最高#ものすごい",
+  "RandomPositiveAdjective_AdultFemale": "いい#すごい#キュンとする#みりょくてきな#ものすごい#すてきな#ウキウキする#おもしろい",
+  "RandomPositiveAdjective_PlaceOrEvent": "いい#すごい#キュンとする#みりょくてきな#ものすごい#すてきな#ウキウキする#おもしろい",
+  "RandomDeliciousAdjective": "最高#おいしい#すてき#文句なし#100点満点#すごくおいしい#おいしそう#ウキウキする",
+  "RandomDeliciousAdjective_Child": "おいしい",
+  "RandomNegativeFoodAdjective_Child": "きもちわるい",
+  "RandomNegativeFoodAdjective_Polite": "…おもしろい#…ふうがわり#…かわった#…なんともいいがたい",
+  "RandomNegativeFoodAdjective": "いやな#きもちわるい#むかむかする#ふゆかい#ぞっとする#はき気がする#ひどい#もどしそうになる#いやけがさす#むかつく#おぞましい#くさったみたい",
+  "RandomSlightlyPositiveFoodAdjective": "そこそこ#なかなか#わるくない",
+  "ChildTerm_Male": "男の子",
+  "ChildTerm_Female": "女の子",
+  "Pronoun_Male": "彼の",
+  "Pronoun_Female": "彼女の",
+  "QuestionDialogue_Yes": "はい",
+  "QuestionDialogue_No": "いいえ",
+  "GenericPlayerTerm": "牧場主",
+  "Possessive_Pronoun_Male": "彼の",
+  "Possessive_Pronoun_Female": "彼女の"
+}

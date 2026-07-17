@@ -1,0 +1,270 @@
+{
+  "0": {
+    "displayName": "Rostiges Schwert",
+    "description": "Ein rostiges, stumpfes Schwert."
+  },
+  "1": {
+    "displayName": "Silbersäbel",
+    "description": "Mit Silber überzogen, um ein Rosten zu verhindern."
+  },
+  "2": {
+    "displayName": "Dunkles Schwert",
+    "description": "Leuchtet mit einer mysteriösen Energie."
+  },
+  "3": {
+    "displayName": "Heilige Klinge",
+    "description": "Sie zu führen erfüllt einen mit Hoffnung."
+  },
+  "4": {
+    "displayName": "Galaxie-Schwert",
+    "description": "Du hast noch nie etwas Vergleichbares gesehen."
+  },
+  "5": {
+    "displayName": "Knochenschwert",
+    "description": "Ein sehr leichter Teil eines geschärften Knochens."
+  },
+  "6": {
+    "displayName": "Eiserne Klinge",
+    "description": "Ein schweres Breitschwert."
+  },
+  "7": {
+    "displayName": "Templer-Klinge",
+    "description": "Gehörte einst einem ehrenhaften Ritter."
+  },
+  "8": {
+    "displayName": "Obsidian-Schneide",
+    "description": "Ist enorm scharf."
+  },
+  "9": {
+    "displayName": "Lava-Katana",
+    "description": "Eine mächtige Klinge, die in einem Becken aus kochender Lava geschmiedet wurde."
+  },
+  "10": {
+    "displayName": "Flamberge",
+    "description": "Ist wirklich schwer."
+  },
+  "11": {
+    "displayName": "Stahl-Kurzschwert",
+    "description": "Eine gewöhnliche Metallklinge."
+  },
+  "12": {
+    "displayName": "Holzklinge",
+    "description": "Für ein geschnitztes Stück Holz nicht schlecht."
+  },
+  "13": {
+    "displayName": "Insektenkopf",
+    "description": "Nicht gerade angenehm zu schwingen."
+  },
+  "14": {
+    "displayName": "Neptuns Gleve",
+    "description": "Ein Erbstück von jenseits der Edelsteinsee."
+  },
+  "15": {
+    "displayName": "Waldschwert",
+    "description": "Wurde durch Waldmagie mächtig gemacht."
+  },
+  "16": {
+    "displayName": "Schnitzmesser",
+    "description": "Eine kleine, leichte Klinge."
+  },
+  "17": {
+    "displayName": "Eiserner Langdolch",
+    "description": "Ein gewöhnlicher Dolch."
+  },
+  "18": {
+    "displayName": "Einbrecher-Stecher",
+    "description": "Die bevorzugte Waffe für die Geschickten und Leisen."
+  },
+  "19": {
+    "displayName": "Schattendolch",
+    "description": "Wenn du die Klinge ans Ohr hältst, hörst du den Schrei von 1.000 Seelen."
+  },
+  "20": {
+    "displayName": "Elfenklinge",
+    "description": "Nur die geschickten Hände einer Elfe könnten diese Waffe herstellen."
+  },
+  "21": {
+    "displayName": "Kristalldolch",
+    "description": "Die Klinge besteht aus gereinigtem Quarz."
+  },
+  "22": {
+    "displayName": "Windspitze",
+    "description": "Eine gewandte kleine Klinge."
+  },
+  "23": {
+    "displayName": "Galaxie-Dolch",
+    "description": "Du hast noch nie etwas Vergleichbares gesehen."
+  },
+  "24": {
+    "displayName": "Holzknüppel",
+    "description": "Ein solides Stück Holz, grob in eine Knüppelform geschnitzt."
+  },
+  "25": {
+    "displayName": "Alex' Schläger",
+    "description": "Der Schlagpunkt ist von Alex' berühmtem Grand Slam verbeult."
+  },
+  "26": {
+    "displayName": "Bleirute",
+    "description": "Ist unglaublich schwer."
+  },
+  "27": {
+    "displayName": "Holzhammer",
+    "description": "Der solide Kopf hält ganz schön was aus. Für einen Knüppel relativ leicht."
+  },
+  "28": {
+    "displayName": "Der Knaller",
+    "description": "Ein extrem schwerer Hammer, der Feinde fliegen lässt."
+  },
+  "29": {
+    "displayName": "Galaxie-Hammer",
+    "description": "Aus einem ultraleichten Material, das du noch nie zuvor gesehen hast."
+  },
+  "30": {
+    "displayName": "Sams alte Gitarre",
+    "description": "Hat schon bessere Tage gesehen."
+  },
+  "31": {
+    "displayName": "Oberschenkelknochen",
+    "description": "Ein alter, schwerer Knochen, der über die Jahrhunderte von Schmutzschichten überzogen wurde."
+  },
+  "32": {
+    "displayName": "Schleuder",
+    "description": "Benötigt Steine als Munition."
+  },
+  "33": {
+    "displayName": "Meister-Schleuder",
+    "description": "Benötigt Steine als Munition."
+  },
+  "34": {
+    "displayName": "Galaxie-Schleuder",
+    "description": "Sieht wirklich mächtig aus."
+  },
+  "35": {
+    "displayName": "Elliotts Bleistift",
+    "description": "Elliott benutzt ihn, um sein Buch zu schreiben. Er ist sehr spitz!"
+  },
+  "36": {
+    "displayName": "Marus Schraubenschlüssel",
+    "description": "Ein großer, metallener Schraubenschlüssel. Er riecht wie Maru."
+  },
+  "37": {
+    "displayName": "Harveys Holzhammer",
+    "description": "Bringt Erinnerungen aus Harveys Klinik zurück."
+  },
+  "38": {
+    "displayName": "Pennys Bratpfanne",
+    "description": "Pennys Lieblingspfanne. Irgendein zähes Zeug klebt darin fest."
+  },
+  "39": {
+    "displayName": "Leahs Schnitzer",
+    "description": "Leahs Lieblingswerkzeug, um Treibholz umzuformen."
+  },
+  "40": {
+    "displayName": "Abbys Planchette",
+    "description": "Aus feinem Marmorholz gemacht."
+  },
+  "41": {
+    "displayName": "Sebs verlorener Streitkolben",
+    "description": "Eine von Sebastians mittelalterlichen Nachbildungen."
+  },
+  "42": {
+    "displayName": "Haleys Eisen",
+    "description": "Ist sengend heiß und riecht nach Haleys Haaren."
+  },
+  "43": {
+    "displayName": "Piratenschwert",
+    "description": "Sieht so aus, als hätte ein Pirat es einst besessen."
+  },
+  "44": {
+    "displayName": "Entermesser",
+    "description": "Eine geschickt hergestellte Klinge."
+  },
+  "45": {
+    "displayName": "Gemeiner Kris",
+    "description": "Die Klinge ist aus einer Iridiumlegierung gemacht."
+  },
+  "46": {
+    "displayName": "Totschläger",
+    "description": "Der beste Kumpel eines Schlägers."
+  },
+  "47": {
+    "displayName": "Sense",
+    "description": "Kann Gras zu Heu schneiden, wenn du ein Silo hast."
+  },
+  "48": {
+    "displayName": "Yeti-Zahn",
+    "description": "Fühlt sich eisig kalt an."
+  },
+  "49": {
+    "displayName": "Rapier",
+    "description": "Eine elegante Klinge."
+  },
+  "50": {
+    "displayName": "Stahl-Falchion",
+    "description": "Leicht und mächtig."
+  },
+  "51": {
+    "displayName": "Zerbrochener Dreizack",
+    "description": "Kommt aus der See, ist aber immer noch scharf."
+  },
+  "52": {
+    "displayName": "Temperiertes Korbschwert",
+    "description": "Sieht so aus, als könnte es allem widerstehen."
+  },
+  "53": {
+    "displayName": "Goldene Sense",
+    "description": "Es ist stärker als eine normale Sense."
+  },
+  "54": {
+    "displayName": "Zwergenschwert",
+    "description": "Es ist uralt, aber die Klinge stumpft nie ab."
+  },
+  "55": {
+    "displayName": "Zwergenhammer",
+    "description": "Er gibt ein sehr schwaches surrendes Geräusch von sich."
+  },
+  "56": {
+    "displayName": "Zwergendolch",
+    "description": "Es ist uralt, aber die Klinge stumpft nie ab."
+  },
+  "57": {
+    "displayName": "Drachenzahn-Machete",
+    "description": "Die Klinge wurde aus einem magischen Zahn geschmiedet."
+  },
+  "58": {
+    "displayName": "Drachenzahn-Keule",
+    "description": "Diese Keule wurde aus einem magischen Zahn gefertigt."
+  },
+  "59": {
+    "displayName": "Drachenzahn-Messer",
+    "description": "Die Klinge wurde aus einem magischen Zahn geschmiedet."
+  },
+  "60": {
+    "displayName": "Ossifizierte Klinge",
+    "description": "Eine große, scharfe, aus Knochen geformte Klinge."
+  },
+  "61": {
+    "displayName": "Iridium-Nadel",
+    "description": "Die Spitze ist unglaublich scharf, sogar bis auf die atomare Ebene."
+  },
+  "62": {
+    "displayName": "Unendliche Klinge",
+    "description": "Die wahre Form des Galaxie-Schwertes."
+  },
+  "63": {
+    "displayName": "Unendlicher Hammer",
+    "description": "Die wahre Form des Galaxie-Hammers."
+  },
+  "64": {
+    "displayName": "Unendlicher Dolch",
+    "description": "Die wahre Form des Galaxie-Dolches."
+  },
+  "65": {
+    "displayName": "Meowmere",
+    "description": "Eine ungewöhnliche Waffe aus einem weit entfernten Land..."
+  },
+  "66": {
+    "displayName": "Iridiumsense",
+    "description": "Kann zum Ernten von Feldfrüchten aller Art verwendet werden. Sie eignet sich auch hervorragend zum Einsammeln von Heu."
+  }
+}

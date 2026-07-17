@@ -1,0 +1,34 @@
+{
+  "MagicHairDye": {
+    "displayName": "Magisches Haargel",
+    "description": "Dein Haar schimmert in allen Farben einer prismatischen Scherbe."
+  },
+  "FrogEgg": {
+    "displayName": "Froschei",
+    "description": "Beschwört einen hungrigen Frosch-Begleiter herbei."
+  },
+  "MagicQuiver": {
+    "displayName": "Zauberköcher",
+    "description": "Schießt alle {0} Sekunden einen magischen Pfeil auf Gegner in der Nähe ab, der {1}-{2} Schaden verursacht."
+  },
+  "FairyBox": {
+    "displayName": "Feen-Kiste",
+    "description": "Beschwört einen Feenbegleiter der Stufe {0}, der dich in Kampfsituationen heilt."
+  },
+  "ParrotEgg": {
+    "displayName": "Papagei Ei",
+    "description": "Beschwört einen Papageien-Begleiter der Stufe {0}, der dir eine {1} Chance gewährt, Goldmünzen zu finden, wenn du Monster erschlägst."
+  },
+  "IceRod": {
+    "displayName": "Eis-Stab",
+    "description": "Schießt alle {0} Sekunden eine Eiskugel ab, die alle Gegner in ihrem Weg für {1} Sekunden einfriert."
+  },
+  "IridiumSpur": {
+    "displayName": "Goldener Sporn",
+    "description": "Kritische Treffer geben dir für {0} Sekunden einen Geschwindigkeitsschub."
+  },
+  "BasiliskPaw": {
+    "displayName": "Basilisk Pfote",
+    "description": "Du bist immun gegen Schwächungen."
+  }
+}

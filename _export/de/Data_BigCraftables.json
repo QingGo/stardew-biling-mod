@@ -1,0 +1,730 @@
+{
+  "0": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "1": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "2": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "3": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "4": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "5": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "6": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "7": {
+    "displayName": "Hauspflanze",
+    "description": "Bringt deinem Haus oder deinem Hof ein wenig Persönlichkeit."
+  },
+  "8": {
+    "displayName": "Vogelscheuche",
+    "description": "Hält Krähen davon ab, deine Pflanzen zu attackieren. Hat einen begrenzten Radius (ungefähr 8 \"Felder\")."
+  },
+  "9": {
+    "displayName": "Blitzableiter",
+    "description": "Sammelt Energie von Gewitterstürmen und kann sie in Batterien umwandeln."
+  },
+  "10": {
+    "displayName": "Bienenhaus",
+    "description": "Stelle es draußen auf und warte auf leckeren Honig - außer im Winter."
+  },
+  "12": {
+    "displayName": "Fass",
+    "description": "Lege eine Frucht oder ein Gemüse hinein. Früher oder später wird daraus ein Getränk."
+  },
+  "13": {
+    "displayName": "Schmelzofen",
+    "description": "Macht deine Erze und Kohle zu Metallbarren."
+  },
+  "15": {
+    "displayName": "Einmachgefäß",
+    "description": "Macht aus Gemüse Eingelegtes und aus Früchten Marmelade."
+  },
+  "16": {
+    "displayName": "Käsepresse",
+    "description": "Macht aus Milch Käse."
+  },
+  "17": {
+    "displayName": "Webstuhl",
+    "description": "Macht aus roher Wolle feinen Stoff."
+  },
+  "19": {
+    "displayName": "Ölpresse",
+    "description": "Macht Gourmet-Öl."
+  },
+  "20": {
+    "displayName": "Recycle-Maschine",
+    "description": "Wandelt geangelten Müll in Naturgüter um."
+  },
+  "21": {
+    "displayName": "Kristallarium",
+    "description": "Lege einen Edelstein deiner Wahl hinein und es erstellt Kopien davon."
+  },
+  "22": {
+    "displayName": "Tischstück L",
+    "description": "Die linke Seite eines großen Tischs."
+  },
+  "23": {
+    "displayName": "Tischstück R",
+    "description": "Die rechte Seite eines großen Tischs."
+  },
+  "24": {
+    "displayName": "Mayonnaise-Maschine",
+    "description": "Macht Eier zu Mayonnaise."
+  },
+  "25": {
+    "displayName": "Saatguterzeuger",
+    "description": "Wirf Nutzpflanzen hinein und bekomme unterschiedliche Mengen an Saat heraus. Funktioniert nicht mit Fruchtbäumen."
+  },
+  "26": {
+    "displayName": "Holzstuhl",
+    "description": "Ein Stuhl, der in 4 verschiedene Richtungen gedreht werden kann."
+  },
+  "27": {
+    "displayName": "Holzstuhl",
+    "description": "Ein Stuhl, der in 4 verschiedene Richtungen gedreht werden kann."
+  },
+  "28": {
+    "displayName": "Skelettmodell",
+    "description": "Ein Modell von einem Skelett."
+  },
+  "29": {
+    "displayName": "Obelisk",
+    "description": "Ein düsteres Portal, das dunkle Energie ausstrahlt."
+  },
+  "31": {
+    "displayName": "Hühnerstatue",
+    "description": "Eine Holzstatue von einem Huhn."
+  },
+  "32": {
+    "displayName": "Steinhaufen",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "33": {
+    "displayName": "Ritterrüstung",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "34": {
+    "displayName": "Zeichen des Gefäßes",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "35": {
+    "displayName": "Einfacher Baumstamm",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "36": {
+    "displayName": "Rasenflamingo",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "37": {
+    "displayName": "Holzschild",
+    "description": "Verwende einen Gegenstand damit, um die Anzeige zu ändern. Der Gegenstand wird nicht verbraucht."
+  },
+  "38": {
+    "displayName": "Steinschild",
+    "description": "Verwende einen Gegenstand damit, um die Anzeige zu ändern. Der Gegenstand wird nicht verbraucht."
+  },
+  "39": {
+    "displayName": "Dunkles Schild",
+    "description": "Benutze einen Gegenstand darauf, um zu ändern, was angezeigt wird. Der Artikel wird nicht verbraucht."
+  },
+  "40": {
+    "displayName": "Großer, grüner Stock",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "41": {
+    "displayName": "Grüne Stöcke",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "42": {
+    "displayName": "Gemischte Stöcke",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "43": {
+    "displayName": "Rote Stöcke",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "44": {
+    "displayName": "Großer, roter Stock",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "45": {
+    "displayName": "Dekorativer Heuballen",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "46": {
+    "displayName": "Baumstammstück",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "47": {
+    "displayName": "Grabstein",
+    "description": "Eine Dekoration für deinen Hof."
+  },
+  "48": {
+    "displayName": "Saisonale Deko",
+    "description": "Diese Dekoration ändert sich mit jeder Saison."
+  },
+  "52": {
+    "displayName": "Steinfrosch",
+    "description": "Gartenkunst für deinen Hof."
+  },
+  "53": {
+    "displayName": "Steinpapagei",
+    "description": "Gartenkunst für deinen Hof."
+  },
+  "54": {
+    "displayName": "Steineule",
+    "description": "Gartenkunst für deinen Hof."
+  },
+  "55": {
+    "displayName": "Stein-Junimo",
+    "description": "Gartenkunst für deinen Hof."
+  },
+  "56": {
+    "displayName": "Schleimball",
+    "description": "Gefüllt mit Schleim."
+  },
+  "62": {
+    "displayName": "Gartentopf",
+    "description": "Lässt innen Pflanzen aus jeder Saison wachsen. Draußen kann er nur für saisonale Pflanzen verwendet werden."
+  },
+  "64": {
+    "displayName": "Bücherschrank",
+    "description": "Ein Zuhause für Bücher."
+  },
+  "65": {
+    "displayName": "Schicker Tisch",
+    "description": "Ein aufwendig hergestellter, runder Tisch."
+  },
+  "66": {
+    "displayName": "Antiker Tisch",
+    "description": "Gehüllt in dickste Spinnweben."
+  },
+  "67": {
+    "displayName": "Antiker Stuhl",
+    "description": "Riecht nach Großmutters alter Wohnung."
+  },
+  "68": {
+    "displayName": "Standuhr",
+    "description": "Sie ist so alt... Das Pendel scheint wohl festgerostet."
+  },
+  "69": {
+    "displayName": "Teddy-Zeitmesser",
+    "description": "Eine Standuhr geformt wie ein Teddy."
+  },
+  "70": {
+    "displayName": "Toter Baum",
+    "description": "Dieses arme Ding ist schon seit langer Zeit versteinert."
+  },
+  "71": {
+    "displayName": "Treppen",
+    "description": "Benutze sie, um eine Ebene in den Minen tiefer zu kommen."
+  },
+  "72": {
+    "displayName": "Lange Fackel",
+    "description": "Der Griff ist aus Bambusholz gefertigt."
+  },
+  "73": {
+    "displayName": "Rituelle Maske",
+    "description": "Viel zu groß, um getragen zu werden."
+  },
+  "74": {
+    "displayName": "Lagerfeuer",
+    "description": "Die rote Asche glüht sanft."
+  },
+  "75": {
+    "displayName": "Bongo",
+    "description": "Ein dekoratives Schlaginstrument mit tiefen Klängen."
+  },
+  "76": {
+    "displayName": "Dekorative Speere",
+    "description": "Keine besonders sichere Dekoration."
+  },
+  "78": {
+    "displayName": "Fels",
+    "description": "Ein extrem dichtes Steinstück."
+  },
+  "79": {
+    "displayName": "Tür",
+    "description": "Ein versteckter Mechanismus lässt sie zurück in den Boden versinken."
+  },
+  "80": {
+    "displayName": "Tür",
+    "description": "Ein versteckter Mechanismus lässt sie zurück in den Boden versinken."
+  },
+  "81": {
+    "displayName": "Verschlossene Tür",
+    "description": "Ein versteckter Mechanismus lässt sie zurück in den Boden versinken."
+  },
+  "82": {
+    "displayName": "Verschlossene Tür",
+    "description": "Ein versteckter Mechanismus lässt sie zurück in den Boden versinken."
+  },
+  "83": {
+    "displayName": "Unheimliche Statue",
+    "description": "Irgendetwas an dieser Statue ist verstörend."
+  },
+  "84": {
+    "displayName": "Unheimliche Statue",
+    "description": "Irgendetwas stimmt mit dieser Statue nicht."
+  },
+  "85": {
+    "displayName": "Faultier-Skelett L",
+    "description": "Dieses ausgestorbene Faultier durchstreifte einst die prähistorischen Wälder des Sternentautals. Sein mächtiger Kiefer konnte die zähesten Pflanzenfasern durchdringen."
+  },
+  "86": {
+    "displayName": "Faultier-Skelett M",
+    "description": "Die Rippen eines prähistorischen Faultiers."
+  },
+  "87": {
+    "displayName": "Faultier-Skelett R",
+    "description": "Die Hinterbeine eines prähistorischen Faultiers."
+  },
+  "88": {
+    "displayName": "Stehende Geode",
+    "description": "Eine riesige Geode, auf einem Stand platziert. Hunderte violette Kristalle schimmern darin."
+  },
+  "89": {
+    "displayName": "Obsidian-Vase",
+    "description": "Eine wunderschön gefertigte, dekorative Vase aus Obsidian und Gold."
+  },
+  "94": {
+    "displayName": "Singender Stein",
+    "description": "Lässt einen puren Ton ertönen, wenn er geschlagen wird."
+  },
+  "95": {
+    "displayName": "Steineule",
+    "description": "Man weiß nicht, woher sie kommt, aber sie sieht sehr gut aus."
+  },
+  "96": {
+    "displayName": "Merkwürdige Kapsel",
+    "description": "Irgendetwas Fleischiges bewegt sich in der Flüssigkeit..."
+  },
+  "98": {
+    "displayName": "Leere Kapsel",
+    "description": "Ein Teil des Glases ist zersprungen."
+  },
+  "99": {
+    "displayName": "Einfülltrichter",
+    "description": "Bietet praktischen Zugang zum Silo-Futter."
+  },
+  "101": {
+    "displayName": "Brutkasten",
+    "description": "Brütet Eier aus, um Küken schlüpfen zu lassen."
+  },
+  "104": {
+    "displayName": "Heizgerät",
+    "description": "Hält deine Tiere im Winter warm und glücklich."
+  },
+  "105": {
+    "displayName": "Zapfhahn",
+    "description": "Bringe ihn an einer Kiefer, einem Ahornbaum oder einer Eiche an und warte darauf, dass sich der Speicher mit dem Erzeugnis füllt!"
+  },
+  "106": {
+    "displayName": "Kamera",
+    "description": "Eine alte Kamera, auf einem Stativ platziert."
+  },
+  "107": {
+    "displayName": "Plüschhase",
+    "description": "Er ist groß, weich und niedlich."
+  },
+  "108": {
+    "displayName": "Blumenfass",
+    "description": "Blumen, die in ein Eichenfass gepflanzt wurden. Blühen im Frühling und Sommer."
+  },
+  "110": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (1 von 8)"
+  },
+  "111": {
+    "displayName": "Dekorativer Krug",
+    "description": "Handgemacht aus Messing."
+  },
+  "112": {
+    "displayName": "Getrocknete Sonnenblumen",
+    "description": "Eine auffallende Hausdekoration."
+  },
+  "113": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (2 von 8)"
+  },
+  "114": {
+    "displayName": "Kohlebrennofen",
+    "description": "Macht 10 Stücke Holz zu einem Stück Kohle."
+  },
+  "116": {
+    "displayName": "Sternentau-Heldenpokal",
+    "description": "Der angesehenste Preis, den ein Bewohner im Sternentautal bekommen kann!"
+  },
+  "117": {
+    "displayName": "Getränkemaschine",
+    "description": "Spendet unentwegt den guten Stoff."
+  },
+  "118": {
+    "displayName": "Fass",
+    "description": "..."
+  },
+  "119": {
+    "displayName": "Kiste",
+    "description": "..."
+  },
+  "120": {
+    "displayName": "Fass",
+    "description": "..."
+  },
+  "121": {
+    "displayName": "Kiste",
+    "description": "..."
+  },
+  "122": {
+    "displayName": "Fass",
+    "description": "..."
+  },
+  "123": {
+    "displayName": "Kiste",
+    "description": "..."
+  },
+  "124": {
+    "displayName": "Fass",
+    "description": "..."
+  },
+  "125": {
+    "displayName": "Kiste",
+    "description": "..."
+  },
+  "126": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (3 von 8)"
+  },
+  "127": {
+    "displayName": "Statue des ewigen Glücks",
+    "description": "Besteht aus solidem Gold. Wofür ist sie?"
+  },
+  "128": {
+    "displayName": "Pilzbox",
+    "description": "Alle paar Tage wachsen Pilze."
+  },
+  "130": {
+    "displayName": "Kiste",
+    "description": "Um deine Gegenstände aufzubewahren."
+  },
+  "136": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (4 von 8)"
+  },
+  "137": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (5 von 8)"
+  },
+  "138": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (6 von 8)"
+  },
+  "139": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (7 von 8)"
+  },
+  "140": {
+    "displayName": "Sammler-Vogelscheuche",
+    "description": "Sammle sie alle! (8 von 8)"
+  },
+  "141": {
+    "displayName": "Prärie-König-Spielautomat",
+    "description": "Spiele \"Reise des Prärie-Königs\" zu Hause!"
+  },
+  "143": {
+    "displayName": "Holzfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "144": {
+    "displayName": "Steinfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "145": {
+    "displayName": "Goldfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "146": {
+    "displayName": "Lagerfeuer",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "147": {
+    "displayName": "Stammfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "148": {
+    "displayName": "Geschnitzte Feuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "149": {
+    "displayName": "Skelettfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "150": {
+    "displayName": "Fassfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "151": {
+    "displayName": "Marmorfeuerschale",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "152": {
+    "displayName": "Laternenpfahl, Holz",
+    "description": "Bietet eine gute Menge Licht."
+  },
+  "153": {
+    "displayName": "Laternenpfahl, Eisen",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "154": {
+    "displayName": "Wurmeimer",
+    "description": "Produziert regelmäßig Köder. Die Würmer benötigen kein Futter."
+  },
+  "155": {
+    "displayName": "??HMTGF??",
+    "description": "??HMTGF??"
+  },
+  "156": {
+    "displayName": "Schleimbrutkasten",
+    "description": "Brütet Schleimeier aus, um Schleime schlüpfen zu lassen. Ermöglicht es, draußen Schleime zu züchten."
+  },
+  "158": {
+    "displayName": "Schleim-Eierpresse",
+    "description": "Komprimiert 100 Stücke Schleim zu einem Schleim-Ei. Ein Wunder der Wissenschaft!"
+  },
+  "159": {
+    "displayName": "Junimo-Kart-Spielautomat",
+    "description": "Spiele \"Junimo Kart\" zu Hause!"
+  },
+  "160": {
+    "displayName": "Statue der Perfektion",
+    "description": "Aus purem Iridium hergestellt."
+  },
+  "161": {
+    "displayName": "??Pinke Zitrone??",
+    "description": "??Pinke Zitrone??"
+  },
+  "162": {
+    "displayName": "??Foroschomon??",
+    "description": "??Foroschomon??"
+  },
+  "163": {
+    "displayName": "Reifefass",
+    "description": "Im Keller benutzen, um Wein und Käse reifen zu lassen."
+  },
+  "164": {
+    "displayName": "Goldener Lewis",
+    "description": "Das geheime Projekt des Bürgermeisters."
+  },
+  "165": {
+    "displayName": "Automatischer Greifer",
+    "description": "Sammelt automatisch jeden Morgen die Produkte deiner Tiere ein. Muss in einem Hühnerstall oder einer Scheune platziert werden."
+  },
+  "167": {
+    "displayName": "Deluxe Vogelscheuche",
+    "description": "Verhindert, dass Krähen deine Ernte angreifen. Hat einen großen Radius (ca. 16 \"Kacheln\")."
+  },
+  "174": {
+    "displayName": "Fass",
+    "description": "..."
+  },
+  "175": {
+    "displayName": "Kiste",
+    "description": "..."
+  },
+  "184": {
+    "displayName": "Saisonpflanze",
+    "description": "Eine Zierpflanze, die sich jede Saison ändert. Sie benötigt kein Wasser."
+  },
+  "188": {
+    "displayName": "Saisonpflanze",
+    "description": "Eine Zierpflanze, die sich jede Saison ändert. Sie benötigt kein Wasser."
+  },
+  "192": {
+    "displayName": "Saisonpflanze",
+    "description": "Eine Zierpflanze, die sich jede Saison ändert. Sie benötigt kein Wasser."
+  },
+  "196": {
+    "displayName": "Saisonpflanze",
+    "description": "Eine Zierpflanze, die sich jede Saison ändert. Sie benötigt kein Wasser."
+  },
+  "200": {
+    "displayName": "Saisonpflanze",
+    "description": "Eine Zierpflanze, die sich jede Saison ändert. Sie benötigt kein Wasser."
+  },
+  "204": {
+    "displayName": "Saisonpflanze",
+    "description": "Eine Zierpflanze, die sich jede Saison ändert. Sie benötigt kein Wasser."
+  },
+  "208": {
+    "displayName": "Werkbank",
+    "description": "Wenn du hier handarbeitest, hast du Zugang zu Materialien in allen angrenzenden Truhen."
+  },
+  "209": {
+    "displayName": "Mini-Jukebox",
+    "description": "Ermöglicht es dir, deine Lieblingsmusik zu spielen."
+  },
+  "211": {
+    "displayName": "Holzhackmaschine",
+    "description": "Setze ein Stück Hartholz ein, um es in normales Holz zu zerlegen."
+  },
+  "214": {
+    "displayName": "Telefon",
+    "description": "Kann zur Überprüfung der Ladenöffnungszeiten und des Inventars verwendet werden."
+  },
+  "216": {
+    "displayName": "Mini-Kühlschrank",
+    "description": "Ermöglicht, zusätzliche Zutaten zum Kochen aufzubewahren."
+  },
+  "219": {
+    "displayName": "Verfluchtes Prärie-König-Spielautomat",
+    "description": "Etwas stimmt nicht mit diesem Prärie-König-Spielautomat..."
+  },
+  "221": {
+    "displayName": "Gegenstand Podest",
+    "description": "Ein Ort, um einen Gegenstand auszustellen."
+  },
+  "232": {
+    "displayName": "Steintruhe",
+    "description": "Ein Ort zur Aufbewahrung deiner Gegenstände."
+  },
+  "238": {
+    "displayName": "Mini-Obelisk",
+    "description": "Platziere zwei auf dem Hof, um sich zwischen ihnen teleportieren zu können."
+  },
+  "239": {
+    "displayName": "Hof-Rechner",
+    "description": "Scannt den Hof und zeigt nützliche Informationen an."
+  },
+  "248": {
+    "displayName": "Mini-Versandbehälter",
+    "description": "Die darin abgelegten Artikel werden in den nächtlichen Versand aufgenommen."
+  },
+  "254": {
+    "displayName": "Straußenbrutkasten",
+    "description": "Ein Brutkasten für Straußeneier. Platziere in einer Scheune."
+  },
+  "182": {
+    "displayName": "Geoden Brecher",
+    "description": "Bricht Geoden automatisch auf."
+  },
+  "246": {
+    "displayName": "Kaffeemaschine",
+    "description": "Brüht jeden Morgen automatisch eine frische Tasse."
+  },
+  "247": {
+    "displayName": "Nähmaschine",
+    "description": "Damit kannst du Kleidung bequem von zu Hause aus schneidern!"
+  },
+  "231": {
+    "displayName": "Solarpanel",
+    "description": "Erzeugt langsam Energie, wenn es in der Sonne belassen wird."
+  },
+  "90": {
+    "displayName": "Knochenmühle",
+    "description": "Verwandelt Knochengegenstände in Düngemittel."
+  },
+  "256": {
+    "displayName": "Junimo-Kiste",
+    "description": "Durch die Kraft der Waldmagie wird jede Junimo-Kiste mit demselben Vorrat verbunden."
+  },
+  "262": {
+    "displayName": "Fass",
+    "description": "..."
+  },
+  "263": {
+    "displayName": "Kiste",
+    "description": "..."
+  },
+  "264": {
+    "displayName": "Schwerer Zapfhahn",
+    "description": "Platziere es auf einen Ahorn, eine Eiche oder eine Kiefer und warte, bis sich das Reservoir mit Produkt füllt! Arbeitet doppelt so schnell wie ein normaler Zapfhahn."
+  },
+  "265": {
+    "displayName": "Dekonstrukteur",
+    "description": "Zerstört handgefertigte Gegenstände, aber rettet ihr wertvollstes Material."
+  },
+  "272": {
+    "displayName": "Auto-Streichler",
+    "description": "Streichelt deine Tiere jeden Morgen automatisch. Muss in einem Stall oder einer Scheune platziert werden."
+  },
+  "275": {
+    "displayName": "Hopper",
+    "description": "Darin platzierte Gegenstände werden automatisch in die davor stehende Maschine geladen."
+  },
+  "278": {
+    "displayName": "Lagerfeuer",
+    "description": "Koch unterwegs!"
+  },
+  "280": {
+    "displayName": "Statue der wahren Perfektion",
+    "description": "Aus purem Iridium hergestellt."
+  },
+  "TextSign": {
+    "displayName": "Schild",
+    "description": "Du kannst eine individuelle Nachricht auf dieses Schild schreiben."
+  },
+  "MushroomLog": {
+    "displayName": "Pilz-Baumstamm",
+    "description": "Bringt immer wieder Pilze hervor. Je mehr wilde Bäume in der Nähe sind, desto besser funktioniert es."
+  },
+  "BaitMaker": {
+    "displayName": "Köderhersteller",
+    "description": "Platziere einen Fisch darin, um einen bestimmten Köder zu erzeugen."
+  },
+  "Dehydrator": {
+    "displayName": "Dehydrator",
+    "description": "Platziere 5 Stück Obst oder essbare Pilze darin, um sie zu trocknen."
+  },
+  "HeavyFurnace": {
+    "displayName": "Schwerer Ofen",
+    "description": "Verarbeitet 5 Barren auf einmal. Benötigt 25 Stück Erz und 3 Kohle pro Einsatz."
+  },
+  "StatueOfBlessings": {
+    "displayName": "Statue der Segnungen",
+    "description": "Die Berührung der Statue schenkt jeden Tag einen einzigartigen Segen."
+  },
+  "StatueOfTheDwarfKing": {
+    "displayName": "Statue des Zwergenkönigs",
+    "description": "Wähle jeden Tag aus zwei bergbaubezogenen Fähigkeiten."
+  },
+  "Anvil": {
+    "displayName": "Amboss",
+    "description": "Ermöglicht es, Ornamente \"neu zu rollen\". Kostet 3 Iridiumbarren pro Benutzung."
+  },
+  "MiniForge": {
+    "displayName": "Mini-Schmiede",
+    "description": "Jetzt kannst du eine zwergische Schmiede bequem von zu Hause aus benutzen."
+  },
+  "FishSmoker": {
+    "displayName": "Fischräucherer",
+    "description": "Platziere Fisch mit einem Stück Kohle, um geräucherten Fisch herzustellen. Geräucherter Fisch ist doppelt so viel wert."
+  },
+  "DeluxeWormBin": {
+    "displayName": "Luxus-Wurmeimer",
+    "description": "Produziert regelmäßig Luxusköder. Die Würmer sind Selbstversorger."
+  },
+  "BigChest": {
+    "displayName": "Große Truhe",
+    "description": "Sie kann fast doppelt so viel speichern wie eine normale Kiste."
+  },
+  "BigStoneChest": {
+    "displayName": "Große Steintruhe",
+    "description": "Sie kann fast doppelt so viel speichern wie eine normale Kiste."
+  }
+}

@@ -68,8 +68,7 @@ namespace AssetExporter
             ["ru"] = LocalizedContentManager.LanguageCode.ru,
             ["hu"] = LocalizedContentManager.LanguageCode.hu,
             ["it"] = LocalizedContentManager.LanguageCode.it,
-            ["vi"] = LocalizedContentManager.LanguageCode.vi,
-            ["th"] = LocalizedContentManager.LanguageCode.th,
+
         };
 
         public override void Entry(IModHelper helper)
@@ -499,39 +498,6 @@ namespace AssetExporter
                         tokenSourceStrings = null;
                     }
                 }
-            return result;
-        }
-
-        private string ResolveToken(string rawValue, Dictionary<string, string> primaryStrings, bool isEnglish)
-        {
-            if (string.IsNullOrEmpty(rawValue))
-                return "";
-
-            var match = TokenRegex.Match(rawValue);
-            if (match.Success)
-            {
-                string source = match.Groups[1].Value; // "Strings\Objects"
-                string key = match.Groups[2].Value;    // "DwarvishTranslationGuide_Name"
-
-                // Try the token's specified source first
-                string assetPath = source.Replace('\\', '/');
-                string cacheKey = assetPath + ":" + isEnglish;
-
-                if (!_stringsLoadCache.TryGetValue(cacheKey, out var tokenSourceStrings))
-                {
-                    try
-                    {
-                        if (isEnglish)
-                            tokenSourceStrings = LoadEn<Dictionary<string, string>>(assetPath);
-                        else
-                            tokenSourceStrings = LoadZh<Dictionary<string, string>>(assetPath);
-                        _stringsLoadCache[cacheKey] = tokenSourceStrings;
-                    }
-                    catch
-                    {
-                        tokenSourceStrings = null;
-                    }
-                }
 
                 if (tokenSourceStrings != null && tokenSourceStrings.TryGetValue(key, out var resolved))
                     return resolved;
@@ -541,7 +507,6 @@ namespace AssetExporter
                     return primaryResolved;
 
                 // Try splitting format arguments from key (e.g. "TrashCan_Description 15")
-                // Key is "TrashCan_Description", arg is "15"; format template has {0}
                 int lastSpace = key.LastIndexOf(' ');
                 if (lastSpace > 0)
                 {

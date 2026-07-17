@@ -1,0 +1,206 @@
+{
+  "Green Slime": {
+    "displayName": "グリーンスライム",
+    "description": ""
+  },
+  "Dust Spirit": {
+    "displayName": "ススおばけ",
+    "description": ""
+  },
+  "Bat": {
+    "displayName": "コウモリ",
+    "description": ""
+  },
+  "Frost Bat": {
+    "displayName": "フロストバット",
+    "description": ""
+  },
+  "Lava Bat": {
+    "displayName": "溶岩コウモリ",
+    "description": ""
+  },
+  "Iridium Bat": {
+    "displayName": "イリジウムコウモリ",
+    "description": ""
+  },
+  "Stone Golem": {
+    "displayName": "ストーンゴーレム",
+    "description": ""
+  },
+  "Wilderness Golem": {
+    "displayName": "荒地ゴーレム",
+    "description": ""
+  },
+  "Iridium Golem": {
+    "displayName": "Wilderness Golem",
+    "description": ""
+  },
+  "Grub": {
+    "displayName": "イモ虫",
+    "description": ""
+  },
+  "Fly": {
+    "displayName": "羽虫",
+    "description": ""
+  },
+  "Frost Jelly": {
+    "displayName": "フロストジェリー",
+    "description": ""
+  },
+  "Sludge": {
+    "displayName": "スラッジ",
+    "description": ""
+  },
+  "Shadow Guy": {
+    "displayName": "シャドーマン",
+    "description": ""
+  },
+  "Ghost": {
+    "displayName": "ゴースト",
+    "description": ""
+  },
+  "Carbon Ghost": {
+    "displayName": "炭素ゴースト",
+    "description": ""
+  },
+  "Duggy": {
+    "displayName": "ダギー",
+    "description": ""
+  },
+  "Rock Crab": {
+    "displayName": "岩ガニ",
+    "description": ""
+  },
+  "Truffle Crab": {
+    "displayName": "Rock Crab",
+    "description": ""
+  },
+  "Lava Crab": {
+    "displayName": "溶岩ガニ",
+    "description": ""
+  },
+  "Iridium Crab": {
+    "displayName": "イリジウムカニ",
+    "description": ""
+  },
+  "Fireball": {
+    "displayName": "ヒノタマ",
+    "description": ""
+  },
+  "Squid Kid": {
+    "displayName": "スキッドキッド",
+    "description": ""
+  },
+  "Skeleton Warrior": {
+    "displayName": "スケルトンウォリアー",
+    "description": ""
+  },
+  "Crow": {
+    "displayName": "カラス",
+    "description": ""
+  },
+  "Frog": {
+    "displayName": "カエル",
+    "description": ""
+  },
+  "Cat": {
+    "displayName": "ネコ",
+    "description": ""
+  },
+  "Shadow Brute": {
+    "displayName": "シャドーウォリアー",
+    "description": ""
+  },
+  "Shadow Shaman": {
+    "displayName": "シャドーシャーマン",
+    "description": ""
+  },
+  "Skeleton": {
+    "displayName": "スケルトン",
+    "description": ""
+  },
+  "Skeleton Mage": {
+    "displayName": "スケルトンメイジ",
+    "description": ""
+  },
+  "Metal Head": {
+    "displayName": "メタルヘッド",
+    "description": ""
+  },
+  "Spiker": {
+    "displayName": "スパイカー",
+    "description": ""
+  },
+  "Bug": {
+    "displayName": "昆虫",
+    "description": ""
+  },
+  "Mummy": {
+    "displayName": "ミイラ",
+    "description": ""
+  },
+  "Big Slime": {
+    "displayName": "ビッグスライム",
+    "description": ""
+  },
+  "Serpent": {
+    "displayName": "サーペント",
+    "description": ""
+  },
+  "Pepper Rex": {
+    "displayName": "ペッパーレックス",
+    "description": ""
+  },
+  "Tiger Slime": {
+    "displayName": "タイガースライム",
+    "description": ""
+  },
+  "Lava Lurk": {
+    "displayName": "溶岩ルーク",
+    "description": ""
+  },
+  "Hot Head": {
+    "displayName": "ホットヘッド",
+    "description": ""
+  },
+  "Magma Sprite": {
+    "displayName": "マグマおばけ",
+    "description": ""
+  },
+  "Magma Duggy": {
+    "displayName": "マグマダギー",
+    "description": ""
+  },
+  "Magma Sparker": {
+    "displayName": "マグマスパーカー",
+    "description": ""
+  },
+  "False Magma Cap": {
+    "displayName": "ニセマグマタケ",
+    "description": ""
+  },
+  "Dwarvish Sentry": {
+    "displayName": "ドワーフセントリー",
+    "description": ""
+  },
+  "Putrid Ghost": {
+    "displayName": "腐ったゴースト",
+    "description": ""
+  },
+  "Shadow Sniper": {
+    "displayName": "シャドウスナイパー",
+    "description": ""
+  },
+  "Spider": {
+    "displayName": "クモ",
+    "description": ""
+  },
+  "Royal Serpent": {
+    "displayName": "ロイヤルサーペント",
+    "description": ""
+  },
+  "Blue Squid": {
+    "displayName": "青いイカ",
+    "description": ""
+  }
+}

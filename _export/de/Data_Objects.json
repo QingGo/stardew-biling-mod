@@ -1,0 +1,3230 @@
+{
+  "0": {
+    "displayName": "Unkraut",
+    "description": "Ein Haufen lästiges Unkraut."
+  },
+  "2": {
+    "displayName": "Diamond Stone",
+    "description": "Break apart to obtain diamonds."
+  },
+  "4": {
+    "displayName": "Ruby Stone",
+    "description": "Break apart to obtain rubies."
+  },
+  "6": {
+    "displayName": "Jade Stone",
+    "description": "Break apart to obtain jade."
+  },
+  "8": {
+    "displayName": "Amethyst Stone",
+    "description": "Break apart to obtain amethysts."
+  },
+  "10": {
+    "displayName": "Topaz Stone",
+    "description": "Break apart to obtain topaz."
+  },
+  "12": {
+    "displayName": "Emerald Stone",
+    "description": "Break apart to obtain emeralds."
+  },
+  "14": {
+    "displayName": "Aquamarine Stone",
+    "description": "Break apart to obtain aquamarines."
+  },
+  "16": {
+    "displayName": "Wilder Meerrettich",
+    "description": "Würzige Wurzeln, die im Frühling gefunden werden können."
+  },
+  "18": {
+    "displayName": "Narzisse",
+    "description": "Eine traditionelle Frühlingsblume, die ein nettes Geschenk abgibt."
+  },
+  "20": {
+    "displayName": "Lauch",
+    "description": "Ein leckerer Verwandter der Zwiebel."
+  },
+  "22": {
+    "displayName": "Löwenzahn",
+    "description": "Nicht die schönste Blume, aber die Blätter geben einen guten Salat ab."
+  },
+  "24": {
+    "displayName": "Pastinake",
+    "description": "Eine Frühlingsknolle, die eng mit der Karotte verwandt ist. Sie hat einen erdigen Geschmack und ist voller Nährstoffe."
+  },
+  "30": {
+    "displayName": "Nutzholz",
+    "description": "Ein vielseitiges Naturgut zum Bauen und Heizen."
+  },
+  "32": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "34": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "36": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "38": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "40": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "42": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "44": {
+    "displayName": "Gem Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "46": {
+    "displayName": "Mystic Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "48": {
+    "displayName": "Snowy Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "50": {
+    "displayName": "Snowy Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "52": {
+    "displayName": "Snowy Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "54": {
+    "displayName": "Snowy Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "56": {
+    "displayName": "Snowy Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "58": {
+    "displayName": "Snowy Stone",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "60": {
+    "displayName": "Smaragd",
+    "description": "Ein wertvoller Stein mit einer brillanten grünen Farbe."
+  },
+  "62": {
+    "displayName": "Aquamarin",
+    "description": "Ein schimmernder blau-grüner Edelstein."
+  },
+  "64": {
+    "displayName": "Rubin",
+    "description": "Ein wertvoller Stein, begehrt wegen seiner tiefen Farbe und seinem wunderschönen Glanz."
+  },
+  "66": {
+    "displayName": "Amethyst",
+    "description": "Eine violette Variante von Quarz."
+  },
+  "68": {
+    "displayName": "Topas",
+    "description": "Relativ gewöhnlich, aber dennoch für seine Schönheit ausgezeichnet."
+  },
+  "70": {
+    "displayName": "Jade",
+    "description": "Ein blassgrüner Schmuckstein."
+  },
+  "71": {
+    "displayName": "Beschnittene lila Glücksshorts",
+    "description": "Lila Seidenshorts, besetzt mit luxuriösem Gold..."
+  },
+  "72": {
+    "displayName": "Diamant",
+    "description": "Ein seltener und wertvoller Edelstein."
+  },
+  "74": {
+    "displayName": "Prismatische Scherbe",
+    "description": "Eine sehr seltene und mächtige Substanz unbekannter Herkunft."
+  },
+  "75": {
+    "displayName": "Geode Stone",
+    "description": "Break apart to obtain geodes."
+  },
+  "76": {
+    "displayName": "Frozen Geode Stone",
+    "description": "Break apart to obtain frozen geodes."
+  },
+  "77": {
+    "displayName": "Magma Geode Stone",
+    "description": "Break apart to obtain magma geodes."
+  },
+  "78": {
+    "displayName": "Höhlenkarotte",
+    "description": "Ein stärkehaltiger Snack, den man in Höhlen findet. Hilft Minenarbeitern, länger zu arbeiten."
+  },
+  "79": {
+    "displayName": "Geheime Notiz",
+    "description": "Sie ist alt und zerknüllt, aber wenn du sie dir ganz genau ansiehst, kannst du etwas erkennen ..."
+  },
+  "80": {
+    "displayName": "Quarz",
+    "description": "Ein klarer Kristall, der häufig in Höhlen und Minen gefunden wird."
+  },
+  "82": {
+    "displayName": "Feuer-Quarz",
+    "description": "Ein leuchtender roter Kristall, der häufig in der Nähe von heißer Lava gefunden wird."
+  },
+  "84": {
+    "displayName": "Gefrorene Träne",
+    "description": "Ein Kristall, dem nachgesagt wird, dass er die gefrorene Träne eines Yetis ist."
+  },
+  "86": {
+    "displayName": "Erdkristall",
+    "description": "Eine harzige Substanz, die in der Nähe der Oberfläche zu finden ist."
+  },
+  "88": {
+    "displayName": "Kokosnuss",
+    "description": "Die Frucht einer Kokospalme. Findet viele kulinarischen Anwendungen."
+  },
+  "90": {
+    "displayName": "Kaktus-Frucht",
+    "description": "Die süße Frucht einer stachligen Kaktusfeige."
+  },
+  "92": {
+    "displayName": "Harz",
+    "description": "Eine Flüssigkeit, die aus Bäumen gewonnen wird."
+  },
+  "93": {
+    "displayName": "Fackel",
+    "description": "Bietet eine mäßige Menge Licht."
+  },
+  "94": {
+    "displayName": "Seelen-Fackel",
+    "description": "Es ist nicht bekannt, woher die blaue Farbe kommt..."
+  },
+  "95": {
+    "displayName": "Radioactive Stone",
+    "description": "Enthält radioaktives Erz."
+  },
+  "96": {
+    "displayName": "Zwergenschriftrolle I",
+    "description": "Eine vergilbte Schriftrolle aus Pergament, gefüllt mit zwergischer Schrift. Diese hier wurde mit einer roten Schleife verschnürt."
+  },
+  "97": {
+    "displayName": "Zwergenschriftrolle II",
+    "description": "Eine vergilbte Schriftrolle aus Pergament, gefüllt mit zwergischer Schrift. Diese hier wurde mit einem grünen Band verschnürt."
+  },
+  "98": {
+    "displayName": "Zwergenschriftrolle III",
+    "description": "Eine vergilbte Schriftrolle aus Pergament, gefüllt mit zwergischer Schrift. Diese hier wurde mit einem blauen Seil verschnürt."
+  },
+  "99": {
+    "displayName": "Zwergenschriftrolle IV",
+    "description": "Eine vergilbte Schriftrolle aus Pergament, gefüllt mit zwergischer Schrift. Diese hier wurde mit einer goldenen Kette verschnürt."
+  },
+  "100": {
+    "displayName": "Angeschlagene Amphore",
+    "description": "Ein antikes Gefäß aus Keramik. Wird benutzt, um trockene und nasse Güter zu transportieren."
+  },
+  "101": {
+    "displayName": "Pfeilspitze",
+    "description": "Eine grob hergestellte Spitze, die zum Jagen genutzt wird."
+  },
+  "102": {
+    "displayName": "Verlorenes Buch",
+    "description": "Schriften von verschiedensten Zeitperioden."
+  },
+  "103": {
+    "displayName": "Alte Puppe",
+    "description": "Eine alte Puppe, die ziemlich verschmutzt ist. Sie wurde vielleicht als Spielzeug, zur Dekoration oder als Requisite in irgendeinem Ritual genutzt."
+  },
+  "104": {
+    "displayName": "Elfische Juwelen",
+    "description": "Verschmutzt, aber dennoch wunderschön. An der Seite ist ein fließendes Skriptum, das manchen Leuten zufolge in der antiken Sprache der Elfen geschrieben ist. Keine elfischen Knochen wurden je gefunden."
+  },
+  "105": {
+    "displayName": "Kauhölzchen",
+    "description": "Leute haben vor langer Zeit an diesen Hölzern gekaut, um ihre Zähne sauber zu halten."
+  },
+  "106": {
+    "displayName": "Dekorativer Fächer",
+    "description": "Dieser exquisite Fächer gehörte vermutlich einst einer Adeligen. Historiker glauben, dass das Tal ein beliebter Urlaubsort für die Reichen in der sechsten Ära war."
+  },
+  "107": {
+    "displayName": "Dinosaurier-Ei",
+    "description": "Ein riesiges Dinosaurier-Ei... Die Schale ist noch komplett intakt!"
+  },
+  "108": {
+    "displayName": "Seltene Scheibe",
+    "description": "Eine schwere schwarze Scheibe, verziert mit merkwürdigen roten Steinen. Wenn du sie hältst, überkommt dich ein Gefühl von Furcht."
+  },
+  "109": {
+    "displayName": "Antikes Schwert",
+    "description": "Die Überreste eines antiken Schwerts. Ein Großteil der Klinge ist verrostet, aber der Griff ist sehr aufwendig verarbeitet."
+  },
+  "110": {
+    "displayName": "Rostiger Löffel",
+    "description": "Ein gewöhnlicher alter Löffel, vermutlich zehn Jahre alt. Nicht sonderlich interessant."
+  },
+  "111": {
+    "displayName": "Rostiger Sporn",
+    "description": "Ein alter Sporn, der einst am Schuh eines Cowboys angebracht war. Die Einwohner müssen hier Tiere wohl schon seit vielen Generationen gezüchtet haben."
+  },
+  "112": {
+    "displayName": "Rostiges Zahnrad",
+    "description": "Ein gut erhaltenes Zahnrad, das wohl Teil einer altertümlichen Maschine war. Könnte zwergische Technologie sein."
+  },
+  "113": {
+    "displayName": "Hühnerstatue",
+    "description": "Die Statue eines Huhns auf einem bronzenen Podest. Die einstigen Bewohner dieses Gebiets müssen Hühner wohl sehr geliebt haben."
+  },
+  "114": {
+    "displayName": "Historisches Saatgut",
+    "description": "Trockene, alte Saat irgendeiner altertümlichen Pflanze. Sie scheint schon lange vertrocknet..."
+  },
+  "115": {
+    "displayName": "Prähistorisches Werkzeug",
+    "description": "Eine Art grobes, altes Grabwerkzeug."
+  },
+  "116": {
+    "displayName": "Getrockneter Seestern",
+    "description": "Ein Seestern aus dem Urozean. Es ist ein erstaunlich gut erhaltenes Exemplar!"
+  },
+  "117": {
+    "displayName": "Anker",
+    "description": "Hat vielleicht mal Piraten gehört."
+  },
+  "118": {
+    "displayName": "Glasscherben",
+    "description": "Ein Mix aus Glasscherben, jahrzehntelang von der Meeresbrandung geschliffen. Diese hier könnten zu einem alten Mosaik oder einer Kette gehört haben."
+  },
+  "119": {
+    "displayName": "Knochenflöte",
+    "description": "Ein prähistorisches Blasinstrument, geschnitzt aus Tierknochen. Sie bringt unheimliche Töne hervor."
+  },
+  "120": {
+    "displayName": "Prähistorische Handaxt",
+    "description": "Eines der ersten Werkzeuge, die von Menschen benutzt wurden. Dieses einfache Werkzeug wurde hergestellt, indem man einen Stein mit einem anderen schlug, um eine scharfe Kante zu erzeugen."
+  },
+  "121": {
+    "displayName": "Zwergischer Helm",
+    "description": "Einer der Helme, die gewöhnlich von Zwergen getragen werden. Die dicken Metallplatten schützen sie vor fallenden Trümmern und Stalaktiten."
+  },
+  "122": {
+    "displayName": "Zwergengerät",
+    "description": "Ein Teil fortschrittlicher Technologie, die einst den Zwergen bekannt war. Es leuchtet und summt immer noch, aber du kommst nicht dahinter, wie es funktioniert."
+  },
+  "123": {
+    "displayName": "Altertümliche Trommel",
+    "description": "Eine Trommel aus Holz und Tierhaut. Sie hat einen tiefen, widerhallenden Ton."
+  },
+  "124": {
+    "displayName": "Goldene Maske",
+    "description": "Eine gruselige goldene Maske, die vermutlich in einstigen magischen Ritualen genutzt wurde. Ein Sockel in der Stirn hält einen großen violetten Edelstein."
+  },
+  "125": {
+    "displayName": "Goldenes Relikt",
+    "description": "Eine goldene Platte mit Hieroglyphen und Bildern geschmückt."
+  },
+  "126": {
+    "displayName": "Merkwürdige Puppe",
+    "description": "???"
+  },
+  "127": {
+    "displayName": "Merkwürdige Puppe",
+    "description": "???"
+  },
+  "128": {
+    "displayName": "Kugelfisch",
+    "description": "Bläht sich auf, wenn er bedroht wird."
+  },
+  "129": {
+    "displayName": "Sardelle",
+    "description": "Ein kleiner silberner Fisch, der im Ozean zu finden ist."
+  },
+  "130": {
+    "displayName": "Thunfisch",
+    "description": "Ein großer Fisch, der im Ozean lebt."
+  },
+  "131": {
+    "displayName": "Sardine",
+    "description": "Ein gewöhnlicher Ozeanfisch."
+  },
+  "132": {
+    "displayName": "Brasse",
+    "description": "Ein relativ gewöhnlicher Flussfisch, der nachtaktiv ist."
+  },
+  "136": {
+    "displayName": "Forellenbarsch",
+    "description": "Ein beliebter Fisch, der in Seen lebt."
+  },
+  "137": {
+    "displayName": "Schwarzbarsch",
+    "description": "Ein Süßwasserfisch, der sehr empfindlich gegenüber Umweltverschmutzung ist."
+  },
+  "138": {
+    "displayName": "Regenbogenforelle",
+    "description": "Eine Süßwasserforelle mit farbigen Flecken."
+  },
+  "139": {
+    "displayName": "Lachs",
+    "description": "Schwimmt flussaufwärts, um seine Eier zu legen."
+  },
+  "140": {
+    "displayName": "Glasaugenbarsch",
+    "description": "Ein Süßwasserfisch, der in der Nacht gefangen werden kann."
+  },
+  "141": {
+    "displayName": "Barsch",
+    "description": "Ein Süßwasserfisch des Winters."
+  },
+  "142": {
+    "displayName": "Karpfen",
+    "description": "Ein gewöhnlicher Teichfisch."
+  },
+  "143": {
+    "displayName": "Katzenfisch",
+    "description": "Ein ungewöhnlicher Fisch, der in Strömen angetroffen wird."
+  },
+  "144": {
+    "displayName": "Hecht",
+    "description": "Ein Süßwasserfisch, der schwer zu fangen ist."
+  },
+  "145": {
+    "displayName": "Gotteslachs",
+    "description": "Ein gewöhnlicher Flussfisch."
+  },
+  "146": {
+    "displayName": "Rotbarbe",
+    "description": "Vor langer Zeit wurden sie als Haustiere gehalten."
+  },
+  "147": {
+    "displayName": "Hering",
+    "description": "Ein gewöhnlicher Ozeanfisch."
+  },
+  "148": {
+    "displayName": "Aal",
+    "description": "Ein langer, schlüpfriger Fisch."
+  },
+  "149": {
+    "displayName": "Oktopus",
+    "description": "Eine mysteriöse und intelligente Kreatur."
+  },
+  "150": {
+    "displayName": "Riffbarsch",
+    "description": "Ein beliebter Fisch mit einer schönen roten Farbe."
+  },
+  "151": {
+    "displayName": "Tintenfisch",
+    "description": "Eine Tiefseekreatur, die zu enormen Größen heranwachsen kann."
+  },
+  "152": {
+    "displayName": "Seetang",
+    "description": "Kann zum Kochen verwendet werden."
+  },
+  "153": {
+    "displayName": "Grünalge",
+    "description": "Ist ziemlich schleimig."
+  },
+  "154": {
+    "displayName": "Seegurke",
+    "description": "Eine schlüpfrige, schleimige Kreatur, die am Grund des Ozeans gefunden werden kann."
+  },
+  "155": {
+    "displayName": "Super-Seegurke",
+    "description": "Eine seltene violette Variante der Seegurke."
+  },
+  "156": {
+    "displayName": "Indischer Glaswels",
+    "description": "Ein bleicher, blinder Fisch, der in Untergrundseen gefunden werden kann."
+  },
+  "157": {
+    "displayName": "Weißalge",
+    "description": "Sie sind super schleimig."
+  },
+  "158": {
+    "displayName": "Steinfisch",
+    "description": "Ein bizarrer Fisch, der wie ein Ziegel geformt ist."
+  },
+  "159": {
+    "displayName": "Purpurfisch",
+    "description": "Lebt in den Tiefen des Ozeans, laicht aber bevorzugt im warmen Sommerwasser."
+  },
+  "160": {
+    "displayName": "Anglerfisch",
+    "description": "Nutzt eine biolumineszente Rute, um Beute anzulocken."
+  },
+  "161": {
+    "displayName": "Eis-Pip",
+    "description": "Ein seltener Fisch, der unter extrem kalten Bedingungen gedeiht."
+  },
+  "162": {
+    "displayName": "Lava-Aal",
+    "description": "Kann irgendwie in heißen Lavabecken überleben."
+  },
+  "163": {
+    "displayName": "Legende",
+    "description": "Der König aller Fische! Man sagte, er würde nie gefangen werden."
+  },
+  "164": {
+    "displayName": "Sandfisch",
+    "description": "Er versucht, sich mit seiner Tarnung zu verstecken."
+  },
+  "165": {
+    "displayName": "Skorpionkarpfen",
+    "description": "Wie ein normaler Karpfen, nur mit einem scharfen Stachel."
+  },
+  "166": {
+    "displayName": "Schatzkiste",
+    "description": "Wow, sie ist voller Schätze! Die bringt sicher einen guten Preis."
+  },
+  "167": {
+    "displayName": "Joja-Cola",
+    "description": "Das Aushängeschild des Joja-Konzerns."
+  },
+  "168": {
+    "displayName": "Müll",
+    "description": "Einfach nur Abfall."
+  },
+  "169": {
+    "displayName": "Treibholz",
+    "description": "Ein Stück Holz aus dem Meer."
+  },
+  "170": {
+    "displayName": "Zerbrochene Brille",
+    "description": "Sieht so aus, als hätte jemand seine Brille verloren. Komplett kaputt."
+  },
+  "171": {
+    "displayName": "Zerbrochene CD",
+    "description": "Eine JojaNet 2.0 Test-CD. Sie müssen Milliarden von diesen Teilen hergestellt haben."
+  },
+  "172": {
+    "displayName": "Durchweichte Zeitung",
+    "description": "Das ist Müll."
+  },
+  "176": {
+    "displayName": "Ei",
+    "description": "Ein normales, weißes Hühnerei."
+  },
+  "174": {
+    "displayName": "Großes Ei",
+    "description": "Ein ungewöhnlich großes, weißes Ei!"
+  },
+  "178": {
+    "displayName": "Heu",
+    "description": "Getrocknetes Gras, das als Tierfutter benutzt wird."
+  },
+  "180": {
+    "displayName": "Ei",
+    "description": "Ein normales, braunes Hühnerei."
+  },
+  "182": {
+    "displayName": "Großes Ei",
+    "description": "Ein ungewöhnlich großes, braunes Ei!"
+  },
+  "184": {
+    "displayName": "Milch",
+    "description": "Ein Krug voll Kuhmilch."
+  },
+  "186": {
+    "displayName": "Große Milch",
+    "description": "Ein großer Krug voll Kuhmilch."
+  },
+  "188": {
+    "displayName": "Grüne Bohne",
+    "description": "Eine saftige, kleine Bohne mit einem frischen Knacken."
+  },
+  "190": {
+    "displayName": "Blumenkohl",
+    "description": "Wertvoll, wächst aber langsam. Trotz seiner blassen Farbe sind seine Kohlröschen mit Nährstoffen gefüllt."
+  },
+  "191": {
+    "displayName": "Verzierte Halskette",
+    "description": "Eine  ausgefallene Halskette im Wasser außerhalb des Badehauses. Sie ist noch nass..."
+  },
+  "192": {
+    "displayName": "Kartoffel",
+    "description": "Eine überregional angebaute Knolle."
+  },
+  "194": {
+    "displayName": "Spiegelei",
+    "description": "Leicht angebraten."
+  },
+  "195": {
+    "displayName": "Omelett",
+    "description": "Es ist super luftig."
+  },
+  "196": {
+    "displayName": "Salat",
+    "description": "Ein gesunder Gartensalat."
+  },
+  "197": {
+    "displayName": "Überbackener Blumenkohl",
+    "description": "Riecht großartig!"
+  },
+  "198": {
+    "displayName": "Gebackener Fisch",
+    "description": "Gebackener Fisch auf einem Kräuterbett."
+  },
+  "199": {
+    "displayName": "Pastinakensuppe",
+    "description": "Sie ist herzhaft und frisch."
+  },
+  "200": {
+    "displayName": "Gemüseeintopf",
+    "description": "Sehr nahrhaft."
+  },
+  "201": {
+    "displayName": "Volles Frühstück",
+    "description": "Du wirst danach die Welt erobern können!"
+  },
+  "202": {
+    "displayName": "Gebratener Tintenfisch",
+    "description": "Er ist so zäh."
+  },
+  "203": {
+    "displayName": "Komisches Brötchen",
+    "description": "Was wohl darin ist?"
+  },
+  "204": {
+    "displayName": "Glücksmahlzeit",
+    "description": "Eine besondere kleine Mahlzeit."
+  },
+  "205": {
+    "displayName": "Gebratene Pilze",
+    "description": "Erdig und aromatisch."
+  },
+  "206": {
+    "displayName": "Pizza",
+    "description": "Wegen der richtigen Gründe beliebt."
+  },
+  "207": {
+    "displayName": "Bohneneintopf",
+    "description": "Ist ganz schön gesund."
+  },
+  "208": {
+    "displayName": "Glasierte Süßkartoffeln",
+    "description": "Süß und sättigend... Der Zucker gibt dem Ganzen einen Hauch von Karamell."
+  },
+  "209": {
+    "displayName": "Karpfen-Überraschung",
+    "description": "Mild und ölig."
+  },
+  "210": {
+    "displayName": "Kartoffelpuffer",
+    "description": "Knusprig und goldbraun!"
+  },
+  "211": {
+    "displayName": "Pfannkuchen",
+    "description": "Ein Stapel luftig weicher Pfannkuchen."
+  },
+  "212": {
+    "displayName": "Lachs-Mahlzeit",
+    "description": "Der Spritzer Zitrone ist der Clou dabei."
+  },
+  "213": {
+    "displayName": "Fisch-Taco",
+    "description": "Riecht lecker."
+  },
+  "214": {
+    "displayName": "Knuspriger Barsch",
+    "description": "Wow, die Panade ist perfekt."
+  },
+  "215": {
+    "displayName": "Paprika-Popper",
+    "description": "Würzige, panierte Paprika mit Käse gefüllt."
+  },
+  "216": {
+    "displayName": "Brot",
+    "description": "Ein knuspriges Baguette."
+  },
+  "218": {
+    "displayName": "Tom Kha-Suppe",
+    "description": "Die verschiedenen Aromen sind unglaublich!"
+  },
+  "219": {
+    "displayName": "Forellensuppe",
+    "description": "Ziemlich salzig."
+  },
+  "220": {
+    "displayName": "Schokoladentorte",
+    "description": "Mächtig und saftig, mit einer dicken Karamellglasur."
+  },
+  "221": {
+    "displayName": "Pinke Torte",
+    "description": "Kleine herzförmige Süßigkeiten sind darauf verstreut."
+  },
+  "222": {
+    "displayName": "Rhabarberkuchen",
+    "description": "Mmmh, herb und süß!"
+  },
+  "223": {
+    "displayName": "Kekse",
+    "description": "Sehr süß und knusprig."
+  },
+  "224": {
+    "displayName": "Spaghetti",
+    "description": "Ein Klassiker."
+  },
+  "225": {
+    "displayName": "Gebratener Aal",
+    "description": "Fettig, aber schmackhaft."
+  },
+  "226": {
+    "displayName": "Würziger Aal",
+    "description": "Er ist richtig scharf! Sei vorsichtig."
+  },
+  "227": {
+    "displayName": "Sashimi",
+    "description": "Roher Fisch in dünne Scheiben geschnitten."
+  },
+  "228": {
+    "displayName": "Maki-Rolle",
+    "description": "Fisch und Reis, in Seetang gewickelt."
+  },
+  "229": {
+    "displayName": "Tortilla",
+    "description": "Kann als Hülle für Essen genutzt oder direkt gegessen werden."
+  },
+  "230": {
+    "displayName": "Rote Platte",
+    "description": "Voller Antioxidantien."
+  },
+  "231": {
+    "displayName": "Auberginen-Parmesan",
+    "description": "Würzig, käsig und wundervoll."
+  },
+  "232": {
+    "displayName": "Milchreis",
+    "description": "Cremig, süß und immer wieder eine Freude."
+  },
+  "233": {
+    "displayName": "Eis",
+    "description": "Es gibt wohl kaum jemanden, der das nicht mag."
+  },
+  "234": {
+    "displayName": "Blaubeertörtchen",
+    "description": "Fein und erfrischend."
+  },
+  "235": {
+    "displayName": "Herbstfülle",
+    "description": "Der Geschmack des Herbstes."
+  },
+  "236": {
+    "displayName": "Kürbissuppe",
+    "description": "Beliebt im Herbst."
+  },
+  "237": {
+    "displayName": "Super-Mahlzeit",
+    "description": "Eine perfekte energiespendende Mahlzeit."
+  },
+  "238": {
+    "displayName": "Preiselbeersoße",
+    "description": "Ein festlicher Leckerbissen."
+  },
+  "239": {
+    "displayName": "Füllung",
+    "description": "Ahh... der Geruch von warmem Brot und Salbei."
+  },
+  "240": {
+    "displayName": "Bauernmahlzeit",
+    "description": "Um wieder zu Kräften zu kommen."
+  },
+  "241": {
+    "displayName": "Überlebensburger",
+    "description": "Ein praktischer Snack für Erkunder."
+  },
+  "242": {
+    "displayName": "Matrosenteller",
+    "description": "Das wird dich in der kalten Meeresluft warm halten."
+  },
+  "243": {
+    "displayName": "Bergarbeiter-Leckerbissen",
+    "description": "Das sollte deine Energiereserven gefüllt halten."
+  },
+  "244": {
+    "displayName": "Wurzelplatte",
+    "description": "Danach willst du definitiv noch mehr buddeln."
+  },
+  "245": {
+    "displayName": "Zucker",
+    "description": "Verleiht Süßigkeiten und Backwaren ihre Süße. Zu viel davon kann ungesund sein."
+  },
+  "246": {
+    "displayName": "Weizenmehl",
+    "description": "Eine beliebte Kochzutat, die aus zermahlenen Weizenkörnern hergestellt wird."
+  },
+  "247": {
+    "displayName": "Öl",
+    "description": "Allzweck-Kochöl."
+  },
+  "248": {
+    "displayName": "Knoblauch",
+    "description": "Verleiht Gerichten eine schmackhafte Note. Hochwertiger Knoblauch kann ziemlich scharf sein."
+  },
+  "250": {
+    "displayName": "Grünkohl",
+    "description": "Die gekräuselten Blätter machen sich gut in Suppen und Gemüsepfannen."
+  },
+  "251": {
+    "displayName": "Teebäumchen",
+    "description": "Braucht 20 Tage, um zu reifen. Produziert Teeblätter, während der letzten Woche jeder Jahreszeit, außer im Winter. Muss nicht bewässert werden!"
+  },
+  "252": {
+    "displayName": "Rhabarber",
+    "description": "Die Stängel sind sehr sauer, geben aber gesüßt einen idealen Nachtisch ab."
+  },
+  "253": {
+    "displayName": "Dreifacher Espresso",
+    "description": "Er ist stärker als normaler Kaffee!"
+  },
+  "254": {
+    "displayName": "Melone",
+    "description": "Ein kühler, süßer Sommerleckerbissen."
+  },
+  "256": {
+    "displayName": "Tomate",
+    "description": "Saftig und ein wenig würzig mit einer Menge kulinarischer Anwendungsmöglichkeiten."
+  },
+  "257": {
+    "displayName": "Morchel",
+    "description": "Begehrt für ihren einzigartigen, nussigen Geschmack."
+  },
+  "258": {
+    "displayName": "Blaubeere",
+    "description": "Eine beliebte Beere, die angeblich viele Vorteile für das gesunde Leben hat. Die blaue Haut hat die höchste Nährstoffkonzentration."
+  },
+  "259": {
+    "displayName": "Straußfarn",
+    "description": "Die jungen Sprossen sind eine essbare Spezialität."
+  },
+  "260": {
+    "displayName": "Peperoni",
+    "description": "Feurig scharf mit einem Hauch von Süße."
+  },
+  "261": {
+    "displayName": "Teleport-Totem: Wüste",
+    "description": "Teleportiere direkt zur Calico Wüste. Wird bei Benutzung verbraucht."
+  },
+  "262": {
+    "displayName": "Weizen",
+    "description": "Eine der meistangebauten Getreidesorten. Bietet großartiges Mehl für Brote oder Kuchen."
+  },
+  "264": {
+    "displayName": "Radieschen",
+    "description": "Ein knuspriges und erfrischendes Wurzelgemüse mit einem Hauch von Pfeffer, wenn es roh gegessen wird."
+  },
+  "266": {
+    "displayName": "Rotkohl",
+    "description": "Oft in Salaten verwendet. Die Farbe kann von violett zu blau zu grüngelb gehen, abhängig von den Bodenbedingungen."
+  },
+  "268": {
+    "displayName": "Sternfrucht",
+    "description": "Eine extrem saftige Frucht, die in heißem, feuchtem Klima wächst. Leicht süß mit einem sauren Unterton."
+  },
+  "270": {
+    "displayName": "Mais",
+    "description": "Eines der beliebtesten Getreide. Die süßen, frischen Kolben sind ein Sommerfavorit."
+  },
+  "271": {
+    "displayName": "Ungemahlener Reis",
+    "description": "Reis in seiner rohesten Form. Führen Sie dies durch eine Mühle, um den Wert zu erhöhen."
+  },
+  "272": {
+    "displayName": "Aubergine",
+    "description": "Ein saftiger und gesunder Verwandter der Tomate. Gebraten oder geschmort besonders lecker."
+  },
+  "273": {
+    "displayName": "Reisspross",
+    "description": "Pflanze sie im Frühling. Wächst in 8 Tagen heran. Wächst schneller, wenn es in der Nähe eines Gewässers gepflanzt wird. Ernte ihn mit einer Sense."
+  },
+  "274": {
+    "displayName": "Artischocke",
+    "description": "Die Knospe einer Distelpflanze. Die stacheligen Außenblätter verstecken das fleischige, füllende Innere."
+  },
+  "275": {
+    "displayName": "Artefaktfund",
+    "description": "Ein Schmied kann dies für dich öffnen. Diese Funde enthalten oft alte Relikte und Kuriositäten."
+  },
+  "276": {
+    "displayName": "Kürbis",
+    "description": "Ein Renner im Herbst, angebaut wegen seiner knusprigen Samen und seines fein schmeckenden Fleisches. Die ausgehöhlten Überreste können zur festlichen Dekoration geschnitzt werden."
+  },
+  "277": {
+    "displayName": "Verwelkter Blumenstrauß",
+    "description": "Ein Geschenk, das zeigt, dass Sie aufhören wollen, sich mit jemandem zu verabreden."
+  },
+  "278": {
+    "displayName": "Senfkohl",
+    "description": "Das blättrige Grünzeugs und die faserigen Stängel sind gesund und lecker."
+  },
+  "279": {
+    "displayName": "Magischer Bonbon",
+    "description": "Ein seltenes und kraftvolles Bonbon, das mit der Essenz des prismatischen Splitters angereichert ist."
+  },
+  "280": {
+    "displayName": "Süßkartoffel",
+    "description": "Eine stärkehaltige Knolle mit großer kulinarischer Vielfalt."
+  },
+  "281": {
+    "displayName": "Pfifferling",
+    "description": "Ein leckerer Pilz mit fruchtigem Duft und leicht pfeffrigem Geschmack."
+  },
+  "282": {
+    "displayName": "Preiselbeere",
+    "description": "Diese säuerlichen roten Beeren sind ein traditioneller Wintergenuss."
+  },
+  "283": {
+    "displayName": "Stechpalme",
+    "description": "Die Blätter und grellroten Beeren sind eine beliebte Winterdekoration."
+  },
+  "284": {
+    "displayName": "Rübe",
+    "description": "Ein süßes und erdiges Wurzelgemüse. Als Bonus kann man aus den Blättern einen großartigen Salat machen."
+  },
+  "286": {
+    "displayName": "Kirschbombe",
+    "description": "Löst eine kleine Explosion aus. Abstand halten!"
+  },
+  "287": {
+    "displayName": "Bombe",
+    "description": "Löst eine Explosion aus. Pass auf!"
+  },
+  "288": {
+    "displayName": "Mega-Bombe",
+    "description": "Löst eine mächtige Explosion aus. Nur unter extremer Vorsicht benutzen."
+  },
+  "290": {
+    "displayName": "Iron Stone",
+    "description": "Break apart to obtain iron ore."
+  },
+  "293": {
+    "displayName": "Ziegelboden",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu dekorieren."
+  },
+  "294": {
+    "displayName": "Zweig",
+    "description": "A broken branch. Chop with an axe to obtain wood."
+  },
+  "295": {
+    "displayName": "Zweig",
+    "description": "A broken branch. Chop with an axe to obtain wood."
+  },
+  "296": {
+    "displayName": "Lachsbeere",
+    "description": "Eine Frühlingsbeere mit dem Geschmack des Waldes."
+  },
+  "297": {
+    "displayName": "Grasbündel",
+    "description": "Pflanze es auf deinem Hof, um neues Gras wachsen zu lassen."
+  },
+  "298": {
+    "displayName": "Hartholzzaun",
+    "description": "Der stabilste aller Zäune."
+  },
+  "299": {
+    "displayName": "Amarant-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 7 Tagen. Ernte ihn mit einer Sense."
+  },
+  "300": {
+    "displayName": "Amarant",
+    "description": "Ein violettes Korn, das von einer alten Zivilisation angebaut wurde."
+  },
+  "301": {
+    "displayName": "Weintrauben-Setzling",
+    "description": "Pflanze ihn im Herbst. Wächst in 10 Tagen, kann aber danach mehrmals geerntet werden. Wächst an einem Rankgerüst."
+  },
+  "302": {
+    "displayName": "Hopfen-Setzling",
+    "description": "Pflanze ihn im Sommer. Wächst in 11 Tagen, kann aber danach mehrmals geerntet werden. Wächst an einem Rankgerüst."
+  },
+  "303": {
+    "displayName": "Helles Bier",
+    "description": "In Maßen genießen."
+  },
+  "304": {
+    "displayName": "Hopfen",
+    "description": "Eine bittere, würzige Blume, die Bier seinen Geschmack verleiht."
+  },
+  "305": {
+    "displayName": "Schattenei",
+    "description": "Ein tiefschwarzes Ei mit roten Flecken. Es fühlt sich warm an."
+  },
+  "306": {
+    "displayName": "Mayonnaise",
+    "description": "Sieht streichbar aus."
+  },
+  "307": {
+    "displayName": "Enten-Mayonnaise",
+    "description": "Eine dicke, gelbe Mayonnaise."
+  },
+  "308": {
+    "displayName": "Schattenmayonnaise",
+    "description": "Eine zähe schwarze Paste, die nach verbrannten Haaren riecht."
+  },
+  "309": {
+    "displayName": "Eichel",
+    "description": "Setze sie auf deinem Hof ein, um eine Eiche zu pflanzen."
+  },
+  "310": {
+    "displayName": "Ahornsamen",
+    "description": "Setze ihn auf deinem Hof ein, um einen Ahornbaum zu pflanzen."
+  },
+  "311": {
+    "displayName": "Kiefernzapfen",
+    "description": "Setze ihn auf deinem Hof ein, um eine Kiefer anzupflanzen."
+  },
+  "313": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "314": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "315": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "316": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "317": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "318": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "319": {
+    "displayName": "Ice Crystal",
+    "description": "Might contain refined quartz."
+  },
+  "320": {
+    "displayName": "Ice Crystal",
+    "description": "Might contain refined quartz."
+  },
+  "321": {
+    "displayName": "Ice Crystal",
+    "description": "Might contain refined quartz."
+  },
+  "322": {
+    "displayName": "Holzzaun",
+    "description": "Hält Tiere und Gras im Griff!"
+  },
+  "323": {
+    "displayName": "Steinzaun",
+    "description": "Hält länger als ein Holzzaun."
+  },
+  "324": {
+    "displayName": "Eisenzaun",
+    "description": "Hält länger als ein Steinzaun."
+  },
+  "325": {
+    "displayName": "Tor",
+    "description": "Damit du durch einen Zaun hindurchgehen kannst."
+  },
+  "326": {
+    "displayName": "Zwergischer Übersetzungsleitfaden",
+    "description": "Bringt dir Zwergisch bei."
+  },
+  "328": {
+    "displayName": "Holzboden",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu dekorieren."
+  },
+  "329": {
+    "displayName": "Steinboden",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "330": {
+    "displayName": "Lehm",
+    "description": "Wird in der Herstellung und Konstruktion benutzt."
+  },
+  "331": {
+    "displayName": "Verwitterter Boden",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "333": {
+    "displayName": "Kristallboden",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "334": {
+    "displayName": "Kupferbarren",
+    "description": "Ein Barren aus purem Kupfer."
+  },
+  "335": {
+    "displayName": "Eisenbarren",
+    "description": "Ein Barren aus purem Eisen."
+  },
+  "336": {
+    "displayName": "Goldbarren",
+    "description": "Ein Barren aus purem Gold."
+  },
+  "337": {
+    "displayName": "Iridiumbarren",
+    "description": "Ein Barren aus purem Iridium."
+  },
+  "338": {
+    "displayName": "Verfeinerter Quarz",
+    "description": "Eine etwas reinere Form des Quarz."
+  },
+  "340": {
+    "displayName": "Honig",
+    "description": "Ein süßer Sirup, der von Bienen produziert wird."
+  },
+  "341": {
+    "displayName": "Teegeschirr",
+    "description": "Feines Porzellan."
+  },
+  "342": {
+    "displayName": "Eingelegtes",
+    "description": "Ein Glas selbst eingelegtes Gemüse."
+  },
+  "343": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone."
+  },
+  "344": {
+    "displayName": "Gelee",
+    "description": "Wabblig."
+  },
+  "346": {
+    "displayName": "Bier",
+    "description": "In Maßen genießen."
+  },
+  "347": {
+    "displayName": "Seltene Saat",
+    "description": "Im Herbst aussähen. Braucht die gesamte Jahreszeit, um zu wachsen."
+  },
+  "348": {
+    "displayName": "Wein",
+    "description": "In Maßen genießen."
+  },
+  "349": {
+    "displayName": "Energie-Tonikum",
+    "description": "Stellt eine Menge Energie wieder her."
+  },
+  "350": {
+    "displayName": "Saft",
+    "description": "Ein süßes, nahrhaftes Getränk."
+  },
+  "351": {
+    "displayName": "Muskelbalsam",
+    "description": "Wenn du es etwas übertrieben hast, kannst du hiermit \"Erschöpfung\" heilen."
+  },
+  "368": {
+    "displayName": "Standarddünger",
+    "description": "Verbessert die Qualität des Bodens ein wenig, was die Chance auf höherwertige Produkte steigert. In das bestellte Feld mischen."
+  },
+  "369": {
+    "displayName": "Qualitätsdünger",
+    "description": "Verbessert die Qualität des Bodens, was die Chance auf höherwertige Produkte steigert. In das bestellte Feld mischen."
+  },
+  "370": {
+    "displayName": "Hydrogel (Standard)",
+    "description": "Diese Erde besitzt die Eigenschaft, eventuell über Nacht bewässert zu bleiben. In das bestellte Feld mischen."
+  },
+  "371": {
+    "displayName": "Hydrogel (Qualität)",
+    "description": "Diese Erde besitzt die Eigenschaft, wahrscheinlich über Nacht bewässert zu bleiben. In das bestellte Feld mischen."
+  },
+  "372": {
+    "displayName": "Venusmuschel",
+    "description": "Einst hat hier jemand gelebt."
+  },
+  "373": {
+    "displayName": "Goldener Kürbis",
+    "description": "Er ist wertvoll, hat aber sonst keinen Nutzen."
+  },
+  "378": {
+    "displayName": "Kupfererz",
+    "description": "Ein gewöhnliches Erz, das zu Barren geschmolzen werden kann."
+  },
+  "380": {
+    "displayName": "Eisenerz",
+    "description": "Ein recht gewöhnliches Erz, das zu Barren geschmolzen werden kann."
+  },
+  "382": {
+    "displayName": "Kohle",
+    "description": "Ein brennbarer Stein, der nützlich beim Schmelzen und der Herstellung von Gegenständen ist."
+  },
+  "384": {
+    "displayName": "Golderz",
+    "description": "Ein wertvolles Erz, das zu Barren geschmolzen werden kann."
+  },
+  "386": {
+    "displayName": "Iridiumerz",
+    "description": "Ein exotisches Erz mit vielen merkwürdigen Eigenschaften. Kann zu Barren geschmolzen werden."
+  },
+  "388": {
+    "displayName": "Holz",
+    "description": "Ein stabiles, pflanzliches Material mit vielseitigen Anwendungsmöglichkeiten."
+  },
+  "390": {
+    "displayName": "Stein",
+    "description": "Ein gewöhnliches Material mit vielen Anwendungsmöglichkeiten beim Bauen und Herstellen."
+  },
+  "392": {
+    "displayName": "Nautilusmuschel",
+    "description": "Eine sehr alte Muschelschale."
+  },
+  "393": {
+    "displayName": "Koralle",
+    "description": "Eine Kolonie aus winzigen Kreaturen, die in ihrem Zusammenschluss wunderschöne Strukturen formen."
+  },
+  "394": {
+    "displayName": "Regenbogenmuschel",
+    "description": "Eine wunderschöne Muschelschale."
+  },
+  "395": {
+    "displayName": "Kaffee",
+    "description": "Riecht lecker. Gibt dir sicher einen Schub."
+  },
+  "396": {
+    "displayName": "Gewürzbeere",
+    "description": "Füllt die Luft mit einem penetranten Aroma."
+  },
+  "397": {
+    "displayName": "Seeigel",
+    "description": "Eine langsame, stachlige Kreatur, die von manchen als Delikatesse angesehen wird."
+  },
+  "398": {
+    "displayName": "Weintraube",
+    "description": "Eine süße Ansammlung von Früchten."
+  },
+  "399": {
+    "displayName": "Frühlingszwiebel",
+    "description": "Wachsen im Frühling in der Wildnis."
+  },
+  "400": {
+    "displayName": "Erdbeere",
+    "description": "Süß, saftig und mit einer ansprechenden roten Farbe. Sehr beliebt."
+  },
+  "401": {
+    "displayName": "Strohboden",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "402": {
+    "displayName": "Edelwicke",
+    "description": "Eine wohlriechende Sommerblume."
+  },
+  "403": {
+    "displayName": "Müsliriegel",
+    "description": "Ein schneller Snack, um den hungrigen Sammler voranzutreiben."
+  },
+  "404": {
+    "displayName": "Gewöhnlicher Pilz",
+    "description": "Leicht nussig und von guter Konsistenz."
+  },
+  "405": {
+    "displayName": "Holzpfad",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "406": {
+    "displayName": "Wildpflaume",
+    "description": "Säuerlich und saftig, mit einem kräftigen Aroma."
+  },
+  "407": {
+    "displayName": "Schotterpfad",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "408": {
+    "displayName": "Haselnuss",
+    "description": "Das ist eine große Haselnuss!"
+  },
+  "409": {
+    "displayName": "Kristallpfad",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "410": {
+    "displayName": "Brombeere",
+    "description": "Ein frühherbstlicher Leckerbissen."
+  },
+  "411": {
+    "displayName": "Pflastersteinpfad",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "412": {
+    "displayName": "Winterwurzel",
+    "description": "Eine stärkehaltige Knolle."
+  },
+  "413": {
+    "displayName": "Blaues Schleim-Ei",
+    "description": "Kann in einem Schleim-Brutkasten ausgebrütet werden."
+  },
+  "414": {
+    "displayName": "Kristallfrucht",
+    "description": "Eine zarte Frucht, die im Schnee auftaucht."
+  },
+  "415": {
+    "displayName": "Trittsteinpfad",
+    "description": "Lege ihn auf den Boden, um Wege zu schaffen oder den Boden zu verschönern."
+  },
+  "416": {
+    "displayName": "Schnee-Süßkartoffel",
+    "description": "Diese kleine Süßkartoffel hat sich unter dem Schnee versteckt."
+  },
+  "417": {
+    "displayName": "Süße Edelsteinbeere",
+    "description": "Mit Abstand das Süßeste, das du je gerochen hast."
+  },
+  "418": {
+    "displayName": "Krokus",
+    "description": "Eine Blume, die im Winter blühen kann."
+  },
+  "419": {
+    "displayName": "Essig",
+    "description": "Eine gereifte und fermentierte Flüssigkeit, die in vielen Rezepten Anwendung findet."
+  },
+  "420": {
+    "displayName": "Roter Pilz",
+    "description": "Ein gepunkteter Pilz, der manchmal in Höhlen zu finden ist."
+  },
+  "421": {
+    "displayName": "Sonnenblume",
+    "description": "Ein häufiger Irrglaube ist, dass die Blume sich immer der Sonne zuwendet."
+  },
+  "422": {
+    "displayName": "Violetter Pilz",
+    "description": "Ein seltener Pilz, der tief in den Höhlen zu finden ist."
+  },
+  "423": {
+    "displayName": "Reis",
+    "description": "Standardgetreide, das oft mit Gemüse serviert wird."
+  },
+  "424": {
+    "displayName": "Käse",
+    "description": "Absolut gewöhnlicher Käse."
+  },
+  "426": {
+    "displayName": "Ziegenkäse",
+    "description": "Weicher Käse, aus Ziegenmilch gemacht."
+  },
+  "428": {
+    "displayName": "Stoff",
+    "description": "Ein feiner Stoffballen."
+  },
+  "430": {
+    "displayName": "Trüffel",
+    "description": "Ein Gourmetpilz mit einem einzigartigen Geschmack."
+  },
+  "432": {
+    "displayName": "Trüffelöl",
+    "description": "Eine Gourmet-Kochzutat."
+  },
+  "433": {
+    "displayName": "Kaffeebohne",
+    "description": "Pflanze sie im Frühling oder Sommer, um eine Kaffeeplanze wachsen zu lassen. Lege fünf Bohnen in ein Fass, um Kaffee zu machen."
+  },
+  "434": {
+    "displayName": "Sternenfall-Frucht",
+    "description": "Eine mysteriöse Frucht, die diejenigen, die sie essen, stärker werden lässt. Der Geschmack ist wie ein Traum... Eine mächtige und persönliche Erfahrung, dennoch schwer, sie anderen zu beschreiben."
+  },
+  "436": {
+    "displayName": "Ziegenmilch",
+    "description": "Die Milch einer Ziege."
+  },
+  "437": {
+    "displayName": "Rotes Schleim-Ei",
+    "description": "Kann in einem Schleim-Brutkasten ausgebrütet werden."
+  },
+  "438": {
+    "displayName": "Gr. Ziegenmilch",
+    "description": "Eine Gallone cremiger Ziegenmilch."
+  },
+  "439": {
+    "displayName": "Violettes Schleim-Ei",
+    "description": "Kann in einem Schleim-Brutkasten ausgebrütet werden."
+  },
+  "440": {
+    "displayName": "Wolle",
+    "description": "Weiche, flauschige Wolle."
+  },
+  "441": {
+    "displayName": "Explosive Munition",
+    "description": "Feuere sie mit einer Schleuder ab."
+  },
+  "442": {
+    "displayName": "Entenei",
+    "description": "Ist immer noch warm."
+  },
+  "444": {
+    "displayName": "Entenfeder",
+    "description": "Schau dir die Farben an."
+  },
+  "446": {
+    "displayName": "Hasenpfote",
+    "description": "Manche sagen, sie bringe Glück."
+  },
+  "447": {
+    "displayName": "Gealterter Fischlaich",
+    "description": "Fischeier in Salz gereift, um den vollen Geschmack zu entfalten."
+  },
+  "449": {
+    "displayName": "Steinbasis",
+    "description": "Ein einfacher Block aus Stein."
+  },
+  "450": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone."
+  },
+  "452": {
+    "displayName": "Unkraut",
+    "description": "Ein Bündel alter, getrockneter Büsche. Might contain fibers or mixed seeds."
+  },
+  "454": {
+    "displayName": "Uralte Frucht",
+    "description": "Sie schlummert seit Äonen."
+  },
+  "456": {
+    "displayName": "Algensuppe",
+    "description": "Ein wenig schleimig."
+  },
+  "457": {
+    "displayName": "Bleiche Brühe",
+    "description": "Eine feine Brühe mit einem Hauch von Schwefel."
+  },
+  "458": {
+    "displayName": "Blumenstrauß",
+    "description": "Ein Geschenk, um dein romantisches Interesse zu zeigen."
+  },
+  "459": {
+    "displayName": "Met",
+    "description": "Gegärtes Getränk aus Honig. In Maßen trinken."
+  },
+  "460": {
+    "displayName": "Meerjungfrauen-Amulett",
+    "description": "Gib das der Person, die du heiraten willst."
+  },
+  "461": {
+    "displayName": "Dekorativer Topf",
+    "description": "Ein Nachbau eines antiken Topfes."
+  },
+  "463": {
+    "displayName": "Trommelblock",
+    "description": "Gibt das Geräusch einer Trommel ab, wenn du vorbeigehst."
+  },
+  "464": {
+    "displayName": "Flötenblock",
+    "description": "Gibt das Geräusch einer Flöte ab, wenn du vorbeigehst."
+  },
+  "465": {
+    "displayName": "Geschwind-Wachs",
+    "description": "Stimuliert die Blätterproduktion. Steigert die Wachstumsrate einer Pflanze garantiert um 10%. In das bestellte Feld mischen."
+  },
+  "466": {
+    "displayName": "Luxus-Geschwind-Wachs",
+    "description": "Stimuliert die Blätterproduktion. Steigert die Wachstumsrate einer Pflanze garantiert um 25%. In das bestellte Feld mischen."
+  },
+  "472": {
+    "displayName": "Pastinaken-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 4 Tagen heran."
+  },
+  "473": {
+    "displayName": "Bohnen-Setzling",
+    "description": "Pflanze ihn im Frühling. Wächst in 10 Tagen heran, kann aber danach mehrmals geerntet werden. Wächst an einem Rankgerüst."
+  },
+  "474": {
+    "displayName": "Blumenkohl-Saat",
+    "description": "Pflanze sie im Frühling. Braucht 12 Tage, um einen großen Blumenkohl zu produzieren."
+  },
+  "475": {
+    "displayName": "Kartoffel-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 6 Tagen heran, kann aber bei der Ernte mehrere Kartoffeln auf einmal bringen."
+  },
+  "476": {
+    "displayName": "Knoblauch-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 4 Tagen heran."
+  },
+  "477": {
+    "displayName": "Grünkohl-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 6 Tagen heran. Ernte ihn mit einer Sense."
+  },
+  "478": {
+    "displayName": "Rhabarber-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 13 Tagen heran."
+  },
+  "479": {
+    "displayName": "Melonen-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 12 Tagen heran."
+  },
+  "480": {
+    "displayName": "Tomaten-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 11 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "481": {
+    "displayName": "Blaubeeren-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 13 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "482": {
+    "displayName": "Peperoni-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 5 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "483": {
+    "displayName": "Weizen-Saat",
+    "description": "Pflanze sie im Sommer oder Herbst. Wächst in 4 Tagen heran. Ernte ihn mit einer Sense."
+  },
+  "484": {
+    "displayName": "Radieschen-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 6 Tagen heran."
+  },
+  "485": {
+    "displayName": "Rotkohl-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 9 Tagen heran."
+  },
+  "486": {
+    "displayName": "Sternfrucht-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 13 Tagen heran."
+  },
+  "487": {
+    "displayName": "Mais-Saat",
+    "description": "Pflanze sie im Sommer oder Herbst. Wächst in 14 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "488": {
+    "displayName": "Auberginen-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 5 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "489": {
+    "displayName": "Artischocken-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 8 Tagen heran."
+  },
+  "490": {
+    "displayName": "Kürbis-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 13 Tagen heran."
+  },
+  "491": {
+    "displayName": "Senfkohl-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 4 Tagen heran."
+  },
+  "492": {
+    "displayName": "Süßkartoffel-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 10 Tagen heran."
+  },
+  "493": {
+    "displayName": "Preiselbeer-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 7 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "494": {
+    "displayName": "Rote-Beete-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 6 Tagen heran."
+  },
+  "495": {
+    "displayName": "Frühlingssaat",
+    "description": "Eine Auswahl verschiedener wilder Frühlingssaat."
+  },
+  "496": {
+    "displayName": "Sommersaat",
+    "description": "Eine Auswahl verschiedener wilder Sommersaat."
+  },
+  "497": {
+    "displayName": "Herbstsaat",
+    "description": "Eine Auswahl verschiedener wilder Herbstsaat."
+  },
+  "498": {
+    "displayName": "Wintersaat",
+    "description": "Eine Auswahl verschiedener wilder Wintersaat."
+  },
+  "499": {
+    "displayName": "Uralte Samen",
+    "description": "Könnten die immer noch wachsen?"
+  },
+  "427": {
+    "displayName": "Tulpenzwiebel",
+    "description": "Pflanze sie im Frühling. Wächst in 6 Tagen zu einer farbenfrohen Blume heran. Ausgewählte Farben."
+  },
+  "429": {
+    "displayName": "Zierlauch-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 7 Tagen zu einer blauen, kugelförmigen Blume heran."
+  },
+  "453": {
+    "displayName": "Mohn-Saat",
+    "description": "Pflanze sie im Sommer. Produziert in 7 Tagen eine hellrote Blume."
+  },
+  "455": {
+    "displayName": "Sommerschmuck-Saat",
+    "description": "Pflanze sie im Sommer. Wächst in 8 Tagen zu einer lebendigen, tropischen Blume heran. Ausgewählte Farben."
+  },
+  "431": {
+    "displayName": "Sonnenblumen-Saat",
+    "description": "Pflanze sie im Sommer oder Herbst. Wächst in 8 Tagen zu einer großen Sonnenblume heran. Bringt bei der Ernte noch mehr Samen ein."
+  },
+  "425": {
+    "displayName": "Feen-Saat",
+    "description": "Pflanze sie im Herbst. Wächst in 12 Tagen zu einer mysteriösen Blume heran. Ausgewählte Farben."
+  },
+  "516": {
+    "displayName": "Kleiner Leuchtring",
+    "description": "Gibt ein kleines, konstantes Licht aus."
+  },
+  "517": {
+    "displayName": "Leuchtring",
+    "description": "Gibt konstant Licht aus."
+  },
+  "518": {
+    "displayName": "Kleiner Magnetring",
+    "description": "Erhöht deinen Radius zur Aufnahme von Gegenständen leicht."
+  },
+  "519": {
+    "displayName": "Magnetring",
+    "description": "Erhöht deinen Radius zur Aufnahme von Gegenständen."
+  },
+  "520": {
+    "displayName": "Schleim-Charmeurring",
+    "description": "Verhindert Schaden durch Schleime."
+  },
+  "521": {
+    "displayName": "Kriegerring",
+    "description": "Durchflutet den Träger gelegentlich mit \"Krieger-Energie\", nachdem ein Monster erlegt wurde."
+  },
+  "522": {
+    "displayName": "Vampirring",
+    "description": "Erhalte jedes Mal ein wenig Leben zurück, wenn du ein Monster erlegst."
+  },
+  "523": {
+    "displayName": "Barbarenring",
+    "description": "Erhalte einen Geschwindigkeitsschub, wenn du ein Monster erlegst."
+  },
+  "524": {
+    "displayName": "Ring von Yoba",
+    "description": "Schützt den Träger gelegentlich vor Schaden."
+  },
+  "525": {
+    "displayName": "Robuster Ring",
+    "description": "Halbiert die Dauer von negativen Statuseffekten."
+  },
+  "526": {
+    "displayName": "Ring des Diebes",
+    "description": "Monster haben eine größere Chance, Beute fallen zu lassen."
+  },
+  "527": {
+    "displayName": "Iridiumband",
+    "description": "Leuchtet, zieht Gegenstände an und erhöht den Angriffsschaden um 10%."
+  },
+  "528": {
+    "displayName": "Jukebox-Ring",
+    "description": "Spielt eine zufällige Auswahl der Musik, die du bereits gehört hast."
+  },
+  "529": {
+    "displayName": "Amethyst-Ring",
+    "description": "Erhöht Zurückstoßen um 10%."
+  },
+  "530": {
+    "displayName": "Topas-Ring",
+    "description": "Erhöht Waffengenauigkeit um 10%."
+  },
+  "531": {
+    "displayName": "Aquamarin-Ring",
+    "description": "Erhöht kritische Trefferchance um 10%."
+  },
+  "532": {
+    "displayName": "Jade-Ring",
+    "description": "Erhöht den Schaden kritischer Treffer um 10%."
+  },
+  "533": {
+    "displayName": "Smaragd-Ring",
+    "description": "Erhöht Waffengeschwindigkeit um 10%."
+  },
+  "534": {
+    "displayName": "Rubin-Ring",
+    "description": "Erhöht Angriff um 10%."
+  },
+  "535": {
+    "displayName": "Geode",
+    "description": "Ein Schmied kann sie dir aufbrechen."
+  },
+  "536": {
+    "displayName": "Gefrorene Geode",
+    "description": "Ein Schmied kann sie dir aufbrechen."
+  },
+  "537": {
+    "displayName": "Magma-Geode",
+    "description": "Ein Schmied kann sie dir aufbrechen."
+  },
+  "538": {
+    "displayName": "Alamit",
+    "description": "Die ausgeprägte Fluoreszenz macht diesen Stein zu einem Liebling unter Steinsammlern."
+  },
+  "539": {
+    "displayName": "Bixit",
+    "description": "Ein dunkles metallisches Mineral, das für seine kubische Struktur begehrt ist."
+  },
+  "540": {
+    "displayName": "Baryt",
+    "description": "Die besten Exemplare ähneln einer Wüstenrose."
+  },
+  "541": {
+    "displayName": "Aerinit",
+    "description": "Diese Kristalle sind erstaunlich leicht."
+  },
+  "542": {
+    "displayName": "Kalzit",
+    "description": "Dieser gelbe Kristall ist mit schimmernden Knoten übersät."
+  },
+  "543": {
+    "displayName": "Dolomit",
+    "description": "Taucht bei Korallenriffen in der Nähe von Unterwasservulkanen auf."
+  },
+  "544": {
+    "displayName": "Esperit",
+    "description": "Diese Kristalle leuchten hellgrün, wenn sie stimuliert werden."
+  },
+  "545": {
+    "displayName": "Fluorapatit",
+    "description": "Kleine Mengen können in menschlichen Zähnen gefunden werden."
+  },
+  "546": {
+    "displayName": "Geminit",
+    "description": "Tauchen in brillanten Anhäufungen auf."
+  },
+  "547": {
+    "displayName": "Helvit",
+    "description": "Wächst in dreieckigen Kolonnen."
+  },
+  "548": {
+    "displayName": "Jamborit",
+    "description": "Dieser Kristall ist so sehr komprimiert, dass er fast schon verschwommen aussieht."
+  },
+  "549": {
+    "displayName": "Jagoit",
+    "description": "Ein hohes Volumen an kleinen Kristallen lässt ihn stark glitzern."
+  },
+  "550": {
+    "displayName": "Kyanit",
+    "description": "Die geometrischen Seitenflächen sind so glatt wie Glas."
+  },
+  "551": {
+    "displayName": "Lunarit",
+    "description": "Die kraterübersäten weißen Kugeln formen ein enges Bündel."
+  },
+  "552": {
+    "displayName": "Malachit",
+    "description": "Ein beliebter Stein zur Dekoration, der in Skulpturen und grüner Farbe genutzt wird."
+  },
+  "553": {
+    "displayName": "Neptunit",
+    "description": "Ein tiefschwarzer Kristall, der ungewöhnlich reflektierend ist."
+  },
+  "554": {
+    "displayName": "Zitronenstein",
+    "description": "Manche meinen, dass die Puderform von diesem Kristall eine zwergische Delikatesse sei."
+  },
+  "555": {
+    "displayName": "Nekoit",
+    "description": "Die feinen Scherben formen eine winzige pinke Flur."
+  },
+  "556": {
+    "displayName": "Auripigment",
+    "description": "Trotz seiner hohen Giftigkeit wird dieses Mineral häufig in der Herstellung und Allgemeinmedizin verwendet."
+  },
+  "557": {
+    "displayName": "Versteinerter Schleim",
+    "description": "Dieser kleine Typ könnte 100.000 Jahre alt sein."
+  },
+  "558": {
+    "displayName": "Donner-Ei",
+    "description": "Den Legenden nach warfen wütende Donnergeister diese Steine gegeneinander."
+  },
+  "559": {
+    "displayName": "Pyrit",
+    "description": "Üblicherweise als \"Narrengold\" bekannt."
+  },
+  "560": {
+    "displayName": "Ozeanstein",
+    "description": "Eine alte Legende behauptet, dass diese Steine Mosaike alter Meerjungfrauen sind."
+  },
+  "561": {
+    "displayName": "Geisterkristall",
+    "description": "Der Stein strahlt eine Aura der Kälte aus."
+  },
+  "562": {
+    "displayName": "Tigerauge",
+    "description": "Ein Streifen von schimmerndem Gold gibt diesem Edelstein einen warmen Glanz."
+  },
+  "563": {
+    "displayName": "Jaspis",
+    "description": "Wenn er poliert wird, fängt dieser Stein an, anziehend zu leuchten. Jahrtausendelang ein wertvolles Gut für die Menschen."
+  },
+  "564": {
+    "displayName": "Opal",
+    "description": "Seine interne Struktur lässt ihn ein Regenbogenlicht reflektieren."
+  },
+  "565": {
+    "displayName": "Feuer-Opal",
+    "description": "Eine seltene Variante des Opals, die nach ihren roten Punkten benannt wurde."
+  },
+  "566": {
+    "displayName": "Coelestin",
+    "description": "Die Knochen früherer Lebensformen bestanden manchmal aus diesem Mineral."
+  },
+  "567": {
+    "displayName": "Marmor",
+    "description": "Ein beliebtes Material für Skulpturen und Konstruktion."
+  },
+  "568": {
+    "displayName": "Sandstein",
+    "description": "Ein gewöhnlicher Steintyp mit roten und braunen Streifenbildungen."
+  },
+  "569": {
+    "displayName": "Granit",
+    "description": "Ein gepunktetes Mineral, das häufig bei Bauten genutzt wird."
+  },
+  "570": {
+    "displayName": "Basalt",
+    "description": "Formt sich in der Nähe von sengend heißem Magma."
+  },
+  "571": {
+    "displayName": "Kalkstein",
+    "description": "Ein sehr gewöhnlicher Steintyp. Ist nicht besonders viel wert."
+  },
+  "572": {
+    "displayName": "Speckstein",
+    "description": "Wegen seiner relativ weichen Beschaffenheit wird dieser Stein gerne zum Schnitzen benutzt."
+  },
+  "573": {
+    "displayName": "Hämatit",
+    "description": "Ein auf Eisen basierendes Mineral mit interessanten magnetischen Eigenschaften."
+  },
+  "574": {
+    "displayName": "Schlammstein",
+    "description": "Ein fein gemaserter Stein aus altem Lehm oder Schlamm."
+  },
+  "575": {
+    "displayName": "Obsidian",
+    "description": "Ein vulkanisches Glas, das bei der schnellen Abkühlung von Lava entsteht."
+  },
+  "576": {
+    "displayName": "Schiefer",
+    "description": "Extrem wasserresistent, was es zu einem guten Material für Dächer macht."
+  },
+  "577": {
+    "displayName": "Feenstein",
+    "description": "Ein altes Bergarbeiterlied spricht davon, dass diese Steine aus den Knochen antiker Feen entstanden sind."
+  },
+  "578": {
+    "displayName": "Sternenscherben",
+    "description": "Niemand weiß, wie sie entstehen. Einige Wissenschaftler behaupten, dass ihre mikroskopische Struktur unnatürliche Gesetzmäßigkeiten aufweist."
+  },
+  "579": {
+    "displayName": "Prähistorische Schulterplatte",
+    "description": "Allgemein bekannt als \"Schulterblatt\"... Es ist unklar, zu welcher Spezies sie gehört."
+  },
+  "580": {
+    "displayName": "Prähistorisches Schienbein",
+    "description": "Ein dicker und stabiler Beinknochen."
+  },
+  "581": {
+    "displayName": "Prähistorischer Schädel",
+    "description": "Definitiv ein Säugetierschädel."
+  },
+  "582": {
+    "displayName": "Skeletthand",
+    "description": "Ein Wunder, dass diese alten, kleinen Stücke so lange überdauert haben."
+  },
+  "583": {
+    "displayName": "Prähistorische Rippe",
+    "description": "Kleine Furchenmarkierungen legen nahe, dass diese Rippen einst die Mahlzeit von jemandem oder etwas waren."
+  },
+  "584": {
+    "displayName": "Prähistorische Rückenwirbel",
+    "description": "Ein Teil der Wirbeln einer prähistorischen Kreatur."
+  },
+  "585": {
+    "displayName": "Skelett-Schwanz",
+    "description": "Ziemlich kurz für einen Schwanz."
+  },
+  "586": {
+    "displayName": "Nautilusfossil",
+    "description": "Muss wohl vor Jahrhunderten von einem uralten Korallenriff angespült worden sein."
+  },
+  "587": {
+    "displayName": "Amphibienfossil",
+    "description": "Die relativ kurzen Hinterbeine legen nahe, dass es sich um eine Art urzeitliche Kröte handelt."
+  },
+  "588": {
+    "displayName": "Palmenfossil",
+    "description": "Palmenfossile sind relativ gewöhnlich, aber das hier ist ein besonders gut erhaltenes Exemplar."
+  },
+  "589": {
+    "displayName": "Trilobit",
+    "description": "Ein lange ausgestorbener Verwandter der Krabbe."
+  },
+  "590": {
+    "displayName": "Artefakt-Ort",
+    "description": "Äh... wie ist das denn bitte in deine Tasche gelangt? Ape hat's wohl verbockt."
+  },
+  "591": {
+    "displayName": "Tulpe",
+    "description": "Die beliebteste Frühlingsblume. Hat einen sehr dezenten, süßen Geruch."
+  },
+  "593": {
+    "displayName": "Sommerschmuck",
+    "description": "Eine tropische Blüte, die in feuchter Sommerluft gedeiht. Hat ein süßes, durchdringendes Aroma."
+  },
+  "595": {
+    "displayName": "Feenrose",
+    "description": "Einer alten Legende nach lockt der süße Geruch dieser Blume Feen an."
+  },
+  "597": {
+    "displayName": "Blaue Jazz",
+    "description": "Die Blume wächst kugelförmig, um so viele Schmetterlinge wie möglich einzuladen."
+  },
+  "599": {
+    "displayName": "Sprinkler",
+    "description": "Bewässert jeden Morgen 4 Felder um sich herum."
+  },
+  "376": {
+    "displayName": "Mohn",
+    "description": "Zusätzlich zu seiner farbenfrohen Blume hat Mohn kulinarische und medizinische Anwendungsmöglichkeiten."
+  },
+  "604": {
+    "displayName": "Plumpudding",
+    "description": "Ein traditioneller Feiertagsleckerbissen."
+  },
+  "605": {
+    "displayName": "Artischockendip",
+    "description": "Kühl und erfrischend."
+  },
+  "606": {
+    "displayName": "Gemüsepfanne",
+    "description": "Gestifteltes Gemüse auf einem Reisbett."
+  },
+  "607": {
+    "displayName": "Geröstete Haselnüsse",
+    "description": "Der Röstprozess sorgt für einen tiefen Waldgeschmack."
+  },
+  "608": {
+    "displayName": "Kürbiskuchen",
+    "description": "Geschmeidige Kürbiscreme in einer flockigen Kruste."
+  },
+  "609": {
+    "displayName": "Radieschensalat",
+    "description": "Die Radieschen sind so knackig!"
+  },
+  "610": {
+    "displayName": "Obstsalat",
+    "description": "Eine leckere Kombination verschiedener Sommerfrüchte."
+  },
+  "611": {
+    "displayName": "Brombeer-Pastete",
+    "description": "Einfach unvergleichlich."
+  },
+  "612": {
+    "displayName": "Preiselbeer-Süßigkeit",
+    "description": "Süß genug, um die bittere Frucht zu überspielen."
+  },
+  "613": {
+    "displayName": "Apfel",
+    "description": "Eine knackige Frucht, um Saft und Most herzustellen."
+  },
+  "614": {
+    "displayName": "Grüner Tee",
+    "description": "Ein angenehmes, energetisierendes Getränk aus leicht verarbeiteten Teeblättern."
+  },
+  "618": {
+    "displayName": "Bruschetta",
+    "description": "Geröstete Tomaten auf einem knackigen Weißbrot."
+  },
+  "621": {
+    "displayName": "Qualitätssprinkler",
+    "description": "Bewässert jeden Morgen 8 Felder um sich herum."
+  },
+  "645": {
+    "displayName": "Iridium-Sprinkler",
+    "description": "Bewässert jeden Morgen 24 Felder um sich herum."
+  },
+  "648": {
+    "displayName": "Kohlsalat",
+    "description": "Leicht, frisch und sehr gesund."
+  },
+  "649": {
+    "displayName": "Straußfarn-Risotto",
+    "description": "Ein cremiges Reisgericht mit gedünstetem Straußfarn. Schmeckt ein wenig fade."
+  },
+  "651": {
+    "displayName": "Mohnmuffin",
+    "description": "Hat einen beruhigenden Effekt."
+  },
+  "628": {
+    "displayName": "Kirschen-Setzling",
+    "description": "Wächst in 28 Tagen zu einem reifen Kirschbaum heran. Trägt im Frühling Früchte. Wächst nur, wenn die 8 umliegenden \"Felder\" leer sind."
+  },
+  "629": {
+    "displayName": "Aprikosen-Setzling",
+    "description": "Wächst in 28 Tagen zu einem reifen Aprikosenbaum heran. Trägt im Frühling Früchte. Wächst nur, wenn die 8 umliegenden \"Felder\" leer sind."
+  },
+  "630": {
+    "displayName": "Orangen-Setzling",
+    "description": "Wächst in 28 Tagen zu einem reifen Orangenbaum heran. Trägt im Sommer Früchte. Wächst nur, wenn die 8 umliegenden \"Felder\" leer sind."
+  },
+  "631": {
+    "displayName": "Pfirsich-Setzling",
+    "description": "Wächst in 28 Tagen zu einem reifen Pfirsichbaum heran. Trägt im Sommer Früchte. Wächst nur, wenn die 8 umliegenden \"Felder\" leer sind."
+  },
+  "632": {
+    "displayName": "Granatapfel-Setzling",
+    "description": "Wächst in 28 Tagen zu einem reifen Granatapfelbaum heran. Trägt im Herbst Früchte. Wächst nur, wenn die 8 umliegenden \"Felder\" leer sind."
+  },
+  "633": {
+    "displayName": "Apfel-Setzling",
+    "description": "Wächst in 28 Tagen zu einem reifen Apfelbaum heran. Trägt im Herbst Früchte. Wächst nur, wenn die 8 umliegenden \"Felder\" leer sind."
+  },
+  "634": {
+    "displayName": "Aprikose",
+    "description": "Eine zarte kleine Frucht mit einem steinharten Kern."
+  },
+  "635": {
+    "displayName": "Orange",
+    "description": "Saftig und platzt nur so vor süßen Sommeraromen."
+  },
+  "636": {
+    "displayName": "Pfirsich",
+    "description": "Fühlt sich fast schon wie ein Fell an."
+  },
+  "637": {
+    "displayName": "Granatapfel",
+    "description": "In der Frucht sind Ansammlungen von saftigen Samen."
+  },
+  "638": {
+    "displayName": "Kirsche",
+    "description": "Beliebt und reift früher als andere Früchte."
+  },
+  "668": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "670": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "674": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "675": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "676": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "677": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "678": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "679": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "680": {
+    "displayName": "Grünes Schleim-Ei",
+    "description": "Kann in einem Schleim-Brutkasten ausgebrütet werden."
+  },
+  "681": {
+    "displayName": "Regentotem",
+    "description": "Benutze ihn, um die Regenwahrscheinlichkeit am nächsten Tag stark zu erhöhen. Wird bei Benutzung verbraucht."
+  },
+  "682": {
+    "displayName": "Mutantenkarpfen",
+    "description": "Das merkwürdige Wasser der Kanalisation hat diesen Karpfen in ein Monster verwandelt."
+  },
+  "684": {
+    "displayName": "Käferfleisch",
+    "description": "Ein saftiges Stück Käferfleisch."
+  },
+  "685": {
+    "displayName": "Köder",
+    "description": "Lässt Fische eher anbeißen. Muss zuerst an einer Angel angebracht werden."
+  },
+  "686": {
+    "displayName": "Spinner",
+    "description": "Die Form bringt ihn dazu, sich im Wasser zu drehen. Erhöht die Beißrate von Fischen etwas."
+  },
+  "687": {
+    "displayName": "Verkleideter Spinner",
+    "description": "Der metallene Anhänger und die farbenfrohen Luftschlangen sind ein verlockendes Spektakel für Fische. Erhöht die Beißrate von Fischen."
+  },
+  "688": {
+    "displayName": "Teleport-Totem: Hof",
+    "description": "Bringt dich direkt vor dein Haus. Wird bei Benutzung verbraucht."
+  },
+  "689": {
+    "displayName": "Teleport-Totem: Berge",
+    "description": "Bringt dich direkt in die Berge. Wird bei Benutzung verbraucht."
+  },
+  "690": {
+    "displayName": "Teleport-Totem: Strand",
+    "description": "Bringt dich direkt an den Strand. Wird bei Benutzung verbraucht."
+  },
+  "691": {
+    "displayName": "Widerhaken",
+    "description": "Macht deinen Fang sicherer und bringt die \"Fischleiste\" dazu, sich an den Fisch zu heften. Funktioniert am besten bei langsamen, schwachen Fischen."
+  },
+  "692": {
+    "displayName": "Blei-Fischköder",
+    "description": "Fügt Gewicht zur \"Fischleiste\" hinzu und verhindert damit, dass sie am Grund herumspringt."
+  },
+  "693": {
+    "displayName": "Schatzjäger",
+    "description": "Fische entkommen nicht, während Schätze eingesammelt werden. Erhöht auch die Chance, Schätze zu finden."
+  },
+  "694": {
+    "displayName": "Fallen-Fischköder",
+    "description": "Fische entkommen langsamer, wenn du sie nicht einkurbelst."
+  },
+  "695": {
+    "displayName": "Korken-Fischköder",
+    "description": "Vergrößert die \"Fischleiste\" etwas."
+  },
+  "698": {
+    "displayName": "Stör",
+    "description": "Lebt am Gewässergrund und ist in seinem Bestand gefährdet. Die Weibchen leben bis zu 150 Jahre."
+  },
+  "699": {
+    "displayName": "Tigerforelle",
+    "description": "Ein seltener Hybrid, der selbst keinen Nachwuchs zeugen kann."
+  },
+  "700": {
+    "displayName": "Zwergwels",
+    "description": "Ein Verwandter der Katzenfische, der sich von allem möglichen Futter am Seeboden ernährt."
+  },
+  "701": {
+    "displayName": "Buntbarsch",
+    "description": "Ein hauptsächlich vegetarischer Fisch, der warmes Wasser bevorzugt."
+  },
+  "702": {
+    "displayName": "Kaulbarsch",
+    "description": "Ein gewöhnlicher Süßwasserfisch, der für seinen unersättlichen Appetit bekannt ist."
+  },
+  "703": {
+    "displayName": "Magnet",
+    "description": "Erhöht die Chance, beim Fischen Schätze zu finden. Allerdings mögen Fische den Geschmack nicht besonders."
+  },
+  "704": {
+    "displayName": "Goldmakrele",
+    "description": "Ein wilder Fleischfresser, mit brillanten, orangenen Schuppen."
+  },
+  "705": {
+    "displayName": "Weißer Thun",
+    "description": "Bevorzugt \"Temperaturkanten\", an denen warmes auf kühles Wasser trifft."
+  },
+  "706": {
+    "displayName": "Blaubarsch",
+    "description": "Lebt in einem Schwarm im Meer, kehrt aber zum Laichen in den Fluss zurück."
+  },
+  "707": {
+    "displayName": "Lengdorsch",
+    "description": "Ein furchterregender Jäger, der so gut wie alles frisst, was in sein Maul passt."
+  },
+  "708": {
+    "displayName": "Heilbutt",
+    "description": "Ein flacher Fisch, der am Ozeangrund lebt."
+  },
+  "709": {
+    "displayName": "Hartholz",
+    "description": "Eine spezielle Art von Holz von überlegener Stärke und Schönheit."
+  },
+  "710": {
+    "displayName": "Krabbenreuse",
+    "description": "Lege sie ins Wasser, setze einen Köder hinein und schaue am nächsten Tag nach, ob du irgendetwas gefangen hast. Funktioniert in Flüssen, Seen und dem Ozean."
+  },
+  "715": {
+    "displayName": "Hummer",
+    "description": "Ein großes Krustentier mit einem starken Schwanz. Lebt im Ozean."
+  },
+  "716": {
+    "displayName": "Flusskrebs",
+    "description": "Ein kleiner Süßwasserverwandter des Hummers."
+  },
+  "717": {
+    "displayName": "Krabbe",
+    "description": "Ein Krustentier des Meeres mit zwei mächtigen Scheren."
+  },
+  "718": {
+    "displayName": "Herzmuschel",
+    "description": "Eine gewöhnliche Salzwassermuschel."
+  },
+  "719": {
+    "displayName": "Miesmuschel",
+    "description": "Ein gewöhnliches, zweischaliges Weichtier, das in Gruppen lebt."
+  },
+  "720": {
+    "displayName": "Garnele",
+    "description": "Ein Aasfresser, der sich vom Meeresboden ernährt. Weitverbreitet für ihr Fleisch geschätzt."
+  },
+  "721": {
+    "displayName": "Schnecke",
+    "description": "Ein weitverbreitetes Weichtier, das in spiralförmigen Muscheln lebt."
+  },
+  "722": {
+    "displayName": "Strandschnecke",
+    "description": "Eine winzige Süßwasserschnecke, die in einer blauen Muschel lebt."
+  },
+  "723": {
+    "displayName": "Auster",
+    "description": "Filtert konstant Wasser, um Futter zu finden. In diesem Prozess entfernt sie auch gefährliche Toxine aus der Umgebung."
+  },
+  "724": {
+    "displayName": "Ahornsirup",
+    "description": "Ein süßer Sirup mit einem einzigartigen Geschmack."
+  },
+  "725": {
+    "displayName": "Eichenharz",
+    "description": "Eine klebrige, duftende Substanz, die aus Eichensaft gewonnen wird."
+  },
+  "726": {
+    "displayName": "Kiefernteer",
+    "description": "Eine penetrante Substanz, die aus Kiefernsaft gewonnen wird."
+  },
+  "727": {
+    "displayName": "Fischsuppe",
+    "description": "Die beste Methode, um dich nach kalten Nächten auf See zu wärmen."
+  },
+  "730": {
+    "displayName": "Hummer-Bisque",
+    "description": "Diese feine Suppe ist ein geheimes Familienrezept von Willy."
+  },
+  "728": {
+    "displayName": "Fischeintopf",
+    "description": "Riecht wie das Meer. Schmeckt aber besser."
+  },
+  "729": {
+    "displayName": "Schneckengericht",
+    "description": "Mit Butter durchtränkte Schnecken, bis zur Perfektion gekocht."
+  },
+  "731": {
+    "displayName": "Ahornriegel",
+    "description": "Ein süßer Riegel mit einer dicken Ahornglasur."
+  },
+  "732": {
+    "displayName": "Krabbenkuchen",
+    "description": "Krabbe, Brotkrümel und Eier, die zu einer Frikadelle geformt und dann goldbraun gebraten werden."
+  },
+  "733": {
+    "displayName": "Shrimp Cocktail",
+    "description": "Eine üppige Vorspeise aus frisch gefangenen Garnelen."
+  },
+  "734": {
+    "displayName": "Waldspringer",
+    "description": "Ein sehr empfindlicher Fisch, der nur in Teichen tief im Wald lebt."
+  },
+  "742": {
+    "displayName": "Haley's Lost Bracelet",
+    "description": "A family heirloom."
+  },
+  "745": {
+    "displayName": "Erdbeer-Saat",
+    "description": "Pflanze sie im Frühling. Wächst in 8 Tagen heran, kann aber danach mehrmals geerntet werden."
+  },
+  "746": {
+    "displayName": "Kürbislaterne",
+    "description": "Eine skurrile Herbstdekoration."
+  },
+  "747": {
+    "displayName": "Welkende Pflanze",
+    "description": "Sich zersetzendes, organisches Material. Es ist schleimig und unangenehm."
+  },
+  "748": {
+    "displayName": "Welkende Pflanze",
+    "description": "Sich zersetzendes, organisches Material. Es ist schleimig und unangenehm."
+  },
+  "749": {
+    "displayName": "Omni-Geode",
+    "description": "Ein Schmied kann sie dir aufbrechen. Diese Geoden enthalten alle möglichen Varianten von Mineralen."
+  },
+  "750": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "751": {
+    "displayName": "Copper Stone",
+    "description": "Da ist Kupfererz in diesem Stein."
+  },
+  "760": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "762": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone, ores, or geodes."
+  },
+  "764": {
+    "displayName": "Gold Stone",
+    "description": "Break apart to obtain gold ore."
+  },
+  "765": {
+    "displayName": "Iridium Stone",
+    "description": "Break apart to obtain iridium ore."
+  },
+  "766": {
+    "displayName": "Schleim",
+    "description": "Ein schimmernder, gallertartiger Blob ohne Geruch."
+  },
+  "767": {
+    "displayName": "Fledermausflügel",
+    "description": "Das Material ist erstaunlich zart."
+  },
+  "768": {
+    "displayName": "Solar-Essenz",
+    "description": "Die leuchtende Oberfläche fühlt sich warm an."
+  },
+  "769": {
+    "displayName": "Schattenessenz",
+    "description": "Bebt vor dunkler Energie."
+  },
+  "770": {
+    "displayName": "Gemischte Saat",
+    "description": "Hier ist ein wenig von allem drin. Pflanze sie ein und lass dich überraschen!"
+  },
+  "771": {
+    "displayName": "Fasern",
+    "description": "Rohes Material, das von Pflanzen stammt."
+  },
+  "772": {
+    "displayName": "Knoblauchöl",
+    "description": "Trink das und schwache Monster werden dich meiden."
+  },
+  "773": {
+    "displayName": "Lebenselixier",
+    "description": "Stellt Gesundheit vollständig wieder her."
+  },
+  "774": {
+    "displayName": "Wilder Köder",
+    "description": "Ein einzigartiges Rezept von Linus, welches dir eine Chance gibt, zwei Fische gleichzeitig zu fangen."
+  },
+  "775": {
+    "displayName": "Gletscherfisch",
+    "description": "Baut ein Nest unter Gletschern."
+  },
+  "784": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "785": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "786": {
+    "displayName": "Unkraut",
+    "description": "Hässliches Unkraut. Might contain fibers or mixed seeds."
+  },
+  "787": {
+    "displayName": "Batterie",
+    "description": "Voll mit wertvoller Energie aufgeladen."
+  },
+  "788": {
+    "displayName": "Verlorene Axt",
+    "description": "Robin hat überall danach gesucht."
+  },
+  "789": {
+    "displayName": "Violette Glücksshorts",
+    "description": "Wäre wohl besser, sie nicht allzu genau zu untersuchen."
+  },
+  "790": {
+    "displayName": "Beerenkorb",
+    "description": "Die Fasern sind voller Beerensaft."
+  },
+  "792": {
+    "displayName": "Unkraut",
+    "description": "Ein Haufen lästiges Unkraut. Cut to obtain wild seeds."
+  },
+  "793": {
+    "displayName": "Unkraut",
+    "description": "Ein Haufen lästiges Unkraut. Cut to obtain wild seeds."
+  },
+  "794": {
+    "displayName": "Unkraut",
+    "description": "Ein Haufen lästiges Unkraut. Cut to obtain wild seeds."
+  },
+  "795": {
+    "displayName": "Schattenlachs",
+    "description": "Ein Lachs, der von Schattenenergie verändert wurde. Das frische Fleisch ist tiefschwarz, wird aber schnell pink, wenn es an die Luft kommt."
+  },
+  "796": {
+    "displayName": "Schleimmakrele",
+    "description": "Sie ist von einer sehr dicken Schicht Schleim umgeben. Sie rutscht dir dauernd aus den Händen!"
+  },
+  "797": {
+    "displayName": "Perle",
+    "description": "Ein seltener Schatz aus dem Meer."
+  },
+  "798": {
+    "displayName": "Mitternächtlicher Tintenfisch",
+    "description": "Ein seltsamer und mysteriöser Bewohner der Zwielicht-Tiefen des Ozeans."
+  },
+  "799": {
+    "displayName": "Gruselfisch",
+    "description": "Die riesigen Augen können die schwachen Silhouetten seiner Beute ausmachen."
+  },
+  "800": {
+    "displayName": "Blobfisch",
+    "description": "Diese kuriose Kreatur lässt sich über den Meeresboden treiben und frisst alles Essbare in ihrem Weg."
+  },
+  "801": {
+    "displayName": "Heiratsring",
+    "description": "Eine alte Tradition in Zuzu ... Damit bittet man um die Hand eines anderen Farmers."
+  },
+  "802": {
+    "displayName": "Kaktussaat",
+    "description": "Kann nur drinnen gepflanzt werden. Braucht 12 Tage, bis sie gewachsen ist, und produziert dann alle 3 tage Früchte."
+  },
+  "803": {
+    "displayName": "Iridiummilch",
+    "description": "Eine mächtige 'Milch' unbekannten Ursprungs."
+  },
+  "805": {
+    "displayName": "Baum Dünger",
+    "description": "Bestreue einen wilden Baum, um ein schnelles Wachstum auch im Winter zu gewährleisten. Funktioniert nicht bei Obstbäumen."
+  },
+  "807": {
+    "displayName": "Dinosaurier Mayonnaise",
+    "description": "Sie ist dick und cremig, mit einem kräftigen grünen Farbton. Es riecht nach Gras und Leder."
+  },
+  "808": {
+    "displayName": "Schattengeist Amulett",
+    "description": "Es ist symoblisch für die Schattenwesen. Als Geschenk bedeutet es den Wunsch, als Freunde zusammenzuziehen."
+  },
+  "809": {
+    "displayName": "Kinoticket",
+    "description": "Es lässt einen in den Kinosaal. Wenn du dies einem Freund gibst, lädt es ihn mit dir ins Kino ein."
+  },
+  "810": {
+    "displayName": "Krabbenschalering",
+    "description": "Die Oberseite des Rings ist aus verzauberter Krabbenschale gefertigt."
+  },
+  "811": {
+    "displayName": "Napalm Ring",
+    "description": "Wenn du einen Gegner besiegst, explodiert er."
+  },
+  "812": {
+    "displayName": "Fischlaich",
+    "description": "Frische Fischeier. Diese können in einem Einmachglas gelagert werden, um mehr Geschmack zu entfalten."
+  },
+  "445": {
+    "displayName": "Kaviar",
+    "description": "Geräucherter Fischlaich eines Störfisches. Gilt als luxoriöse Delikatesse!"
+  },
+  "814": {
+    "displayName": "Tintenfisch Tinte",
+    "description": "Tintenfische nutzen diese Tinte, um mögliche Angreifer zu verwirren."
+  },
+  "815": {
+    "displayName": "Teeblätter",
+    "description": "Die jungen Blätter einer Tee-Pflanze. Kann benutzt werden um das populäre energetisierende Heißgetränk herzustellen."
+  },
+  "267": {
+    "displayName": "Flunder",
+    "description": "Es lebt auf dem Boden, so dass beide Augen auf dem Kopf sind."
+  },
+  "265": {
+    "displayName": "Meerschaumpudding",
+    "description": "Dieser Briny Pudding wird Sie wirklich in die maritime Denkweise bringen!"
+  },
+  "269": {
+    "displayName": "Mitternachtskarpfen",
+    "description": "Dieser schüchterne Fisch fühlt sich nur nachts wohl."
+  },
+  "292": {
+    "displayName": "Mahagoni-Samen",
+    "description": "Platziere dies auf deiner Farm, um einen Mahagonibaum zu pflanzen."
+  },
+  "289": {
+    "displayName": "Straußenei",
+    "description": "Es ist möglicherweise das größte Ei der Welt."
+  },
+  "25": {
+    "displayName": "Mussel Stone",
+    "description": "In diesem Stein sind Muscheln."
+  },
+  "73": {
+    "displayName": "Goldene Walnuss",
+    "description": "Für die Papageien der Ingwerinsel ist diese Nuss die feinste Delikatesse."
+  },
+  "69": {
+    "displayName": "Bananensprössling",
+    "description": " Dauert 28 Tage, um einen reifen Bananenbaum zu produzieren. Trägt das ganze Jahr über Früchte, wenn es auf der Ingwerinsel gepflanzt wird."
+  },
+  "91": {
+    "displayName": "Banane",
+    "description": "Eine süße, stärkehaltige tropische Frucht."
+  },
+  "791": {
+    "displayName": "Goldene Kokosnuss",
+    "description": "Das ist eine hart zu knackende Nuss."
+  },
+  "816": {
+    "displayName": "Fossil Stone",
+    "description": "Break apart to obtain fossils and bones."
+  },
+  "817": {
+    "displayName": "Fossil Stone",
+    "description": "Break apart to obtain fossils and bones."
+  },
+  "818": {
+    "displayName": "Clay Stone",
+    "description": "Break apart to obtain clay."
+  },
+  "819": {
+    "displayName": "Omni Geode Stone",
+    "description": "Break apart to obtain omni geodes."
+  },
+  "820": {
+    "displayName": "Versteinerter Schädel",
+    "description": " Es ist ein perfektes Exemplar!"
+  },
+  "821": {
+    "displayName": "Versteinerte Wirbelsäule",
+    "description": "Eine Säule aus ineinandergreifenden Wirbeln."
+  },
+  "822": {
+    "displayName": "Versteinerter Schwanz",
+    "description": "Dieser Schwanz hat an der Spitze ein keulenartiges Merkmal."
+  },
+  "823": {
+    "displayName": "Versteinertes Bein",
+    "description": "Ein dicker und stabiler Beinknochen."
+  },
+  "824": {
+    "displayName": "Versteinerte Rippen",
+    "description": "Vor langer Zeit schützten diese Rippen den Körper eines großen Tieres."
+  },
+  "825": {
+    "displayName": "Schlangenschädel",
+    "description": "Ein konservierter Schädel, der einst einer Schlange gehörte."
+  },
+  "826": {
+    "displayName": "Schlangenwirbel",
+    "description": " Es scheint, dass diese Schlange äußerst flexibel gewesen sein könnte."
+  },
+  "827": {
+    "displayName": "Mumifizierte Fledermaus",
+    "description": " Die zarten Flügel sind perfekt erhalten."
+  },
+  "828": {
+    "displayName": "Mumifizierter Frosch ",
+    "description": " Dieser uralte Frosch hat möglicherweise im Dschungel gelebt."
+  },
+  "829": {
+    "displayName": "Ingwer",
+    "description": "Diese scharfe, würzige Wurzel soll die Vitalität steigern."
+  },
+  "830": {
+    "displayName": "Taro-Wurzel",
+    "description": "Diese stärkehaltige Wurzel ist eine der ältesten Kulturpflanzen."
+  },
+  "831": {
+    "displayName": "Taro-Knollen",
+    "description": "Pflanze diese bei warmem Wetter. Dauert 10 Tage bis zur Reife. Wächst schneller, wenn sie in der Nähe eines Gewässers gepflanzt wird. Mit der Sense ernten."
+  },
+  "832": {
+    "displayName": "Ananas",
+    "description": "Eine süße und herbe tropische Leckerei."
+  },
+  "833": {
+    "displayName": "Ananassamen",
+    "description": "Pflanze diese bei warmem Wetter ein. Dauert 14 Tage bis zur Reife und produziert danach weiterhin Früchte."
+  },
+  "834": {
+    "displayName": "Mango",
+    "description": "Eine große, süße tropische Frucht mit einzigartigem Geschmack."
+  },
+  "835": {
+    "displayName": "Mangosprösslinge",
+    "description": " Dauert 28 Tage, um einen reifen Mangobaum zu produzieren. Trägt das ganze Jahr über Früchte, wenn er auf der Ingwerinsel gepflanzt wird."
+  },
+  "836": {
+    "displayName": "Stachelrochen",
+    "description": "Trotz eines giftigen Stachels sind diese Fische scheu und meiden lieber den Menschen."
+  },
+  "837": {
+    "displayName": "Rotfeuerfisch",
+    "description": "Ein aggressiver, räuberischer Fisch mit giftigen Stacheln."
+  },
+  "838": {
+    "displayName": "Blauer Diskusbuntbarsch",
+    "description": "Ein farbenfroher tropischer Fisch, der in Aquarien sehr beliebt ist."
+  },
+  "839": {
+    "displayName": "Dornenring ",
+    "description": " Wenn Feinde dir Schaden zufügen, werden sie selbst Schaden nehmen."
+  },
+  "840": {
+    "displayName": "Rustikaler Dielenboden",
+    "description": "Platz auf dem Boden, um Wege zu schaffen oder Böden zu dekorieren."
+  },
+  "841": {
+    "displayName": "Steingehweg Boden",
+    "description": "Platziere auf dem Boden, um Wege zu schaffen oder Böden zu dekorieren."
+  },
+  "842": {
+    "displayName": "Tagebuch Fetzen",
+    "description": "Eine feuchte, zerrissene Seite aus einem alten Tagebuch..."
+  },
+  "843": {
+    "displayName": "Cinder Shard Stone",
+    "description": "Break apart to obtain cinder shards."
+  },
+  "844": {
+    "displayName": "Cinder Shard Stone",
+    "description": "Break apart to obtain cinder shards."
+  },
+  "845": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "846": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "847": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "848": {
+    "displayName": "Schlackenscherbe",
+    "description": "Man spürt ein warmes Glühen aus dem Inneren dieses Steins."
+  },
+  "849": {
+    "displayName": "Copper Stone",
+    "description": "Da ist Kupfererz in diesem Stein."
+  },
+  "850": {
+    "displayName": "Iron Stone",
+    "description": "Break apart to obtain iron ore."
+  },
+  "851": {
+    "displayName": "Magmahut",
+    "description": "Ein sehr seltener Pilz, der neben Lavatümpeln lebt."
+  },
+  "852": {
+    "displayName": "Drachenzahn",
+    "description": " Gerüchten zufolge handelt es sich dabei um die Zähne alter Schlangen. Der Zahnschmelz besteht aus reinem Iridium!"
+  },
+  "856": {
+    "displayName": "Neugierköder",
+    "description": "Erhöht deine Chance, seltene Fische zu fangen."
+  },
+  "857": {
+    "displayName": "Tigerschleim-Ei",
+    "description": "kann in einem Schleim-Inkubator ausgebrütet werden. Mit äußerster Vorsicht verwenden!"
+  },
+  "858": {
+    "displayName": "Qi-Edelstein",
+    "description": "Eine Sonderwährung von Herrn Qi geehrt."
+  },
+  "859": {
+    "displayName": "Glücksring",
+    "description": "Das Mond-Emblem soll demjenigen, der es trägt, Glück bringen."
+  },
+  "860": {
+    "displayName": "Heißer Java-Ring",
+    "description": "Erhöht enorm deine Chance, beim Töten von Monstern Kaffeegetränke zu finden."
+  },
+  "861": {
+    "displayName": "Schutzring",
+    "description": "Bleibe nachdem du Schaden erlitten hast noch eine Weile unbesiegbar."
+  },
+  "862": {
+    "displayName": "Seelendiebring",
+    "description": "Gewinne jedes Mal ein wenig Energie, wenn Du ein Monster tötest."
+  },
+  "863": {
+    "displayName": "Phönixring",
+    "description": "Gewinne einmal am Tag Gesundheitspunkte, nachdem Du im Kampf ohnmächtig wurdest."
+  },
+  "864": {
+    "displayName": "Kriegsdenkmal",
+    "description": " Es ist ein verblasstes Foto eines Soldaten..."
+  },
+  "865": {
+    "displayName": "Gourmet-Tomatensalz",
+    "description": "Ein seltenes, köstliches und schmackhaftes Salz."
+  },
+  "866": {
+    "displayName": "Sternentautaler Rose",
+    "description": "Eine Rose, die an das Tal erinnert. Sie duftet himmlisch."
+  },
+  "867": {
+    "displayName": "Erweiterte TV-Fernbedienung",
+    "description": " Sie hat mehr Tasten als eine normale Fernbedienung. Perfekt für den begeisterten TV-Zuschauer!"
+  },
+  "868": {
+    "displayName": "Arktische Scherbe",
+    "description": "Diese Scherbe leuchtet mit einem jenseitigen blauen Licht."
+  },
+  "869": {
+    "displayName": "Zappelnder Wurm",
+    "description": " Es ist ein zappelnder, nasser Wurm."
+  },
+  "870": {
+    "displayName": "Piraten-Medaillon",
+    "description": " Es ist ein altes Piraten-Andenken."
+  },
+  "872": {
+    "displayName": "Feenstaub",
+    "description": "Sprenkel auf Fässer, Öfen und andere Raffinerieausrüstung, damit sie ihr Produkt sofort erhalten."
+  },
+  "873": {
+    "displayName": "Piña Colada",
+    "description": "Getränk in Maßen genießen."
+  },
+  "874": {
+    "displayName": "Käfersteak",
+    "description": "Die letzte Zuflucht des hungrigen Höhlentauchers."
+  },
+  "875": {
+    "displayName": "Ektoplasma",
+    "description": "A dicker, schleimiger Schleim, den der Zauberer aus irgendeinem Grund haben möchte."
+  },
+  "876": {
+    "displayName": "Prismatisches Gelee",
+    "description": "Gelee, geerntet aus dem seltenen und schwer fassbaren Prismenschleim."
+  },
+  "877": {
+    "displayName": "Qualitäts-Bobber",
+    "description": "Steigert die Qualität der Fische, die Du fängst."
+  },
+  "879": {
+    "displayName": "Monster-Moschus",
+    "description": "Versprühe dies, um mehr Monster aus ihrem Versteck zu locken."
+  },
+  "880": {
+    "displayName": "Kombinierter Ring",
+    "description": "..."
+  },
+  "881": {
+    "displayName": "Knochenfragment",
+    "description": "Ein kleines Knochenstück."
+  },
+  "882": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "883": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "884": {
+    "displayName": "Unkraut",
+    "description": "Might contain fibers or mixed seeds."
+  },
+  "885": {
+    "displayName": "Fasersaatgut",
+    "description": "Pflanze diese zu jeder Jahreszeit. Erfordert keine Bewässerung. Mit der Sense ernten."
+  },
+  "886": {
+    "displayName": "Warp-Totem: Insel",
+    "description": "Teleportiere direkt zur Ingwerinsel. Wird bei Gebrauch verbraucht."
+  },
+  "887": {
+    "displayName": "Immunitätsband",
+    "description": "Die Oberseite des Rings ist aus verzauberter violetter Wolle gefertigt."
+  },
+  "888": {
+    "displayName": "Glühsteinring",
+    "description": "Emittiert ein konstantes Licht und vergrößert auch deinen Radius zum Sammeln von Gegenständen."
+  },
+  "889": {
+    "displayName": "Qi-Frucht",
+    "description": "Herr Qi hat Dich aufgefordert, 500 dieser seltsamen Melonen zu verschiffen."
+  },
+  "890": {
+    "displayName": "Qi-Bohne",
+    "description": "Pflanze diese zu jeder Jahreszeit ein. Gieße jeden Tag, um eine Qi-Frucht zu produzieren. Wächst in 4 Tagen heran."
+  },
+  "891": {
+    "displayName": "Pilzbaumsamen",
+    "description": "Platziere dies auf deiner Farm, um einen Pilzbaum zu pflanzen."
+  },
+  "892": {
+    "displayName": "Warp Totem: Qis Arena",
+    "description": "Teleportiere zu Qis Arena. Sei auf eine Herausforderung vorbereitet!"
+  },
+  "893": {
+    "displayName": "Feuerwerk (Rot)",
+    "description": "Eine alte Tradition für Feste und Feierlichkeiten. Mit Vorsicht behandeln!"
+  },
+  "894": {
+    "displayName": "Feuerwerk (Violett)",
+    "description": "Eine alte Tradition für Feste und Feierlichkeiten. Mit Vorsicht behandeln!"
+  },
+  "895": {
+    "displayName": "Feuerwerk (Grün)",
+    "description": "Eine alte Tradition für Feste und Feierlichkeiten. Mit Vorsicht behandeln!"
+  },
+  "896": {
+    "displayName": "Galaxieseele",
+    "description": "Schmiede 3 davon zu einem Galaxie-Schwert, um seine endgültige Form zu entfesseln."
+  },
+  "897": {
+    "displayName": "Pierres verlorene Lagerliste",
+    "description": "Pierre könnte daran interessiert sein."
+  },
+  "898": {
+    "displayName": "Sohn vom Purpurfisch",
+    "description": "Er schlüpfte im warmen Sommerwasser und trat in die Fußstapfen seines Vaters."
+  },
+  "899": {
+    "displayName": "Frau Angler",
+    "description": "Benutzt einen biolumineszenten Tänzer, um Beute anzulocken."
+  },
+  "900": {
+    "displayName": "Legende II",
+    "description": "Der Nachfolger der ursprünglichen Legende."
+  },
+  "901": {
+    "displayName": "Radioaktiver Karpfen",
+    "description": "Ein Karpfen, der zu viele Jahre im Giftschlamm verbracht hat."
+  },
+  "902": {
+    "displayName": "Gletscherfisch Junior",
+    "description": "Der ursprüngliche Gletscherfisch hatte einen Sohn..."
+  },
+  "903": {
+    "displayName": "Ginger Ale",
+    "description": "Eine pikante Limonade, bekannt für seine beruhigende Wirkung auf den Magen."
+  },
+  "904": {
+    "displayName": "Bananenpudding",
+    "description": "Ein cremiges Dessert mit einem wunderbaren tropischen Geschmack."
+  },
+  "905": {
+    "displayName": "Mango-Klebreis",
+    "description": "Süße Mango und Kokosnuss verwandeln diesen Reis in etwas ganz Besonderes."
+  },
+  "906": {
+    "displayName": "Poi",
+    "description": "Ein traditionelles Essen mit einem delikaten, süßen Geschmack, wenn es frisch verzehrt wird."
+  },
+  "907": {
+    "displayName": "Tropisches Curry",
+    "description": "Ein exotisches, duftendes Curry, serviert in einer Ananasschale."
+  },
+  "908": {
+    "displayName": "Zauberköder",
+    "description": "Ermöglicht es, Fische zu jeder Jahreszeit, zu jeder Zeit und bei jedem Wetter zu fangen, unabhängig davon, in welche Art von Wasser Du es wirfst."
+  },
+  "909": {
+    "displayName": "Radioaktives Erz",
+    "description": " Es glüht mit gefährlicher Energie... Kann zu Barren geschmolzen werden."
+  },
+  "910": {
+    "displayName": "Radioaktiver Barren",
+    "description": "Bei der Sicherheitskommission der Stadt Zuzu bekannt dafür, dass er unwiderrufliche Körperschäden verursacht."
+  },
+  "911": {
+    "displayName": "Pferde-Flöte",
+    "description": "Das Spielen dieser Flöte wird dein Pferd beschwören. Funktioniert nur im Freien."
+  },
+  "913": {
+    "displayName": "Bereicherer",
+    "description": "Auf einen Sprinkler stellen und mit Dünger beladen, um ihn automatisch auszubringen, wenn Samen in der Nähe gepflanzt werden."
+  },
+  "915": {
+    "displayName": "Druck-Drüse",
+    "description": "Auf einen Sprinkler stellen, um seine Bewässerungsreichweite zu erhöhen"
+  },
+  "917": {
+    "displayName": "Qi-Würze",
+    "description": "Nur ein Hauch hebt jedes Gericht in außergewöhnliche Höhen. Wird beim Kochen automatisch angewendet."
+  },
+  "918": {
+    "displayName": "Hyper Speed-Zücht",
+    "description": "Regt die Blattproduktion stark an.  Steigert garantiert die Wachstumsrate um mindestens 33%. Wird in gepflügten Boden gemischt."
+  },
+  "919": {
+    "displayName": "Deluxe-Dünger",
+    "description": "Verbessert die Bodenqualität erheblich und erhöht damit die Chance, Qualitätskulturen anzubauen.  Wird in gepflügten Boden gemischt."
+  },
+  "920": {
+    "displayName": "Deluxe Hydro-Boden",
+    "description": "Dieser Boden hat eine 100%ige Chance, über Nacht bewässert zu bleiben.  Wird in gepflügten Boden gemischt."
+  },
+  "921": {
+    "displayName": "Tintenfisch-Tintenravioli",
+    "description": "Schützt vorübergehend vor Schwächungen."
+  },
+  "922": {
+    "displayName": "SupplyCrate",
+    "description": "..."
+  },
+  "923": {
+    "displayName": "SupplyCrate",
+    "description": "..."
+  },
+  "924": {
+    "displayName": "SupplyCrate",
+    "description": "..."
+  },
+  "925": {
+    "displayName": "Schleimkasten",
+    "description": "Verwende diesen, um einen domestizierten Schleim an einen anderen Ort zu transportieren."
+  },
+  "926": {
+    "displayName": "Koch-Set",
+    "description": "Verwende dies, um ein Kochlagerfeuer zu machen, damit Du auch unterwegs kochen kannst!"
+  },
+  "927": {
+    "displayName": "Campingkocher",
+    "description": "Dieser ermöglicht es, überall zu kochen, und wird bei Gebrauch nicht verbraucht."
+  },
+  "928": {
+    "displayName": "Gold-Ei",
+    "description": "Ein sehr seltenes und besonderes Ei mit einer massiven Goldschale."
+  },
+  "929": {
+    "displayName": "Hecke",
+    "description": "Ein geformter Busch, der wie ein Zaun wirkt."
+  },
+  "930": {
+    "displayName": "???",
+    "description": "???"
+  },
+  "FarAwayStone": {
+    "displayName": "Weit entfernter Stein",
+    "description": "Ein Stein von unbekannter Herkunft. Sieht aus, als könnte man ihn in etwas einsetzen."
+  },
+  "CalicoEgg": {
+    "displayName": "Calico-Ei",
+    "description": "Ein einzigartiges Ei, das während des Wüstenfestivals gefunden werden kann."
+  },
+  "MixedFlowerSeeds": {
+    "displayName": "Gemischte Blumensamen",
+    "description": "Ein Sortiment von Blumensamen. Pflanze sie ein und sieh, was wächst!"
+  },
+  "GoldenBobber": {
+    "displayName": "Goldener Köder",
+    "description": "Willy ist auf der Suche danach."
+  },
+  "CalicoEggStone_0": {
+    "displayName": "Calico-Ei Stein",
+    "description": "Auseinanderbrechen, um Calico-Eier zu erhalten."
+  },
+  "CalicoEggStone_1": {
+    "displayName": "Calico-Ei Stein",
+    "description": "Auseinanderbrechen, um Calico-Eier zu erhalten."
+  },
+  "CalicoEggStone_2": {
+    "displayName": "Calico-Ei Stein",
+    "description": "Auseinanderbrechen, um Calico-Eier zu erhalten."
+  },
+  "MysteryBox": {
+    "displayName": "Mysteriöse Kiste",
+    "description": "Ein Schmied kann das für dich öffnen. Wer weiß, was darin sein könnte?"
+  },
+  "TroutDerbyTag": {
+    "displayName": "Goldene Marke",
+    "description": "Gib dies am Forellenderby-Stand ab, um eine Belohnung zu erhalten."
+  },
+  "DeluxeBait": {
+    "displayName": "Deluxe Köder",
+    "description": "Sorgt dafür, dass die Fische noch schneller anbeißen und vergrößert den \"Angelbalken\"."
+  },
+  "Moss": {
+    "displayName": "Moos",
+    "description": "Eine besondere Art von Pflanze, die in schattigen Gebieten wächst."
+  },
+  "MossySeed": {
+    "displayName": "Moosiges Saatgut",
+    "description": "Damit können seltene Wildbäume gepflanzt werden."
+  },
+  "GreenRainWeeds0": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds1": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds2": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds3": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds4": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds5": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds6": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "GreenRainWeeds7": {
+    "displayName": "Grüner Regen Unkraut",
+    "description": "Kann Fasern oder gemischte Samen enthalten."
+  },
+  "SonarBobber": {
+    "displayName": "Sonarköder",
+    "description": "Zeigt an, welcher Fisch an der Leine ist, bevor er gefangen wird."
+  },
+  "SpecificBait": {
+    "displayName": "Köder",
+    "description": "Erhöht die Chance, {0} zu fangen."
+  },
+  "TentKit": {
+    "displayName": "Zelt-Bausatz",
+    "description": "Hiermit lässt sich ein einmalig verwendbares Zelt zum Schlafen aufstellen. Kann nur im Freien verwendet werden."
+  },
+  "VolcanoGoldNode": {
+    "displayName": "Goldstein",
+    "description": "Aufbrechen, um Golderz zu erhalten."
+  },
+  "MysticTreeSeed": {
+    "displayName": "Mystischer Baumsamen",
+    "description": "Dieser kann gepflanzt werden, um einen besonderen Baum wachsen zu lassen."
+  },
+  "MysticSyrup": {
+    "displayName": "Mystischer Sirup",
+    "description": "Ein sehr seltener Sirup, dem magische Eigenschaften nachgesagt werden."
+  },
+  "Raisins": {
+    "displayName": "Rosinen",
+    "description": "Es heißt, es sei das Lieblingsessen der Junimos."
+  },
+  "DriedFruit": {
+    "displayName": "Getrocknet",
+    "description": "Kaugummiartige Stücke von {0} (getrocknet)."
+  },
+  "DriedMushrooms": {
+    "displayName": "Getrocknet",
+    "description": "Ein Paket mit Gourmet-Pilzen."
+  },
+  "StardropTea": {
+    "displayName": "Sternenfall-Tee",
+    "description": "Ein ganz besonderes Geschenk, über das sich jeder freuen würde."
+  },
+  "PrizeTicket": {
+    "displayName": "Gewinnkarte",
+    "description": "Gib dies dem Preisautomaten in Lewis' Haus, um eine besondere Belohnung zu erhalten."
+  },
+  "GoldCoin": {
+    "displayName": "Goldmünze",
+    "description": "1 Goldmünze."
+  },
+  "TreasureTotem": {
+    "displayName": "Schatz-Totem",
+    "description": "Auf grabbarem Gelände verwenden, um einen Ring von Schatzplätzen zu beschwören."
+  },
+  "ChallengeBait": {
+    "displayName": "Herausforderung Köder",
+    "description": "Ein \"perfekter\" Fang bringt die dreifache Menge an Fischen ein. Doch jedes Mal, wenn ein Fisch aus der \" Fangleiste \" entkommt, verringert sich der Fang."
+  },
+  "CarrotSeeds": {
+    "displayName": "Karottensamen",
+    "description": "Im Frühjahr pflanzen. Braucht 3 Tage zum Wachsen."
+  },
+  "Carrot": {
+    "displayName": "Karotte",
+    "description": "Eine schnell wachsende, farbenfrohe Knolle, die sich hervorragend als Snack eignet."
+  },
+  "SummerSquashSeeds": {
+    "displayName": "Sommerkürbis-Samen",
+    "description": "Im Sommer pflanzen. Es dauert 6 Tage bis zur Reife und produziert auch nach der ersten Ernte weiter."
+  },
+  "SummerSquash": {
+    "displayName": "Sommerkürbis",
+    "description": "Ein gekrümmter gelber Kürbis, der unreif geerntet wird und noch zart ist."
+  },
+  "BroccoliSeeds": {
+    "displayName": "Brokkoli-Samen",
+    "description": "Im Herbst pflanzen. Es dauert 8 Tage bis zur Reife und produziert auch nach der ersten Ernte weiter."
+  },
+  "Broccoli": {
+    "displayName": "Brokkoli",
+    "description": "Der blühende Kopf einer Brokkolipflanze. Die winzigen Knospen verleihen ihm eine einzigartige Textur."
+  },
+  "PowdermelonSeeds": {
+    "displayName": "Pulvermelonen Samen",
+    "description": "Diese besondere Melone wächst im Winter. Es dauert 7 Tage bis zur Reife."
+  },
+  "Powdermelon": {
+    "displayName": "Pulvermelone",
+    "description": "Diese Melone, die ihren Namen von der pulvrigen Schicht hat, die sich auf der Oberfläche bildet, ist knackig und süß und hat einen feinen Geschmack."
+  },
+  "SeedSpot": {
+    "displayName": "Artefakt-Ort",
+    "description": "Äh... wie ist das denn bitte in deine Tasche gelangt? Ape hat's wohl verbockt."
+  },
+  "SmokedFish": {
+    "displayName": "Geräuchert",
+    "description": "{0}, geräuchert bis zur Perfektion."
+  },
+  "PurpleBook": {
+    "displayName": "Buch der Sterne",
+    "description": "Lesen, um Erfahrungen in allen Bereichen zu sammeln."
+  },
+  "SkillBook_0": {
+    "displayName": "Sternentautaler Almanach",
+    "description": "Lesen, um Hofarbeiterfahrung zu sammeln."
+  },
+  "SkillBook_2": {
+    "displayName": "Holzfäller Wochenblatt",
+    "description": "Lesen, um Sammelerfahrung zu sammeln."
+  },
+  "SkillBook_1": {
+    "displayName": "Köder und noch mehr Köder",
+    "description": "Lesen, um Angelerfahrung zu sammeln."
+  },
+  "SkillBook_3": {
+    "displayName": "Bergbau Monatsheft",
+    "description": "Lesen, um Bergbauerfahrung zu sammeln."
+  },
+  "SkillBook_4": {
+    "displayName": "Kampf-Quartalsheft",
+    "description": "Lesen, um Kampferfahrung zu sammeln."
+  },
+  "Book_Trash": {
+    "displayName": "Das Gassenbuffet",
+    "description": "Du hast eine höhere Chance, Gegenstände im Müll zu finden."
+  },
+  "Book_Crabbing": {
+    "displayName": "Die Kunst des Krabbenspiels",
+    "description": "Krabbentöpfe haben eine 25 %ige Chance, das Doppelte zu erbringen."
+  },
+  "Book_Bombs": {
+    "displayName": "Zwergen-Sicherheitshandbuch",
+    "description": "Bomben verursachen 25% weniger Schaden an dir."
+  },
+  "Book_Roe": {
+    "displayName": "Juwelen des Meeres",
+    "description": "Fischereischatztruhen haben eine Chance, Rogen zu enthalten."
+  },
+  "Book_WildSeeds": {
+    "displayName": "Waschbär-Tagebuch",
+    "description": "Unkraut hat eine höhere Chance, gemischte Saat zu bilden."
+  },
+  "Book_Woodcutting": {
+    "displayName": "Woodys Geheimnis",
+    "description": "Gefällte Bäume haben eine 5 %ige Chance, die doppelte Holzmenge zu liefern."
+  },
+  "Book_Defense": {
+    "displayName": "Jack ist flink, Jack ist zäh",
+    "description": "Erhalte +1 Verteidigung."
+  },
+  "Book_Friendship": {
+    "displayName": "Freundschaft für Anfänger",
+    "description": "Du freundest dich etwas schneller mit Leuten an."
+  },
+  "Book_Void": {
+    "displayName": "Monster-Kompendium",
+    "description": "Monster haben eine kleine Chance, doppelte Beute zu hinterlassen."
+  },
+  "Book_Speed": {
+    "displayName": "Weg des Windes, Teil 1",
+    "description": "Du läufst etwas schneller."
+  },
+  "Book_Marlon": {
+    "displayName": "Kartierung von Höhlensystemen",
+    "description": "Du bekommst 50% Rabatt auf Marlons Fundservice."
+  },
+  "Book_PriceCatalogue": {
+    "displayName": "Preiskatalog",
+    "description": "Der Wert deiner Gegenstände ist nun sichtbar."
+  },
+  "Book_QueenOfSauce": {
+    "displayName": "Königin der Soßen Kochbuch",
+    "description": "Lerne alle Königin der Soßen-Rezepte, die du noch nicht kennst."
+  },
+  "Book_Diamonds": {
+    "displayName": "Der Diamantenjäger",
+    "description": "Jeder Stein hat die Chance, einen Diamanten zu hinterlassen, wenn er von Hand abgebaut wird."
+  },
+  "Book_Mystery": {
+    "displayName": "Buch der Mysterien",
+    "description": "Du hast eine etwas höhere Chance, Mysteriöse Kisten zu finden."
+  },
+  "Book_AnimalCatalogue": {
+    "displayName": "Tierkatalog",
+    "description": "Du kannst auf Marnies Laden zugreifen, wenn sie nicht da ist."
+  },
+  "Book_Speed2": {
+    "displayName": "Weg des Windes, Teil 2",
+    "description": "Du läufst etwas schneller."
+  },
+  "GoldenAnimalCracker": {
+    "displayName": "Goldener Tierkräcker",
+    "description": "Gib dies einem Nutztier, um seinen Ertrag dauerhaft zu verdoppeln. Funktioniert nicht bei Schweinen."
+  },
+  "GoldenMysteryBox": {
+    "displayName": "Goldene Mysteriöse Kiste",
+    "description": "Ein Schmied kann das für dich öffnen. Wer weiß, was darin sein könnte?"
+  },
+  "SeaJelly": {
+    "displayName": "Seegelee",
+    "description": "Ein seltenes Gelee, das im Meer vorkommt."
+  },
+  "CaveJelly": {
+    "displayName": "Höhlengelee",
+    "description": "Ein seltenes Gelee, das in unterirdischen Seen vorkommt."
+  },
+  "RiverJelly": {
+    "displayName": "Flussgelee",
+    "description": "Ein seltenes Gelee, das im Süßwasser vorkommt."
+  },
+  "Goby": {
+    "displayName": "Grundeln",
+    "description": "Einige Grundelarten können Wasserfälle hinaufklettern."
+  },
+  "VolcanoCoalNode0": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "VolcanoCoalNode1": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "PotOfGold": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "Book_Artifact": {
+    "displayName": "Antike Schätze: Leitfaden für die Schätzung",
+    "description": "Beim Verkauf von Artefakten erzielst du einen besseren Preis."
+  },
+  "Book_Horse": {
+    "displayName": "Pferd: Das Buch",
+    "description": "Du bekommst ein bisschen mehr Geschwindigkeit, wenn du auf einem Pferd reitest."
+  },
+  "ButterflyPowder": {
+    "displayName": "Schmetterlingspulver",
+    "description": "Streue es auf ein Haustier, um es von deinem Hof zu entfernen. Der Vorgang ist unumkehrbar."
+  },
+  "PetLicense": {
+    "displayName": "Haustier-Lizenz",
+    "description": "Lade ein neues Haustier in dein Zuhause ein. Wenn du nicht genügend Außennäpfe für deine Haustiere hast, werden sie unruhig."
+  },
+  "BlueGrassStarter": {
+    "displayName": "Blaugras-Starter",
+    "description": "Platziere dies auf deiner Farm, um einen blauen Grasbüschel zu pflanzen."
+  },
+  "MossSoup": {
+    "displayName": "Moos-Suppe",
+    "description": "Er ist dick und schleimig, aber essbar."
+  },
+  "Book_Grass": {
+    "displayName": "Alte Schlitterbeine",
+    "description": "Du wirst jetzt viel schneller durch Gras und Pflanzen laufen."
+  },
+  "BasicCoalNode0": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  },
+  "BasicCoalNode1": {
+    "displayName": "Stein",
+    "description": "Break apart to obtain stone with a chance of coal."
+  }
+}

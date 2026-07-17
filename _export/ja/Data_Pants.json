@@ -1,0 +1,74 @@
+{
+  "0": {
+    "displayName": "ファーマーパンツ",
+    "description": "この分野では長時間快適で丈夫。"
+  },
+  "1": {
+    "displayName": "ショーツ",
+    "description": "暑い夏の日に最適...足に感謝。"
+  },
+  "2": {
+    "displayName": "ロングドレス",
+    "description": "長くて華やかなドレス。"
+  },
+  "3": {
+    "displayName": "スカート",
+    "description": "かわいいスカート。"
+  },
+  "4": {
+    "displayName": "プリーツスカート",
+    "description": "かわいいプリーツスカート。"
+  },
+  "5": {
+    "displayName": "恐竜のパンツ",
+    "description": "このパンツはずっと前に絶滅したと考えられていた！"
+  },
+  "6": {
+    "displayName": "グラススカート",
+    "description": "乾いた草で作られたスカート。"
+  },
+  "7": {
+    "displayName": "ルアウスカート",
+    "description": "「ルアウ」パーティーに参加するためのスカート！"
+  },
+  "8": {
+    "displayName": "魔神のパンツ",
+    "description": "ボトム近くから吹き出したパンツ。あなたの願いは答えられました！"
+  },
+  "9": {
+    "displayName": "タイトパンツ",
+    "description": "とてもタイトなパンツ。"
+  },
+  "10": {
+    "displayName": "バギーパンツ",
+    "description": "パンツのルーズペア。"
+  },
+  "11": {
+    "displayName": "シンプルドレス",
+    "description": "やわらかくて滑らかなミディアム丈のドレス"
+  },
+  "12": {
+    "displayName": "リラックスフィットパンツ",
+    "description": "これらのパンツは足の部分に少し余裕があります。"
+  },
+  "13": {
+    "displayName": "リラックスフィットショーツ",
+    "description": "これらのショーツは足の部分に少し余裕があります。"
+  },
+  "14": {
+    "displayName": "ポルカドットショーツ",
+    "description": "おっと！"
+  },
+  "15": {
+    "displayName": "ラッキーパープルショートパンツ",
+    "description": "豪華なゴールドが付いたパープルシルクショートパンツ..."
+  },
+  "998": {
+    "displayName": "プリズムパンツ",
+    "description": "プリズムエネルギーできらめくパンツ。"
+  },
+  "999": {
+    "displayName": "プリズムジニーパンツ",
+    "description": "プリズムエネルギーできらめくパンツ。"
+  }
+}

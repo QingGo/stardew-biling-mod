@@ -1,0 +1,270 @@
+{
+  "0": {
+    "displayName": "サビた剣",
+    "description": "サビた古いなまくらの剣。"
+  },
+  "1": {
+    "displayName": "銀のサーベル",
+    "description": "サビをふせぐために銀でメッキされている。"
+  },
+  "2": {
+    "displayName": "闇の剣",
+    "description": "ナゾめいたエネルギーでほのかに光っている。"
+  },
+  "3": {
+    "displayName": "聖なるつるぎ",
+    "description": "つるぎ自身が使い手をえらぶといわれる。"
+  },
+  "4": {
+    "displayName": "ギャラクシーソード",
+    "description": "けっしてほかに並ぶもののない剣。"
+  },
+  "5": {
+    "displayName": "ホネの剣",
+    "description": "鋭くとがったホネ。非常に軽い。"
+  },
+  "6": {
+    "displayName": "鉄の剣",
+    "description": "重厚なブロードソード。"
+  },
+  "7": {
+    "displayName": "騎士のつるぎ",
+    "description": "かつては高潔な騎士が手にしていたつるぎ。"
+  },
+  "8": {
+    "displayName": "黒曜石の剣",
+    "description": "おどろくべき鋭さをそなえている。"
+  },
+  "9": {
+    "displayName": "マグマ刀",
+    "description": "溶けて泡立つ溶岩をきたえてつくられた強靭な刀。"
+  },
+  "10": {
+    "displayName": "クレイモア",
+    "description": "すさまじく重い両手剣。"
+  },
+  "11": {
+    "displayName": "鋼鉄の片手剣",
+    "description": "金属の刃をもつシンプルな剣。"
+  },
+  "12": {
+    "displayName": "木の剣",
+    "description": "木からつくられた剣。そこそこ役にたつ。"
+  },
+  "13": {
+    "displayName": "昆虫の大アゴ",
+    "description": "ふるうのが楽しいかというと、正直微妙。"
+  },
+  "14": {
+    "displayName": "ネプチューンのつるぎ",
+    "description": "ジェム海の彼方より伝わる秘伝の宝剣。"
+  },
+  "15": {
+    "displayName": "フォレストソード",
+    "description": "強力な森の魔法をおびている。"
+  },
+  "16": {
+    "displayName": "肉切りナイフ",
+    "description": "小さくて軽いナイフ。"
+  },
+  "17": {
+    "displayName": "鉄のダガー",
+    "description": "ありふれた短剣"
+  },
+  "18": {
+    "displayName": "盗人のナイフ",
+    "description": "スピードと静かさを優先した武器。"
+  },
+  "19": {
+    "displayName": "シャドウダガー",
+    "description": "その刃を耳に近づければ、1000もの魂が金切り声をあげるのが聞こえる。"
+  },
+  "20": {
+    "displayName": "エルフの剣",
+    "description": "エルフの器用な手でなければ、こんな剣はつくれない。"
+  },
+  "21": {
+    "displayName": "クリスタルダガー",
+    "description": "精製されたクリスタルからつくられた短剣。"
+  },
+  "22": {
+    "displayName": "風のスピア",
+    "description": "すばやくくり出せる小さな刃物。"
+  },
+  "23": {
+    "displayName": "ギャラクシーダガー",
+    "description": "けっしてほかに並ぶもののない短剣。"
+  },
+  "24": {
+    "displayName": "木のこんぼう",
+    "description": "堅い木をこんぼうの形にあらく削ったもの。"
+  },
+  "25": {
+    "displayName": "アレックスのバット",
+    "description": "ボールの当たるところは、アレックスが打った満塁ホームランのせいでへこんでいる。"
+  },
+  "26": {
+    "displayName": "鉛のロッド。",
+    "description": "驚異的な重さ。"
+  },
+  "27": {
+    "displayName": "木のハンマー",
+    "description": "頭の部分でガツンと一撃。こんぼうにくらべると軽い。"
+  },
+  "28": {
+    "displayName": "グランドハンマー",
+    "description": "とてつもなくヘビーなハンマー。喰らった敵は宙を舞う。"
+  },
+  "29": {
+    "displayName": "ギャラクシーハンマー",
+    "description": "けっしてほかに並ぶもののないハンマー。とてつもなく軽い素材でできている。"
+  },
+  "30": {
+    "displayName": "サムの古いギター",
+    "description": "思い出がたくさんつまっている。"
+  },
+  "31": {
+    "displayName": "大たい骨",
+    "description": "ずっしりと重い古びたホネ。数世紀ぶんのよごれがこびりついている。"
+  },
+  "32": {
+    "displayName": "パチンコ",
+    "description": "弾として石や鉱石が必要。"
+  },
+  "33": {
+    "displayName": "マスターパチンコ",
+    "description": "弾として石や鉱石が必要。"
+  },
+  "34": {
+    "displayName": "ギャラクシーパチンコ",
+    "description": "並ぶものがないくらい強力。"
+  },
+  "35": {
+    "displayName": "エリオットのえんぴつ",
+    "description": "エリオットが小説を書くのにつかったえんぴつ。鋭くけずってある！"
+  },
+  "36": {
+    "displayName": "マルのレンチ",
+    "description": "金属製の大きなレンチ。マルとおなじにおいがする。"
+  },
+  "37": {
+    "displayName": "ハーヴィーのマレット",
+    "description": "見るとハーヴィーの診療所を思い出す。"
+  },
+  "38": {
+    "displayName": "ペニーのフライパン",
+    "description": "ペニーお気にいりのフライパン。内側にはゴムのようなナゾのかたまりがこびりついている。"
+  },
+  "39": {
+    "displayName": "リアの万能ナイフ",
+    "description": "リアが流木をけずるのに愛用しているナイフ。"
+  },
+  "40": {
+    "displayName": "アビゲイルの占い板",
+    "description": "占いにつかう板。マーブルウッドでできている。"
+  },
+  "41": {
+    "displayName": "セバスチャンのメイス",
+    "description": "中世の武器のレプリカ。セバスチャンのコレクションのひとつ。"
+  },
+  "42": {
+    "displayName": "ヘイリーのアイロン",
+    "description": "とても熱い。ヘイリーの髪とおなじようなにおいがする。"
+  },
+  "43": {
+    "displayName": "海賊の剣",
+    "description": "いかにも海賊につかわれていそうな剣。"
+  },
+  "44": {
+    "displayName": "カットラス",
+    "description": "みごとなつくりの剣。"
+  },
+  "45": {
+    "displayName": "魔性のクリス",
+    "description": "イリジウム合金でつくられた短剣。"
+  },
+  "46": {
+    "displayName": "カジェル",
+    "description": "蛮勇のおともに。"
+  },
+  "47": {
+    "displayName": "カマ",
+    "description": "牧場にサイロがあれば、牧草を刈ってほし草にできる。"
+  },
+  "48": {
+    "displayName": "イエティのキバ",
+    "description": "ふれると氷のように冷たい。"
+  },
+  "49": {
+    "displayName": "レイピア",
+    "description": "刃が優美な剣。"
+  },
+  "50": {
+    "displayName": "ファルシオン",
+    "description": "軽くてもパワフルな片手剣。"
+  },
+  "51": {
+    "displayName": "欠けたトライデント",
+    "description": "海から見つかったにもかかわらず、その鋭さはにぶっていない。"
+  },
+  "52": {
+    "displayName": "精鍛の剣",
+    "description": "どんな攻撃にも耐えぬきそうなブロードソード。"
+  },
+  "53": {
+    "displayName": "ゴールデン鎌",
+    "description": "通常の鎌よりも強力です。"
+  },
+  "54": {
+    "displayName": "ドワーフの剣",
+    "description": "とても古いものだが、切れ味は失われていない。"
+  },
+  "55": {
+    "displayName": "ドワーフのハンマー",
+    "description": "かすかに風を巻く音がする。"
+  },
+  "56": {
+    "displayName": "ドワーフのダガー",
+    "description": "とても古いものだが、切れ味は失われていない。"
+  },
+  "57": {
+    "displayName": "ドラゴンの歯のカットラス",
+    "description": "この刃は魔法の歯から鍛えられている。"
+  },
+  "58": {
+    "displayName": "ドラゴンの歯のこんぼう",
+    "description": "魔法の歯から作られたもの。"
+  },
+  "59": {
+    "displayName": "ドラゴンの歯のナイフ",
+    "description": "この刃は魔法の歯から鍛えられている。"
+  },
+  "60": {
+    "displayName": "骨のつるぎ",
+    "description": "骨で作られた大きく鋭い刃。"
+  },
+  "61": {
+    "displayName": "イリジウムニードル",
+    "description": "先端は原子レベルで見ても信じられないほど鋭い。"
+  },
+  "62": {
+    "displayName": "インフィニティブレード",
+    "description": "ギャラクシーソードの真の姿。"
+  },
+  "63": {
+    "displayName": "インフィニティガベル",
+    "description": "ギャラクシーハンマーの真の姿。"
+  },
+  "64": {
+    "displayName": "インフィニティダガー",
+    "description": "ギャラクシーダガーの真の姿。"
+  },
+  "65": {
+    "displayName": "ミャオメア",
+    "description": "遠い国からきた珍しい武器…"
+  },
+  "66": {
+    "displayName": "イリジウムのカマ",
+    "description": "あらゆる作物の収穫に使用できる。干し草づくりにも最適。"
+  }
+}

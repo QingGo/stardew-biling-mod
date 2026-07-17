@@ -1,0 +1,22 @@
+{
+  "RandomNegativeItemNoun": "Müll#Schrott#Gerümpel#Krempel#Mist",
+  "RandomPositiveAdjective_Child": "cool#lustig#toll#nett#goldig#super#großartig",
+  "RandomPositiveAdjective_AdultMale": "interessant#aufregend#toll#lustig#großartig#fantastisch",
+  "RandomPositiveAdjective_AdultFemale": "wundervoll#prima#herzerwärmend#magisch#unglaublich#bezaubernd#unterhaltsam#hinreißend",
+  "RandomPositiveAdjective_PlaceOrEvent": "wundervoll#prima#herzerwärmend#magisch#unglaublich#bezaubernd#unterhaltsam#hinreißend",
+  "RandomDeliciousAdjective": "köstlich#lecker#wundervoll#zufriedenstellend#füllend#fabelhaft#appetitlich#herrlich",
+  "RandomDeliciousAdjective_Child": "lecker",
+  "RandomNegativeFoodAdjective_Child": "eklig",
+  "RandomNegativeFoodAdjective_Polite": "... interessant#... ungewöhnlich#... anders#... eigenwillig",
+  "RandomNegativeFoodAdjective": "scheußlich#ekelhaft#widerlich#abscheulich#unappetitlich#zum Kotzen#furchtbar#abstoßend#ekelerregend#schauderhaft#entsetzlich#verdorben",
+  "RandomSlightlyPositiveFoodAdjective": "ordentlich#gut#essbar",
+  "ChildTerm_Male": "Junge",
+  "ChildTerm_Female": "Mädchen",
+  "Pronoun_Male": "ihm",
+  "Pronoun_Female": "ihr",
+  "QuestionDialogue_Yes": "Ja",
+  "QuestionDialogue_No": "Nein",
+  "GenericPlayerTerm": "du",
+  "Possessive_Pronoun_Male": "sein",
+  "Possessive_Pronoun_Female": "ihr"
+}

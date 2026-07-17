@@ -1,0 +1,730 @@
+{
+  "0": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "1": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "2": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "3": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "4": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "5": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "6": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "7": {
+    "displayName": "観葉植物",
+    "description": "暮らしにはなやかさをそえてくれる鉢植え。"
+  },
+  "8": {
+    "displayName": "カカシ",
+    "description": "カラスから作物を守ってくれる。一定の範囲にだけ有効。（半径およそ8マス）"
+  },
+  "9": {
+    "displayName": "ひらい針",
+    "description": "カミナリのエネルギーをあつめ、電池にしてくれる。"
+  },
+  "10": {
+    "displayName": "ハチの巣箱",
+    "description": "外に設置して待つと、おいしいハチミツがとれる。（冬をのぞく）"
+  },
+  "12": {
+    "displayName": "醸造ダル",
+    "description": "なかに野菜やくだものを入れて待つと、飲みものができる。"
+  },
+  "13": {
+    "displayName": "溶鉱炉",
+    "description": "鉱石と石炭を入れるとのべ棒ができる。"
+  },
+  "15": {
+    "displayName": "保存ジャー",
+    "description": "野菜をピクルスに、くだものをジャムに変える"
+  },
+  "16": {
+    "displayName": "チーズプレス",
+    "description": "ミルクからチーズをつくる。"
+  },
+  "17": {
+    "displayName": "織り機",
+    "description": "刈ったウールから布をつくる。"
+  },
+  "19": {
+    "displayName": "オイルメーカー",
+    "description": "トリュフオイルをつくる。"
+  },
+  "20": {
+    "displayName": "リサイクルマシン",
+    "description": "釣ってしまったゴミを素材に変える。"
+  },
+  "21": {
+    "displayName": "結晶コピーマシン",
+    "description": "なかに宝石を入れるとコピーをつくってくれる。"
+  },
+  "22": {
+    "displayName": "テーブルパーツL",
+    "description": "おおきなテーブルの左側。"
+  },
+  "23": {
+    "displayName": "テーブルパーツR",
+    "description": "おおきなテーブルの右側。"
+  },
+  "24": {
+    "displayName": "マヨネーズマシン",
+    "description": "タマゴからマヨネーズをつくれる。"
+  },
+  "25": {
+    "displayName": "タネ製造マシン",
+    "description": "作物を中に入れると、タネをいくつか生産する。木になるくだものにはつかえない。"
+  },
+  "26": {
+    "displayName": "木のイス",
+    "description": "4方向、どちらに向けてもつかえるすぐれもの。"
+  },
+  "27": {
+    "displayName": "木のイス",
+    "description": "4方向、どちらに向けてもつかえるすぐれもの。"
+  },
+  "28": {
+    "displayName": "スケルトンの模型",
+    "description": "スケルトンのすがたを模した人形。"
+  },
+  "29": {
+    "displayName": "オベリスク",
+    "description": "禍々しい様子をした門。邪悪なエネルギーをはなっている。"
+  },
+  "31": {
+    "displayName": "ニワトリの像",
+    "description": "木でできたニワトリの像。"
+  },
+  "32": {
+    "displayName": "石のケアン",
+    "description": "農場用の装飾アイテム"
+  },
+  "33": {
+    "displayName": "よろい一式",
+    "description": "農場用の装飾アイテム"
+  },
+  "34": {
+    "displayName": "船舶の象徴",
+    "description": "農場用の装飾アイテム"
+  },
+  "35": {
+    "displayName": "丸太",
+    "description": "農場用の装飾アイテム"
+  },
+  "36": {
+    "displayName": "フラミンゴ",
+    "description": "農場用の装飾アイテム"
+  },
+  "37": {
+    "displayName": "木の掲示板",
+    "description": "これにアイテムを使用すると、いろいろ表示を変えられる。アイテムは消費されない。"
+  },
+  "38": {
+    "displayName": "石の掲示板",
+    "description": "これにアイテムを使用すると、いろいろ表示を変えられる。アイテムは消費されない。"
+  },
+  "39": {
+    "displayName": "黒い掲示板",
+    "description": "これにアイテムを使用すると、いろいろ表示を変えられる。アイテムは消費されない。"
+  },
+  "40": {
+    "displayName": "グリーンステッキ（大）",
+    "description": "農場用の装飾アイテム"
+  },
+  "41": {
+    "displayName": "グリーンステッキ（小）",
+    "description": "農場用の装飾アイテム"
+  },
+  "42": {
+    "displayName": "いろいろステッキ",
+    "description": "農場用の装飾アイテム"
+  },
+  "43": {
+    "displayName": "レッドステッキ（小）",
+    "description": "農場用の装飾アイテム"
+  },
+  "44": {
+    "displayName": "レッドステッキ（大）",
+    "description": "農場用の装飾アイテム"
+  },
+  "45": {
+    "displayName": "干し草俵",
+    "description": "農場用の装飾アイテム"
+  },
+  "46": {
+    "displayName": "平丸太",
+    "description": "農場用の装飾アイテム"
+  },
+  "47": {
+    "displayName": "墓石",
+    "description": "農場用の装飾アイテム"
+  },
+  "48": {
+    "displayName": "季節の飾り",
+    "description": "季節によって変わる飾りつけ"
+  },
+  "52": {
+    "displayName": "石のカエル",
+    "description": "農場のお庭用アート"
+  },
+  "53": {
+    "displayName": "石のオウム",
+    "description": "農場のお庭用アート"
+  },
+  "54": {
+    "displayName": "石のフクロウ",
+    "description": "農場のお庭用アート"
+  },
+  "55": {
+    "displayName": "石のジュニモ",
+    "description": "農場のお庭用アート"
+  },
+  "56": {
+    "displayName": "スライムボール",
+    "description": "なかにスライムがつまっている。"
+  },
+  "62": {
+    "displayName": "植木鉢",
+    "description": "屋内であれば、オールシーズンの作物がそだつ。屋外では、季節に合った作物しかそだたない"
+  },
+  "64": {
+    "displayName": "本棚",
+    "description": "暮らしのなかに本を取り入れたい人に。"
+  },
+  "65": {
+    "displayName": "高級なテーブル",
+    "description": "みごとな細工がほどこされた丸テーブル。"
+  },
+  "66": {
+    "displayName": "とても古いテーブル",
+    "description": "ぶあついクモの巣におおわれている。"
+  },
+  "67": {
+    "displayName": "とても古いスツール",
+    "description": "おばあちゃんの家みたいなにおいがする。"
+  },
+  "68": {
+    "displayName": "大きな古時計",
+    "description": "とても古い…ふり子はサビついて止まってしまったようだ。"
+  },
+  "69": {
+    "displayName": "クマちゃんの時計",
+    "description": "クマちゃんの形をしたふり子時計。"
+  },
+  "70": {
+    "displayName": "デッドツリー",
+    "description": "むかしむかしに化石化してしまったかわいそうなツリー。"
+  },
+  "71": {
+    "displayName": "階段",
+    "description": "鉱山でつかうと下の階へおりられる。"
+  },
+  "72": {
+    "displayName": "ロングトーチ",
+    "description": "柄は竹からできている。"
+  },
+  "73": {
+    "displayName": "儀式用マスク",
+    "description": "おおきすぎて顔にはかぶれない。"
+  },
+  "74": {
+    "displayName": "たき火",
+    "description": "残り火が赤くほのかに灯っている。"
+  },
+  "75": {
+    "displayName": "ボンゴ",
+    "description": "かざりがついた打楽器。深みのある音が出る。"
+  },
+  "76": {
+    "displayName": "装飾用ヤリ",
+    "description": "あまり安全とは言えないインテリア。"
+  },
+  "78": {
+    "displayName": "巨岩",
+    "description": "とてもおおきな石のかたまり。"
+  },
+  "79": {
+    "displayName": "ドア",
+    "description": "隠れた仕掛けによって、床に引っこむようになっている。"
+  },
+  "80": {
+    "displayName": "ドア",
+    "description": "隠れた仕掛けによって、床に引っこむようになっている。"
+  },
+  "81": {
+    "displayName": "カギつきドア",
+    "description": "隠れた仕掛けによって、床に引っこむようになっている。"
+  },
+  "82": {
+    "displayName": "カギつきドア",
+    "description": "隠れた仕掛けによって、床に引っこむようになっている。"
+  },
+  "83": {
+    "displayName": "邪悪な像",
+    "description": "見ているとどこか胸さわぎがする彫像。"
+  },
+  "84": {
+    "displayName": "邪悪な像",
+    "description": "どこかおかしな雰囲気がただよう彫像。"
+  },
+  "85": {
+    "displayName": "ナマケモノの化石 L",
+    "description": "スターデューバレーの森に大むかし生息していたナマケモノの化石。パワフルなあごで、頑丈な植物のせんいもかみ砕いていた。"
+  },
+  "86": {
+    "displayName": "ナマケモノの化石 M",
+    "description": "大むかしに生息していたナマケモノのろっ骨。"
+  },
+  "87": {
+    "displayName": "ナマケモノの化石 R",
+    "description": "大むかしに生息していたナマケモノのうしろ足としっぽ。"
+  },
+  "88": {
+    "displayName": "晶洞石のおきもの",
+    "description": "スタンドに固定された大きなジオード。なかには数えきれないほどの紫水晶がきらめいている。"
+  },
+  "89": {
+    "displayName": "黒曜石の花びん",
+    "description": "黒曜石と金からつくられた、装飾用のうつくしい花びん。"
+  },
+  "94": {
+    "displayName": "ソングストーン",
+    "description": "たたくとすんだ音をひびかせる石。"
+  },
+  "95": {
+    "displayName": "フクロウの石像",
+    "description": "みごとな石像だが、どこでつくられたのかは不明。"
+  },
+  "96": {
+    "displayName": "奇妙なカプセル",
+    "description": "液体のなかで、肉のようなものがうごめいている…"
+  },
+  "98": {
+    "displayName": "からっぽのカプセル",
+    "description": "ガラスの一部が割れている。"
+  },
+  "99": {
+    "displayName": "エサやり機",
+    "description": "サイロに入ったエサをラクにとり出せる。"
+  },
+  "101": {
+    "displayName": "ふ卵器",
+    "description": "タマゴからニワトリやアヒルのヒナをかえすことができる。"
+  },
+  "104": {
+    "displayName": "ヒーター",
+    "description": "小屋をあたため、冬でも動物たちの暮らしを快適に保ってくれる。"
+  },
+  "105": {
+    "displayName": "樹液採取器",
+    "description": "カエデ、オーク、マツの木にとりつけてしばらく待てば、木がたくわえた樹液を採取できる。"
+  },
+  "106": {
+    "displayName": "カメラ",
+    "description": "古いカメラ。三脚に取り付けられている。"
+  },
+  "107": {
+    "displayName": "ウサギのぬいぐるみ",
+    "description": "おおきくてふかふかな、かわいいぬいぐるみ。"
+  },
+  "108": {
+    "displayName": "タルフラワー",
+    "description": "花が植えられたオーク材のタル。春と夏のあいだ花を咲かせる。"
+  },
+  "110": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の1個目）"
+  },
+  "111": {
+    "displayName": "はなやかな水差し",
+    "description": "真ちゅうから人の手でつくられている。"
+  },
+  "112": {
+    "displayName": "ヒマワリのドライフラワー",
+    "description": "枯れてなお力強いインテリア。"
+  },
+  "113": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の2個目）"
+  },
+  "114": {
+    "displayName": "炭焼き窯",
+    "description": "木10個から石炭を1つつくれる。"
+  },
+  "116": {
+    "displayName": "スターデューヒーロートロフィー",
+    "description": "スターデューバレーの住人にとってもっとも栄誉ある賞をもらった証。"
+  },
+  "117": {
+    "displayName": "コーラマシン",
+    "description": "良質なコーラを生産しつづけるマシン。"
+  },
+  "118": {
+    "displayName": "タル",
+    "description": "…"
+  },
+  "119": {
+    "displayName": "木箱",
+    "description": "…"
+  },
+  "120": {
+    "displayName": "タル",
+    "description": "…"
+  },
+  "121": {
+    "displayName": "木箱",
+    "description": "…"
+  },
+  "122": {
+    "displayName": "タル",
+    "description": "…"
+  },
+  "123": {
+    "displayName": "木箱",
+    "description": "…"
+  },
+  "124": {
+    "displayName": "タル",
+    "description": "…"
+  },
+  "125": {
+    "displayName": "木箱",
+    "description": "…"
+  },
+  "126": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の3個目）"
+  },
+  "127": {
+    "displayName": "おわりなき幸運の像",
+    "description": "純金でできている。何の役にたつんだろう？"
+  },
+  "128": {
+    "displayName": "キノコボックス",
+    "description": "数日おきにキノコが収穫できる。"
+  },
+  "130": {
+    "displayName": "箱",
+    "description": "中にアイテムを入れておける。"
+  },
+  "136": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の4個目）"
+  },
+  "137": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の5個目）"
+  },
+  "138": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の6個目）"
+  },
+  "139": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の7個目）"
+  },
+  "140": {
+    "displayName": "レアなカカシ",
+    "description": "全種類あつめよう！（全8個中の8個目）"
+  },
+  "141": {
+    "displayName": "ゲーム機（プレーリーキング）",
+    "description": "プレーリーキングを自宅であそべる！"
+  },
+  "143": {
+    "displayName": "木のたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "144": {
+    "displayName": "石のたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "145": {
+    "displayName": "金のたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "146": {
+    "displayName": "キャンプファイア",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "147": {
+    "displayName": "丸太のたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "148": {
+    "displayName": "木彫りのたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "149": {
+    "displayName": "ドクロのたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "150": {
+    "displayName": "タルのたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "151": {
+    "displayName": "大理石のたき火台",
+    "description": "周囲をほどほどに照らしてくれる。"
+  },
+  "152": {
+    "displayName": "木の街灯",
+    "description": "周囲を明るく照らしてくれる。"
+  },
+  "153": {
+    "displayName": "鉄の街灯",
+    "description": "周囲を明るく照らしてくれる。"
+  },
+  "154": {
+    "displayName": "ミミズ飼育器",
+    "description": "定期的に釣りエサがとれる。エサはやらなくてOK。"
+  },
+  "155": {
+    "displayName": "??HMTGF??",
+    "description": "??HMTGF??"
+  },
+  "156": {
+    "displayName": "スライム用ふ卵器",
+    "description": "スライムのタマゴをふ化させる。家の外でもスライムを飼えるようになる。"
+  },
+  "158": {
+    "displayName": "スライムエッグプレス",
+    "description": "スライムのかけら100個を、スライムのタマゴ1つに変えられる。科学の力ってすごい！"
+  },
+  "159": {
+    "displayName": "ゲームマシン：ジュニモカート",
+    "description": "「ジュニモカート」を家であそぼう！"
+  },
+  "160": {
+    "displayName": "完全無欠の像",
+    "description": "純イリジウム製。"
+  },
+  "161": {
+    "displayName": "??ピンキーレモン??",
+    "description": "??ピンキーレモン??"
+  },
+  "162": {
+    "displayName": "??フロッグモン??",
+    "description": "??フロッグモン??"
+  },
+  "163": {
+    "displayName": "熟成ダル",
+    "description": "地下室でつかう。ワインやチーズのようなアイテムを熟成させる。"
+  },
+  "164": {
+    "displayName": "ルイスの黄金像",
+    "description": "町長のひみつプロジェクト"
+  },
+  "165": {
+    "displayName": "自動収穫機",
+    "description": "動物から毎朝、自動で収穫できる。小屋または家畜小屋の中に置く必要がある。"
+  },
+  "167": {
+    "displayName": "デラックスかかし。",
+    "description": "農作物を鳥から守ってくれる。広範囲(約16タイル)。"
+  },
+  "174": {
+    "displayName": "タル",
+    "description": "…"
+  },
+  "175": {
+    "displayName": "木箱",
+    "description": "…"
+  },
+  "184": {
+    "displayName": "シーズンプラント",
+    "description": "季節に合わせて変化する観賞用植物。水やりの必要がない"
+  },
+  "188": {
+    "displayName": "シーズンプラント",
+    "description": "季節に合わせて変化する観賞用植物。水やりの必要がない"
+  },
+  "192": {
+    "displayName": "シーズンプラント",
+    "description": "季節に合わせて変化する観賞用植物。水やりの必要がない"
+  },
+  "196": {
+    "displayName": "シーズンプラント",
+    "description": "季節に合わせて変化する観賞用植物。水やりの必要がない"
+  },
+  "200": {
+    "displayName": "シーズンプラント",
+    "description": "季節に合わせて変化する観賞用植物。水やりの必要がない"
+  },
+  "204": {
+    "displayName": "シーズンプラント",
+    "description": "季節に合わせて変化する観賞用植物。水やりの必要がない"
+  },
+  "208": {
+    "displayName": "作業台",
+    "description": "ここでクラフトすると、近くにある箱に入っている材料を使うことができる。"
+  },
+  "209": {
+    "displayName": "ミニ・ジュークボックス",
+    "description": "好きな曲をプレイできる。"
+  },
+  "211": {
+    "displayName": "ウッドチッパー",
+    "description": "硬材を入れると、通常の木に分解してくれる。"
+  },
+  "214": {
+    "displayName": "電話",
+    "description": "店の営業時間や、在庫の確認に利用できる。"
+  },
+  "216": {
+    "displayName": "ミニ冷蔵庫",
+    "description": "料理の追加材料を保管できる。"
+  },
+  "219": {
+    "displayName": "呪われたP.K. アーケードシステム",
+    "description": "このプレーリーキング・アーケードシステムは、何かがおかしい…"
+  },
+  "221": {
+    "displayName": "アイテム用の台座",
+    "description": "アイテムを展示するための台座。"
+  },
+  "232": {
+    "displayName": "石の箱",
+    "description": "中にアイテムを入れておける。"
+  },
+  "238": {
+    "displayName": "ミニオベリスク",
+    "description": "農場に2箇所設置して、その間をワープする。"
+  },
+  "239": {
+    "displayName": "農場コンピューター",
+    "description": "農場をスキャンし、役立つ情報を表示する。"
+  },
+  "248": {
+    "displayName": "ミニ出荷箱",
+    "description": "入れたアイテムが毎晩の出荷に含まれる。"
+  },
+  "254": {
+    "displayName": "ダチョウふ卵器",
+    "description": "ダチョウのタマゴをダチョウのヒナにふ化させる。家畜小屋に置く。"
+  },
+  "182": {
+    "displayName": "ジオード粉砕機",
+    "description": "自動でジオードを割る。"
+  },
+  "246": {
+    "displayName": "コーヒーメーカー",
+    "description": "毎朝作りたての一杯を自動で作ってくれる。"
+  },
+  "247": {
+    "displayName": "ミシン",
+    "description": "お家での繕いからお洋服の仕立てまでご利用いただけます！"
+  },
+  "231": {
+    "displayName": "ソーラーパネル",
+    "description": "太陽の下に置いて、ゆっくり電池を充電する。"
+  },
+  "90": {
+    "displayName": "骨粉砕機",
+    "description": "骨状のアイテムから肥料を作る。"
+  },
+  "256": {
+    "displayName": "ジュニモの箱",
+    "description": "森の魔法の力が、ジュニモの箱をすべて同じ隠し場所につなげている。"
+  },
+  "262": {
+    "displayName": "タル",
+    "description": "…"
+  },
+  "263": {
+    "displayName": "木箱",
+    "description": "…"
+  },
+  "264": {
+    "displayName": "大型樹液採取器",
+    "description": "カエデ、オーク、マツの木にとりつけてしばらく待てば、木がたくわえた樹液を採取できる。ふつうの樹液採取器の2倍の効率がある。"
+  },
+  "265": {
+    "displayName": "分解器",
+    "description": "クラフトアイテムを壊して、もっとも価値が高い素材を回収する。"
+  },
+  "272": {
+    "displayName": "自動ナデナデ装置",
+    "description": "Joja Co.が特許を取得した小屋と家畜小屋のための技術。動物たちとの友好度を保つことができるが、人の手で撫でるほどの効果はない。実際に動物と触れ合うことで不足を補うことができる。"
+  },
+  "275": {
+    "displayName": "ホッパー",
+    "description": "中に入れたアイテムを、前にある装置に自動的に投入する。"
+  },
+  "278": {
+    "displayName": "キャンプファイヤー",
+    "description": "外出先で料理しよう！"
+  },
+  "280": {
+    "displayName": "真の完璧の像",
+    "description": "純イリジウム製。"
+  },
+  "TextSign": {
+    "displayName": "看板",
+    "description": "この看板にはメッセージを書くことができます。"
+  },
+  "MushroomLog": {
+    "displayName": "キノコの原木",
+    "description": "時々キノコが生えてくる。近くに野生の木があればあるほど効率がよくなる。"
+  },
+  "BaitMaker": {
+    "displayName": "エサ製造器",
+    "description": "中に魚を入れて専用のエサを作る。"
+  },
+  "Dehydrator": {
+    "displayName": "乾燥器",
+    "description": "中にくだものやキノコを5個入れて乾燥させる。"
+  },
+  "HeavyFurnace": {
+    "displayName": "強力溶鉱炉",
+    "description": "一度に5個ののべ棒が作れる。一回の使用に鉱石25個と石炭3個が必要。"
+  },
+  "StatueOfBlessings": {
+    "displayName": "祝福の像",
+    "description": "この像にふれると毎日特別な祝福を受けることができる。"
+  },
+  "StatueOfTheDwarfKing": {
+    "displayName": "ドワーフキングの像",
+    "description": "2種類の採鉱パワーから毎日1つ選べる。"
+  },
+  "Anvil": {
+    "displayName": "カナトコ",
+    "description": "装身具を作り直すことができる。一回の使用にイリジウムののべ棒が3個必要。"
+  },
+  "MiniForge": {
+    "displayName": "小さな鍛造機",
+    "description": "これがあれば自宅でドワーフの鍛冶ができる。"
+  },
+  "FishSmoker": {
+    "displayName": "魚のくんせい器",
+    "description": "魚と石炭を入れて魚のくんせいを作る。くんせいにすると2倍の値段で売れる。"
+  },
+  "DeluxeWormBin": {
+    "displayName": "デラックスミミズ飼育器",
+    "description": "定期的にデラックス釣りエサがとれる。エサはやらなくてOK。"
+  },
+  "BigChest": {
+    "displayName": "大きな箱",
+    "description": "ふつうの箱のおよそ2倍の収納スペースがある。"
+  },
+  "BigStoneChest": {
+    "displayName": "大きな石の箱",
+    "description": "ふつうの箱のおよそ2倍の収納スペースがある。"
+  }
+}

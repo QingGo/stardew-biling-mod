@@ -1,0 +1,74 @@
+{
+  "504": {
+    "displayName": "スニーカー",
+    "description": "防御はうすいが、見た目はオシャレ！"
+  },
+  "505": {
+    "displayName": "ゴム長グツ",
+    "description": "エレメントから身を守ってくれる。"
+  },
+  "506": {
+    "displayName": "革のブーツ",
+    "description": "しなやかな革からつくられている。"
+  },
+  "507": {
+    "displayName": "作業用ブーツ",
+    "description": "しこまれた鉄板がつま先を守る。"
+  },
+  "508": {
+    "displayName": "コンバットブーツ",
+    "description": "鉄のあみで補強されている。"
+  },
+  "509": {
+    "displayName": "ツンドラブーツ",
+    "description": "毛皮の裏地が足首を寒さから守ってくれる。"
+  },
+  "510": {
+    "displayName": "サーマルブーツ",
+    "description": "異常気象にそなえて設計されている。"
+  },
+  "511": {
+    "displayName": "ダークブーツ",
+    "description": "ぶ厚い黒革からつくられている。"
+  },
+  "512": {
+    "displayName": "防火ブーツ",
+    "description": "アツアツの溶岩にも耐えられるらしい。"
+  },
+  "513": {
+    "displayName": "精霊のブーツ",
+    "description": "布地にふしぎな力が宿っている。"
+  },
+  "514": {
+    "displayName": "スペースブーツ",
+    "description": "むらさき色の光沢は、イリジウムが編みこまれている証。"
+  },
+  "515": {
+    "displayName": "カウボーイブーツ",
+    "description": "カントリーファッションの頂点。"
+  },
+  "804": {
+    "displayName": "エミリーのマジックブーツ",
+    "description": "エミリーの愛を込めて作られました。100％堆肥です！"
+  },
+  "806": {
+    "displayName": "レプラコーンシューズ",
+    "description": "バックルは純金製。"
+  },
+  "853": {
+    "displayName": "シンダークラウンシューズ",
+    "description": "有名なドワーフの道化師が持っていた魔法の靴。"
+  },
+  "854": {
+    "displayName": "マーメイドブーツ",
+    "description": "人魚のウロコのオーラに守られている。"
+  },
+  "855": {
+    "displayName": "ドラゴンスケールブーツ",
+    "description": "とても丈夫でキラキラ。"
+  },
+  "878": {
+    "displayName": "クリスタルシューズ",
+    "description": "足元をしっかり守ってくれる、輝くシューズ。"
+  }
+}

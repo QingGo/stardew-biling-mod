@@ -1,0 +1,266 @@
+{
+  "1": {
+    "displayName": "Triff den Zauberer",
+    "description": "Du hast einen Brief vom örtlichen Zauberer bekommen. Er behauptet, Informationen über das alte Gemeinschaftszentrum zu haben."
+  },
+  "2": {
+    "displayName": "Der mysteriöse Qi",
+    "description": "In einer geheimen Schließkassette hast du eine Notiz mit merkwürdigen Anweisungen gefunden. Sie wurde mit \"Mr. Qi\" unterschrieben."
+  },
+  "3": {
+    "displayName": "Der mysteriöse Qi",
+    "description": "Du hast eine weitere Notiz von \"Mr. Qi\" gefunden. Die Anfrage ist dieses Mal sogar noch ungewöhnlicher."
+  },
+  "4": {
+    "displayName": "Der mysteriöse Qi",
+    "description": "Du hast im Kühlschrank des Bürgermeisters eine weitere merkwürdige Notiz gefunden. Dieses Mal sind die Anweisungen kryptischer."
+  },
+  "5": {
+    "displayName": "Der mysteriöse Qi",
+    "description": "Du hast im Auge des Drachen noch eine Notiz gefunden. Es scheint, als würde Mr. Qis Schnitzeljagd sich dem Ende zuneigen."
+  },
+  "6": {
+    "displayName": "Erste Schritte",
+    "description": "Wenn du ein Bauer werden willst, musst du mit den Grundlagen anfangen. Benutze deine Hacke, um das Feld zu bestellen, benutze dann eine Saat auf dieser Erde, um etwas anzupflanzen. Bewässere sie jeden Tag, bis die Pflanze zur Ernte herangewachsen ist."
+  },
+  "7": {
+    "displayName": "Tiere aufziehen",
+    "description": "Robin, die örtliche Schreinerin, lebt im Norden der Stadt. Im Gegenzug für Materialien und Geld baut sie dir neue Gebäude auf deinem Hof. Mit ihrer Hilfe kannst du einen Hühnerstall oder Stall bauen, damit du Tiere züchten kannst."
+  },
+  "8": {
+    "displayName": "Fortschritt",
+    "description": "Wenn du an Erfahrung gewinnst, wirst du neue Rezepte zur Herstellung entdecken, die deine Einkünfte erhöhen und dein Leben einfacher machen. Eine Vogelscheuche zum Beispiel wird Krähen davon abhalten, sich an deiner wertvollen Ernte zu vergreifen."
+  },
+  "9": {
+    "displayName": "Sag Hallo!",
+    "description": "Es wäre eine nette Geste, dich jedem in der Stadt vorzustellen. Manche Leute sind eventuell etwas zurückhaltend, wenn es darum geht, den neuen Einwohner zu begrüßen."
+  },
+  "10": {
+    "displayName": "Kupfererz",
+    "description": "Du hast ein Stück Kupfererz gefunden. Du bist dir nicht sicher, wofür es gut ist, aber der örtliche Schmied sollte es wissen."
+  },
+  "11": {
+    "displayName": "Sich seinen Weg schmieden",
+    "description": "Wenn du weiter Erze abbaust, solltest du einen Schmelzofen bauen können."
+  },
+  "12": {
+    "displayName": "Schmelzen",
+    "description": "Mit deinem neuen Schmelzofen kannst du Metalle schmelzen. Laut Clints Anweisungen sollte der Schmelzofen aus 5 Stücken Kupfererz und 1 Stück Kohle einen Kupferbarren anfertigen."
+  },
+  "13": {
+    "displayName": "Auf zum Strand",
+    "description": "Jemand namens Willy hat dich dazu eingeladen, ihn am Strand südlich der Stadt zu besuchen. Er meint, er habe etwas, das er dir geben will."
+  },
+  "14": {
+    "displayName": "Erkunde die Mine",
+    "description": "Es gibt einen alten Minenschacht in den Bergen nördlich der Stadt. Dort könnten wertvolle Minerale sein, aber Marlon meinte, dort lauern zahlreiche Gefahren."
+  },
+  "15": {
+    "displayName": "Aufnahme",
+    "description": "Wenn du 10 Schleime erledigen kannst, hast du dir deinen Platz in der Abenteurergilde verdient."
+  },
+  "16": {
+    "displayName": "Aufnahme",
+    "description": "Du hast erfolgreich 10 Schleime besiegt. Jetzt kannst du der Abenteurergilde beitreten."
+  },
+  "17": {
+    "displayName": "Tiefer in die Mine",
+    "description": "Sieht so aus, als würde der Lift in den Minen immer noch funktionieren. Mit ihm kannst du schnell zu allen Lifttüren gelangen, die du entdeckt hast. Eine tiefere Expedition wäre vielleicht angemessen."
+  },
+  "18": {
+    "displayName": "Auf zum Grund?",
+    "description": "Bisher gibt es keine Anzeichen von einem Ende. Wie tief geht diese Mine?"
+  },
+  "19": {
+    "displayName": "Der Schädelschlüssel",
+    "description": "Du hast am Grund der Mine einen merkwürdigen Schlüssel gefunden."
+  },
+  "20": {
+    "displayName": "Qis Herausforderung",
+    "description": "Du wurdest dazu herausgefordert, Ebene 25 in der Schädelhöhle zu erreichen. Dir wurde eine ordentliche Belohnung versprochen, wenn du erfolgreich sein solltest."
+  },
+  "21": {
+    "displayName": "Marnies Bitte",
+    "description": "Marnie ist auf deinem Hof vorbeigekommen und hat dich um eine Höhlenkarotte gebeten. Sie versucht, ihre Ziegen zum Sprechen zu bringen und Höhlenkarotten sind deren liebste Belohnung."
+  },
+  "22": {
+    "displayName": "Fischeintopf",
+    "description": "Jodi hat auf deinem Hof vorbeigeschaut, um dich zum Abendessen um 19:00 Uhr einzuladen. Ihre einzige Bitte ist, dass du einen Forellenbarsch für ihren Fischeintopf mitbringst."
+  },
+  "23": {
+    "displayName": "Archäologie",
+    "description": "Du hast ein altertümlich wirkendes Objekt gefunden. Könnte es ein Artefakt vergangener Zeiten sein? Vielleicht hat Gunther, der Museumsdirektor, eine Antwort."
+  },
+  "24": {
+    "displayName": "Archäologie",
+    "description": "Gunther hat dich darum gebeten, neue Artefakte oder Minerale dem Museum zu spenden. Er meint, er würde dich ab und an mit seltenen Waren kompensieren."
+  },
+  "25": {
+    "displayName": "Wie man Freunde gewinnt",
+    "description": "Jemandem Geschenke zu machen ist ein großartiger Weg, um Freundschaften aufzubauen. Lerne die individuellen Geschmäcker der Leute kennen und du wirst in kürzester Zeit beliebt sein."
+  },
+  "26": {
+    "displayName": "\"Rattenproblem\"",
+    "description": "Irgendetwas Merkwürdiges geht im Gemeinschaftszentrum vor sich..."
+  },
+  "27": {
+    "displayName": "Goblin-Problem",
+    "description": "Ein Goblin blockert den Weg zur Hexenhütte. Es muss einen Weg geben, ihn zu bewegen... Vielleicht sollte ich nach mehr Informationen über Goblins suchen."
+  },
+  "28": {
+    "displayName": "Dunkler Talisman",
+    "description": "Der Zauberer hat mich darum gebeten, die magische Tinte aus dem Haus seiner Exfrau zu holen. Aber um hineinzukommen, brauche ich einen dunklen Talisman..."
+  },
+  "29": {
+    "displayName": "Seltsame Notiz",
+    "description": "Du hast eine kaum lesbare Notiz gefunden, die besagt, dass du \"Ahonsierub\" in den \"gehmn Walt\" bringen sollst."
+  },
+  "30": {
+    "displayName": "Geheimnisvolle Notiz",
+    "description": "Du hast eine Notiz gefunden, auf der steht \"Jemand wartet auf Ebene 100 der Schädelhöhle auf dich\"."
+  },
+  "31": {
+    "displayName": "Ein Wintermysterium",
+    "description": "An einer Bushaltestelle hattest du eine Zufallsbegegnung mit einer seltsamen Person. Als sie dich sah, floh sie Richtung Stadt. Ob es dort einen Hinweis auf ihren Aufenthaltsort gibt?"
+  },
+  "100": {
+    "displayName": "Robins verlorene Axt",
+    "description": "Robin hat ihre Lieblingsaxt verloren. Das letzte Mal hat sie sie anscheinend auf Marnies Ranch benutzt, um Holz zu hacken."
+  },
+  "101": {
+    "displayName": "Jodis Bitte",
+    "description": "Jodi benötigt frischen Blumenkohl für ein Rezept, an dem sie arbeitet. Sie hat dich darum gebeten, ihr einen zu bringen."
+  },
+  "102": {
+    "displayName": "Bürgermeister \"Shorts\"",
+    "description": "Bürgermeister Lewis hat seine violetten \"Shorts\" verloren. Er bittet dich darum, sie ihm zurückzubringen... Unauffällig."
+  },
+  "103": {
+    "displayName": "Pam ist durstig",
+    "description": "Pam dürstet es nach hellem Bier. Reguläres Bier wird nicht reichen. Du kannst es selbst brauen, wenn du Hopfen und ein Fass zum Brauen hast."
+  },
+  "104": {
+    "displayName": "Nutzpflanzen-Forschung",
+    "description": "Demetrius braucht eine frische Melone für seine Forschung."
+  },
+  "105": {
+    "displayName": "Knietherapie",
+    "description": "George braucht eine scharfe Peperoni, um die Schmerzen in seinem Knie zu lindern."
+  },
+  "106": {
+    "displayName": "Kuh-Vergnügen",
+    "description": "Marnie will ihren Kühen einen besonderen Leckerbissen gönnen. Sie bittet dich um ein Bündel Amarant."
+  },
+  "107": {
+    "displayName": "Beerenkorb",
+    "description": "Es ist Brombeerenzeit, aber Linus kann seinen Korb nicht finden! Er bittet dich darum, ihm beim Suchen zu helfen. Er hat keine Ahnung, wo er sein könnte."
+  },
+  "108": {
+    "displayName": "Kürbis-Schnitzen",
+    "description": "Caroline will mit ihrer Tochter einen Kürbis schnitzen. Sie hat dich darum gebeten, ihr einen von deinem Hof zu bringen."
+  },
+  "109": {
+    "displayName": "Fange einen Tintenfisch",
+    "description": "Willy hat dich herausgefordert, einen Tintenfisch zu fangen. Er sagt, du kannst sie im Ozean an Winternächten fischen."
+  },
+  "110": {
+    "displayName": "Clints Versuch",
+    "description": "Clint will, dass du Emily einen Amethysten gibst. Er möchte, dass du ihr sagst, dass er von ihm ist."
+  },
+  "111": {
+    "displayName": "Dunkle Reagenz",
+    "description": "Der Zauberer will, dass du in die Minen gehst und ihm eine Schattenessenz bringst. Er braucht sie für eine Art dunkle Magie."
+  },
+  "112": {
+    "displayName": "Ein Gefallen für Clint",
+    "description": "Clint hat einen neuen Hammer und will ihn an verschiedenen Metallen ausprobieren."
+  },
+  "113": {
+    "displayName": "Robins Bitte",
+    "description": "Robin hat dich angeschrieben, um dich um Hartholz zu bitten."
+  },
+  "114": {
+    "displayName": "Fischeintopf",
+    "description": "Gus will einen Fischeintopf machen, aber er braucht einen weißen Thun."
+  },
+  "115": {
+    "displayName": "Frische Frucht",
+    "description": "Emily sehnt sich nach dem Geschmack des Frühlings. Sie fragt nach einer frischen Aprikose."
+  },
+  "116": {
+    "displayName": "Omas Geschenk",
+    "description": "Evelyn will ihren Ehemann mit einem Geschenk überraschen."
+  },
+  "117": {
+    "displayName": "Pierres Mitteilung",
+    "description": "Pierre wird \"gutes Geld\" an denjenigen zahlen, der ihm einen Teller Sashimi bringt. Anscheinend braucht er es echt dringend."
+  },
+  "118": {
+    "displayName": "Aquatische Forschung",
+    "description": "Demetrius studiert die Toxine örtlicher Kugelfische. Er hat dich darum gebeten, ihm einen zu bringen."
+  },
+  "119": {
+    "displayName": "Der Stern eines Soldaten",
+    "description": "Kent will seiner Frau zu ihrem Jahrestag eine Sternfrucht schenken."
+  },
+  "120": {
+    "displayName": "Bürgermeister-Bedürfnisse",
+    "description": "Bürgermeister Lewis will Trüffelöl. Er will nicht sagen wofür. Vielleicht geht es dich nichts an."
+  },
+  "121": {
+    "displayName": "Gesucht: Hummer",
+    "description": "Gus hat in einer Mitteilung um einen frischen Hummer gebeten."
+  },
+  "122": {
+    "displayName": "Pam braucht Saft",
+    "description": "Pams Fernbedienung ist tot. Es fällt ihr schwer, immer wieder von der Couch zum Fernseher zu gehen, um umzuschalten."
+  },
+  "123": {
+    "displayName": "Stab der Macht",
+    "description": "Der Zauberer arbeitet an einem Stab von phänomenaler Kraft. Wer weiß schon wofür. Er braucht einen Iridiumbarren, um ihn zu vollenden."
+  },
+  "124": {
+    "displayName": "Fange einen Lengdorsch",
+    "description": "Willy hat dich herausgefordert, einen Lengdorsch zu fangen."
+  },
+  "125": {
+    "displayName": "Exotische Spirituosen",
+    "description": "Gus will einen Kokos-no-no machen, aber ihm fehlt die Hauptzutat."
+  },
+  "126": {
+    "displayName": "Besorgung für deine Frau",
+    "description": "Deine Frau bat dich, ihr 200 Stück Faser für ein geheimes Projekt zu bringen."
+  },
+  "127": {
+    "displayName": "Haleys Kuchen-Spaziergang",
+    "description": "Deine Frau organisiert einen Wohltätigkeits-Kuchenspaziergang auf dem Stadtplatz. Sie bat dich, einen Schokoladenkuchen mitzubringen."
+  },
+  "128": {
+    "displayName": "...",
+    "description": "..."
+  },
+  "129": {
+    "displayName": "...",
+    "description": "..."
+  },
+  "130": {
+    "displayName": "Die Ehefrau des Piraten",
+    "description": "Eine alte Dame, die auf der Ingwerinsel lebt, bittet dich, ein Andenken an ihren Mann zu finden. Sie gab dir ein altes Foto von einem Soldaten, der an Land gespült wurde, in der Hoffnung, dass es dir irgendwie helfen würde."
+  },
+  "131": {
+    "displayName": "Willy Herausforderung",
+    "description": "Willy hat dich herausgefordert, 3 Sandfische zu fangen."
+  },
+  "132": {
+    "displayName": "Erste Schritte",
+    "description": "Wenn du ein Landwirt werden willst, musst du mit den Grundlagen beginnen. Füttere deine Hühner jeden Tag, indem du sie draußen Gras fressen lässt oder ihnen Heu in die Tröge legst. Wenn sie ausgewachsen sind, ernte ein Ei von deinen Hühnern."
+  },
+  "133": {
+    "displayName": "Tiere füttern",
+    "description": "Robin, die örtliche Schreinerin, lebt nördlich der Stadt. Im Tausch gegen Rohstoffe und Geld baut sie neue Gebäude auf deinem Hof. Wenn du ein Silo baust, kannst du dein eigenes Gras mit der Sense ernten und es für die Fütterung deiner Tiere lagern."
+  },
+  "134": {
+    "displayName": "Der Riesenstumpf",
+    "description": "Der große Baum im Süden meines Hofes ist umgekippt. Mit 100 Hartholz könnte ich den Stumpf in etwas Interessantes verwandeln..."
+  }
+}

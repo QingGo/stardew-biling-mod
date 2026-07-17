@@ -1,0 +1,150 @@
+{
+  "Axe": {
+    "displayName": "Axt",
+    "description": "Zum Holzhacken."
+  },
+  "CopperAxe": {
+    "displayName": "Kupferaxt",
+    "description": "Zum Holzhacken."
+  },
+  "SteelAxe": {
+    "displayName": "Stahlaxt",
+    "description": "Zum Holzhacken."
+  },
+  "GoldAxe": {
+    "displayName": "Goldaxt",
+    "description": "Zum Holzhacken."
+  },
+  "IridiumAxe": {
+    "displayName": "Iridiumaxt",
+    "description": "Zum Holzhacken."
+  },
+  "BambooPole": {
+    "displayName": "Bambusstange",
+    "description": "Am Wasser benutzen, um Fische zu fangen."
+  },
+  "TrainingRod": {
+    "displayName": "Übungsangel",
+    "description": "Es ist viel einfacher zu benutzen als andere Ruten, kann aber nur Grundfische fangen."
+  },
+  "FiberglassRod": {
+    "displayName": "Fiberglasangel",
+    "description": "Am Wasser benutzen, um Fische zu fangen."
+  },
+  "IridiumRod": {
+    "displayName": "Iridiumangel",
+    "description": "Am Wasser benutzen, um Fische zu fangen."
+  },
+  "AdvancedIridiumRod": {
+    "displayName": "Fortgeschrittene Iridiumangel",
+    "description": "Wird im Wasser verwendet, um Fische zu fangen. Bis zu zwei Köder können auf einmal befestigt werden."
+  },
+  "Hoe": {
+    "displayName": "Hacke",
+    "description": "Grabe Erde um und bestelle den Boden."
+  },
+  "CopperHoe": {
+    "displayName": "Kupferhacke",
+    "description": "Grabe Erde um und bestelle den Boden."
+  },
+  "SteelHoe": {
+    "displayName": "Stahlhacke",
+    "description": "Grabe Erde um und bestelle den Boden."
+  },
+  "GoldHoe": {
+    "displayName": "Goldhacke",
+    "description": "Grabe Erde um und bestelle den Boden."
+  },
+  "IridiumHoe": {
+    "displayName": "Iridiumhacke",
+    "description": "Grabe Erde um und bestelle den Boden."
+  },
+  "Lantern": {
+    "displayName": "Laterne",
+    "description": "Erleuchtet dunkle Orte."
+  },
+  "MilkPail": {
+    "displayName": "Melkkübel",
+    "description": "Sammle Milch von deinen Tieren."
+  },
+  "Pan": {
+    "displayName": "Kupferpfanne",
+    "description": "Benutze sie, um Erze aus Strömungen zu gewinnen."
+  },
+  "SteelPan": {
+    "displayName": "Stahlpfanne",
+    "description": "Dient zum Sammeln von Erzen aus Wasserläufen. Die Ausbeute ist größer und besser als bei einer Kupferpfanne. Außerdem besteht eine kleine Chance, dass sofort eine weitere Stelle zum Schwenken erscheint."
+  },
+  "GoldPan": {
+    "displayName": "Goldpfanne",
+    "description": "Dient zum Sammeln von Erzen aus Wasserläufen. Die Ausbeute ist größer und besser als bei einer Stahlpfanne. Außerdem besteht eine kleine Chance, dass sofort eine weitere Stelle zum Schwenken erscheint."
+  },
+  "IridiumPan": {
+    "displayName": "Iridiumpfanne",
+    "description": "Dient zum Sammeln von Erzen aus Wasserläufen. Liefert die beste Ausbeute. Außerdem besteht eine Chance, dass sofort eine weitere Stelle zum Schwenken erscheint."
+  },
+  "Pickaxe": {
+    "displayName": "Spitzhacke",
+    "description": "Zum Zerbrechen von Steinen."
+  },
+  "CopperPickaxe": {
+    "displayName": "Kupferspitzhacke",
+    "description": "Zum Zerbrechen von Steinen."
+  },
+  "SteelPickaxe": {
+    "displayName": "Stahlspitzhacke",
+    "description": "Zum Zerbrechen von Steinen."
+  },
+  "GoldPickaxe": {
+    "displayName": "Goldspitzhacke",
+    "description": "Zum Zerbrechen von Steinen."
+  },
+  "IridiumPickaxe": {
+    "displayName": "Iridiumspitzhacke",
+    "description": "Zum Zerbrechen von Steinen."
+  },
+  "ReturnScepter": {
+    "displayName": "Zepter der Rückkehr",
+    "description": "Der goldene Griff bebt mit unbändiger Macht. Halte dieses Zepter zum Himmel, um auf Wunsch nach Hause zurückzukehren."
+  },
+  "Shears": {
+    "displayName": "Schafschere",
+    "description": "Benutze sie, um die Wolle von Schafen zu erhalten."
+  },
+  "WateringCan": {
+    "displayName": "Gießkanne",
+    "description": "Zum Pflanzengießen. Kann bei jeder Wasserquelle wieder aufgefüllt werden."
+  },
+  "CopperWateringCan": {
+    "displayName": "Kupfergießkanne",
+    "description": "Zum Pflanzengießen. Kann bei jeder Wasserquelle wieder aufgefüllt werden."
+  },
+  "SteelWateringCan": {
+    "displayName": "Stahlgießkanne",
+    "description": "Zum Pflanzengießen. Kann bei jeder Wasserquelle wieder aufgefüllt werden."
+  },
+  "GoldWateringCan": {
+    "displayName": "Goldgießkanne",
+    "description": "Zum Pflanzengießen. Kann bei jeder Wasserquelle wieder aufgefüllt werden."
+  },
+  "IridiumWateringCan": {
+    "displayName": "Iridiumgießkanne",
+    "description": "Zum Pflanzengießen. Kann bei jeder Wasserquelle wieder aufgefüllt werden."
+  },
+  "CopperTrashCan": {
+    "displayName": "Kupfermülleimer",
+    "description": "Wenn du einen Gegenstand entsorgst, erhältst du 15% des Wertes zurück."
+  },
+  "SteelTrashCan": {
+    "displayName": "Stahlmülleimer",
+    "description": "Wenn du einen Gegenstand entsorgst, erhältst du 30% des Wertes zurück."
+  },
+  "GoldTrashCan": {
+    "displayName": "Goldmülleimer",
+    "description": "Wenn du einen Gegenstand entsorgst, erhältst du 45% des Wertes zurück."
+  },
+  "IridiumTrashCan": {
+    "displayName": "Iridiummülleimer",
+    "description": "Wenn du einen Gegenstand entsorgst, erhältst du 60% des Wertes zurück."
+  }
+}

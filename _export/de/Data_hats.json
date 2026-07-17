@@ -1,0 +1,490 @@
+{
+  "0": {
+    "displayName": "Cowboyhut",
+    "description": "Das Leder ist alt und rissig, aber erstaunlich geschmeidig. Er riecht modrig."
+  },
+  "1": {
+    "displayName": "Bowlerhut",
+    "description": "Aus geschmeidigem Filz gemacht."
+  },
+  "2": {
+    "displayName": "Zylinder",
+    "description": "Der Klassiker eines Gentlemans."
+  },
+  "3": {
+    "displayName": "Sombrero",
+    "description": "Ein festlich dekorierter Hut aus gewobenem Stroh."
+  },
+  "4": {
+    "displayName": "Strohhut",
+    "description": "Luftig und kühl, die Freude eines jeden Bauern."
+  },
+  "5": {
+    "displayName": "Beamtenkappe",
+    "description": "Sieht so aus, als stamme sie von einem Polizisten oder Briefträger. Jedenfalls ist sie immer noch sehr weich und riecht normal."
+  },
+  "6": {
+    "displayName": "Blaue Mütze",
+    "description": "Blicke mit dieser Prärie-Mütze zurück auf einfachere Zeiten."
+  },
+  "7": {
+    "displayName": "Pflaumen-Chapeau",
+    "description": "Sieht in Ordnung aus."
+  },
+  "8": {
+    "displayName": "Skelett-Maske",
+    "description": "Die roten Augen leuchten auf mysteriöse Weise."
+  },
+  "9": {
+    "displayName": "Goblinmaske",
+    "description": "Jage der Nachbarschaft mit dieser gruseligen Maske einen Schrecken ein. Gummiohren für den besten Effekt."
+  },
+  "10": {
+    "displayName": "Hühnermaske",
+    "description": "Damit bringst du sicher jeden zum Grinsen."
+  },
+  "11": {
+    "displayName": "Ohrenschützer",
+    "description": "Halten deine Ohren angenehm warm. Mit weichem Samt aus dem Schlossdorf bestückt."
+  },
+  "12": {
+    "displayName": "Feine Schleife",
+    "description": "Kleine pinke Juwelen glitzern bei genauerer Betrachtung."
+  },
+  "13": {
+    "displayName": "Tropiklammer",
+    "description": "Ist wie eine kleine Palme geformt."
+  },
+  "14": {
+    "displayName": "Schmetterlingsschleife",
+    "description": "Diese Schleife ist sehr weich."
+  },
+  "15": {
+    "displayName": "Jägerkappe",
+    "description": "Das Wollfutter sollte dich selbst tief im Wald noch warm halten."
+  },
+  "16": {
+    "displayName": "Truckerhut",
+    "description": "Mit Netzstoff hinten, um deinen Kopf kühl zu halten."
+  },
+  "17": {
+    "displayName": "Matrosenhut",
+    "description": "Er ist frisch und steif."
+  },
+  "18": {
+    "displayName": "Gute alte Kappe",
+    "description": "Eine alte Mütze mit geknicktem Schirm. Sie hat wohl eine Menge durchgemacht."
+  },
+  "19": {
+    "displayName": "Fedora",
+    "description": "Die Grundausstattung eines Großstädters."
+  },
+  "20": {
+    "displayName": "Coole Kappe",
+    "description": "Ziemlich verblasst, war aber einst tiefblau."
+  },
+  "21": {
+    "displayName": "Glückbringende Schleife",
+    "description": "Die Mitte ist aus solidem Gold gefertigt."
+  },
+  "22": {
+    "displayName": "Gepunktete Schleife",
+    "description": "Die hier zieht sicher Aufmerksamkeit auf sich."
+  },
+  "23": {
+    "displayName": "Gnomkappe",
+    "description": "Dieser Gnom hatte einen riesigen Kopf."
+  },
+  "24": {
+    "displayName": "Augenklappe",
+    "description": "Es ist schwer zu sagen, ob sie echt oder aus einem Kostümladen ist."
+  },
+  "25": {
+    "displayName": "Winterstern-Mütze",
+    "description": "Feiere diese magische Zeit."
+  },
+  "26": {
+    "displayName": "Tiara",
+    "description": "Dieser Stirnreif besitzt einen großen Amethysten, umrandet von Gold."
+  },
+  "27": {
+    "displayName": "Schutzhelm",
+    "description": "Zum Beschützen deiner Birne."
+  },
+  "28": {
+    "displayName": "Südwester",
+    "description": "Die Form dieses Huts hält Segler während Stürmen trocken."
+  },
+  "29": {
+    "displayName": "Gänseblümchen",
+    "description": "Ein frisch gepflücktes Gänseblümchen, das man sich in die Haare stecken kann."
+  },
+  "30": {
+    "displayName": "Wassermelonen-Band",
+    "description": "Das Farbschema ist inspiriert von der geliebten Sommermelone."
+  },
+  "31": {
+    "displayName": "Mauseohren",
+    "description": "Aus synthetischen Fasern hergestellt."
+  },
+  "32": {
+    "displayName": "Katzenohren",
+    "description": "Schnurrhaare inklusive."
+  },
+  "33": {
+    "displayName": "Cowgal-Hut",
+    "description": "Das Band ist mit falschen Diamanten bestückt."
+  },
+  "34": {
+    "displayName": "Cowboy-Hut",
+    "description": "Für Milchexperten."
+  },
+  "35": {
+    "displayName": "Schützenhut",
+    "description": "Modisch, egal ob du ein Bogenschütze bist oder nicht."
+  },
+  "36": {
+    "displayName": "Panda-Hut",
+    "description": "Ein hübscher Panda-Hut."
+  },
+  "37": {
+    "displayName": "Blauer Cowboyhut",
+    "description": "Ein Cowboyhut aus Jeans in blau."
+  },
+  "38": {
+    "displayName": "Roter Cowboyhut",
+    "description": "Ein auffälliger Cowboyhut aus rotem Samt."
+  },
+  "39": {
+    "displayName": "Hütchenhut",
+    "description": "Eine Kuriosität aus einem fernen Land."
+  },
+  "40": {
+    "displayName": "Lebenshut",
+    "description": "Es absorbiert die Feuchtigkeit aus der Kopfhaut. Keine Bewässerung erforderlich!"
+  },
+  "41": {
+    "displayName": "Emily's magischer Hut",
+    "description": "Hergestellt mit Liebe von Emily. Es ist zu 100% biologisch!"
+  },
+  "42": {
+    "displayName": "Pilzkappe",
+    "description": "Es riecht erdig."
+  },
+  "43": {
+    "displayName": "Dinosaurier Hut",
+    "description": "Ein Hut, der wie ein kleiner Dinosaurier aussieht."
+  },
+  "44": {
+    "displayName": "Totem Maske",
+    "description": "Keine Sorge, es wird dein Gesicht nicht verziehen..."
+  },
+  "45": {
+    "displayName": "Logo Kappe",
+    "description": "Eine rote Kappe mit einem Logo auf der Vorderseite."
+  },
+  "46": {
+    "displayName": "Tragbarer Zwergenhelm",
+    "description": "Eine etwas größere, menschlichere Version der Helme der Zwerge."
+  },
+  "47": {
+    "displayName": "Modehut",
+    "description": "Ein modischer Hut mit einer Feder im Rand."
+  },
+  "48": {
+    "displayName": "Kürbis Maske",
+    "description": "Das muss mal ein ziemlich großer Kürbis gewesen sein..."
+  },
+  "49": {
+    "displayName": "Haarknochen",
+    "description": "Eine prähistorische Version des Haarschleifens."
+  },
+  "50": {
+    "displayName": "Ritterhelm",
+    "description": "Es sieht genau wie das Original aus!"
+  },
+  "51": {
+    "displayName": "Knappenhelm",
+    "description": "Das Gesicht ist unbedeckt, um den Luftstrom zu erhöhen."
+  },
+  "52": {
+    "displayName": "Fleckiges Kopftuch",
+    "description": "Ein roter Schal mit Punkten um den Kopf gebunden."
+  },
+  "53": {
+    "displayName": "Beanie",
+    "description": "Ein warmer Hut mit einer ziemlich engen Passform."
+  },
+  "54": {
+    "displayName": "Schlaffer Beanie",
+    "description": "Ein warmer Hut mit lockerer Passform."
+  },
+  "55": {
+    "displayName": "Fischerhut",
+    "description": "Der breite Rand hält deinen Kopf beim Angeln am Flussufer im Schatten"
+  },
+  "56": {
+    "displayName": "Blobfisch Maske",
+    "description": "Genauso schwammig wie das Original!"
+  },
+  "57": {
+    "displayName": "Party Hut",
+    "description": "Ein alberner roter Hut, der jede Feier spaßiger macht."
+  },
+  "58": {
+    "displayName": "Party Hut",
+    "description": "Ein alberner blauer Hut, der jede Feier spaßiger macht."
+  },
+  "59": {
+    "displayName": "Party Hut",
+    "description": "Ein alberner grüner Hut, der jede Feier spaßiger macht."
+  },
+  "60": {
+    "displayName": "Arkaner Hut",
+    "description": "Die Art von Cowboyhut, die von einem Zauberer getragen wird."
+  },
+  "61": {
+    "displayName": "Kochmütze",
+    "description": "Der traditionelle Hut, der von einem Chefkoch getragen wird."
+  },
+  "62": {
+    "displayName": "Piratenhut",
+    "description": "Ein Kapitänshut mit einem schrecklichen Totenkopf auf der Vorderseite."
+  },
+  "63": {
+    "displayName": "Flacher Kappenhut",
+    "description": "Ein Hut in einem alten Stil, der einst als sehr modisch galt."
+  },
+  "64": {
+    "displayName": "Eleganter Turban",
+    "description": "Ein feiner schwarzer Seidenturban mit goldener Verzierung."
+  },
+  "65": {
+    "displayName": "Weißer Turban",
+    "description": "Ein feiner weißer Seidenturban mit blauer Zierde."
+  },
+  "66": {
+    "displayName": "Müllmütze",
+    "description": "Es ist ein Mülltonnen-Deckel, der zu einem Hut'upcycelt' wird..."
+  },
+  "67": {
+    "displayName": "Goldene Maske",
+    "description": "Eine originalgetreue Nachbildung der Reliquie der Kaliko-Wüste!"
+  },
+  "68": {
+    "displayName": "Propeller Hut",
+    "description": "Ein alberner Hut mit einem Propeller oben drauf."
+  },
+  "69": {
+    "displayName": "Brautschleier",
+    "description": "Die traditionelle Kopfbedeckung für eine Braut."
+  },
+  "70": {
+    "displayName": "Hexenhut",
+    "description": "Ein spitzer Hut, der bei Hexen beliebt ist."
+  },
+  "71": {
+    "displayName": "Kupferpfanne",
+    "description": "Du kannst die Kupferpfanne auf den Kopf platzieren..."
+  },
+  "72": {
+    "displayName": "Grüner Turban",
+    "description": "Ein grüner Seidenturban mit einem goldenen Ornament auf der Vorderseite."
+  },
+  "73": {
+    "displayName": "Magischer Cowboy Hut",
+    "description": "Es schimmert vor prismatischer Energie"
+  },
+  "74": {
+    "displayName": "Magischer Turban",
+    "description": "Es schimmert vor prismatischer Energie"
+  },
+  "75": {
+    "displayName": "Goldener Helm",
+    "description": "Es ist die Hälfte einer goldenen Kokosnuss."
+  },
+  "76": {
+    "displayName": "Deluxe-Piratenhut",
+    "description": "Nur der berüchtigtste Pirat könnte diesen Look glaubhaft tragen."
+  },
+  "77": {
+    "displayName": "Pinke Schleife",
+    "description": "Diese riesige Schleife ist schon ein Statement!"
+  },
+  "78": {
+    "displayName": "Froschhut",
+    "description": "Ein schleimiger Freund, der auf deiner Kuppel lebt."
+  },
+  "79": {
+    "displayName": "Kleine Mütze",
+    "description": "Es ist eine aerodynamischere Art von Hut."
+  },
+  "80": {
+    "displayName": "Hüttensänger Maske",
+    "description": "Trage diese, damit du genauso aussieht wie dein Lieblings-Inselhändler."
+  },
+  "81": {
+    "displayName": "Deluxe-Cowboyhut",
+    "description": "Cowboyhut mit einer extremeren Form."
+  },
+  "82": {
+    "displayName": "Herr Qis Hut",
+    "description": "Eine Nachbildung von Herrn Qis ikonischem Hut."
+  },
+  "83": {
+    "displayName": "Dunkler Cowboyhut",
+    "description": "Cowboyhut in modischem Schwarz."
+  },
+  "84": {
+    "displayName": "Radioaktive Schutzbrille",
+    "description": "Bietet eigentlich keinen Schutz vor Strahlung."
+  },
+  "85": {
+    "displayName": "Säbelrassler-Hut",
+    "description": "Der klassische Säbelrassler-Look."
+  },
+  "86": {
+    "displayName": "Qi Maske",
+    "description": "???"
+  },
+  "87": {
+    "displayName": "Sternenhelm",
+    "description": "Eine rote Mütze mit Sternen darauf."
+  },
+  "88": {
+    "displayName": "Sonnenbrille",
+    "description": "Diese gibt dir einen entspannten Look."
+  },
+  "89": {
+    "displayName": "Schutzbrille",
+    "description": "Damit siehst du sehr sicher aus."
+  },
+  "90": {
+    "displayName": "Försterhut",
+    "description": "Es ist die Freude eines Försters."
+  },
+  "91": {
+    "displayName": "Tigerhut",
+    "description": "Lässt dich wie einen schönen Tiger aussehen."
+  },
+  "92": {
+    "displayName": "???",
+    "description": "???"
+  },
+  "93": {
+    "displayName": "Kriegerhelm",
+    "description": "Eine Straußeneierschale, die in einen Helm umgewandelt wurde."
+  },
+  "AbigailsBow": {
+    "displayName": "Abigails Schleife",
+    "description": "Ist die gleiche wie Abbys"
+  },
+  "TricornHat": {
+    "displayName": "Dreispitz",
+    "description": "Es ist ein traditioneller Hut für Marineoffiziere."
+  },
+  "JojaCap": {
+    "displayName": "Joja Mütze",
+    "description": "Eine offizielle Joja-Mütze. Hergestellt aus 100% Polyester."
+  },
+  "LaurelWreathCrown": {
+    "displayName": "Lorbeerkranz",
+    "description": "Eine Blättergirlande in Form einer schönen Krone."
+  },
+  "GilsHat": {
+    "displayName": "Gils Hut",
+    "description": "Es ist der gleiche Hut, den Gil trägt."
+  },
+  "BlueBow": {
+    "displayName": "Blaue Schleife",
+    "description": "Diese große Schleife ist ein echter Hingucker!"
+  },
+  "DarkVelvetBow": {
+    "displayName": "Dunkle Samtschleife",
+    "description": "Eine große, weiche Schleife aus dunklem Samt."
+  },
+  "MummyMask": {
+    "displayName": "Mumienmaske",
+    "description": "Eine große Mumienmaske... furchterregend!"
+  },
+  "BucketHat": {
+    "displayName": "Bucket-Hut",
+    "description": "Ein einfacher Hut mit kurzer Krempe."
+  },
+  "SquidHat": {
+    "displayName": "Tintenfischhut",
+    "description": "Das ist deine Chance, einen Tintenfisch auf dem Kopf zu tragen."
+  },
+  "SportsCap": {
+    "displayName": "Sportmütze",
+    "description": "Die Mütze ist mit einem alten Teamlogo versehen."
+  },
+  "RedFez": {
+    "displayName": "Roter Fez",
+    "description": "Ein einzigartiger Hut, der durch das berühmte Handelsschwein bekannt wurde."
+  },
+  "RaccoonHat": {
+    "displayName": "Waschbärenhut",
+    "description": "Ein klassischer Hut aus Zeiten des wilden Westens."
+  },
+  "SteelPanHat": {
+    "displayName": "Stahlpfanne",
+    "description": "Du setzt die Stahlpfanne auf deinen Kopf..."
+  },
+  "GoldPanHat": {
+    "displayName": "Goldpfanne",
+    "description": "Du setzt die Goldpfanne auf deinen Kopf..."
+  },
+  "IridiumPanHat": {
+    "displayName": "Iridiumpfanne",
+    "description": "Du setzt die Iridiumpfanne auf deinen Kopf..."
+  },
+  "MysteryHat": {
+    "displayName": "Mysteriöser Hut",
+    "description": "Hergestellt aus den Resten der Mysteriösen Kiste."
+  },
+  "DarkBallcap": {
+    "displayName": "Dunkle Ballkappe",
+    "description": "Sie sitzt perfekt auf dem Kopf."
+  },
+  "LeprechuanHat": {
+    "displayName": "Koboldhut",
+    "description": "Der Vorbesitzer muss einen großen Kopf für einen Kobold gehabt haben."
+  },
+  "JunimoHat": {
+    "displayName": "Junimohut",
+    "description": "Zu Ehren unserer kleinen Freunde..."
+  },
+  "PaperHat": {
+    "displayName": "Papierhut",
+    "description": "Er besteht aus Spezialpapier, das sich bei Regen nicht auflöst."
+  },
+  "PageboyCap": {
+    "displayName": "Ballonmütze",
+    "description": "Aus irgendeinem Grund macht sie Lust, Zeitungen zu verkaufen."
+  },
+  "JesterHat": {
+    "displayName": "Narrenhut",
+    "description": "Zeige deinen inneren Clown."
+  },
+  "BlueRibbon": {
+    "displayName": "Blaue Schleifleine",
+    "description": "Eine schöne Schleifleine, die sich am Hinterkopf befindet."
+  },
+  "GovernorsHat": {
+    "displayName": "Gouverneurshut",
+    "description": "Eine Nachbildung des kultigen Hutes des Gouverneurs."
+  },
+  "WhiteBow": {
+    "displayName": "Weiße Schleife",
+    "description": "Eine Schleife so weiß wie Schnee."
+  },
+  "SpaceHelmet": {
+    "displayName": "Weltraumhelm",
+    "description": "Warnung: Dieser Helm ist nicht im Weltraum getestet worden."
+  },
+  "InfinityCrown": {
+    "displayName": "Unendlichkeitskrone",
+    "description": "Sie besteht aus einem exotischen Metall, das du noch nie gesehen hast."
+  }
+}

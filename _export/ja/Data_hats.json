@@ -1,0 +1,490 @@
+{
+  "0": {
+    "displayName": "カウボーイハット",
+    "description": "古くてひび割れた革でできているが、おどろくほどしなやか。年季の入ったにおいがする。"
+  },
+  "1": {
+    "displayName": "山高帽",
+    "description": "つややかなフェルトでできている。"
+  },
+  "2": {
+    "displayName": "シルクハット",
+    "description": "紳士たちの定番ファッション。"
+  },
+  "3": {
+    "displayName": "ソンブレロ",
+    "description": "陽気なかざりのついた帽子。わらで編まれている。"
+  },
+  "4": {
+    "displayName": "むぎわら帽",
+    "description": "かぶると軽くてすずしい、牧場主の味方。"
+  },
+  "5": {
+    "displayName": "オフィシャルなキャップ",
+    "description": "郵便屋さんや警察官がかぶっていそうな帽子。いずれにせよ、手入れがよくていまだに清潔。"
+  },
+  "6": {
+    "displayName": "青いボンネット",
+    "description": "素朴な時代を思い起こさせる、開拓時代のボンネット。"
+  },
+  "7": {
+    "displayName": "プラム色の帽子",
+    "description": "おしゃれな帽子。"
+  },
+  "8": {
+    "displayName": "スケルトンマスク",
+    "description": "ミステリアスに光る赤い目付き。"
+  },
+  "9": {
+    "displayName": "ゴブリンマスク",
+    "description": "かぶればご近所さんも震えあがる不気味なマスク。ゴム製の耳で効果倍増。"
+  },
+  "10": {
+    "displayName": "ニワトリのお面",
+    "description": "これをかぶれば周りの笑いをとれることうけあい。"
+  },
+  "11": {
+    "displayName": "耳あて",
+    "description": "耳をぽかぽかに保ってくれる。裏地は、キャッスル村の職人が織ったベルベット。"
+  },
+  "12": {
+    "displayName": "優雅なリボン",
+    "description": "よく見ると、小さなピンクの宝石があしらわれている。"
+  },
+  "13": {
+    "displayName": "トロピカルな髪かざり",
+    "description": "小さなヤシの木の形をしている。"
+  },
+  "14": {
+    "displayName": "蝶ネクタイ",
+    "description": "とても手ざわりがなめらか。"
+  },
+  "15": {
+    "displayName": "狩人の帽子",
+    "description": "裏地のウールのおかげで、森の奥でもあたたかい。"
+  },
+  "16": {
+    "displayName": "トラック野郎の帽子",
+    "description": "うしろに入ったメッシュが頭をすずしく保ってくれる。"
+  },
+  "17": {
+    "displayName": "セーラー帽",
+    "description": "パリッと糊がきいている。"
+  },
+  "18": {
+    "displayName": "旧きよきキャップ",
+    "description": "しわがよったひさしのついた、布地がたるんだ古い帽子。年季の入った様子がうかがえる。"
+  },
+  "19": {
+    "displayName": "フェドーラ帽",
+    "description": "シティファッションのスタンダード。"
+  },
+  "20": {
+    "displayName": "クールなキャップ",
+    "description": "いまはかなり色あせているが、かつては鮮やかなブルーだった。"
+  },
+  "21": {
+    "displayName": "ラッキーリボン",
+    "description": "真ん中のとめ具は純金製。"
+  },
+  "22": {
+    "displayName": "水玉リボン",
+    "description": "周囲の注目を浴びることまちがいなし。"
+  },
+  "23": {
+    "displayName": "ノームの帽子",
+    "description": "この帽子をかぶっていたノームは、頭がすごく大きかったはず。"
+  },
+  "24": {
+    "displayName": "眼帯",
+    "description": "ホンモノなのかコスプレ用品なのか、真相は不明。"
+  },
+  "25": {
+    "displayName": "サンタの帽子",
+    "description": "特別なシーズンのお祝いに。"
+  },
+  "26": {
+    "displayName": "ティアラ",
+    "description": "金でふちどりした大粒のアメシストがはまっている。"
+  },
+  "27": {
+    "displayName": "ヘルメット",
+    "description": "頭を危険から守ってくれる。"
+  },
+  "28": {
+    "displayName": "サウスウェスター",
+    "description": "船乗りたちの帽子。形のおかげで、嵐のなかでもぬれずにいられる。"
+  },
+  "29": {
+    "displayName": "デイジー",
+    "description": "春の野からつみとった1輪のデイジー。"
+  },
+  "30": {
+    "displayName": "スイカカチューシャ",
+    "description": "みんなが好きなスイカの色にヒントを得てつくられたカチューシャ。"
+  },
+  "31": {
+    "displayName": "ネズミミ",
+    "description": "化学繊維でつくられたネズミの耳。"
+  },
+  "32": {
+    "displayName": "ネコミミ",
+    "description": "ネコヒゲもセットで付いてくる。"
+  },
+  "33": {
+    "displayName": "カウガールハット",
+    "description": "バンドには模造ダイヤのかざり付き。"
+  },
+  "34": {
+    "displayName": "牛飼いの帽子",
+    "description": "乳しぼりのエキスパートへおくられる帽子。"
+  },
+  "35": {
+    "displayName": "弓使いの帽子",
+    "description": "あなたが弓を使えなくても、見た目はおしゃれ。"
+  },
+  "36": {
+    "displayName": "パンダの帽子",
+    "description": "可愛いパンダの帽子"
+  },
+  "37": {
+    "displayName": "青いカウボーイハット",
+    "description": "すてきな青みのデニム製のカウボーイハット"
+  },
+  "38": {
+    "displayName": "赤いカウボーイハット",
+    "description": "赤いスエード製の目を引くカウボーイハット"
+  },
+  "39": {
+    "displayName": "コーンハット",
+    "description": "遠くからでも目立つことまちがいなし"
+  },
+  "40": {
+    "displayName": "生きている帽子",
+    "description": "頭皮の水分を吸収する。水をあげる必要なし！"
+  },
+  "41": {
+    "displayName": "エミリーのマジックハット",
+    "description": "エミリーが愛情をこめて作ったもの。100%オーガニック！"
+  },
+  "42": {
+    "displayName": "キノコのキャップ",
+    "description": "土の匂いがする。"
+  },
+  "43": {
+    "displayName": "恐竜帽子",
+    "description": "小さな恐竜に見えるように作られたもの。"
+  },
+  "44": {
+    "displayName": "トーテムマスク",
+    "description": "心配しないで、顔はワープしません…"
+  },
+  "45": {
+    "displayName": "ロゴキャップ",
+    "description": "前部にロゴがついた赤いキャップ。"
+  },
+  "46": {
+    "displayName": "被られるドワーフのカブト",
+    "description": "少し大きめ、ドワーフの人間サイズバージョンのヘルメット。"
+  },
+  "47": {
+    "displayName": "ファッション帽子",
+    "description": "羽飾りがついたファッショナブルな帽子。"
+  },
+  "48": {
+    "displayName": "カボチャ帽子",
+    "description": "かつては相当大きなカボチャだったに違いない…"
+  },
+  "49": {
+    "displayName": "ヘアボーン",
+    "description": "古風な髪飾り。"
+  },
+  "50": {
+    "displayName": "騎士のカブト",
+    "description": "本物にそっくり！"
+  },
+  "51": {
+    "displayName": "エスクワイアのカブト",
+    "description": "空気が流れるように、顔面部は露出している。"
+  },
+  "52": {
+    "displayName": "ポルカドットスカーフ",
+    "description": "頭部に巻く、赤いポルカドットのスカーフ。"
+  },
+  "53": {
+    "displayName": "ビーニーハット",
+    "description": "しっかりとフィットする暖かい帽子。"
+  },
+  "54": {
+    "displayName": "ばたばたビーニー",
+    "description": "ゆったりめのフィット感の暖かい帽子。"
+  },
+  "55": {
+    "displayName": "釣り帽子",
+    "description": "川釣りの時に、大きめのつばで影を作ってくれる。"
+  },
+  "56": {
+    "displayName": "ぶくぶく魚マスク",
+    "description": "本物のようにスポンジ感あり！"
+  },
+  "57": {
+    "displayName": "パーティーハット",
+    "description": "まぬけな赤い帽子、お祝いで楽しさ倍増。"
+  },
+  "58": {
+    "displayName": "パーティーハット",
+    "description": "まぬけな青い帽子、お祝いで楽しさ倍増。"
+  },
+  "59": {
+    "displayName": "パーティーハット",
+    "description": "まぬけな緑の帽子、お祝いで楽しさ倍増。"
+  },
+  "60": {
+    "displayName": "難解な帽子",
+    "description": "魔法使いがかぶるようなカーボーイハット。"
+  },
+  "61": {
+    "displayName": "シェフハット",
+    "description": "ヘッドシェフがかぶる伝統的な帽子。"
+  },
+  "62": {
+    "displayName": "海賊帽子",
+    "description": "前部に恐ろしいドクロマークがついたキャプテンの帽子。"
+  },
+  "63": {
+    "displayName": "平たい帽子",
+    "description": "かつてはファッショナブルだった古風な帽子。"
+  },
+  "64": {
+    "displayName": "エレガントターバン",
+    "description": "金の飾りがついた黒のシルク製ターバン。"
+  },
+  "65": {
+    "displayName": "白いターバン",
+    "description": "青い飾りのついた白のシルク製ターバン。"
+  },
+  "66": {
+    "displayName": "ゴミ帽子",
+    "description": "ゴミの缶の蓋を「リサイクル」した帽子…"
+  },
+  "67": {
+    "displayName": "ゴールデンマスク",
+    "description": "カリコ砂漠のプレートを忠実に再現したもの！"
+  },
+  "68": {
+    "displayName": "プロペラハット",
+    "description": "プロペラがついたまぬけな帽子。"
+  },
+  "69": {
+    "displayName": "ウェディングベール",
+    "description": "花嫁がかぶる伝統的なベール。"
+  },
+  "70": {
+    "displayName": "魔女の帽子",
+    "description": "魔女に人気のとがった帽子。"
+  },
+  "71": {
+    "displayName": "銅製のフライパン",
+    "description": "頭にのせる銅製のフライパン…"
+  },
+  "72": {
+    "displayName": "緑のターバン",
+    "description": "前面にゴールドの装飾がある緑のシルクターバン。"
+  },
+  "73": {
+    "displayName": "魔法のカウボーイハット",
+    "description": "多彩なエネルギーできらめく"
+  },
+  "74": {
+    "displayName": "魔法のターバン",
+    "description": "多彩なエネルギーできらめく"
+  },
+  "75": {
+    "displayName": "金のヘルメット",
+    "description": "金のココナッツを半分に割ったもの。"
+  },
+  "76": {
+    "displayName": "豪華な海賊の帽子",
+    "description": "もっとも悪名高い海賊だけが、これを身に付けることができる。"
+  },
+  "77": {
+    "displayName": "ピンクの弓",
+    "description": "この巨大な弓は、自己主張が激しすぎる！"
+  },
+  "78": {
+    "displayName": "カエルの帽子",
+    "description": "あなたの頭に住んでいる、ヌルヌルした友達。"
+  },
+  "79": {
+    "displayName": "スモールキャップ",
+    "description": "より空気抵抗が少ない帽子。"
+  },
+  "80": {
+    "displayName": "青い鳥のマスク",
+    "description": "これをかぶれば、あなたのお気に入りの島のトレーダーのような姿に。"
+  },
+  "81": {
+    "displayName": "豪華なカウボーイハット",
+    "description": "より過激な形のカウボーイハット。"
+  },
+  "82": {
+    "displayName": "ミスターQiの帽子",
+    "description": "ミスターQiの印象的な帽子のレプリカ。"
+  },
+  "83": {
+    "displayName": "黒いカウボーイハット",
+    "description": "おしゃれな黒のカウボーイハット"
+  },
+  "84": {
+    "displayName": "放射線ゴーグル",
+    "description": "実を言うと放射線からは守ってくれない。"
+  },
+  "85": {
+    "displayName": "剣士の帽子",
+    "description": "クラシックな剣士の装い。"
+  },
+  "86": {
+    "displayName": "Qiマスク",
+    "description": "？？？"
+  },
+  "87": {
+    "displayName": "星のヘルメット",
+    "description": "星がついている赤い帽子。"
+  },
+  "88": {
+    "displayName": "サングラス",
+    "description": "リラックスした雰囲気をだせる。"
+  },
+  "89": {
+    "displayName": "ゴーグル",
+    "description": "とっても安全な見た目になれる。"
+  },
+  "90": {
+    "displayName": "採食者の帽子",
+    "description": "採食者は大喜び。"
+  },
+  "91": {
+    "displayName": "トラの帽子",
+    "description": "まるで美しいトラのように。"
+  },
+  "92": {
+    "displayName": "???",
+    "description": "???"
+  },
+  "93": {
+    "displayName": "戦士のカブト",
+    "description": "ダチョウのタマゴの殻をカブトに再利用。"
+  },
+  "AbigailsBow": {
+    "displayName": "アビゲイルのリボン",
+    "description": "アビーとおそろいのリボン。"
+  },
+  "TricornHat": {
+    "displayName": "三角帽子",
+    "description": "海軍士官の伝統的な帽子。"
+  },
+  "JojaCap": {
+    "displayName": "Jojaキャップ",
+    "description": "Jojaのオフィシャルキャップ。素材はポリエステル100%"
+  },
+  "LaurelWreathCrown": {
+    "displayName": "月桂冠",
+    "description": "月桂樹の葉でつくられた美しい王冠。"
+  },
+  "GilsHat": {
+    "displayName": "ギルの帽子",
+    "description": "ギルとおそろいの帽子。"
+  },
+  "BlueBow": {
+    "displayName": "ブルーリボン",
+    "description": "とても目立つ大きなリボン！"
+  },
+  "DarkVelvetBow": {
+    "displayName": "ダークベルベットリボン",
+    "description": "ダークベルベットで作られた大きくて柔らかいリボン。"
+  },
+  "MummyMask": {
+    "displayName": "ミイラのマスク",
+    "description": "大きなミイラのマスク… 怖い！"
+  },
+  "BucketHat": {
+    "displayName": "バケットハット",
+    "description": "つばの短いシンプルな帽子。"
+  },
+  "SquidHat": {
+    "displayName": "イカの帽子",
+    "description": "イカの気持ちが分かるかも。"
+  },
+  "SportsCap": {
+    "displayName": "スポーツキャップ",
+    "description": "ヴィンテージなチームロゴが入った帽子。"
+  },
+  "RedFez": {
+    "displayName": "レッドフェズ",
+    "description": "有名な商人のブタによって人気を博したユニークな帽子。"
+  },
+  "RaccoonHat": {
+    "displayName": "ラクーンハット",
+    "description": "クラシックな開拓時代の帽子。"
+  },
+  "SteelPanHat": {
+    "displayName": "鋼の砂金皿",
+    "description": "鋼の砂金皿をかぶってみた…"
+  },
+  "GoldPanHat": {
+    "displayName": "金の砂金皿",
+    "description": "金の砂金皿をかぶってみた…"
+  },
+  "IridiumPanHat": {
+    "displayName": "イリジウムの砂金皿",
+    "description": "イリジウムの砂金皿をかぶってみた…."
+  },
+  "MysteryHat": {
+    "displayName": "ミステリーハット",
+    "description": "ミステリーボックスの余り物でつくられている。"
+  },
+  "DarkBallcap": {
+    "displayName": "ダークボールキャップ",
+    "description": "頭にぴったりフィットする。"
+  },
+  "LeprechuanHat": {
+    "displayName": "レプラコーンハット",
+    "description": "前の持ち主は頭の大きなレプラコーンだったに違いない。"
+  },
+  "JunimoHat": {
+    "displayName": "ジュニモハット",
+    "description": "小さな友だちに敬意を表して…"
+  },
+  "PaperHat": {
+    "displayName": "紙の帽子",
+    "description": "雨にぬれてもふやけない特別な紙でできている。"
+  },
+  "PageboyCap": {
+    "displayName": "ページボーイキャップ",
+    "description": "なぜか新聞を売りたくなる。"
+  },
+  "JesterHat": {
+    "displayName": "ピエロの帽子",
+    "description": "これをかぶれば気分はピエロ。"
+  },
+  "BlueRibbon": {
+    "displayName": "青いリボン",
+    "description": "頭の後ろにつける可愛いリボン。"
+  },
+  "GovernorsHat": {
+    "displayName": "知事の帽子",
+    "description": "印象的な知事の帽子のレプリカ。"
+  },
+  "WhiteBow": {
+    "displayName": "ホワイトリボン",
+    "description": "雪のように白いリボン。"
+  },
+  "SpaceHelmet": {
+    "displayName": "宇宙ヘルメット",
+    "description": "注意：実際に宇宙で使えるかどうかはテストされていません。"
+  },
+  "InfinityCrown": {
+    "displayName": "インフィニティクラウン",
+    "description": "見たこともない特殊な金属でできている。"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "Pantry/0": {
+    "displayName": "Nutzpflanzen (Frühling)",
+    "description": ""
+  },
+  "Pantry/1": {
+    "displayName": "Nutzpflanzen (Sommer)",
+    "description": ""
+  },
+  "Pantry/2": {
+    "displayName": "Nutzpflanzen (Herbst)",
+    "description": ""
+  },
+  "Pantry/3": {
+    "displayName": "Nutzpflanzen (Qualität)",
+    "description": ""
+  },
+  "Pantry/4": {
+    "displayName": "Tier",
+    "description": ""
+  },
+  "Pantry/5": {
+    "displayName": "Handwerker",
+    "description": ""
+  },
+  "Crafts Room/13": {
+    "displayName": "Sammeln (Frühling)",
+    "description": ""
+  },
+  "Crafts Room/14": {
+    "displayName": "Sammeln (Sommer)",
+    "description": ""
+  },
+  "Crafts Room/15": {
+    "displayName": "Sammeln (Herbst)",
+    "description": ""
+  },
+  "Crafts Room/16": {
+    "displayName": "Sammeln (Winter)",
+    "description": ""
+  },
+  "Crafts Room/17": {
+    "displayName": "Konstruktion",
+    "description": ""
+  },
+  "Crafts Room/19": {
+    "displayName": "Sammeln (Exoten)",
+    "description": ""
+  },
+  "Fish Tank/6": {
+    "displayName": "Flussfische",
+    "description": ""
+  },
+  "Fish Tank/7": {
+    "displayName": "Teichfische",
+    "description": ""
+  },
+  "Fish Tank/8": {
+    "displayName": "Ozeanfische",
+    "description": ""
+  },
+  "Fish Tank/9": {
+    "displayName": "Nachtfischen",
+    "description": ""
+  },
+  "Fish Tank/10": {
+    "displayName": "Spezialitätsfische",
+    "description": ""
+  },
+  "Fish Tank/11": {
+    "displayName": "Krabbenreuse",
+    "description": ""
+  },
+  "Boiler Room/20": {
+    "displayName": "Schmied",
+    "description": ""
+  },
+  "Boiler Room/21": {
+    "displayName": "Geologe",
+    "description": ""
+  },
+  "Boiler Room/22": {
+    "displayName": "Abenteurer",
+    "description": ""
+  },
+  "Vault/23": {
+    "displayName": "2.500 G",
+    "description": ""
+  },
+  "Vault/24": {
+    "displayName": "5.000 G",
+    "description": ""
+  },
+  "Vault/25": {
+    "displayName": "10.000 G",
+    "description": ""
+  },
+  "Vault/26": {
+    "displayName": "25.000 G",
+    "description": ""
+  },
+  "Bulletin Board/31": {
+    "displayName": "Koch",
+    "description": ""
+  },
+  "Bulletin Board/32": {
+    "displayName": "Feldforschung",
+    "description": ""
+  },
+  "Bulletin Board/33": {
+    "displayName": "Verzauberer",
+    "description": ""
+  },
+  "Bulletin Board/34": {
+    "displayName": "Färbemittel",
+    "description": ""
+  },
+  "Bulletin Board/35": {
+    "displayName": "Futter",
+    "description": ""
+  },
+  "Abandoned Joja Mart/36": {
+    "displayName": "Das fehlende",
+    "description": ""
+  }
+}

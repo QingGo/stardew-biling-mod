@@ -444,6 +444,10 @@ def main():
             shutil.copy2(str(src), str(OUTPUT_DIR / f))
             print(f"已复制 {f}")
 
+    # Also sync generated content.json back to root BilingualMod/ for tests
+    root_bilingual = script_dir / ".." / "BilingualMod" / "content.json"
+    shutil.copy2(str(OUTPUT_DIR / "content.json"), str(root_bilingual))
+
     patch_count = len(content_changes)
     print(f"处理完成：补丁数 {patch_count}")
     print(f"语言对：{', '.join(f'{pair}' for pair in args.pairs)}")

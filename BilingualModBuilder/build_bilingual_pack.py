@@ -120,8 +120,10 @@ def main():
             if patch is not None:
                 content_changes.append(patch)
 
-        # Font redirect patches (Load action) for cross-font/CJK pairs
-        font_patches = build_font_patches(pair, pair_code, OUTPUT_DIR)
+        # Font redirect patches (Load action) for cross-font/CJK pairs.
+        # Use ROOT_BILINGUAL_DIR (which has committed assets/) rather than
+        # OUTPUT_DIR (which is empty of assets until write_content_pack copies them).
+        font_patches = build_font_patches(pair, pair_code, ROOT_BILINGUAL_DIR)
         for fp in font_patches:
             content_changes.append(fp)
             print(f"  Font redirect: {fp['Target']} -> {fp['FromFile']} (when={pair_code})")

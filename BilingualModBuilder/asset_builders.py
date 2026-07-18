@@ -343,12 +343,23 @@ def _build_model_or_pipe_patch(asset_path, l1, l2, field_map, when_val):
 
 # ====== Font patches builder ======
 # Pairs that need any font redirect (non-ASCII glyphs missing from active font)
+# CJK-CJK pairs (ja:zh etc.) and EN-with-CJK pairs (en:zh, en:ja) need SpriteFont
+# redirects because the active game font lacks those glyphs.
 FONT_PATCH_PAIRS = {
     "ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja",
     "en:zh", "en:ja", "en:ko",
 }
-# Pairs that also need BmFont patches (BmFont is CJK-only)
-BMFONT_PAIRS = {"ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja"}
+# Pairs that also need BmFont patches. Stardew's BmFont (Fonts/Chinese,
+# Fonts/Japanese) is used for loading text, TV subtitles, mail body, and
+# some HUD elements. When the pair includes CJK glyphs, both BmFonts must
+# be redirected to the merged versions so CJK characters render even when
+# the active game language is EN (which would otherwise load a latin-only
+# fallback). Korean is intentionally excluded because we don't ship
+# pre-merged Korean BmFonts.
+BMFONT_PAIRS = {
+    "ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja",
+    "en:zh", "en:ja",
+}
 SPRITE_FONTS = ("SpriteFont1", "SmallFont")
 BMFONTS = ("Chinese", "Japanese")
 
@@ -370,7 +381,8 @@ def build_font_patches(pair, pair_code, output_dir: Path):
                 "When": {"BilingualMode": pair_code},
             })
 
-    # BmFont patches only for CJK pairs
+    # BmFont patches: Load merged Chinese & Japanese BmFonts for CJK pairs
+    # (including en:zh/en:ja, since EN fallback lacks CJK glyphs).
     if pair in BMFONT_PAIRS:
         for bmf_name in BMFONTS:
             from_file = f"assets/{bmf_name}.xnb"

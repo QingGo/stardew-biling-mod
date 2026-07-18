@@ -96,12 +96,12 @@ def main():
 
     for pair in args.pairs:
         if pair in FONT_LIMITED_PAIRS:
-            print(f"注意：语言对 {pair} 需要合并字体支持（仅 CJK 遊戲語言下生效）。")
+            print(f"注意：语言对 {pair} 需要合并字体支持（仅在 CJK 游戏语言下生效）。")
             print()
         # Warn about EN + CJK pairs which do NOT get font patches (FNA rendering bug).
         if pair.startswith("en:") and any(pair.endswith(f":{c}") for c in ("zh", "ja", "ko")):
-            print(f"提示：语言对 {pair} 在 EN 遊戲語言下不會加載字體補丁（已知 FNA 渲染 bug）。")
-            print(f"      如需顯示 CJK 字元，請將遊戲語言切換為對應 CJK 語言（zh-CN/ja-JP 等）。")
+            print(f"提示：语言对 {pair} 在 EN 游戏语言下不会加载字体补丁（已知 FNA 渲染 bug）。")
+            print(f"      如需显示 CJK 字符，请将游戏语言切换为对应 CJK 语言（zh-CN/ja-JP 等）。")
             print()
 
     if not ASSETS_LIST_FILE.exists():

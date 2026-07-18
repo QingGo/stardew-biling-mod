@@ -145,6 +145,18 @@ class TestContentJsonMultiPair:
         assert 'Fonts/Japanese' in targets, f"BmFont Japanese missing, got {targets}"
         assert len(font_patches) == 4, f"Expected 4 font patches, got {len(font_patches)}: {targets}"
 
+    def test_en_zh_has_no_font_patches(self):
+        """v2.0.1: en-zh does NOT emit font Load patches (EN-mode bug, see asset_builders docs)."""
+        data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
+        en_zh_font_patches = [c for c in data['Changes']
+                              if c.get('Action') == 'Load'
+                              and 'Fonts/' in c.get('Target', '')
+                              and c['When'].get('BilingualMode') == 'en-zh']
+        assert len(en_zh_font_patches) == 0, (
+            f"en-zh should not have font patches (EN-mode mosaic bug); "
+            f"found {len(en_zh_font_patches)}: {[p['Target'] for p in en_zh_font_patches]}"
+        )
+
     def test_event_cs_1726_segment_bilingual(self):
         """Event.cs.1726 has per-segment bilingual format."""
         data = json.loads(self.CONTENT_PATH.read_text('utf-8'))

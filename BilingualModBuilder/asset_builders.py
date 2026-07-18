@@ -342,24 +342,32 @@ def _build_model_or_pipe_patch(asset_path, l1, l2, field_map, when_val):
 
 
 # ====== Font patches builder ======
-# Pairs that need any font redirect (non-ASCII glyphs missing from active font)
-# CJK-CJK pairs (ja:zh etc.) and EN-with-CJK pairs (en:zh, en:ja) need SpriteFont
-# redirects because the active game font lacks those glyphs.
+# Font redirect is only enabled for CJK-CJK pairs (e.g. ja:zh, zh:ja).
+# When the game language is itself CJK (zh-CN, ja-JP, ko-KR), our merged
+# SpriteFont1/SmallFont/BmFont loads cleanly and all CJK glyphs render.
+#
+# EN-with-CJK pairs (en:zh, en:ja, en:ko) DO NOT get font redirects. The
+# reason: deploying our `pack_xnb.py`-generated XNB under EN game language
+# causes FNA's SpriteFontReader to render some rendering paths (NPC
+# dialogue, TV subtitles, mail, loading text) as vertical-mosaic glitches.
+# The root cause is deep in FNA's texture/format handling for asset loads
+# triggered in EN locale context and is not yet fixed. For EN game
+# language users who need CJK glyph display, the workaround is to switch
+# game language to the CJK member of their pair (zh-CN for en:zh, ja-JP
+# for en:ja etc.). With no font load patch applied, EN game language will
+# render CJK characters as `*` (the SpriteFont default character). That
+# is readable ("this glyph is unsupported") and less confusing than mosaic.
 FONT_PATCH_PAIRS = {
     "ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja",
-    "en:zh", "en:ja", "en:ko",
 }
 # Pairs that also need BmFont patches. Stardew's BmFont (Fonts/Chinese,
 # Fonts/Japanese) is used for loading text, TV subtitles, mail body, and
-# some HUD elements. When the pair includes CJK glyphs, both BmFonts must
-# be redirected to the merged versions so CJK characters render even when
-# the active game language is EN (which would otherwise load a latin-only
-# fallback). Korean is intentionally excluded because we don't ship
-# pre-merged Korean BmFonts.
-BMFONT_PAIRS = {
-    "ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja",
-    "en:zh", "en:ja",
-}
+# some HUD elements. We only redirect BmFont for CJK-CJK pairs where the
+# game language is itself CJK; doing it under EN game language caused
+# vertical-mosaic corruption (EN fallback path doesn't resolve Chinese_*
+# texture pages correctly). Korean is intentionally excluded because we
+# don't ship pre-merged Korean BmFonts.
+BMFONT_PAIRS = {"ja:zh", "zh:ja", "ko:zh", "zh:ko", "ja:ko", "ko:ja"}
 SPRITE_FONTS = ("SpriteFont1", "SmallFont")
 BMFONTS = ("Chinese", "Japanese")
 

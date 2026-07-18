@@ -15,6 +15,12 @@
 - **关闭** — `BilingualMode=off` 时跟随游戏原生语言设置，不进行任何干预
 - **多个语言对并列** — 一次构建可同时包含多种语言对，玩家按需切换
 
+> **⚠ EN 遊戲語言與 CJK 配對的限制（v2.0.1）**
+>
+> 當遊戲語言設為 English 且 BilingualMode 為 `en-zh`/`en-ja` 等含 CJK 的配對時，**CJK 字元會顯示為 `*` 號**而非正常字形。這是已知 FNA 渲染路徑 bug — `pack_xnb.py` 生成的 SpriteFont/BmFont XNB 在 EN locale 上下文下，NPC 對話/TV/信件/加載文字的渲染路徑會出現縱向馬賽克。我們暫時關閉了 EN 配 CJK 的字體 Load 補丁。
+>
+> **解決方案**：需要在雙語界面查看 CJK 字元的場景中，請將遊戲語言切換為 CJK 成員（`中文`、`日本語` 等）。此時 EffectFont/TV/信件/加載文字均能正確渲染中日文。例如 en-zh 模式下，請將遊戲語言設為「中文」即可同時看到 EN+ZH 雙語。
+
 ### v2.0.0 破坏性更新
 
 - **配置格式变更** — `BilingualMode` 取值从 v1 的 `true`/`false` 改为语言对代码（如 `en-zh`、`ja-zh`）或 `off`。旧版本的 `"true"` 在 v2 中会触发 CP 验证警告，请手动修改 `config.json` 为合法值。

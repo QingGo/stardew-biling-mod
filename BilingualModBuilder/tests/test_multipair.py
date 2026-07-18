@@ -8,12 +8,14 @@ sys.path.insert(0, r'C:\Users\minam\code\stardew-bilin\BilingualModBuilder')
 
 from parsers import (
     BILINGUAL_TEMPLATE,
+    PIPE_BILINGUAL_TEMPLATE,
     bilingualize_pair,
     make_dialogue_bilingual,
 )
 from build_bilingual_pack import (
-    PIPE_BILINGUAL_TEMPLATE,
     asset_path_to_filename,
+)
+from asset_builders import (
     is_string_asset,
     is_data_asset,
     is_festival_asset,
@@ -129,16 +131,19 @@ class TestContentJsonMultiPair:
         assert true_count == 0, f"Found {true_count} 'true' patches that would cause CP validation errors"
 
     def test_font_redirect_patches_for_cjk(self):
-        """ja-zh pair adds font Load patches for SpriteFont1 and SmallFont."""
+        """ja-zh adds Load patches for SpriteFont1, SmallFont, and BmFonts."""
         data = json.loads(self.CONTENT_PATH.read_text('utf-8'))
-        font_patches = [c for c in data['Changes'] 
-                        if c.get('Action') == 'Load' 
+        font_patches = [c for c in data['Changes']
+                        if c.get('Action') == 'Load'
                         and 'Fonts/' in c.get('Target', '')
                         and c['When'].get('BilingualMode') == 'ja-zh']
-        assert len(font_patches) == 2, f"Expected 2 font patches, got {len(font_patches)}"
         targets = [c['Target'] for c in font_patches]
-        assert 'Fonts/SpriteFont1' in targets
-        assert 'Fonts/SmallFont' in targets
+        # 2 SpriteFont patches + 2 BmFont patches = 4 total
+        assert 'Fonts/SpriteFont1' in targets, f"SpriteFont1 missing, got {targets}"
+        assert 'Fonts/SmallFont' in targets, f"SmallFont missing, got {targets}"
+        assert 'Fonts/Chinese' in targets, f"BmFont Chinese missing, got {targets}"
+        assert 'Fonts/Japanese' in targets, f"BmFont Japanese missing, got {targets}"
+        assert len(font_patches) == 4, f"Expected 4 font patches, got {len(font_patches)}: {targets}"
 
     def test_event_cs_1726_segment_bilingual(self):
         """Event.cs.1726 has per-segment bilingual format."""

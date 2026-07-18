@@ -1,7 +1,8 @@
 """
 Python XNB packer for SpriteFont (uncompressed, Windows target).
-Writes chars as 7-bit encoded integers (FNA/MonoGame format),
-NOT UTF-8 (which xnbcli incorrectly uses).
+Chars are stored as UTF-8 bytes (matching the original game format).
+Verified by inspecting raw bytes of original SpriteFont1.zh-CN.xnb:
+  byte[97] = 0xC2 0xA0 = UTF-8 encoding of U+00A0
 
 XNB SpriteFont content order:
   1. Texture2D (reader idx 2)
@@ -11,7 +12,7 @@ XNB SpriteFont content order:
   5. int32 lineSpacing (primitive)
   6. float spacing (primitive)
   7. List<Vector3> kerning (reader idx 7)
-  8. Nullable<char> defaultCharacter (byte hasValue + optional 7bit char)
+  8. Nullable<char> defaultCharacter (byte hasValue + optional UTF-8 char)
 """
 import json, struct, os, sys
 from PIL import Image
@@ -23,9 +24,10 @@ def write_7bit(buf, val):
         val >>= 7
     buf.append(val & 0x7F)
 
-def write_7bit_char(buf, char):
-    """Write a single char as 7-bit encoded integer (Unicode code point)."""
-    write_7bit(buf, ord(char))
+def write_utf8_char(buf, char):
+    """Write a single char as UTF-8 bytes (matching original XNB format)."""
+    encoded = char.encode('utf-8')
+    buf.extend(encoded)
 
 def write_string(buf, s):
     """Write a 7-bit length-prefixed UTF-8 string."""
@@ -115,7 +117,7 @@ def pack_spritefont(json_path, png_path, output_path):
     write_7bit(body, 5)
     write_uint32(body, len(chars))
     for c in chars:
-        write_7bit_char(body, c)
+        write_utf8_char(body, c)
 
     # 5. int32 lineSpacing (primitive, no reader index)
     line_spacing = content.get('verticalLineSpacing', content.get('lineSpacing', 0))
@@ -139,7 +141,7 @@ def pack_spritefont(json_path, png_path, output_path):
     default_char = content.get('defaultCharacter')
     if default_char is not None and default_char != '':
         write_byte(body, 1)
-        write_7bit_char(body, default_char)
+        write_utf8_char(body, default_char)
     else:
         write_byte(body, 0)
 
@@ -171,16 +173,31 @@ def pack_spritefont(json_path, png_path, output_path):
     return True
 
 if __name__ == '__main__':
-    base_in = 'C:/Users/minam/code/stardew-bilin/_tmp/font-zh'
+    # merge_font.py produces bidirectional outputs:
+    #   _tmp/font-merged-zh/{font}.zh-CN.{json,png}  (ZH base + JA missing)
+    #   _tmp/font-merged-ja/{font}.ja-JP.{json,png}  (JA base + ZH missing)
+    base_zh_in = 'C:/Users/minam/code/stardew-bilin/_tmp/font-merged-zh'
+    base_ja_in = 'C:/Users/minam/code/stardew-bilin/_tmp/font-merged-ja'
     base_out = 'C:/Users/minam/code/stardew-bilin/BilingualMod/assets'
 
-    json_path = os.path.join(base_in, 'SpriteFont1.zh-CN.json')
-    png_path = os.path.join(base_in, 'SpriteFont1.zh-CN.png')
-    out_path = os.path.join(base_out, 'SpriteFont1.zh-CN.xnb')
+    fonts = sys.argv[1:] if len(sys.argv) > 1 else ['SpriteFont1', 'SmallFont']
 
-    if not os.path.exists(json_path):
-        print(f'Error: {json_path} not found. Run merge_font.py first.')
-        sys.exit(1)
+    for font_name in fonts:
+        # Pack ZH-direction (used when game language is zh-CN)
+        zh_json = os.path.join(base_zh_in, f'{font_name}.zh-CN.json')
+        zh_png = os.path.join(base_zh_in, f'{font_name}.zh-CN.png')
+        zh_out = os.path.join(base_out, f'{font_name}.zh-CN.xnb')
+        if os.path.exists(zh_json):
+            pack_spritefont(zh_json, zh_png, zh_out)
+        else:
+            print(f'Skip ZH pack: {zh_json} not found')
 
-    pack_spritefont(json_path, png_path, out_path)
+        # Pack JA-direction (used when game language is ja-JP)
+        ja_json = os.path.join(base_ja_in, f'{font_name}.ja-JP.json')
+        ja_png = os.path.join(base_ja_in, f'{font_name}.ja-JP.png')
+        ja_out = os.path.join(base_out, f'{font_name}.ja-JP.xnb')
+        if os.path.exists(ja_json):
+            pack_spritefont(ja_json, ja_png, ja_out)
+        else:
+            print(f'Skip JA pack: {ja_json} not found')
     print('\nDone')

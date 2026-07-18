@@ -13,6 +13,7 @@ import re
 from typing import Optional
 
 BILINGUAL_TEMPLATE = "{left} / {right}"
+PIPE_BILINGUAL_TEMPLATE = "{left} | {right}"  # used by Data/* pipe-separated fields
 
 # ====== Shared ======
 

@@ -7,9 +7,18 @@
 
 ## 功能
 
-- **语言对选择** — 在 GMCM 中选择 `en-zh`（英中）、`de-en`（德英）、`ja-zh`（日中）等
-- **开启** — 选中语言对后，所有文本显示为 `语言A / 语言B`
-- **关闭** — 跟随游戏语言设置，不进行任何干预
+- **多语言对支持** — 通过 GMCM 或 `config.json` 在以下语言对之间实时切换：
+  - `en-zh`：英中双语（默认）
+  - `de-en`：德英双语
+  - `ja-zh`：日中双语（含合并字体支持，假名 + 繁体汉字均能显示）
+  - 其他自定义对只需导出对应语言数据并重建包即可
+- **关闭** — `BilingualMode=off` 时跟随游戏原生语言设置，不进行任何干预
+- **多个语言对并列** — 一次构建可同时包含多种语言对，玩家按需切换
+
+### v2.0.0 破坏性更新
+
+- **配置格式变更** — `BilingualMode` 取值从 v1 的 `true`/`false` 改为语言对代码（如 `en-zh`、`ja-zh`）或 `off`。旧版本的 `"true"` 在 v2 中会触发 CP 验证警告，请手动修改 `config.json` 为合法值。
+- **日中字体合并** — 新增 `fonts/` 字体合并流程，解决日中双语下的假名/繁体汉字缺失问题（详见下文"字体合并"章节）。
 
 支持切换的场景：
 - Strings/\* 界面文本（菜单、按钮、提示等）
@@ -70,17 +79,18 @@
    **方法一：在标题画面配置（推荐）**
    - 在主菜单（标题画面），点击左下角的 ⚙ **齿轮图标**（Mods 按钮）
    - 选择 `Stardew Valley Bilingual Text`
-   - 找到 `BilingualMode`（默认已开启 `true`）
-   - 如需中文模式，将其改为 `false`，点击 **保存并退出**，然后加载存档
+   - 找到 `BilingualMode` 下拉列表（默认 `en-zh`）
+   - 选择需要的语言对（`en-zh`、`de-en`、`ja-zh`）或 `off` 关闭
+   - 点击 **保存并退出**，然后加载存档
 
    **方法二：进入游戏后配置**
    - 加载存档后，按 `ESC` 打开背包/暂停界面
    - 点击菜单栏右侧的 🎮 **游戏手柄图标**（Mods 按钮）
    - 向下滚动到底部，选择 `Stardew Valley Bilingual Text`
-   - 将 `BilingualMode` 改为 `false` 即可关闭双语，改回 `true` 重新开启
+   - 修改 `BilingualMode` 下拉列表到所需语言对或 `off`
    - 每次更改后点击 **保存并退出**
 
-   > 默认模式为 **开启**（安装后即可看到双语效果）。也可以直接编辑 `Mods/BilingualMod/config.json` 文件，将 `"BilingualMode"` 设为 `"false"` 关闭双语。
+   > 默认模式为 **en-zh 英中双语**（安装后即可看到双语效果）。也可以直接编辑 `Mods/BilingualMod/config.json` 文件，例如 `"BilingualMode": "ja-zh"` 或 `"off"`。
 
 ### 更新版本
 
@@ -134,8 +144,12 @@
 
 | 模式 | 活跃补丁数 |
 |------|-----------|
-| BilingualMode = false（关闭） | 0（所有补丁通过 `When` 条件跳过，游戏原生文本） |
-| BilingualMode = true（开启） | 193（160 字符串 + 25 Data Fields + 8 节日） |
+| BilingualMode = off（关闭） | 0（所有补丁通过 `When` 条件跳过，游戏原生文本） |
+| BilingualMode = en-zh | ~180（含 2 个字体重定向） |
+| BilingualMode = de-en | ~180（无需字体重定向，两种语言均使用拉丁字体） |
+| BilingualMode = ja-zh | ~185（含 4 个字体重定向：2 SpriteFont + 2 BmFont） |
+
+> 仅列出计数参考；每个实际构建的补丁数因缺失资产的跳过情况略有不同。
 
 ### 日历节日（EditData + Entries，NPC 对话 + 事件脚本 + 节日名称）
 
@@ -184,29 +198,52 @@ python build_bilingual_pack.py --pairs zh:en
 
 > 如需导出其他语言的游戏数据，先修改 `AssetExporter/config.json` 的 `Languages` 字段（默认 `["en", "zh"]`），运行 AssetExporter mod 后即可获得对应语言的 JSON 文件。
 
-> **⚠ 日中/日韩/韩中等跨 CJK 语言对的字体限制**  
-> 星露谷为每种语言编译了独立的位图字体 SpriteFont XNB，游戏引擎运行时只能加载**一种**字体。
-> `ja:zh`（日中）对下，共享的 CJK 汉字可以正常渲染，但日文假名（ひらがな・カタカナ）或韩文谚文会显示为 `*`。
-> 
-> **如需完整支持，创建合并字体 XNB 的步骤：**
-> 1. 安装 [xnbcli](https://github.com/Pathoschild/StardewXnbCli)：`dotnet tool install -g xnbcli`
-> 2. 导出中日字体数据：
->    ```bash
->    xnbcli export "Stardew Valley\Content\Fonts\SpriteFont1.zh-CN.xnb" --output-dir zh_font/
->    xnbcli export "Stardew Valley\Content\Fonts\SpriteFont1.ja-JP.xnb" --output-dir ja_font/
->    ```
-> 3. 将日文字体的假名 glyphs（ひらがな・カタカナ）从 `ja_font/texture.png` 复制到 `zh_font/texture.png` 的空闲区域
-> 4. 更新 `zh_font/charmap.csv` 添加新 glyph 的坐标映射
-> 5. 重建 XNB：
->    ```bash
->    xnbcli rebuild --input-dir zh_font/ --output SpriteFont1.zh-CN.xnb
->    ```
-> 6. 将 `SpriteFont1.zh-CN.xnb` 放入 `BilingualMod/assets/`，添加 CP `Load` 补丁：
->    ```json
->    { "Action": "Load", "Target": "Fonts/SpriteFont1",
->      "FromFile": "assets/SpriteFont1.zh-CN.xnb",
->      "When": { "BilingualMode": "ja-zh" } }
->    ```
+### 2b. 字体合并流程（仅跨 CJK 语言对需要）
+
+零版本构建可跳过此步。若打包 `ja:zh` 等跨 CJK 对，需另外执行以下两条命令生成合并字体 XNB，否则日文假名/繁体汉字在游戏中显示为 `*`。
+
+**SpriteFont（XNA 位图字体）：**
+
+```bash
+cd BilingualModBuilder
+# 1. 用 xnbcli（Node.js）解包原 zh-CN 和 ja-JP 版 SpriteFont1 + SmallFont
+#    解包后数据位于 _tmp/font-zh/ 和 _tmp/font-ja/
+# 2. 双向合并日文字形到中文字体（产生 _tmp/font-merged-zh/ 等）
+python merge_font.py SpriteFont1
+python merge_font.py SmallFont
+# 3. 用 Python XNB 打包器直接生成 .xnb（避免 xnbcli 的 UTF-8 与 FNA 格式不兼容问题）
+python pack_xnb.py SpriteFont1
+python pack_xnb.py SmallFont
+```
+
+**BmFont（文本系统位图字体，用于加载文字/TV/信件）：**
+
+```bash
+# 1. 用 xnbcli 解包 Content/Fonts/Chinese.xnb 和 Japanese.xnb（会导出 XML）
+# 2. 把日文字符合并到中文 BmFont 的 XML 中（反之亦然）
+python merge_bmfont.py
+# 3. 用 xnbcli 重新打包为 .xnb
+#    输出位于 BilingualMod/assets/Chinese.xnb 和 Japanese.xnb
+```
+
+`build_bilingual_pack.py` 会根据 `--pairs` 自动为 `ja:zh` 等对添加对应的 CP `Load` 补丁，指向 `assets/` 下生成的合并字体文件。
+
+> **⚠ 日中/日韩/韩中等跨 CJK 语言对的字体支持**  
+> 星露谷为每种 CJK 语言编译了独立的位图字体（SpriteFont + BmFont）。在 v2 之前，跨 CJK 对（如 `ja:zh`）会出现假名/繁体汉字显示为 `*` 的问题。v2 起内置**两种字体系统的合并支持**：
+>
+> | 字体系统 | 用途 | 合并工具 | 输出资产 |
+> |---------|------|---------|---------|
+> | SpriteFont (SpriteFont1, SmallFont) | 对话、道具悬浮、HUD 元素 | `merge_font.py` + `pack_xnb.py` | `assets/{font}.zh-CN.xnb` |
+> | BmFont (Chinese, Japanese) | 加载文字、TV 字幕、信件正文、部分 UI | `merge_bmfont.py` + xnbcli | `assets/{Chinese,Japanese}.xnb` |
+>
+> 两个流程都做了**双向合并**：
+> - `SpriteFont1.zh-CN.xnb` = 中文 base + 日文缺失字符（~1184 个：假名 + 繁体汉字 + 少量符号）
+> - `BmFont Chinese.xnb` = 中文 base + 日文缺失字符的 XML，扩展纹理页指向 `Japanese_0/1.xnb`
+> - `BmFont Japanese.xnb` = 日文 base + 中文缺失字符的 XML，扩展纹理页指向 `Chinese_0..3.xnb`
+>
+> **构建命令**：见下方"从源码构建"小节中的"字体合并流程"。
+>
+> **已知限制**：`ja:zh` 下共享 CJK 汉字（如"日"、"本"）保留中文字形（笔画为简化体形态），而非日文具体的字形变体。CP 的 `Load` 一个 `Target` 只能指向一个文件，无法在游戏运行时按 `Language` 令牌动态切换两份字体。接受此视觉细节即可获得完整功能覆盖。
 
 ### 3. 验证
 
@@ -236,26 +273,36 @@ stardew-bilin/
 │   ├── ModEntry.cs                 # 遍历资产列表，按类型导出 JSON
 │   └── assets-list.txt             # 需要导出的资产路径列表
 ├── BilingualModBuilder/            # Python 构建脚本
-│   ├── build_bilingual_pack.py     # 读取 _export/{en,zh}，生成 content.json
-│   ├── parsers.py                  # 文本解析器（对话/邮件/事件/Q&A/条件）
+│   ├── build_bilingual_pack.py     # 主入口：参数解析 + 按资产分派到 asset_builders
+│   ├── asset_builders.py           # 按 asset 类型的构建器（string/data/festival/font）
+│   ├── config_builder.py           # content.json 组装 + manifest/config 同步
+│   ├── parsers.py                  # 文本解析器（对话/邮件/事件/Q&A/条件 + 模板常量）
+│   ├── merge_font.py               # SpriteFont 双向合并（JA/ZH 互补）
+│   ├── merge_bmfont.py             # BmFont XML 双向合并
+│   ├── pack_xnb.py                 # 纯 Python XNB 打包器（UTF-8 char + format=0 BGRA32）
+│   ├── make_release.py             # 打包 BilingualMod/ 为可分发 zip
 │   ├── assets-list.txt             # 资产路径列表（与导出时一致）
 │   ├── BilingualMod/               # 构建输出（由 .gitignore 忽略）
 │   │   ├── content.json            # 自动生成的 Content Patcher 补丁
 │   │   ├── manifest.json
-│   │   └── config.json
+│   │   ├── config.json
+│   │   └── assets/                 # 合并后的字体 XNB 文件（按需生成）
 │   └── tests/                      # pytest 单元测试
-│       ├── test_parsers_d1.py      # #$1 条件对话（含 $k/$0 与 #$e# 终结两种模式）
-│       ├── test_parsers_qr.py      # $q/$r 内联问答（事件 + 对话两种格式）
+│       ├── test_parsers_d1.py      # #$1 条件对话
+│       ├── test_parsers_qr.py      # $q/$r 内联问答
 │       ├── test_parsers_y.py       # $y 快速问答 + 烹饪频道
-│       └── test_multipair.py       # 多语言对支持
+│       └── test_multipair.py       # 多语言对支持 + 字体补丁
 ├── BilingualMod/                   # Content Patcher 内容包（游戏使用的版本）
 │   ├── manifest.json
-│   ├── config.json
-│   └── content.json                # 由 build_bilingual_pack.py 自动生成
-├── _export/                        # 导出的游戏文本资产（中英文对照）
-│   ├── en/                         # 英文原文 JSON（185 个文件）
-│   └── zh/                         # 中文翻译 JSON（185 个文件）
-├── scripts/                        # 辅助分析脚本
+│   ├── config.json                 # 默认 "BilingualMode": "en-zh"
+│   ├── content.json                # 由 build_bilingual_pack.py 自动生成
+│   └── assets/                     # 合并后的字体 XNB（含 .zh-CN 与合并 BmFont）
+├── _export/                        # 导出的游戏文本资产（按语言分目录）
+│   ├── en/                         # 英文原文 JSON
+│   ├── zh/                         # 中文翻译 JSON
+│   ├── de/                         # 德文 JSON
+│   └── ja/                         # 日文 JSON
+├── xnbcli/                         # xnbcli Node.js 工具（用于解包 XNB）
 ├── docs/
 │   └── tech-doc.md                 # 原始技术方案文档
 ├── images/                         # 效果截图
@@ -332,7 +379,10 @@ sequenceDiagram
 | 普通双语 | `bilingualize_pair()` 统一处理 | `^` 性别分支配对输出 `"EN男 / ZH男 ^ EN女 / ZH女"`（跳过 `${...^...}$` CP 令牌）；自动识别 `$y 'Q_Opt1_Resp1'` 格式，按 `_` 分割后逐段双语化，所有 parser 共享此函数 |
 | 日历节日 | `EditData` + `Entries` | 替换 `name` + 全部 NPC 对话（dialogue parser）+ 事件脚本（event parser），不影响 `conditions`/`mainEvent` 等 |
 | 多字段管道型 | `pipe_multi` 类型 | 支持多个对话字段（如 NPCGiftTastes 的 0/2/4/6/8 五档送礼对话），读取 `_raw` 全值后按字段拆分双语；使用 ` | ` 作为隔符避免与 `/` 字段分隔符冲突 |
-| Content Patcher | 全部用 `EditData` | 所有补丁加 `When: "BilingualMode": "true"`，关闭模式 0 补丁 |
+| Content Patcher | 全部用 `EditData` + `Load` 字体 | 所有补丁加 `When: "BilingualMode": "<pair_code>"`，关闭（`off`）时 0 补丁；跨 CJK 对额外加 4 个 `Load` 字体重定向（2 SpriteFont + 2 BmFont） |
+| 多语言对 | `--pairs en:zh de:en ja:zh` | 一次构建生成多个并列补丁集，各自 `When` 条件不同，玩家通过 `BilingualMode` 选择当前生效的语言对 |
+| 字体合并（SpriteFont） | `merge_font.py` + `pack_xnb.py` | 双向合并中日 SpriteFont 字形（6988→8172 字形），纯 Python XNB 打包器写 format=0 BGRA32 未压缩 + UTF-8 char 编码，避开 xnbcli 的 DXT 压缩 stub 和 7-bit int char 误解 |
+| 字体合并（BmFont） | `merge_bmfont.py` + xnbcli | 双向合并 BmFont XML，扩展纹理页指向对方语言的原生 .xnb 纹理，保留各 base 的字形 metrics |
 | 验证 | `verify.py` 九合一 | Token 完整性、`^` 分隔、对话安全、SMAPI 日志、mail 格式、节日名称、parser 分配、CookingChannel 配方名去重、`#$1` 重复前缀 |
 
 ## 已知问题
@@ -345,15 +395,29 @@ sequenceDiagram
 
 ### 已知限制
 
-3. **动态格式字符串的双语重复** — 841 个 key 含 `{0}` `{1}` 等 `string.Format` 占位符。当占位符对应的参数本身也是双语文本（如季节名 `Summer / 夏季`、物品名 `Parsnip / 防风草`），`string.Format` 将双语参数**同时代入模板的 EN 半段和 ZH 半段**，产生嵌套双语（如 `Day 9 of Summer / 夏季, Year 3 / 第3年Summer / 夏季9日`）。这是 Content Patcher 架构的固有局限 — 无法控制运行时 `string.Format` 的参数代入。影响轻微（文字冗余但不丢失信息），需 C# Harmony 补丁彻底修复。
+3. **动态格式字符串的双语重复** — 841 个 key 含 `{0}` `{1}` 等 `string.Format` 占位符。当占位符对应的参数本身也是双语文本（如季节名 `Summer / 夏季`、物品名 `Parsnip / 防风草`），`string.Format` 将双语参数**同时代入模板的 EN 半段和 ZH 半段**，产生嵌套双语。这是 Content Patcher 架构的固有局限 — 无法控制运行时 `string.Format` 的参数代入。影响轻微（文字冗余但不丢失信息），需 C# Harmony 补丁彻底修复。
 4. **字幕 (Strings/credits)** — 非 `Dictionary<string, string>` 格式，导出失败。
-5. **剧情动画事件缺失 2/45** — `IslandFarmHouse`、`Tent` 导出失败。
-6. **节日 NPC 缺失 7 个对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
-7. **电视烹饪频道菜名前缀重复**（v1.1 已修复） — 历史版本 `Data/TV/CookingChannel` 的 `RecipeName/Dialogue` 格式导致菜名在双语两侧重复出现。
-8. **`$y` 快速问答仅显示英文**（v1.1 已修复） — 历史版本 `bilingualize_pair` 将 `$y 'EN'` 和 `$y 'ZH'` 简单拼接，游戏只处理第一个 `$y` 块。现改为按 `_` 分割后逐段双语配对，修复全部 14 处 `$y` 文本。
-9. **`$q/$r` 问答仅显示英文**（v1.2 已修复） — 历史版本 `Data/ExtraDialogue` 中 5 条 Morris 对话含 `$q/$r` Q&A 结构，EN/ZH 两侧各有一套命令。`bilingualize_pair` 简单拼接后产生两套 `$q` 命令，游戏只处理第一个（英文）。现改为保留 EN 命令结构，仅双语化文本部分。
-10. **`#$1` 条件对话中文丢失**（v1.2 已修复） — 14 条对话中 `#$1` 条件块使用 `#$e#` 而非 `$k`/`$0` 作为终结符（Abigail 周四、Caroline 多段对话等）。`_bilingualize_d1_segment` 因找不到 `$k`/`$0` 返回 None，降级后产生两套 `#$1` 前缀，游戏只处理第一个。现改为无条件型 `$k`/`$0` 时以 `#$e#`/`#$b#`/段尾为终止位置。
-11. **对话分段模板误用导致部分页面仅显示单语**（v1.3 已修复） — `StringsFromCSFiles`、`Strings/1_6_Strings`、`Strings/StringsFromMaps` 中含有 `#$b#`/`#$e#` 分段标记的文本（113 条）被误分配到 plain template parser（`bilingualize_pair`），导致 EN/ZH 两侧的 `#$b#` 段在游戏内交错穿插，部分对话页仅显示英文。现改为资产级 `is_dialogue` 分类 + 逐条目 `#$b#`/`#$e#` 自动检测双层防护，每条 `#$b#` 段独立双语化，每页都显示 `EN / ZH`。
+5. **剧情动画事件缺失 1/45** — `Tent` 导出失败（`IslandFarmHouse` 已修复）。
+6. **节日 NPC 缺失少量对话 key** — `Dwarf_y2`、`Sandy_y2`、`Event.cs.1862` 在部分节日中无官方中文翻译。安装贴吧汉化修正后重新导出即可补全。
+7. **日中字体中共享汉字的字形风格**（v2 现状） — CP `Load` 一个 `Target` 只能指向一个 `FromFile`，故 `ja:zh` 共享 CJK 汉字固定使用中文字形（简化笔画形态），不区分游戏语言。若需日文字形，需 C# Mod 按 SMAPI 令牌切换字体实例。
+8. **电视烹饪频道菜名前缀重复**（v1.1 已修复） — 历史版本 `Data/TV/CookingChannel` 的 `RecipeName/Dialogue` 格式导致菜名在双语两侧重复出现。
+9. **`$y` 快速问答仅显示英文**（v1.1 已修复） — 历史版本 `bilingualize_pair` 将 `$y 'EN'` 和 `$y 'ZH'` 简单拼接，游戏只处理第一个 `$y` 块。现改为按 `_` 分割后逐段双语配对，修复全部 14 处 `$y` 文本。
+10. **`$q/$r` 问答仅显示英文**（v1.2 已修复） — 历史版本 `Data/ExtraDialogue` 中 5 条 Morris 对话含 `$q/$r` Q&A 结构，EN/ZH 两侧各有一套命令。`bilingualize_pair` 简单拼接后产生两套 `$q` 命令，游戏只处理第一个（英文）。现改为保留 EN 命令结构，仅双语化文本部分。
+11. **`#$1` 条件对话中文丢失**（v1.2 已修复） — 14 条对话中 `#$1` 条件块使用 `#$e#` 而非 `$k`/`$0` 作为终结符（Abigail 周四、Caroline 多段对话等）。`_bilingualize_d1_segment` 因找不到 `$k`/`$0` 返回 None，降级后产生两套 `#$1` 前缀，游戏只处理第一个。现改为无条件型 `$k`/`$0` 时以 `#$e#`/`#$b#`/段尾为终止位置。
+12. **对话分段模板误用导致部分页面仅显示单语**（v1.3 已修复） — `StringsFromCSFiles`、`Strings/1_6_Strings`、`StringsFromMaps` 中含有 `#$b#`/`#$e#` 分段标记的文本（113 条）被误分配到 plain template parser（`bilingualize_pair`），导致 EN/ZH 两侧的 `#$b#` 段在游戏内交错穿插，部分对话页仅显示英文。现改为资产级 `is_dialogue` 分类 + 逐条目 `#$b#`/`#$e#` 自动检测双层防护，每条 `#$b#` 段独立双语化，每页都显示 `EN / ZH`。
+13. **日中字体渲染缺失假名/繁体汉字**（v2.0 已修复） — 历史版本未合并字体，游戏内只加载原字体的字形。v2 引入 `merge_font.py`（SpriteFont 双向合并）+ `merge_bmfont.py`（BmFont 双向合并）+ `pack_xnb.py`（Python XNB 打包，UTF-8 char + format=0 BGRA32），覆盖 Loading 文字、TV 字幕、信件、NPC 对话、技能悬浮框等所有字体路径。
+
+### v2.0 字体合并历程
+
+字体合并经历了多次修复迭代：
+
+| 问题 | 表现 | 根因 | 修复 |
+|------|------|------|------|
+| `SpriteFont` 加载错乱 | `ArgumentOutOfRangeException` | xnbcli stub 的 dxt-js 把 raw BGRA 当 DXT3 压缩数据 | `pack_xnb.py` 写 format=0 未压缩 BGRA32 |
+| `Character map must be in ascending order`（初次） | SpriteFont 构造越界 | `merge_font.py` 漏合并 kerning 列表 | 补齐 kerning 数据 |
+| `Character map must be in ascending order`（二次） | 仍越界 | 假名追加在 CJK 汉字之后，违反升序 | 合并后按 code point 排序所有四表 |
+| `Character map must be in ascending order`（三次） | 仍越界 | xnbcli 写 char 为 UTF-8，FNA 读为 7-bit 编码整数，CJK 字节被错误合并 | 用 `pack_xnb.py` 替代 xnbcli，保持原始 UTF-8 char 写法（与原版 XNB 一致） |
+| `Loading / TV / 信件` 仍显示 `*` | 仅 SpriteFont 部分修好 | 漏掉 BmFont 系统的合并 | 新增 `merge_bmfont.py`，双向合并 XML + 扩展纹理页 |
 
 ## 后续计划
 
